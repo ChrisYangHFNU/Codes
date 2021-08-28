@@ -6,6 +6,8 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning}
 \usepackage{tcolorbox}
+\usepackage{empheq}
+\newcommand*\widefbox[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
 \usetheme{PaloAlto}
 \logo{\includegraphics[width=1.55cm,height=1.55cm]{logo.jpg}}
 \newcounter{savedenum}
@@ -457,4 +459,203 @@
 
 \end{frame}
 
+\subsection{3\quad 本课程内容}
+\begin{frame}{本课程内容}
+  \begin{columns}
+    \begin{column}{0.15\linewidth}
+      \begin{enumerate}
+        \item 引论
+        \saveenum
+      \end{enumerate}
+    \end{column}
+    \begin{column}{0.35\linewidth}
+      \textcolor{blue}{均匀传输线和波导理论基础}\\
+      \textcolor{blue}{微波电路元件}
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      \begin{enumerate}
+        \resume
+        \item \textbf{传输线理论}
+        \item \textbf{规则金属波导}
+        \item \textbf{微波集成电路}
+        \item 毫米波介质波导与光波导
+        \item \textbf{微波网络基础}
+        \item \textbf{微波谐振器}
+        \item \textbf{常用微波器件}
+        \item 微波铁氧体元件
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{微波技术的研究方法}
+
+\end{frame}
+
+\subsection{4\quad 导行波及其传输特性}
+\begin{frame}{基本概念}
+  \begin{enumerate}
+    \item \textbf{导行系统(Guided system)}
+    \saveenum
+    \\约束或导引电磁能量定向传播
+  \end{enumerate}
+  作用：\\
+  \begin{itemize}
+    \item 无辐射损耗的将电磁波从一处传到另一处
+    \item 设计成微波元件：滤波器、阻抗变换器、定向耦合器等。
+  \end{itemize}
+  微波电路是一种由各种导行系统构成的导行电磁波电路
+\end{frame}
+
+\begin{frame}{导行系统结构}
+  %\begin{figure}
+    \centering
+    \includegraphics[width=9cm]{guidesystem.png}
+  %\end{figure}
+\end{frame}
+
+\begin{frame}{基本概念}
+  \begin{enumerate}
+    \resume
+    \item \textbf{导行波（Guided Wave）}
+    \\沿导行系统定向传播的电磁波（导波）
+    \\
+    \\TEM波\quad 横电磁波 —— 各种传输线 电磁能量约束或限制在导体之间的空间内沿其轴向传播
+    \\TE\ TM波\quad 横电/横磁波 —— 封闭金属波导 电磁能量完全限制在金属管内沿轴向传播
+    \\表面波 —— 开波导 电磁能量约束在波导结构的周围（波导内和波导表面附近）沿轴向传播
+    \saveenum
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{基本概念}
+  \begin{enumerate}
+    \resume
+    \item \textbf{导模(Guided mode)}
+    \\导行波的模式（传输模）
+    \\ *在导行系统横截面上的电磁场呈驻波分布，且完全确定的，与位置和频率无关
+    \\ *导模是离散的，当频率一定时，每个导模具有唯一的传播常数
+    \\ *导模之间相互正交，彼此独立，互不耦合
+    \\ *具有截止特性，截止条件和截止波长因导行系统和模式而异
+    \item \textbf{规则导行系统(Regular guided system)}
+    \\无限长笔直导行系统，其横截面尺寸、媒质分布、结构材料、边界条件沿轴向均不变化
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{导波场的分析}
+  在\textbf{均匀}、\textbf{无耗}、\textbf{各向同性}、\textbf{无源}导行系统中
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      \begin{align*}
+        &\nabla\times\vec E=-\frac{\partial \vec B}{\partial t}\\
+        &\nabla\times\vec H=\vec{J} +\frac{\partial \vec D}{\partial t}\\
+        &\nabla\cdot\vec{D}=\rho\\
+        &\nabla\cdot\vec{B}=0
+      \end{align*}
+      设导波沿$z$向传播，坐标$z$与横向坐标无关
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      \flushright
+      \includegraphics[width=4cm]{zuobiao.png}
+      \begin{align*}
+        & \nabla=\nabla_{t}+\hat z \partial / \partial z\\
+        & \vec E=\vec E_{t}+\hat z E_{z}\\
+        & \vec H=\vec H_{t}+\hat z H_{z}
+      \end{align*}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{导波场的分析}
+  \begin{columns}
+    \begin{column}{0.45\linewidth}
+      \begin{empheq}[box=\widefbox]{align*}
+        %\tikzmarkin{c}(0.05,-0.6)(-0.05,0.65)
+        & \nabla_t\times\vec H_{t}=j\omega\epsilon\hat z E_z \\
+        & \nabla_t\times \hat z H_z+\hat z\times\frac{\partial \vec{H_t}}{\partial z}
+        = j\omega\epsilon\vec{E_t}
+        %\tikzmarkend{c}
+      \end{empheq}
+      $\times j\omega\mu$
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      \begin{empheq}[box=\widefbox]{align*}
+        & \nabla_t\times\vec E_{t}=-j\omega\mu\hat z H_z \\
+        & \nabla_t\times \hat z E_{z}+\hat z\times\frac{\partial \vec{E_t}}{\partial z}
+        = -j\omega\mu\vec{H_t}
+      \end{empheq}
+      $\hat{z}\times\frac{\partial}{\partial z}$
+    \end{column}
+  \end{columns}
+  \begin{align*}
+    \flushleft
+    j\omega\mu\hat{z}\times\frac{\partial \vec{H_{t}}}{\partial z}=-j\omega\mu\nabla_{t}\times\hat{z}H_{z}-\omega^{2}\mu\epsilon\vec{E_{t}}
+  \end{align*}
+  \begin{align*}
+    \flushright
+    -j\omega\mu\hat{z}\times\frac{\partial \vec{H_{t}}}{\partial z}=\hat{z}\times\frac{\partial}{\partial z} \left(\nabla_{t}\times\hat{z}E_{z}\right)+\hat{z}\times\frac{\partial}{\partial z} \left(\hat{z} \times \frac{\partial \vec{E_{t}}}{\partial z} \right)
+  \end{align*}
+  % draw arrows
+  %\begin{tikzpicture}
+    % define two coordinates at bottom of each equation box
+    %\coordinate (aa) at ($(c)+(5mm,-1.3cm)$);
+    % draw arrow down and place node below
+    %\draw [->] (aa) --++(0,-3mm) node[below] (bi) {$\beta_i$}
+  %\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{导波场的分析}
+
+\end{frame}
+
+\begin{frame}{导波场的分析}
+
+\end{frame}
+
+\begin{frame}{导波场的分析}
+
+\end{frame}
+
+\begin{frame}{导波场的分析}
+
+\end{frame}
+
+\begin{frame}{导波场的分析}
+
+\end{frame}
+
+\begin{frame}{导波场的分析}
+
+\end{frame}
+
+\begin{frame}{导波场的分析}
+
+\end{frame}
+
+\begin{frame}{导波场的分析}
+
+\end{frame}
+
+\begin{frame}{导波场的分析}
+
+\end{frame}
+
+\begin{frame}{导波场的分析}
+
+\end{frame}
+
+\begin{frame}{导行波的一般传输特性}
+
+\end{frame}
+
+\begin{frame}{导行波的一般传输特性}
+
+\end{frame}
+
+\begin{frame}{导行波的一般传输特性}
+
+\end{frame}
+
+\begin{frame}{导行波的一般传输特性}
+
+\end{frame}
 \end{document}
