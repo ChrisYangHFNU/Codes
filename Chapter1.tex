@@ -1,14 +1,18 @@
-\documentclass{beamer}
-\usepackage[UTF8,noindent]{ctexcap}
+\documentclass{ctexbeamer}
+\usepackage{verbatim}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{mathtools}
 \usepackage{multirow,booktabs}
 \usepackage{tikz}
 \usetikzlibrary{positioning}
+\usetikzlibrary{calc}
 \usepackage{tcolorbox}
 \usepackage{empheq}
 \newcommand*\widefbox[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
-\usetheme{PaloAlto}
+%\usetheme{PaloAlto}
+%\usetheme{CambridgeUS}
+\usetheme{Berkeley}
 \logo{\includegraphics[width=1.55cm,height=1.55cm]{logo.jpg}}
 \newcounter{savedenum}
 \newcommand*{\saveenum}{\setcounter{savedenum}{\theenumi}}
@@ -282,12 +286,12 @@
     \begin{column}{0.65\linewidth}
       Maxwell Equations:
       %\begin{equation}
-        \begin{align}
+        \begin{align*}
           &\nabla\times\vec E=-\frac{\partial \vec B}{\partial t}\\
           &\nabla\times\vec H=\vec{J} +\frac{\partial \vec D}{\partial t}\\
           &\nabla\cdot\vec{D}=\rho\\
           &\nabla\cdot\vec{B}=0
-        \end{align}
+        \end{align*}
       %\end{equation}
       \begin{itemize}
         \item 英国物理学家。1864年，麦氏发表了电磁场理论，成为人类历史上预言电磁波存在的\textbf{第一人}
@@ -344,10 +348,10 @@
 \begin{frame}{Maxwell方程组的物理意义}
   \begin{columns}
     \begin{column}{0.4\linewidth}
-      \begin{align}
+      \begin{align*}
         & \nabla\times\vec{E} = -\frac{\partial \vec{B}}{\partial t}\\
         & \nabla\times\vec{H} = \vec{J}+\frac{\partial \vec{D}}{\partial t}
-      \end{align}
+      \end{align*}
     \end{column}
     \begin{column}{0.6\linewidth}
       \begin{itemize}
@@ -374,10 +378,10 @@
 \begin{frame}{Maxwell方程组的物理意义}
   \begin{columns}
     \begin{column}{0.4\linewidth}
-      \begin{align}
+      \begin{align*}
         & \nabla\times\vec{H} = j\omega\epsilon\vec{E}+\vec{J}\\
         & \nabla\times\vec{E} = -j\omega\mu\vec{H}
-      \end{align}
+      \end{align*}
     \end{column}
     \begin{column}{0.6\linewidth}
       \textbf{单色波}频域的$Maxwell$方程
@@ -391,12 +395,12 @@
 \begin{frame}{Maxwell方程组的物理意义}
   \begin{columns}
     \begin{column}{0.4\linewidth}
-      \begin{align}
+      \begin{align*}
         &\nabla\times\vec E=-\frac{\partial \vec B}{\partial t}\\
         &\nabla\times\vec H=\vec{J} +\frac{\partial \vec D}{\partial t}\\
         &\nabla\cdot\vec{D}=\rho\\
         &\nabla\cdot\vec{B}=0
-      \end{align}
+      \end{align*}
     \end{column}
     \begin{column}{0.65\linewidth}
       \begin{itemize}
@@ -497,14 +501,15 @@
   \begin{enumerate}
     \item \textbf{导行系统(Guided system)}
     \saveenum
-    \\约束或导引电磁能量定向传播
+    \\约束或导引电磁能量定向传播\\
+    作用：\\
+    \begin{itemize}
+      \item 无辐射损耗的将电磁波从一处传到另一处
+      \item 设计成微波元件：滤波器、阻抗变换器、定向耦合器等。
+    \end{itemize}
+    微波电路是一种由各种导行系统构成的导行电磁波电路
   \end{enumerate}
-  作用：\\
-  \begin{itemize}
-    \item 无辐射损耗的将电磁波从一处传到另一处
-    \item 设计成微波元件：滤波器、阻抗变换器、定向耦合器等。
-  \end{itemize}
-  微波电路是一种由各种导行系统构成的导行电磁波电路
+
 \end{frame}
 
 \begin{frame}{导行系统结构}
@@ -519,10 +524,9 @@
     \resume
     \item \textbf{导行波（Guided Wave）}
     \\沿导行系统定向传播的电磁波（导波）
-    \\
-    \\TEM波\quad 横电磁波 —— 各种传输线 电磁能量约束或限制在导体之间的空间内沿其轴向传播
-    \\TE\ TM波\quad 横电/横磁波 —— 封闭金属波导 电磁能量完全限制在金属管内沿轴向传播
-    \\表面波 —— 开波导 电磁能量约束在波导结构的周围（波导内和波导表面附近）沿轴向传播
+    \\\textbf{TEM波}\quad 横电磁波 —— 各种传输线 电磁能量约束或限制在导体之间的空间内沿其轴向传播
+    \\\textbf{TE/TM波}\quad 横电/横磁波 —— 封闭金属波导 电磁能量完全限制在金属管内沿轴向传播
+    \\\textbf{表面波} —— 开波导 电磁能量约束在波导结构的周围（波导内和波导表面附近）沿轴向传播
     \saveenum
   \end{enumerate}
 \end{frame}
@@ -545,12 +549,12 @@
   在\textbf{均匀}、\textbf{无耗}、\textbf{各向同性}、\textbf{无源}导行系统中
   \begin{columns}
     \begin{column}{0.5\linewidth}
-      \begin{align*}
+      \begin{empheq}[box=\widefbox]{align*}
         &\nabla\times\vec E=-\frac{\partial \vec B}{\partial t}\\
         &\nabla\times\vec H=\vec{J} +\frac{\partial \vec D}{\partial t}\\
         &\nabla\cdot\vec{D}=\rho\\
         &\nabla\cdot\vec{B}=0
-      \end{align*}
+      \end{empheq}
       设导波沿$z$向传播，坐标$z$与横向坐标无关
     \end{column}
     \begin{column}{0.5\linewidth}
@@ -565,70 +569,215 @@
   \end{columns}
 \end{frame}
 
+\newcommand{\mtikzmark}[1]{\tikz[overlay,remember picture]\node(#1){};}
+\tikzset{mylabel/.style={align=center,fill=blue!10,font=\footnotesize}}
+%\mytlabel[options]{start.mark}{end.mark}{text}
+\newcommand\mytlabel[4][]{%
+\tikz[overlay,remember picture]
+{\draw[->]([yshift=-10pt]#2.north) -- node[mylabel,#1]{#4}([yshift=6pt]#3.north);}
+}
 \begin{frame}{导波场的分析}
   \begin{columns}
     \begin{column}{0.45\linewidth}
       \begin{empheq}[box=\widefbox]{align*}
         %\tikzmarkin{c}(0.05,-0.6)(-0.05,0.65)
-        & \nabla_t\times\vec H_{t}=j\omega\epsilon\hat z E_z \\
-        & \nabla_t\times \hat z H_z+\hat z\times\frac{\partial \vec{H_t}}{\partial z}
-        = j\omega\epsilon\vec{E_t}
-        %\tikzmarkend{c}
+        & \nabla_t\times\vec{H_{t}}=j\omega\epsilon\hat{z}E_{z} \\
+        & \nabla_t\times\hat{z}H_{z}+\hat{z}\times\frac{\partial\vec{H_{t}}}{\partial z}
+        = \mtikzmark{a}j\omega\epsilon\vec{E_{t}}
       \end{empheq}
-      $\times j\omega\mu$
+      %$$\times j\omega\mu$$
     \end{column}
     \begin{column}{0.5\linewidth}
       \begin{empheq}[box=\widefbox]{align*}
-        & \nabla_t\times\vec E_{t}=-j\omega\mu\hat z H_z \\
-        & \nabla_t\times \hat z E_{z}+\hat z\times\frac{\partial \vec{E_t}}{\partial z}
+        & \nabla_t\times\vec E_{t}=-j\omega\mu\hat{z} H_{z} \\
+        & \nabla_t\times \hat z E_{z}+\hat{z}\times\mtikzmark{c}\frac{\partial\vec{E_{t}}}{\partial z}
         = -j\omega\mu\vec{H_t}
       \end{empheq}
-      $\hat{z}\times\frac{\partial}{\partial z}$
     \end{column}
   \end{columns}
-  \begin{align*}
-    \flushleft
-    j\omega\mu\hat{z}\times\frac{\partial \vec{H_{t}}}{\partial z}=-j\omega\mu\nabla_{t}\times\hat{z}H_{z}-\omega^{2}\mu\epsilon\vec{E_{t}}
-  \end{align*}
-  \begin{align*}
-    \flushright
-    -j\omega\mu\hat{z}\times\frac{\partial \vec{H_{t}}}{\partial z}=\hat{z}\times\frac{\partial}{\partial z} \left(\nabla_{t}\times\hat{z}E_{z}\right)+\hat{z}\times\frac{\partial}{\partial z} \left(\hat{z} \times \frac{\partial \vec{E_{t}}}{\partial z} \right)
-  \end{align*}
-  % draw arrows
-  %\begin{tikzpicture}
-    % define two coordinates at bottom of each equation box
-    %\coordinate (aa) at ($(c)+(5mm,-1.3cm)$);
-    % draw arrow down and place node below
-    %\draw [->] (aa) --++(0,-3mm) node[below] (bi) {$\beta_i$}
-  %\end{tikzpicture}
+  \begin{flalign*}
+      & j\omega\mu\hat{z}\times\frac{\partial \vec{H_{t}}}{\partial z}=\mtikzmark{b}-j\omega\mu\nabla_{t}\times\hat{z}H_{z}-\omega^{2}\mu\epsilon\vec{E_{t}} &
+  \end{flalign*}
+  \begin{flalign*}
+    && -j\omega\mu\hat{z}\times\frac{\partial \vec{H_{t}}}{\partial z}=\hat{z}\times\frac{\partial}{\partial z} \left(\nabla_{t}\times\hat{z}E_{z}\right)+\hat{z}\times\mtikzmark{d}\frac{\partial}{\partial z} \left(\hat{z} \times \frac{\partial \vec{E_{t}}}{\partial z} \right)
+  \end{flalign*}
+  % draw arrow with text from specified position to another
+  \mytlabel{a}{b}{$\times j\omega\mu$}
+  \mytlabel{c}{d}{$\hat{z}\times\frac{\partial}{\partial z}$}
 \end{frame}
 
 \begin{frame}{导波场的分析}
-
+  \begin{empheq}[box=\widefbox]{align*}
+    \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}} \right)\vec{E_{t}}=\frac{\partial}{\partial z}\nabla_{t}E_{z}-j\omega\mu\nabla_{t}\times\hat{z}H_{z}
+  \end{empheq}
+  \begin{empheq}[box=\widefbox]{align*}
+    \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}} \right)\vec{H_{t}}=\frac{\partial}{\partial z}\nabla_{t}H_{z}-j\omega\epsilon\nabla_{t}\times\hat{z}E_{z}
+  \end{empheq}
+  在规则导行系统中，导波场的\textbf{横向分量}可用\textbf{纵向分量}完全确定。\\上面公式中$k^{2}=\omega^{2}\mu\epsilon$
 \end{frame}
 
 \begin{frame}{导波场的分析}
-
+  \begin{empheq}[box=\widefbox]{align*}
+    & \nabla^{2}\vec{E}+k^{2}\vec{E}=0\\
+    & \nabla^{2}\vec{H}+\mtikzmark{a}k^{2}\vec{H}=0
+  \end{empheq}
+  \begin{columns}
+    \begin{column}{0.45\linewidth}
+      \begin{empheq}[box=\widefbox]{align*}
+        & \nabla^{2}E_{z}+\mtikzmark{b}k^{2}E_{z}=0\\
+        & \nabla^{2}H_{z}+\mtikzmark{d}k^{2}H_{z}=0
+      \end{empheq}
+    \end{column}
+    \begin{column}{0.45\linewidth}
+      \begin{empheq}[box=\widefbox]{align*}
+        & \nabla^{2}\vec{E}_{t}+\mtikzmark{c}k^{2}\vec{E}_{t}=0\\
+        & \nabla^{2}\vec{H}_{t}+k^{2}\vec{H}_{t}=0
+      \end{empheq}
+    \end{column}
+  \end{columns}
+  \flushright
+  \begin{empheq}[box=\widefbox]{align*}
+    \left( \nabla^{2}_{t}+\frac{\partial^{2}}{\partial z^{2}}\right)
+    \left\{\begin{aligned}
+      \mtikzmark{e}E_{z}(z,t)\\H_{z}(z,t)
+    \end{aligned}\right\}
+    +k^{2}
+    \left\{\begin{aligned}
+      E_{z}(z,t)\\H_{z}(z,t)
+    \end{aligned}\right\}
+    =0
+  \end{empheq}
+  \mytlabel{a}{b}{纵向场}
+  \mytlabel{a}{c}{横向场}
+  \mytlabel{d}{e}{Helmholtz Equation}
 \end{frame}
 
 \begin{frame}{导波场的分析}
-
+  \begin{empheq}[box=\widefbox]{align*}
+    \left( \nabla^{2}_{t}+\frac{\partial^{2}}{\partial z^{2}}\right)
+    \left\{\begin{aligned}
+      \mtikzmark{e}E_{z}(z,t)\\H_{z}(z,t)
+    \end{aligned}\right\}
+    +k^{2}
+    \left\{\begin{aligned}
+      E_{z}(z,t)\\H_{z}(z,t)
+    \end{aligned}\right\}
+    =0
+  \end{empheq}
+  \begin{enumerate}
+    \item \textbf{分离变量法}\\
+    令$E_{z}(z,t)=Z(z)E_{0z}(t)$ \\
+    \begin{align*}
+      \frac{\nabla_{t}^{2}E_{0z}(t)}{E_{0z}(t)}+\frac{d^{2}Z(z)/dz^{2}}{Z(z)}=-k^{2}
+    \end{align*}
+    \begin{columns}
+      \begin{column}{0.3\linewidth}
+        分离变量常数: $k_{c}$和$\beta$
+      \end{column}
+      \begin{column}{0.6\linewidth}
+        \begin{empheq}[box=\widefbox]{align*}
+          & d^{2}Z(z)/dz^{2}+\beta^{2}Z(z)=0 \\
+          & \nabla_{t}^{2}E_{0z}(t)+k_{c}^{2}E_{0z}(t)=0
+        \end{empheq}
+        \flushright————本征值方程
+      \end{column}
+    \end{columns}
+    \saveenum
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{导波场的分析}
-
+  \begin{enumerate}
+    \resume
+    \item \textbf{色散关系}
+    \begin{columns}
+      \begin{column}{0.55\linewidth}
+        \begin{empheq}[box=\widefbox]{align*}
+          & k^{2}=k_{c}^{2}+\beta^{2}\\
+          & \beta=\sqrt{k^{2}-k_{c}^{2}}=k\sqrt{1-(k_{c}/k)^{2}}
+        \end{empheq}
+      \end{column}
+      \begin{column}{0.4\linewidth}
+        \raggedright
+        $k^{2}=\omega^{2}\mu\epsilon$\\  $\beta$:导波的传播常数或相移常数
+      \end{column}
+    \end{columns}
+    $$d^{2}Z(z)/dz^{2}+\beta^{2}Z(z)=0$$
+    %\flushleft
+    解：
+    \begin{empheq}[box=\widefbox]{align*}
+      Z(z)=A_{1}exp(-j\beta z)+A_{2}exp(j\beta z)
+    \end{empheq}
+    规则导行系统中沿正$z$方向传播的导波纵向场分量\\
+    \begin{align*}
+      E_{z}(t,z)=E_{0z}(t)exp(-j\beta z)\\
+      H_{z}(t,z)=H_{0z}(t)exp(-j\beta z)
+    \end{align*}
+    \saveenum
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{导波场的分析}
-
+  \begin{enumerate}
+    \resume
+    \item 本征值方程
+    \begin{empheq}[box=\widefbox]{align*}
+      \nabla_{t}^{2}E_{0z}(t)+k_{c}^{2}E_{0z}(t)=0
+    \end{empheq}
+    $k_{c}$：在特定边界条件下的本征值，称为导波的横向截止波数\\
+    $k_{c}\neq 0$
+    \saveenum
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{导波场的分析}
-
+  \begin{enumerate}
+    \resume
+    \item 横-纵向场的关系
+    \begin{empheq}[box=\widefbox]{align*}
+      \left( k^{2}+\frac{\partial_{2}}{\partial z^{2}}\right)\vec{E}_{t}=\frac{\partial}{\partial z}\nabla_{t}E_{z}-j\omega\mu\nabla_{t}\times\hat{z}H_{z}\\
+      \left( k^{2}+\frac{\partial_{2}}{\partial z^{2}}\right)\vec{H}_{t}=\frac{\partial}{\partial z}\nabla_{t}H_{z}-j\omega\epsilon\nabla_{t}\times\hat{z}E_{z}
+    \end{empheq}
+    \begin{columns}
+      \begin{column}{0.6\linewidth}
+        \begin{empheq}[box=\widefbox]{align*}
+          \vec{E}_{t}=\frac{-j\beta}{k_{c}^{2}}\left[\nabla_{t}E_{z}+Z_{h}\nabla_{t}H_{z}\times\hat{z}\right]\\
+          \vec{H}_{t}=\frac{-j\beta}{k_{c}^{2}}\left[\nabla_{t}H_{z}+Y_{e}\hat{z}\times\nabla_{t}E_{z}\right]
+        \end{empheq}
+      \end{column}
+      \begin{column}{0.4\linewidth}
+        \begin{align*}
+          Z_{h}=\sqrt{\frac{\mu}{\epsilon}}\frac{k}{\beta}\\
+          Y_{e}=\sqrt{\frac{\epsilon}{\mu}}\frac{k}{\beta}
+        \end{align*}
+      \end{column}
+    \end{columns}
+    \saveenum
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{导波场的分析}
+  \begin{enumerate}
+    \resume
+    \item 导波的种类\\
+    横磁波（TM）或电（E）波——
+    \begin{empheq}[box=\widefbox]{align*}
+      H_{z}=0
+    \end{empheq}
+    \begin{columns}
+      \begin{column}{0.4\linewidth}
+        \begin{empheq}[box=\widefbox]{align*}
+          \vec{E}_{t}^{e}=\frac{-j\beta}{k_{c}^{2}}\nabla_{t}E_{z}
+        \end{empheq}
+      \end{column}
+      \begin{column}{0.6\linewidth}
+        \begin{empheq}[box=\widefbox]{align*}
+          \vec{H}_{t}^{e}=\frac{-j\beta}{k_{c}^{2}}Y_{e}\hat{z}\times\nabla_{t}E_{z}
+        \end{empheq}
+      \end{column}
+    \end{columns}
 
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{导波场的分析}
@@ -658,4 +807,5 @@
 \begin{frame}{导行波的一般传输特性}
 
 \end{frame}
+
 \end{document}
