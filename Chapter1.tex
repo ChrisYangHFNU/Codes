@@ -5,6 +5,9 @@
 \usepackage{mathtools}
 \usepackage{multirow,booktabs}
 \usepackage{tikz}
+%\addtobeamertemplate{block begin}{%
+%\setlength{\textwidth}{0.9\textwidth}%
+%}{}
 \usetikzlibrary{positioning}
 \usetikzlibrary{calc}
 \usepackage{tcolorbox}
@@ -266,7 +269,7 @@
     \end{column}
     \hfill
     \begin{column}{0.65\linewidth}
-      \includegraphics[width=4.5cm]{faradayexperiment.jpg}
+      \includegraphics[width=5cm]{faradayexperiment.jpg}
       \begin{itemize}
         \item 英国物理学家、化学家
         \item 1831年发现电磁感应
@@ -417,8 +420,8 @@
     \saveenum
   \end{enumerate}
   \begin{columns}
-    \begin{column}{0.43\linewidth}
-      \begin{tcolorbox}[colback=green!5,colframe=green!40!black,title=微波与超短波、短波比较]
+    \begin{column}{0.44\linewidth}
+      \begin{tcolorbox}[colback=blue!5,colframe=blue!40!black,title=微波与超短波、短波比较]
         微波与超短波、短波相比较大大扩展了通讯通道，开辟了微波通讯和卫星通讯。
       \end{tcolorbox}
     \end{column}
@@ -708,7 +711,7 @@
     \begin{empheq}[box=\widefbox]{align*}
       Z(z)=A_{1}exp(-j\beta z)+A_{2}exp(j\beta z)
     \end{empheq}
-    规则导行系统中沿正$z$方向传播的导波纵向场分量\\
+    \textbf{规则导行系统中沿正$z$方向传播的导波纵向场分量}\\
     \begin{align*}
       E_{z}(t,z)=E_{0z}(t)exp(-j\beta z)\\
       H_{z}(t,z)=H_{0z}(t)exp(-j\beta z)
@@ -760,32 +763,38 @@
   \begin{enumerate}
     \resume
     \item 导波的种类\\
-    横磁波（TM）或电（E）波——
-    \begin{empheq}[box=\widefbox]{align*}
-      H_{z}=0
-    \end{empheq}
-    \begin{columns}
-      \begin{column}{0.4\linewidth}
-        \begin{empheq}[box=\widefbox]{align*}
-          \vec{E}_{t}^{e}=\frac{-j\beta}{k_{c}^{2}}\nabla_{t}E_{z}
-        \end{empheq}
-      \end{column}
-      \begin{column}{0.6\linewidth}
-        \begin{empheq}[box=\widefbox]{align*}
-          \vec{H}_{t}^{e}=\frac{-j\beta}{k_{c}^{2}}Y_{e}\hat{z}\times\nabla_{t}E_{z}
-        \end{empheq}
-      \end{column}
-    \end{columns}
-
+    \begin{block}{横磁波（TM）或电（E）波——$H_{z}=0$}
+      \begin{empheq}[box=\widefbox]{align*}
+        \vec{E}_{t}^{e}=\frac{-j\beta}{k_{c}^{2}}\nabla_{t}E_{z}\qquad
+        \vec{H}_{t}^{e}=\frac{-j\beta}{k_{c}^{2}}Y_{e}\hat{z}\times\nabla_{t}E_{z}
+      \end{empheq}
+    \end{block}
+    \begin{block}{横电波（TE）或磁（H）波——$E_{z}=0$}
+      \begin{empheq}[box=\widefbox]{align*}
+        \vec{E}_{t}^{h}=\frac{-j\beta}{k_{c}^{2}}Z_{h}\nabla_{t}H_{z}\times\hat{z}\qquad
+        \vec{H}_{t}^{h}=\frac{-j\beta}{k_{c}^{2}}\nabla_{t}H_{z}
+      \end{empheq}
+    \end{block}
+    导行系统横向为调谐（振动）解形式$k_{c}^{2}>0$,$k^{2}>\beta^{2}$;$\beta=k\cdot\sqrt{1-\left(\frac{k_{c}}{k}\right)^{2}}$ 相速$v_{p}>c/\sqrt{\epsilon_{r}}$快波，有色散性，且需满足$k_{c}<k$才能传播。
   \end{enumerate}
 \end{frame}
 
 \begin{frame}{导波场的分析}
-
+  \begin{block}{横电磁波（TEM）——$E_{z}=H_{z}=0$}
+    %\begin{flalign*}
+      $$ \because E_{t}\neq 0,H_{t}\neq 0 $$
+    %\end{flalign*}
+    以及
+    \begin{align*}
+      & \vec{E}_{t}=\frac{-j\beta}{k_{c}^{2}}[\nabla_{t}E_{z}+Z_{h}\nabla_{t}H_{z}\times\hat{z}]\\
+      & \vec{H}_{t}=\frac{-j\beta}{k_{c}^{2}}[\nabla_{t}H_{z}+Y_{e}\hat{z}\times\nabla_{t}E_{z}]
+    \end{align*}
+    $$\left(\frac{0}{0}\right)形式\Longrightarrow k_{c}=0 \qquad k^{2}=k_{c}^{2}+\beta^{2}\Longrightarrow \beta=k $$
+  \end{block}
 \end{frame}
 
 \begin{frame}{导波场的分析}
-
+  又由$\nabla_{t}\times\vec{E}_{t}=-j\omega\mu\hat{z}H_{z}$\qquad$\nabla_{t}\times\vec{H}_{t}=j\omega\epsilon\hat{z}E_{z}$
 \end{frame}
 
 \begin{frame}{导波场的分析}
