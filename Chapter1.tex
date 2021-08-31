@@ -789,20 +789,62 @@
       & \vec{E}_{t}=\frac{-j\beta}{k_{c}^{2}}[\nabla_{t}E_{z}+Z_{h}\nabla_{t}H_{z}\times\hat{z}]\\
       & \vec{H}_{t}=\frac{-j\beta}{k_{c}^{2}}[\nabla_{t}H_{z}+Y_{e}\hat{z}\times\nabla_{t}E_{z}]
     \end{align*}
-    $$\left(\frac{0}{0}\right)形式\Longrightarrow k_{c}=0 \qquad k^{2}=k_{c}^{2}+\beta^{2}\Longrightarrow \beta=k $$
+    $$\left(\frac{0}{0}\right)\text{形式}\Longrightarrow k_{c}=0 \qquad k^{2}=k_{c}^{2}+\beta^{2}\Longrightarrow \beta=k $$
   \end{block}
 \end{frame}
 
 \begin{frame}{导波场的分析}
   又由$\nabla_{t}\times\vec{E}_{t}=-j\omega\mu\hat{z}H_{z}$\qquad$\nabla_{t}\times\vec{H}_{t}=j\omega\epsilon\hat{z}E_{z}$
+  \begin{empheq}[box=\widefbox]{align*}
+    \nabla_{t}\times\vec{E}_{t}^{0}=0 \qquad \nabla_{t}\times\vec{H}_{t}^{0}=0
+  \end{empheq}
+  $$\nabla_{t}\times\hat{z}E_{z}+\hat{z}\times\frac{\partial\vec{E}_{t}}{\partial z}=-j\omega\mu\vec{H}_{t} \qquad \nabla_{t}\times\hat{z}H_{z}+\hat{z}\times\frac{\partial\vec{H}_{t}}{\partial z}=j\omega\epsilon\vec{E}_{t} $$
+  \begin{columns}
+    \begin{column}{0.2\linewidth}
+      \begin{empheq}[box=\widefbox]{align*}
+        & \frac{\partial}{\partial z}=-j\beta \\ & k=\omega\sqrt(\mu\epsilon)
+      \end{empheq}
+    \end{column}
+    \begin{column}{0.75\linewidth}
+      \begin{empheq}[box=\widefbox]{align*}
+        \vec{E}_{t}^{0}\times \hat{z}=-\eta\vec{H}_{t}^{0} \qquad \eta\vec{H}_{t}^{0}\times\hat{z}=\vec{E}_{t}^{0}\quad \text{TEM波}
+      \end{empheq}
+    \end{column}
+  \end{columns}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      固有阻抗$\eta=\sqrt(\mu/\epsilon)\text{且}$
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      \begin{empheq}[box=\widefbox]{align*}
+        \nabla_{t}^{2}\vec{E}_{0t}^{0}(t)=0 \quad \nabla_{t}^{2}\vec{H}_{0t}^{0}(t)=0
+      \end{empheq}
+    \end{column}
+  \end{columns}
+  TEM的导波场与静态场相同，存在于导体之间，或由双导体或多导体构成的导行系统（传输线）中，故又称为传输线模式；导波的相速、群速与无耗媒质平面波相同，无色散现象。
 \end{frame}
 
 \begin{frame}{导波场的分析}
-
+  混合波\quad——\quad\fbox{$k_{c}^{2}<0$}\\导行系统横向为衰减解形式，场被束缚在导行系统表面——表面波可存在于电抗壁导行系统中，例如：介质波导、光纤等。
+  \begin{empheq}[box=\widefbox]{align*}
+    k^{2}<\beta^{2}\rightarrow v_{p}<c/\sqrt{\epsilon_{r}}
+  \end{empheq}
+  \textbf{称为慢波,且需满足$k_{c}<k$才能传播}
 \end{frame}
 
 \begin{frame}{导行波的一般传输特性}
-
+  \begin{enumerate}
+    \item \textbf{导模的截止波长与传输条件}\\
+    导行系统中某导模无衰减能传播的最大波长——\textbf{截止波长}$\lambda_{c}$ \\
+    导行系统中某导模无衰减能传播的最小频率——\textbf{截止频率}$f_{c}$ \\
+    导波的传播常数\quad \widefbox{$\beta=k\sqrt{1-(k_{c}/k)^{2}}$} \\
+    为虚数时，导模不能传播。\\
+    当$k^{2}=\omega^{2}\mu\epsilon=k_{c}^{2}$时$\beta=0$,导模截止。\\
+    对应的截止频率\quad$\Longrightarrow$\quad $\omega\sqrt{\mu\epsilon}=k_{c}$ \\
+    截止频率：\widefbox{$f_{c}=\frac{k_{c}}{2\pi\sqrt{\mu\epsilon}}$}\\
+    截止波长：\widefbox{$\lambda_{c}=\frac{2\pi}{k_{c}}$}
+    \saveenum
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{导行波的一般传输特性}
