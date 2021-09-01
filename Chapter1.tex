@@ -326,7 +326,52 @@
 
 \subsection{1\quad 微波及其特点}
 \begin{frame}{微波及其特点}
-  电磁波按波长（或频率）划分，则大致可以把$300MHz - 3000GHz$,（对应空气中波长$\lambda$是$1m - 0.1mm$）这一频段的电磁波称之为微波。它处于超短波和红外光波之间。
+  \begin{columns}
+    \begin{column}{0.3\linewidth}
+      %\begin{itemize}
+        电磁波按波长（或频率）划分，则大致可以把$300MHz - 3000GHz$,（对应空气中波长$\lambda$是$1m - 0.1mm$）这一频段的电磁波称之为微波。它处于超短波和红外光波之间。
+      %\end{itemize}
+    \end{column}
+    \begin{column}{0.7\linewidth}
+      \tikzset{twoline/.style={align=center,execute at begin node=\setlength{\baselineskip}{0.5em}}}
+      \begin{tikzpicture}
+      	% define visible spectrum shading
+      	\pgfdeclareverticalshading{visible}{100bp}
+      	{color(0bp)=(violet!70); color(25bp)=(violet!70); color(35bp)=(blue!70);
+      		color(45bp)=(green!70); color(55bp)=(yellow!70); color(65bp)=(orange);
+      		color(75bp)=(red!70); color(100bp)=(red!70)}
+      	% grayish background for spectrum labels
+      	\draw[gray!15,fill] (-1,0) rectangle (1,7.5);
+      	% axes
+      	\draw (-1,0) -- (-1,7.5) (1,0) -- (1,7.5);
+      	\node at (-2,7.7) {wavelength};
+      	\node at (2,7.7) {frequency};
+      	% spectrum labels
+      	\shade[shading=visible] (-1,4.2) rectangle (1,5.6);
+      	\foreach \x/\xlabel in {1.9/{radio waves}, -1.8/{microwaves}, -4.6/{infrared}, -6.35/{visible light}, -7.8/{ultraviolet}, -11/{X-rays}, -14.8/{$\gamma$-rays} } \node at (0,{\x*0.35+5.6}) {\xlabel};
+      	% values of wavelengths
+      	\foreach \x in {5,3,1,...,-15} {
+      		\draw (-1,{\x*0.35+5.6}) --++ (-0.5,0);
+      		\node at (-2,{\x*0.35+5.6}) {$10^{\x}$ m};
+      	}
+      	% values of frequencies
+      	\foreach \x in {3,5,...,23} {
+      		\draw (1,{-\x*0.35+8.25}) --++ (0.5,0);
+      		\node at (2,{-\x*0.35+8.25}) {$10^{\x}$ Hz};
+      	}
+      	% dashed lines as separators
+      	\foreach \x in {0,-4,-9,-13} \draw[dashed,thick] (-1,{\x*0.35+5.6}) --++ (2,0);
+      	% extension for visible spectrum
+      	\draw[thick, gray!75] (1,4.2) --++ (1.6,0) -- (3.1,3.2);
+      	\draw[thick, gray!75] (1,5.6) --++ (1.6,0) -- (3.1,6.6);
+      	\shade[shading=visible] (3.1,3.2) rectangle (3.8,6.6);
+      	\node at (3.5, 6.8) {1 m};
+        \node at (3.5, 3.0) {0.1 mm};
+      	%\node[right] at (3.5, 6.4) {1 m};
+      	%\node[right] at (3.5, 3.4) {0.1 mm};
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{微波波段的划分}
@@ -344,7 +389,7 @@
      U & 0.6 & 40-60 & 0.75-0.5 \\
      V & 0.4 & 60-80 & 0.5-0.375 \\
      W & 0.3 & 80-100 & 0.375-0.3 \\
-     \bottomrule
+    \bottomrule
   \end{tabular}
 \end{frame}
 
@@ -379,6 +424,8 @@
 \end{frame}
 
 \begin{frame}{Maxwell方程组的物理意义}
+\begin{itemize}
+  \item Maxwell方程还指出:电磁转化有一个重要条件，即频率$\omega$。只有较高的$\omega$才能确保电磁的有效转换，直流情况没有转换。可以这样说，在高频封闭电路才有可能变成开放电路。不过很有意思的是频率越高，越难输出功率，这也是一个有趣的矛盾。
   \begin{columns}
     \begin{column}{0.4\linewidth}
       \begin{align*}
@@ -387,11 +434,9 @@
       \end{align*}
     \end{column}
     \begin{column}{0.6\linewidth}
-      \textbf{单色波}频域的$Maxwell$方程
+      \textbf{单色波}频域的Maxwell方程
     \end{column}
   \end{columns}
-\begin{itemize}
-  \item $Maxwell$方程还指出:电磁转化有一个重要条件，即频率$\omega$。只有较高的$\omega$才能确保电磁的有效转换，直流情况没有转换。可以这样说，在高频封闭电路才有可能变成开放电路。不过很有意思的是频率越高，越难输出功率，这也是一个有趣的矛盾。
 \end{itemize}
 \end{frame}
 
@@ -841,22 +886,106 @@
     为虚数时，导模不能传播。\\
     当$k^{2}=\omega^{2}\mu\epsilon=k_{c}^{2}$时$\beta=0$,导模截止。\\
     对应的截止频率\quad$\Longrightarrow$\quad $\omega\sqrt{\mu\epsilon}=k_{c}$ \\
-    截止频率：\widefbox{$f_{c}=\frac{k_{c}}{2\pi\sqrt{\mu\epsilon}}$}\\
-    截止波长：\widefbox{$\lambda_{c}=\frac{2\pi}{k_{c}}$}
+    \begin{empheq}[box=\widefbox]{align*}
+      & \textbf{截止频率：}f_{c}=\frac{k_{c}}{2\pi\sqrt{\mu\epsilon}}\\
+      & \textbf{截止波长：}\lambda_{c}=\frac{2\pi}{k_{c}}
+    \end{empheq}
+    \saveenum
+  \end{enumerate}
+\end{frame}
+
+\begin{comment}
+\begin{frame}{导行波的一般传输特性}
+  \begin{enumerate}
+    \resume
+    \item \textbf{相速度和群速度}\\
+    相速度：导模等相位面移动速度——平面波相速$v=c/\sqrt{\epsilon_{r}}$
+    \begin{empheq}[box=\widefbox]{align*}
+      v_{p}=\frac{\omega}{\beta}=\frac{\omega}{k}\frac{1}{\sqrt{1-(k_{c}/k)^{2}}=\frac{v}{\sqrt{1-(\lamba/\lambda_{c})^{2}}}=\frac{v}{G}
+    \end{empheq}
+  \end{enumerate}
+\end{frame}
+\end{comment}
+
+\begin{frame}{导行波的一般传输特性}
+  \begin{enumerate}
+    \resume
+    \item \textbf{相速度和群速度}\\
+    相速度：导模等相位面移动速度
+    \begin{empheq}[box=\widefbox]{align*}
+      & v_{p}=\frac{\omega}{\beta}=\frac{\omega}{k}
+      \frac{1}{\sqrt{1-(k_{c}/k)^{2}}}
+      =\frac{v}{\sqrt{1-(\lambda/\lambda_{c})^{2}}}=\frac{v}{G}\\
+      & \text{平面波在介质中光速:}v=c/\sqrt{\epsilon_{r}}\\
+      & \text{色散因子:}G=\sqrt{1-(\lambda/\lambda_{c})^{2}}
+    \end{empheq}
+    群速度：波包移动速度或窄带信号移送速度
+    \begin{empheq}[box=\widefbox]{align*}
+      v_{g}=\frac{d\omega}{d\beta}=v\sqrt{1-(\lambda/\lambda_{c})^{2}}=vG
+    \end{empheq}
+    \begin{empheq}[box=\widefbox]{align*}
+      v_{p}\cdot v_{g}=v^{2}
+    \end{empheq}
     \saveenum
   \end{enumerate}
 \end{frame}
 
 \begin{frame}{导行波的一般传输特性}
-
+  \begin{enumerate}
+    \resume
+    \item \textbf{波导波长}\\
+    导行系统中导模相邻同相位面之间距离，或者相位差2$\pi$的相位面之间的距离。\\
+    \begin{empheq}[box=\widefbox]{align*}
+      \lambda_{g}=\frac{2\pi}{\beta}=\frac{\lambda}{\sqrt{1-(\lambda/\lambda_{c})^{2}}}
+    \end{empheq}
+    \item \textbf{波阻抗}\\
+    导模的横向电场和横向磁场之比\\
+    \begin{empheq}[box=\widefbox]{align*}
+      & Z_{TE}=\frac{E_{u}}{H_{v}}=\frac{-E_{v}}{H_{u}}=\frac{\omega\mu}{\beta}=\frac{\eta}{\sqrt{1-(\lambda/\lambda_{c})^{2}}}\\
+      & Z_{TM}=\frac{E_{u}}{H_{v}}=\frac{-E_{v}}{H_{u}}=\frac{\beta}{\omega\mu}=\eta\sqrt{1-(\lambda/\lambda_{c})^{2}}
+    \end{empheq}
+    $ \text{波阻抗：}\eta=\sqrt{\mu/\epsilon}\quad \text{自由空间：}\eta_{0}=\sqrt{\mu_{0}/\epsilon_{0}}=377\Omega $
+    \saveenum
+    \end{enumerate}
 \end{frame}
 
 \begin{frame}{导行波的一般传输特性}
-
+  \begin{enumerate}
+    \resume
+    \item \textbf{功率流}\\
+    沿无耗规则导行系统$+z$方向传输的导波时间平均功率
+    \begin{align*}
+      P & =\frac{1}{2}Re\int_{S}\vec{E}\times\vec{H}^{*}\cdot d\vec{S}\\
+        & =\frac{1}{2}Re\int_{S}[(\vec{E}_{0t}+\vec{E}_{0z})e^{j\omega t-\gamma z}]\\
+        & \qquad\qquad\times[(\vec{H}_{0t}^{*}+\vec{H}_{0z}^{*})e^{-j\omega t-\gamma^{*} z}]\cdot \hat{z}dS\\
+        & =\frac{1}{2}Re\int_{S}\vec{E}_{0t}\times\vec{H}_{0t}^{*}\cdot \hat{z}dS
+    \end{align*}
+    \begin{columns}
+      \begin{column}{0.85\linewidth}
+        \begin{empheq}[box=\widefbox]{align*}
+          P=\left\{
+          \begin{aligned}
+            1/Z_{TEM}\\
+            1/Z_{TE}\\
+            1/Z_{TM}
+          \end{aligned}
+          \right\}\frac{1}{2}\int_{S}[\lvert \vec{E}_{0u}(u,v)\rvert^{2}+\lvert \vec{E}_{0v}(u,v)\rvert^{2}]dS
+        \end{empheq}
+      \end{column}
+      \begin{column}{0.1\linewidth}
+        \begin{empheq}[box=\widefbox]{align*}
+          \textbf{TEM}\\
+          \textbf{TE}\\
+          \textbf{TM}
+        \end{empheq}
+      \end{column}
+    \end{columns}
+  \end{enumerate}
 \end{frame}
 
-\begin{frame}{导行波的一般传输特性}
-
+\begin{frame}
+  \centering
+  \Huge{谢谢！}
 \end{frame}
 
 \end{document}
