@@ -8,8 +8,10 @@
 %\addtobeamertemplate{block begin}{%
 %\setlength{\textwidth}{0.9\textwidth}%
 %}{}
-\usetikzlibrary{positioning}
-\usetikzlibrary{calc}
+\usetikzlibrary{calc,positioning,shapes.misc}
+\usetikzlibrary{arrows.meta,graphs,graphdrawing}
+%\usetikzlibrary{calc}
+\usegdlibrary{layered}
 \usepackage{tcolorbox}
 \usepackage{empheq}
 \newcommand*\widefbox[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
@@ -613,30 +615,31 @@
 \end{frame}
 
 \subsection{2\quad 微波的应用}
-\begin{frame}{微波技术的应用}
-  \begin{tikzpicture}
-    \node[draw,
-    %fill=blue,
-    minimum width=2cm,
-    minimum height=1.2cm]
-    (sum) at (0,0){微波应用};
-  \end{tikzpicture}
-\end{frame}
-
-\begin{frame}{微波技术的发展}
-
+\begin{frame}{微波技术的应用及发展}
+  \begin{itemize}
+    \item 微波技术的应用\\
+    \tikz [nodes={text height=.7em,text depth=.2em,draw=black!20,thick,fill=white},>={Stealth[round,sep]},rounded corners,semithick]
+    \graph [layered layout,level distance=1cm,sibling sep=.5em,sibling distance=1cm]{
+    微波应用 -> {雷达,通信,科学研究,生物医药,微波能};
+    };
+    \item 微波技术的发展\\
+    \tikz [nodes={text height=.7em,text depth=.2em,draw=black!20,thick,fill=white},>={Stealth[round,sep]},rounded corners,semithick]
+    \graph [layered layout,level distance=1cm,sibling sep=.5em,sibling distance=1cm]{
+    发展方向 -> {工作频段向高频段发展,小型化宽带化,自动化智能化};
+    };
+  \end{itemize}
 \end{frame}
 
 \subsection{3\quad 本课程内容}
 \begin{frame}{本课程内容}
   \begin{columns}
-    \begin{column}{0.15\linewidth}
+    \begin{column}{0.2\linewidth}
       \begin{enumerate}
         \item 引论
         \saveenum
       \end{enumerate}
     \end{column}
-    \begin{column}{0.35\linewidth}
+    \begin{column}{0.3\linewidth}
       \textcolor{blue}{均匀传输线和波导理论基础}\\
       \textcolor{blue}{微波电路元件}
     \end{column}
@@ -657,7 +660,28 @@
 \end{frame}
 
 \begin{frame}{微波技术的研究方法}
-
+  \begin{tikzpicture}[
+    terminal/.style={
+    % The shape:
+    rectangle,
+    % The size:
+    minimum size=6mm,
+    % The border:
+    very thick,
+    %draw=red!50!black!50, % 50% red and 50% black,
+                          % and that mixed with 50% white
+    draw=black!10,
+    % The filling:
+    %top color=white,      % a shading that is white at the top...
+    %bottom color=red!50!black!20, % and something else at the bottom
+    fill=white,
+    % Fonts
+    font=\itshape}]
+    \node (W) [terminal]                                         {研究方法基本内容};
+    \node (N) [terminal,above right=of W,xshift=0mm,yshift=4mm]  {麦克斯韦方程};
+    \node (S) [terminal,below right=of W,xshift=0mm,yshift=-4mm] {基尔霍夫定律};
+    \node (E) [terminal,below right=of N,xshift=0mm,yshift=-4mm] {场与路相结合};
+  \end{tikzpicture}
 \end{frame}
 
 \subsection{4\quad 导行波及其传输特性}
