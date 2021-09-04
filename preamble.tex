@@ -1,0 +1,23 @@
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{multirow,booktabs}
+\usepackage{tikz}
+%\addtobeamertemplate{block begin}{%
+%\setlength{\textwidth}{0.9\textwidth}%
+%}{}
+\usetikzlibrary{calc,positioning,shapes.misc}
+\usetikzlibrary{arrows.meta,graphs,graphdrawing}
+%\usetikzlibrary{calc}
+\usegdlibrary{layered}
+\usepackage{tcolorbox}
+\usepackage{empheq}
+\newcommand*\widefbox[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
+%\usetheme{PaloAlto}
+%\usetheme{CambridgeUS}
+\usetheme{Berkeley}
+\logo{\includegraphics[width=1.55cm,height=1.55cm]{logo.jpg}}
+\newcounter{savedenum}
+\newcommand*{\saveenum}{\setcounter{savedenum}{\theenumi}}
+\newcommand*{\resume}{\setcounter{enumi}{\thesavedenum}}
