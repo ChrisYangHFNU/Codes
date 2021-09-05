@@ -1,12 +1,4 @@
 \section{第一章\quad 引论}
-\begin{frame}{第一章\quad 引论}
- \begin{enumerate}
-  \item 微波及其特点
-  \item 微波的应用
-  \item 本书的内容框图
-  \item 导行波及其一般的传输特性
- \end{enumerate}
-\end{frame}
 
 \begin{frame}{近代通信技术的发展}
  \begin{columns}
@@ -266,7 +258,7 @@
  \end{columns}
 \end{frame}
 
-\begin{frame}{无线电波的发明}
+\begin{frame}{无线电报的发明}
  \begin{columns}
   \begin{column}{0.35\linewidth}
    \begin{figure}
@@ -345,7 +337,7 @@
  \end{columns}
 \end{frame}
 
-\subsection{1\quad 微波及其特点}
+\subsection{微波及其特点}
 \begin{frame}{微波及其特点}
  \begin{columns}
   \begin{column}{0.3\linewidth}
@@ -533,7 +525,7 @@
  \end{enumerate}
 \end{frame}
 
-\subsection{2\quad 微波的应用}
+\subsection{微波的应用}
 \begin{frame}{微波技术的应用及发展}
  \begin{itemize}
   \item 微波技术的应用\\
@@ -549,7 +541,7 @@
  \end{itemize}
 \end{frame}
 
-\subsection{3\quad 本课程内容}
+\subsection{本课程内容}
 \begin{frame}{本课程内容}
  \begin{columns}
   \begin{column}{0.2\linewidth}
@@ -584,26 +576,31 @@
      % The shape:
      rectangle,
      % The size:
-     minimum size=6mm,
+     minimum size = 4mm,
      % The border:
      very thick,
      %draw=red!50!black!50, % 50% red and 50% black,
      % and that mixed with 50% white
-     draw=black!10,
+     draw=blue!50,
      % The filling:
      %top color=white,      % a shading that is white at the top...
      %bottom color=red!50!black!20, % and something else at the bottom
      fill=white,
      % Fonts
      font=\itshape}]
+
   \node (W) [terminal]                                         {研究方法基本内容};
   \node (N) [terminal,above right=of W,xshift=0mm,yshift=4mm]  {麦克斯韦方程};
   \node (S) [terminal,below right=of W,xshift=0mm,yshift=-4mm] {基尔霍夫定律};
   \node (E) [terminal,below right=of N,xshift=0mm,yshift=-4mm] {场与路相结合};
+  \draw [->] (W.north) .. controls +(up:10mm) and +(left:10mm) .. node[swap]{场} (N.west);
+  \draw [->] (W.south) .. controls +(down:10mm) and +(left:10mm) .. node[swap]{路}(S.west);
+  \draw [->] (N.east) .. controls +(right:10mm) and +(up:10mm) .. (E.north);
+  \draw [->] (S.east) .. controls +(right:10mm) and +(down:10mm) .. (E.south);
  \end{tikzpicture}
 \end{frame}
 
-\subsection{4\quad 导行波及其传输特性}
+\subsection{导行波及其传输特性}
 \begin{frame}{基本概念}
  \begin{enumerate}
   \item \textbf{导行系统(Guided system)}
@@ -1027,9 +1024,4 @@
          \end{column}
         \end{columns}
  \end{enumerate}
-\end{frame}
-
-\begin{frame}
- \centering
- \Huge{谢谢！}
 \end{frame}
