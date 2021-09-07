@@ -655,8 +655,8 @@
   \begin{column}{0.5\linewidth}
    \begin{empheq}[box=\widefbox]{align*}
     &\nabla\times\vec E=-\frac{\partial \vec B}{\partial t}\\
-    &\nabla\times\vec H=\vec{J} +\frac{\partial \vec D}{\partial t}\\
-    &\nabla\cdot\vec{D}=\rho\\
+    &\nabla\times\vec H=\frac{\partial \vec D}{\partial t}\\
+    &\nabla\cdot\vec{D}=0\\
     &\nabla\cdot\vec{B}=0
    \end{empheq}
    设导波沿$z$向传播，坐标$z$与横向坐标无关
@@ -715,7 +715,7 @@
   \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}} \right)\vec{E_{t}}=\frac{\partial}{\partial z}\nabla_{t}E_{z}-j\omega\mu\nabla_{t}\times\hat{z}H_{z}
  \end{empheq}
  \begin{empheq}[box=\widefbox]{align*}
-  \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}} \right)\vec{H_{t}}=\frac{\partial}{\partial z}\nabla_{t}H_{z}-j\omega\epsilon\nabla_{t}\times\hat{z}E_{z}
+  \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}} \right)\vec{H_{t}}=\frac{\partial}{\partial z}\nabla_{t}H_{z}+j\omega\epsilon\nabla_{t}\times\hat{z}E_{z}
  \end{empheq}
  在规则导行系统中，导波场的\textbf{横向分量}可用\textbf{纵向分量}完全确定。\\上面公式中$k^{2}=\omega^{2}\mu\epsilon$
 \end{frame}
@@ -839,8 +839,8 @@
   \resume
   \item 横-纵向场的关系
         \begin{empheq}[box=\widefbox]{align*}
-         \left( k^{2}+\frac{\partial_{2}}{\partial z^{2}}\right)\vec{E}_{t}=\frac{\partial}{\partial z}\nabla_{t}E_{z}-j\omega\mu\nabla_{t}\times\hat{z}H_{z}\\
-         \left( k^{2}+\frac{\partial_{2}}{\partial z^{2}}\right)\vec{H}_{t}=\frac{\partial}{\partial z}\nabla_{t}H_{z}-j\omega\epsilon\nabla_{t}\times\hat{z}E_{z}
+         \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}}\right)\vec{E}_{t}=\frac{\partial}{\partial z}\nabla_{t}E_{z}-j\omega\mu\nabla_{t}\times\hat{z}H_{z}\\
+         \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}}\right)\vec{H}_{t}=\frac{\partial}{\partial z}\nabla_{t}H_{z}+j\omega\epsilon\nabla_{t}\times\hat{z}E_{z}
         \end{empheq}
         \begin{columns}
          \begin{column}{0.6\linewidth}
@@ -876,7 +876,7 @@
           \vec{H}_{t}^{h}=\frac{-j\beta}{k_{c}^{2}}\nabla_{t}H_{z}
          \end{empheq}
         \end{block}
-        导行系统横向为调谐（振动）解形式$k_{c}^{2}>0$,$k^{2}>\beta^{2}$;$\beta=k\cdot\sqrt{1-\left(\frac{k_{c}}{k}\right)^{2}}$ 相速$v_{p}>c/\sqrt{\epsilon_{r}}$快波，有色散性，且需满足$k_{c}<k$才能传播。
+        导行系统横向为调谐（振动）解形式$k_{c}^{2}>0$,$k^{2}>\beta^{2}$;$\beta=k\cdot\sqrt{1-\left(k_{c}/k\right)^{2}}$ 相速$v_{p}>c/\sqrt{\epsilon_{r}}$快波，有色散性，且需满足$k_{c}<k$才能传播。
  \end{enumerate}
 \end{frame}
 
