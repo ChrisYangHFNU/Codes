@@ -243,8 +243,8 @@
     \end{bmatrix}
     =
     \begin{bmatrix}
-      ch\gamma d & Z_{0}sh\gamma d\\
-      Z_{0}^{-1}sh\gamma d & ch\gamma d
+      \cosh\gamma d & Z_{0}\sinh\gamma d\\
+      Z_{0}^{-1}\sinh\gamma d & \cosh\gamma d
     \end{bmatrix}
     \begin{bmatrix}
       V_{L}\\I_{L}
@@ -279,12 +279,12 @@
   \end{empheq}
   \begin{align*}
     \begin{bmatrix}
-      V(d)\\I(d)
+      V(z)\\I(z)
     \end{bmatrix}
     =
     \begin{bmatrix}
-      ch\gamma z & -Z_{0}sh\gamma z\\
-      -Z_{0}^{-1}sh\gamma z & ch\gamma z
+      \cosh\gamma z & -Z_{0}\sinh\gamma z\\
+      -Z_{0}^{-1}\sinh\gamma z & \cosh\gamma z
     \end{bmatrix}
     \begin{bmatrix}
       V_{0}\\I_{0}
@@ -695,8 +695,73 @@
 \end{frame}
 
 \subsection{无耗线工作状态分析}
-\begin{frame}{无耗线工作状态分析}
+\begin{frame}{无耗线工作状态}
+  任何传输线上的电压函数只可能是入射波和反射波的迭加（构成Standing Wave）。不同传输线的区别仅仅在于入射波和反射波的成分不同。换句话说，通解是完备的，我们不需要再找，也不可能再找到其他解。\\
+  边界条件确定$A_{1}$和$A_{2}$。边界条件的求取过程中，也孕育着一种思想，即网络思想(Network Idea)：已知输入求输出；或已知输出求输入。
+\end{frame}
 
+\begin{frame}{无耗线工作状态}
+  \begin{empheq}[box=\widefbox]{align*}
+    V(z)=A_{1}e^{-j\beta z}+A_{2}e^{+j\beta z}
+  \end{empheq}
+  \begin{empheq}[box=\widefbox]{align*}
+    V(d) & =\frac{1}{2}(V_{L}+Z_{0}I_{L})e^{j\beta d}+\frac{1}{2}(V_{L}-Z_{0}I_{L})e^{-j\beta d}\\
+    & =V^{+}(d)+V^{-}(d)
+  \end{empheq}
+  \begin{empheq}[box=\widefbox]{align*}
+    I(z)=\frac{1}{Z_{0}}(A_{1}e^{-j\beta z}+A_{2}e^{+j\beta z})
+  \end{empheq}
+  \begin{empheq}[box=\widefbox]{align*}
+    I(d) & =\frac{1}{2Z_{0}}(V_{L}+Z_{0}I_{L})e^{j\beta d}-\frac{1}{2Z_{0}}(V_{L}-Z_{0}I_{L})e^{-j\beta d}\\
+    & =I^{+}(d)+I^{-}(d)
+  \end{empheq}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \begin{itemize}
+    \item 传输线上反射波的大小，可用反射系数的模、驻波比和行波系数三个参量来描述。\\
+    \begin{columns}
+      \begin{column}{0.5\linewidth}
+        反射系数模的变化范围为\\
+        驻波比的变化范围为\\
+        行波系数的变化范围为
+      \end{column}
+      \begin{column}{0.3\linewidth}
+        \fbox{$0\leq\lvert\Gamma\rvert\leq 1$}\\
+        \fbox{$1\leq\rho\leq\infty$}\\
+        \fbox{$0\leq K\leq 1$}
+      \end{column}
+    \end{columns}
+    \item 传输线的工作状态一般分为三种：\\
+    (1)行波状态 \qquad $\lvert\Gamma\rvert=0,\rho=1,K=1$ \\
+    (2)行驻波状态\quad $0<\lvert\Gamma\rvert<1 \quad 1<\rho<\infty \quad 0<K<1$\\
+    (3)驻波状态 \qquad $\lvert\Gamma\rvert=1 \quad \rho=\infty \quad K=0$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \begin{enumerate}
+    \item \textbf{行波状态（无反射情况）}
+    \begin{columns}
+      \begin{column}{0.4\linewidth}
+        条件：\\
+        $Z_{L}=Z_{0}\rightarrow$\\
+        $\Gamma_{L}=0,\rho=1,K=1$
+      \end{column}
+      \begin{column}{0.6\linewidth}
+        \begin{empheq}[box=\widefbox]{align*}
+          \Gamma_{L}=\frac{A_{2}}{A_{1}}=\frac{Z_{L}-Z_{0}}{Z_{L}+Z_{0}}\\
+          =\left\lvert\frac{Z_{L}-Z_{0}}{Z_{L}+Z_{0}}\right\rvert e^{j\Phi_{L}}=\lvert\Gamma_{L}\rvert e^{j\Phi_{L}}
+        \end{empheq}
+      \end{column}
+    \end{columns}
+    由始端条件解
+    \begin{empheq}[box=\widefbox]{align*}
+      V(z)=\frac{V_{0}+I_{0}Z_{0}}{2}e^{-j\beta z}=V_{0}^{+}e^{-j\beta z}\\
+      I(z)=\frac{V_{0}+I_{0}Z_{0}}{2Z_{0}}e^{-j\beta z}=I_{0}^{+}e^{-j\beta z}
+    \end{empheq}
+    \saveenum
+  \end{enumerate}
 \end{frame}
 
 \subsection{有耗线的特性与计算}
