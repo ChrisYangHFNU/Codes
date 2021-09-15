@@ -764,6 +764,89 @@
   \end{enumerate}
 \end{frame}
 
+\begin{frame}{无耗线工作状态}
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      \begin{empheq}[box=\widefbox]{align*}
+        v(z,t)=\lvert V_{0}^{+}\rvert\cos(\omega t-\phi_{0}-\beta z)\\
+        i(z,t)=\lvert I_{0}^{+}\rvert\cos(\omega t-\phi_{0}-\beta z)
+      \end{empheq}
+      $\phi_{0}$为初相角，行波状态下的分布规律：\\
+      (1)线上电压和电流的振幅恒定不变\\
+      (2)电压行波与电流行波同相，它们的相位是位置$z$和时间$t$的函数，$v(z,t)$和$i(z,t)$初相均为$\phi_{0}$，因为$Z_{0}$是实数\\
+      (3)线上的输入阻抗处处相等，且均等于特性阻抗
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      \includegraphics[width=5cm]{xingbo.png}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \begin{enumerate}
+    \resume
+    \item \textbf{驻波状态（全反射情况)}
+    \saveenum
+  \end{enumerate}
+  反射系数模等于1的全反射情况称为驻波状态。
+  \begin{empheq}[box=\widefbox]{align*}
+    \Gamma_{L}=\frac{A_{2}}{A_{1}}=\frac{Z_{L}-Z_{0}}{Z_{L}+Z_{0}}=\left\lvert\frac{Z_{L}-Z_{0}}{Z_{L}+Z_{0}}\right\rvert e^{j\phi_{L}}=\lvert\Gamma_{L}\rvert e^{j\phi_{L}}
+  \end{empheq}
+  条件：终端短路；终端开路；终端接纯电抗负载\\
+  \qquad \quad$Z_{L}=0$,\qquad$Z_{L}=\infty$,\qquad$Z_{L}=\pm jX_{L}$\\
+  终端的入射波将被全反射，沿线入射波与反射波迭加形成驻波分布。驻波状态意味着入射波功率一点也没有被负载吸收，即\textbf{负载与传输线完全失配}。
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \begin{itemize}
+    \item 终端短路
+  \end{itemize}
+  \begin{empheq}[box=\widefbox]{align*}
+    Z_{L}=0,\Gamma_{L}=\frac{Z_{L}-Z_{0}}{Z_{L}+Z_{0}}=-1\rightarrow VSWR=\frac{1+\lvert\Gamma_{L}\rvert}{1-\lvert\Gamma_{L}\rvert}=\infty
+  \end{empheq}
+  \begin{align*}
+    V(d)&=V^{+}(d)+V^{-}(d)=V_{L}^{+}(e^{j\beta d}-e^{-j\beta d})=j2V_{L}^{+}\sin\beta d\\
+    I(d)&=I^{+}(d)+I^{-}(d)=I_{L}^{+}(e^{j\beta d}+e^{-j\beta d})=2I_{L}^{+}\cos\beta d\\
+    &=\frac{2V_{L}^{+}}{Z_{0}}\cos\beta d
+  \end{align*}
+  短路时的驻波状态分布规律：\\
+  (1)瞬时电压或电流在传输线的某个固定位置上随时间$t$作正弦或余弦变化，而在某一时刻随位置$d(z)$也作正弦或余弦变化，但瞬时电压和电流的时间相位差和空间相位差均为$\pi/2$，这表明传输线上没有功率传输。
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \only<1>{\includegraphics[width=9cm]{duanlu.png}}
+  \only<2>{\begin{columns}
+   \begin{column}{0.55\linewidth}
+    \begin{empheq}[box=\widefbox]{align*}
+     d=(2n+1)\lambda/4,(n=0,1,\ldots)\\
+     \lvert V\rvert_{max}=2\lvert V_{L}^{+}\rvert
+    \end{empheq}
+    \begin{empheq}[box=\widefbox]{align*}
+     d=n\lambda/2,(n=0,1,\ldots)\\
+     \lvert V\rvert_{min}=0
+    \end{empheq}
+   \end{column}
+   \begin{column}{0.45\linewidth}
+    (2)电压振幅最大值，而电流振幅恒为零，这些点称之为电压的波腹点和电流的波节点；\\
+    电流振幅恒为最大值，而电压振幅恒为零，这些点称之为电流的波腹点和电压的波节点。
+   \end{column}
+  \end{columns}}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  终端短路下：
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    $ \beta d=n\pi $ & $ \beta d=(2n+1)\pi/2 $ \\
+    $ d=n\lambda/2 $ & $ d=(2n+1)\lambda/4 $ \\
+    \hline
+    $\text{电压节点}\lvert V(d)\rvert=0$ & $\text{电压腹点}\lvert V(d)\rvert=2\lvert V_{L}^{+}\rvert$ \\
+    $\text{电流腹点}\lvert I(d)\rvert=2\lvert I_{L}^{+}\rvert$ &$ \text{电流节点}\lvert I(d)\rvert=0$ \\
+    \hline
+  \end{tabular}
+\end{frame}
+
 \subsection{有耗线的特性与计算}
 \begin{frame}{有耗线的特性与计算}
 
