@@ -814,7 +814,7 @@
 \end{frame}
 
 \begin{frame}{无耗线工作状态}
-  \only<1>{\includegraphics[width=9cm]{duanlu.png}}
+  \only<1>{\includegraphics[width=10cm]{duanlu.png}}
   \only<2>{\begin{columns}
    \begin{column}{0.55\linewidth}
     \begin{empheq}[box=\widefbox]{align*}
@@ -831,20 +831,133 @@
     电流振幅恒为最大值，而电压振幅恒为零，这些点称之为电流的波腹点和电压的波节点。
    \end{column}
   \end{columns}}
+  \only<3>{
+  \begin{table}[h!]
+    \begin{center}
+      \caption{终端短路情况}
+      \begin{tabular}{|c|c|}
+        \hline
+        $ \beta d=n\pi $ & $ \beta d=(2n+1)\pi/2 $ \\
+        $ d=n\lambda/2 $ & $ d=(2n+1)\lambda/4 $ \\
+        \hline
+        $\text{电压节点}\lvert V(d)\rvert=0$ & $\text{电压腹点}\lvert V(d)\rvert=2\lvert V_{L}^{+}\rvert$ \\
+        $\text{电流腹点}\lvert I(d)\rvert=2\lvert I_{L}^{+}\rvert$ &$ \text{电流节点}\lvert I(d)\rvert=0$ \\
+        \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  }
+  \only<4>{(3)传输线终端短路时，输入阻抗为纯电抗。\\
+  \begin{empheq}[box=\widefbox]{align*}
+    Z_{in}^{sc}(d)=Z_{0}\frac{Z_{L}+jZ_{0}\tan\beta d}{Z_{0}+jZ_{L}\tan\beta d}=jZ_{0}\tan\beta d=jZ_{0}\tan\frac{2\pi d}{\lambda}=jX_{in}
+  \end{empheq}}
 \end{frame}
 
 \begin{frame}{无耗线工作状态}
-  终端短路下：
-  \centering
-  \begin{tabular}{|c|c|}
-    \hline
-    $ \beta d=n\pi $ & $ \beta d=(2n+1)\pi/2 $ \\
-    $ d=n\lambda/2 $ & $ d=(2n+1)\lambda/4 $ \\
-    \hline
-    $\text{电压节点}\lvert V(d)\rvert=0$ & $\text{电压腹点}\lvert V(d)\rvert=2\lvert V_{L}^{+}\rvert$ \\
-    $\text{电流腹点}\lvert I(d)\rvert=2\lvert I_{L}^{+}\rvert$ &$ \text{电流节点}\lvert I(d)\rvert=0$ \\
-    \hline
-  \end{tabular}
+  \begin{itemize}
+    \item 终端开路
+  \end{itemize}
+  \begin{empheq}[box=\widefbox]{align*}
+    Z_{L}=\infty,\Gamma_{L}=\frac{Z_{L}-Z_{0}}{Z_{L}+Z_{0}}=1\rightarrow VSWR=\frac{1+\lvert\Gamma_{L}\rvert}{1-\lvert\Gamma_{L}\rvert}=\infty
+  \end{empheq}
+  \begin{align*}
+    &\Gamma_{L}=V_{L}^{-}/V_{L}^{+}=1 \quad V_{L}^{-}=V_{L}^{+}\\
+    &V(d)=V^{+}(d)+V^{-}(d)=2V_{L}^{+}\cos\beta d\\
+    &I(d)=I^{+}(d)+I^{-}(d)=j2I_{L}^{+}\sin\beta d\\
+    &Z_{in}^{oc}(d)=-jZ_{0}\cot\beta d
+  \end{align*}
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      终端短路
+      \begin{empheq}[box=\widefbox]{align*}
+        Z_{L}=0,\Gamma_{L}=-1\rightarrow VSWR=\infty
+      \end{empheq}
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      \begin{empheq}[box=\widefbox]{align*}
+        & V(d)=j2V_{L}^{+}\sin\beta d\\
+        & I(d)=2I_{L}^{+}\cos\beta d\\
+        & Z_{in}^{sc}(d)=jZ_{0}\tan\beta d
+      \end{empheq}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  (1)负载处，或\fbox{$d=n\lambda/2,(n=0,1,\ldots)$}\\
+  电流$I_{L}=0$为电流波节点，\\
+  电压为最大值$V_{L}=2V_{L}^{+}$为电压波腹点
+  \begin{table}[h!]
+    \begin{center}
+      \caption{终端开路情况}
+      \begin{tabular}{|c|c|}
+        \hline
+        $\beta d=n\pi$ & $\beta d=(2n+1)\pi/2$ \\
+        $d=n\lambda/2$ & $d=(2n+1)\lambda/4$\\
+        \hline
+        电压腹点$\lvert V(d)\rvert=2\lvert V_{L}^{+}\rvert$ & 电压节点$\lvert V(d)=0\rvert$ \\
+        电流节点$\lvert I(d)=0\rvert$ & 电流腹点$\lvert I(d)\rvert=2\lvert I_{L}^{+}\rvert$ \\
+        \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  (2)输入阻抗\\
+  $Z_{in}^{oc}(d)=-jZ_{0}\cot\beta d\Longleftrightarrow$ 短路 \fbox{$Z_{in}^{sc}=jZ_{0}\tan\beta d$}\\
+  经过观察：\textbf{把开路线可以看成是短路线移动$\lambda/4$而成}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      短路状态
+      \begin{empheq}[box=\widefbox]{align*}
+        & V(d)=j2V_{L}^{+}\sin\beta d\\
+        & I(d)=2I_{L}^{+}\cos\beta d
+      \end{empheq}
+      \begin{empheq}[box=\widefbox]{align*}
+        Z(d)=jZ_{0}\tan\beta d
+      \end{empheq}
+      作$d'=d+\lambda/4,V_{L}^{+}=j\tilde V_{L}^{+}$变换，即可由开路线转化为短路线。不能疏忽了$V_{L}^{+}=j\tilde V_{L}^{+}$的条件，长度$d'$移动条件只对$\lvert V_{L}^{+}\rvert$和阻抗有效，\textbf{相位}是不等价的。
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      开路状态
+      \begin{empheq}[box=\widefbox]{align*}
+        & V(d)=2V_{L}^{+}\cos\beta d\\
+        & I(d)=j2I_{L}^{+}\sin\beta d
+      \end{empheq}
+      \centering
+      $\Downarrow$
+      \begin{empheq}[box=\widefbox]{align*}
+        & V(d')=j2\tilde V_{L}^{+}\sin\beta d'\\
+        & I(d')=2\tilde I_{L}^{+}\cos\beta d'
+      \end{empheq}
+      \begin{empheq}[box=\widefbox]{align*}
+        Z(d)=-jZ_{0}\cot\beta d
+      \end{empheq}
+      $\Downarrow$
+      \begin{empheq}[box=\widefbox]{align*}
+        Z(d')=jZ_{0}\tan\beta d'
+      \end{empheq}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \includegraphics[width=10cm]{kailu.png}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \begin{align*}
+    Z_{in}^{oc}(d)=-jZ_{0}\cot\beta d \qquad Z_{in}^{sc}(d)=jZ_{0}\tan\beta d\\
+    Z_{in}^{oc}(d)\cdot Z_{in}^{sc}(d)=Z_{0}^{2}
+  \end{align*}
+  \begin{itemize}
+    \item 对于一定长度$d$的传输线，通过开路和短路的测量，可以得到如下参数：
+  \end{itemize}
+  \begin{align*}
+    &Z_{0}=\sqrt{Z_{in}^{oc}(d)\cdot Z_{in}^{sc}(d)}\\
+    &\beta=\frac{1}{d}\arctan\sqrt{\frac{Z_{in}^{sc}(d)}{Z_{in}^{oc}(d)}}
+  \end{align*}
 \end{frame}
 
 \subsection{有耗线的特性与计算}
