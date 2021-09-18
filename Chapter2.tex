@@ -960,6 +960,23 @@
   \end{align*}
 \end{frame}
 
+\begin{frame}{无耗线工作状态}
+  \begin{itemize}
+    \item 终端接纯电感负载无耗线 \fbox{$Z_{L}=+jX_{L}$}
+  \end{itemize}
+  \begin{align*}
+    \Gamma_{L}& =\frac{Z_{L}-Z_{0}}{Z_{L}+Z_{0}}=\frac{jX_{L}-Z_{0}}{jX_{L}+Z_{0}}=\frac{(jX_{L}-Z_{0})^2}{(jX_{L}+Z_{0})(jX_{L}-Z_{0})}\\
+    & =\frac{Z_{0}^{2}-X_{L}^{2}-2jZ_{0}X_{L}}{Z_{0}^{2}+X_{L}^{2}}=\lvert\Gamma_{L}\rvert e^{j\phi_{L}}
+  \end{align*}
+  \begin{align*}
+    \therefore\lvert\Gamma_{L}\rvert=\frac{\sqrt{(Z_{0}^{2}-X_{L}^{2})^2+4Z_{0}^{2}X_{L}^{2}}}{Z_{0}^{2}+X_{L}^{2}}=\frac{\sqrt{(Z_{0}^{2}+X_{L}^{2})^2}}{Z_{0}^{2}+X_{L}^{2}}=1
+  \end{align*}
+    \begin{empheq}[box=\widefbox]{align*}
+      \phi_{L}=\arctan\frac{2X_LZ_0}{X_L^2-Z_0^2}
+    \end{empheq}
+  终端产生全反射，形成驻波，但终端既不是电压波腹点也不是波节点
+\end{frame}
+
 \subsection{有耗线的特性与计算}
 \begin{frame}{有耗线的特性与计算}
 
