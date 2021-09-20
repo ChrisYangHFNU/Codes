@@ -7,8 +7,8 @@ lambda = C/f;
 l = lambda;
 omega = 2*pi*f;
 beta = 2*pi/lambda;
-d = linspace(0,l,100);
-t = linspace(0,2*pi/omega,100);
+d = linspace(0,2*l,100);
+t = linspace(0,2*pi/omega,50);
 LenT = length(t);
 vMatrix_sw = [];
 iMatrix_sw = [];
@@ -24,15 +24,30 @@ for k=1:LenT
     vMatrix_tw = [vMatrix_tw;v_tw];
     iMatrix_tw = [iMatrix_tw;i_tw];
 end
-figure(1)
-p = plot(vMatrix_sw,'EraseMode','background','MarkerSize',5);
-axis([0 100 -2.5 2.5])
+savepath = 'D:\01.yangjing\Codes\GitHub\image\'; % 保存路径
 for kk=1:LenT
-    set(p,'XData',[1:LenT],'YData',vMatrix_sw)
-    drawnow
-    pause(0.1);
+    h = figure; % 将figure保存在h中
+    set(h,'Visible','off'); %将figure设为不显示，防止一直弹框
+    plot(d,vMatrix_tw(kk,:),d,iMatrix_tw(kk,:)) % 绘图
+    axis([0 max(d) -2.5 2.5]);
+    legend('电压驻波','电流驻波')
+    saveas(h,[savepath num2str(kk)],'jpg');
+    clf;
 end
 
+inputpath = 'D:\01.yangjing\Codes\GitHub\image\'; % 图片输入路径
+format = '.jpg'; % 图片格式
+pic = dir([inputpath,'*.jpg']); % 返回路径内容：文件名
+WriteObj = VideoWriter('D:\01.yangjing\Codes\GitHub\movie\temp1.avi'); % 合成视频目标文件路径
+WriteObj.FrameRate = 5; % 调整帧率，用来调整视频长短
+open(WriteObj); %打开视频
+for ii=1:(length(pic))
+    frame = imread(strcat(inputpath,num2str(ii),format)); % 读取图片，放在变量frame中
+    writeVideo(WriteObj,frame); % frame存到变量WriteObj中
+    % ...这里是你想要对每张图片的操作，比如反色、二值化之类
+end
+close(WriteObj); %关闭视频
+    
 % for kk=1:LenT
 %     plot(vMatrix_sw(kk,:),'b')
 %     plot(iMatrix_sw(kk,:),'r')
