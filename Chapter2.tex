@@ -765,6 +765,12 @@
 \end{frame}
 
 \begin{frame}{无耗线工作状态}
+  \begin{center}
+    \href{run:/temp1.avi}{行波动画}
+  \end{center}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
   \begin{columns}
     \begin{column}{0.5\linewidth}
       \begin{empheq}[box=\widefbox]{align*}
@@ -811,6 +817,12 @@
   \end{align*}
   短路时的驻波状态分布规律：\\
   (1)瞬时电压或电流在传输线的某个固定位置上随时间$t$作正弦或余弦变化，而在某一时刻随位置$d(z)$也作正弦或余弦变化，但瞬时电压和电流的时间相位差和空间相位差均为$\pi/2$，这表明传输线上没有功率传输。
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \begin{center}
+    \href{run:/temp2.avi}{驻波动画}
+  \end{center}
 \end{frame}
 
 \begin{frame}{无耗线工作状态}
@@ -962,7 +974,7 @@
 
 \begin{frame}{无耗线工作状态}
   \begin{itemize}
-    \item 终端接纯电感负载无耗线 \fbox{$Z_{L}=+jX_{L}$}
+    \item 终端接\textbf{纯电感}负载无耗线\quad \fbox{$Z_{L}=+jX_{L}$}
   \end{itemize}
   \begin{align*}
     \Gamma_{L}& =\frac{Z_{L}-Z_{0}}{Z_{L}+Z_{0}}=\frac{jX_{L}-Z_{0}}{jX_{L}+Z_{0}}=\frac{(jX_{L}-Z_{0})^2}{(jX_{L}+Z_{0})(jX_{L}-Z_{0})}\\
@@ -975,6 +987,107 @@
       \phi_{L}=\arctan\frac{2X_LZ_0}{X_L^2-Z_0^2}
     \end{empheq}
   终端产生全反射，形成驻波，但终端既不是电压波腹点也不是波节点
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \begin{columns}
+    \begin{column}{0.55\linewidth}
+      可见此时终端也产生全反射，线上形成驻波；但此时终端$(d=0)$既不是电压波节点也不是电压波腹点。沿线的电压、电流和阻抗分布曲线可将电感负载用一段小于$\lambda/4$的短路线来等效后获得。
+    \end{column}
+    \begin{column}{0.45\linewidth}
+      \includegraphics[width=4.5cm]{diangan1.png}
+      \includegraphics[width=4.5cm]{diangan2.png}
+    \end{column}
+  \end{columns}
+  \begin{columns}
+    \begin{column}{0.55\linewidth}
+      短路线输入阻抗：
+      \begin{empheq}[box=\widefbox]{align*}
+        Z_{in}^{sc}(d)=jZ_{0}\tan\beta d=jX_{L}
+      \end{empheq}
+      故有等效短路线长度：
+      \begin{empheq}[box=\widefbox]{align*}
+        l_{es}& =\frac{1}{\beta}\tan^{-1}\left(\frac{X_L}{Z_0}\right)\\
+        & =\frac{\lambda}{2\pi}\arctan\left(\frac{X_L}{Z_0}\right)
+      \end{empheq}
+    \end{column}
+    \begin{column}{0.45\linewidth}
+      \includegraphics[width=4.5cm]{diangan3.png}
+      \includegraphics[width=4.5cm]{diangan4.png}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \begin{itemize}
+    \item 终端接\textbf{纯电容}负载无耗线\quad \fbox{$Z_L=-jX_L$}
+  \end{itemize}
+  \begin{align*}
+    \Gamma_L=\frac{Z_L-Z_0}{Z_L+Z_0}=\frac{jX_L+Z_0}{jX_L-Z_0}=\lvert\Gamma_L\rvert e^{-j\phi_L}\\
+    \lvert\Gamma_L\rvert=1 \qquad \phi_L=\arctan\frac{-2X_{L}Z_{0}}{X_{L}^{2}-Z_{0}^{2}}
+  \end{align*}
+  可见此时终端也产生全反射，线上形成驻波；但此时终端$(d=0)$既不是电压波节点也不是电压波腹点。沿线的电压、电流和阻抗分布曲线可将电容负载用一段小于$\lambda/4$的开路线来等效后获得。
+  \begin{align*}
+    Z_{in}^{oc}(d)=-jZ_0\cot\beta d=-jX_L
+  \end{align*}
+  \begin{empheq}[box=\widefbox]{align*}
+    l_{eo} =\frac{1}{\beta}\cot^{-1}\left(\frac{X_L}{Z_0}\right)=\frac{\lambda}{2\pi}\cot^{-1}\left(\frac{X_L}{Z_0}\right)
+  \end{empheq}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \centering
+  \includegraphics[width=8.5cm]{dianrong.png}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  阻抗的一般公式\quad \fbox{$Z_L=jX_L$}
+  \begin{align*}
+    Z_{in}(d) & =Z_{0}\frac{Z_L+jZ_0\tan\beta d}{Z_0+jZ_L\tan\beta d}\\
+    & =jZ_0\frac{X_L+Z_0\tan\beta d}{Z_0-X_L\tan\beta d}=jZ_0\frac{\frac{X_L}{Z_0}+\tan\beta d}{1-\frac{X_L}{Z_0}\tan\beta d}
+  \end{align*}
+  此电抗也可用一段特性阻抗为$Z_0$、长度为$l_0$的短路线等效，长度$l_0$可由下式确定\\
+  假设：$$\frac{X_L}{Z_0}=\tan\beta l_0 \qquad Z_{in}(d)=jZ_0\tan\beta(d+l_0)$$
+  \begin{align*}
+    l_0=\frac{\lambda}{2\pi}\arctan\frac{X_L}{Z_0}\quad \Longrightarrow \quad
+    \left\{
+    \begin{aligned}
+      l_0>0 \quad X_L\text{为感性}\\
+      l_0<0 \quad X_L\text{为容性}
+    \end{aligned}
+    \right.
+  \end{align*}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \begin{empheq}[box=\widefbox]{align*}
+    X_L=Z_0\tan\frac{2\pi}{\lambda}l_0\quad \Longrightarrow \quad l_0=\frac{\lambda}{2\pi}\arctan\frac{X_L}{Z_0}
+  \end{empheq}
+  长度为$l$终端接电抗性负载的传输线，沿线电压、电流及阻抗的变化规律与\textbf{长度为$(l+l_0)$的短路线}上对应段的变化规律完全一致，距终端最近的电压波节点
+  \begin{align*}
+    \left\{
+    \begin{aligned}
+      0<d<\lambda/4 \qquad \text{纯感抗}\\
+      \lambda/4<d<\lambda/2 \qquad \text{纯容抗}
+    \end{aligned}
+    \right.
+  \end{align*}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \centering
+  \includegraphics[width=8cm]{LandC.png}\\
+  \flushleft
+  综上所述，均匀无耗传输线终端无论是短路、开路还是接纯电抗负载，终端均产生全反射，沿线电压电流呈驻波分布，只是终端不同。\\
+  1、\textbf{短路}：电压按正弦变化，电流按余弦变化，终端电压为零，电流为最大；\\
+  \textbf{开路}：电压按余弦变化，电流按正弦变化，终端电流为零，电压为最大；\\
+  \textbf{纯电抗}：电压、电流按正余弦变化，终端电压和电流不为零，也不是最大。
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  2、二分之一波长的重复性，四分之一波长的变化性。\\
+  3、驻波波腹值为入射波的两倍，波节值等于零。短路线终端为电压波节、电流波腹；开路线终端为电压波腹、电流波节；接纯电抗负载时，终端既非波腹也非波节（\textbf{纯电感负载时，距负载第一个出现的是电压波腹点}）。\\
+  4、沿线同一位置的电压电流之间$90^\circ$相位差，所以驻波状态只有能量的存贮并无能量的传输。
 \end{frame}
 
 \subsection{有耗线的特性与计算}
