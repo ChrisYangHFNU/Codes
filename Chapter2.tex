@@ -765,12 +765,6 @@
 \end{frame}
 
 \begin{frame}{无耗线工作状态}
-  \begin{center}
-    \href{run:/temp1.avi}{行波动画}
-  \end{center}
-\end{frame}
-
-\begin{frame}{无耗线工作状态}
   \begin{columns}
     \begin{column}{0.5\linewidth}
       \begin{empheq}[box=\widefbox]{align*}
@@ -817,12 +811,6 @@
   \end{align*}
   短路时的驻波状态分布规律：\\
   (1)瞬时电压或电流在传输线的某个固定位置上随时间$t$作正弦或余弦变化，而在某一时刻随位置$d(z)$也作正弦或余弦变化，但瞬时电压和电流的时间相位差和空间相位差均为$\pi/2$，这表明传输线上没有功率传输。
-\end{frame}
-
-\begin{frame}{无耗线工作状态}
-  \begin{center}
-    \href{run:/temp2.avi}{驻波动画}
-  \end{center}
 \end{frame}
 
 \begin{frame}{无耗线工作状态}
@@ -1088,6 +1076,47 @@
   2、二分之一波长的重复性，四分之一波长的变化性。\\
   3、驻波波腹值为入射波的两倍，波节值等于零。短路线终端为电压波节、电流波腹；开路线终端为电压波腹、电流波节；接纯电抗负载时，终端既非波腹也非波节（\textbf{纯电感负载时，距负载第一个出现的是电压波腹点}）。\\
   4、沿线同一位置的电压电流之间$90^\circ$相位差，所以驻波状态只有能量的存贮并无能量的传输。
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \begin{enumerate}
+    \resume
+    \item \textbf{行驻波状态（部分反射情况）}\quad \fbox{$Z_L=R_L\pm jX_L$}
+  \end{enumerate}
+  条件：当均匀无耗传输线终端接一般复阻抗，产生部分反射，在线上形成行驻波。
+  \begin{empheq}[box=\widefbox]{align*}
+    \Gamma_L & =\frac{Z_L-Z_0}{Z_L+Z_0}=\frac{(R_L\pm jX_L)-Z_0}{(R_L\pm jX_L)+Z_0}\\
+    & = \frac{R_L^2-Z_0^2+X_L^2}{(R_L+Z_0)^2+X_L^2}\pm j\frac{2X_LZ_0}{(R_L+Z_0)^2+X_L^2}\\
+    & = \Gamma_{L1}\pm j\Gamma_{L2}=\lvert \Gamma_L\rvert e^{\pm j\phi_L}
+  \end{empheq}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \widefbox{$\Gamma_L=\lvert\Gamma_L\rvert e^{\pm j\phi_L}$}
+  \begin{align*}
+    & \lvert\Gamma_L\rvert=\sqrt{\frac{(R_L-Z_0)^2+X_L^2}{(R_L+Z_0)^2+X_L^2}}<1 \\
+    & \phi_L=\arctan\frac{\pm 2X_LZ_0}{R_L^2+X_L^2-Z_0^2}
+  \end{align*}
+  传输线工作在行驻波状态，行波与驻波的相对大小决定于负载与传输线的失配程度。
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  1、沿线电压、电流分布\\
+  从
+  \begin{align*}
+    V(d)=V^+(d)[1+\lvert\Gamma_L\rvert e^{j(\phi_L-2\beta d)}]\\
+    I(d)=I^+(d)[1-\lvert\Gamma_L\rvert e^{j(\phi_L-2\beta d)}]
+  \end{align*}
+  \begin{empheq}[box=\widefbox]{align*}
+    V(d)=V_L^+e^{j\beta d}[1+\lvert\Gamma_L\rvert e^{\phi_L-2\beta d}]\\
+    I(d)=I_L^+e^{j\beta d}[1-\lvert\Gamma_L\rvert e^{\phi_L-2\beta d}]
+  \end{empheq}
+  $\xLongrightarrow{\text{取模}}$
+  \begin{align*}
+    &\lvert V\rvert_{max}=V_L^+[1+\lvert\Gamma_L\rvert] \qquad \lvert V\rvert_{min}=V_L^+[1-\lvert\Gamma_L\rvert] \\
+    &\lvert I\rvert_{max}=I_L^+[1+\lvert\Gamma_L\rvert] \qquad\quad \lvert I\rvert_{min}=I_L^+[1-\lvert\Gamma_L\rvert]
+  \end{align*}
+  此时$\lvert\Gamma\rvert<1$，终端产生部分反射，线上形成行驻波，无波节点，驻波最小值不等于零，驻波最大值不等于终端入射波振幅的两倍。
 \end{frame}
 
 \subsection{有耗线的特性与计算}
