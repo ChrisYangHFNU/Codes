@@ -1119,6 +1119,56 @@
   此时$\lvert\Gamma\rvert<1$，终端产生部分反射，线上形成行驻波，无波节点，驻波最小值不等于零，驻波最大值不等于终端入射波振幅的两倍。
 \end{frame}
 
+\begin{frame}{无耗线工作状态}
+  \begin{align*}
+    \lvert V(d)\rvert=\lvert V^+(d)\rvert[1+\lvert\Gamma_L\rvert^2+2\lvert\Gamma_L\rvert\cos(\phi_L-2\beta d)]^{1/2}\\
+    \lvert I(d)\rvert=\lvert I^+(d)\rvert[1+\lvert\Gamma_L\rvert^2-2\lvert\Gamma_L\rvert\cos(\phi_L-2\beta d)]^{1/2}
+  \end{align*}
+  当$\cos(\phi_L-2\beta d)=1$\quad $\Longrightarrow$\quad \widefbox{$\phi_L-2\beta d=-2n\pi$}\\
+  电压驻波最大点位置
+  \begin{empheq}[box=\widefbox]{align*}
+    d_{max}=\frac{\lambda}{4\pi}\phi_L+n\frac{\lambda}{2}\quad n=0,1,2,\ldots
+  \end{empheq}
+  当$\cos(\phi_L-2\beta d)=-1$\quad $\Longrightarrow$\quad \widefbox{$\phi_L-2\beta d=-\pi-2n\pi$}\\
+  电压驻波最小点位置
+  \begin{empheq}[box=\widefbox]{align*}
+    d_{min}=\frac{\lambda}{4\pi}\phi_L+\frac{\lambda}{4}(2n+1)\quad n=0,1,2,\ldots
+  \end{empheq}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  2、阻抗分布
+  \begin{align*}
+    Z_{in}(d)  =Z_0\frac{1+\lvert\Gamma_L\rvert e^{-j(2\beta d-\phi_L)}}{1-\lvert\Gamma_L\rvert e^{-j(2\beta d-\phi_L)}}=Z_0\frac{e^{j(\beta d-\frac{1}{2}\phi_L)}+\lvert\Gamma_L\rvert e^{-j(\beta d-\frac{1}{2}\phi_L)}}{e^{j(\beta d-\frac{1}{2}\phi_L)}-\lvert\Gamma_L\rvert e^{-j(\beta d-\frac{1}{2}\phi_L)}}\\
+    = Z_0\frac{(1+\lvert\Gamma_L\rvert)\cos\left(\beta d-\frac{1}{2}\phi_L\right)+j(1-\lvert\Gamma_L\rvert)\sin\left(\beta d-\frac{1}{2}\phi_L\right)}{(1-\lvert\Gamma_L\rvert)\cos\left(\beta d-\frac{1}{2}\phi_L\right)+j(1+\lvert\Gamma_L\rvert)\sin\left(\beta d-\frac{1}{2}\phi_L\right)}
+  \end{align*}
+  \begin{empheq}[box=\widefbox]{align*}
+    Z_{in}(d)=Z_0\frac{\left(\frac{1+\lvert\Gamma_L\rvert}{1-\lvert\Gamma_L\rvert}\right)+j\tan\left(\beta d-\frac{1}{2}\phi_L\right)}{1+j\left(\frac{1+\lvert\Gamma_L\rvert}{1-\lvert\Gamma_L\rvert}\right)\tan\left(\beta d-\frac{1}{2}\phi_L\right)}
+  \end{empheq}
+  \begin{empheq}[box=\widefbox]{align*}
+    \rho=\frac{1+\lvert\Gamma_L\rvert}{1-\lvert\Gamma_L\rvert}
+  \end{empheq}
+\end{frame}
+
+\begin{frame}{无耗线工作状态}
+  \begin{align*}
+    & \cos(\phi_L-2\beta d)=1,\qquad \text{(V最大 I最小)}\\
+    & Z_{in}=R_{max}+jX_{max}=Z_0\rho\\
+    & R_{max}=Z_0\rho;X_{max}=0
+  \end{align*}
+  \hspace*{\fill}
+  \begin{align*}
+    & \cos(\phi_L-2\beta d)=-1,\qquad \text{(V最小 I最大)}\\
+    & Z_{in}=R_{min}+jX_{min}=Z_0/\rho\\
+    & R_{min}=Z_0/\rho=Z_0K;X_{min}=0
+  \end{align*}
+  \hspace*{\fill}
+  \begin{align*}
+    &\text{电压最大、最小点阻抗均为实数，二者相距}\lambda/4,\\
+    &R_{max}R_{min}=Z_{0}^{2}
+  \end{align*}
+\end{frame}
+
 \subsection{有耗线的特性与计算}
 \begin{frame}{有耗线的特性与计算}
 
