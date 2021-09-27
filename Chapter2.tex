@@ -1246,6 +1246,40 @@
   表明，在复平面上等反射系数模$\lvert\Gamma\rvert$的轨迹是以坐标原点为圆心、$\lvert\Gamma_L\rvert$为半径的圆，这个圆称为等反射系数$\lvert\Gamma\rvert$圆。由于反射系数的模与驻波比是一一对应的，故又称为\textbf{等驻波比圆}。
 \end{frame}
 
+\begin{frame}{Smith Chart（阻抗圆图及其应用）}
+  例1 \quad 特性阻抗$Z_0=50\Omega$，负载阻抗$Z_L=100+j50\Omega$，求距负载$0.24\lambda$处输入阻抗。\\
+  解：归一化负载阻抗$z_L=2+j1$\\
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      1)\quad 向电源方向旋转$0.213\lambda$
+      \begin{align*}
+        \phi=\arctan(1/2)\\
+        \frac{2\pi}{\lambda/2}=\frac{\pi-\phi}{l}\\
+        l =(\pi-0.4636)\lambda/4\pi\\
+        =0.213\lambda
+      \end{align*}
+      2)\quad 旋转$0.24\lambda$到$z_{in}$
+      \begin{align*}
+        z_in=0.42-j0.25\rightarrow\times 50\\
+        \rightarrow 21-j12.5\Omega
+      \end{align*}
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      \only<1>{\includegraphics[width=5cm]{example1-1.png}}
+      \only<2>{\includegraphics[width=5cm]{example1-2.png}}
+      \only<3>{\includegraphics[width=5cm]{example1-3.png}}
+      \only<4>{\includegraphics[width=5cm]{example1-4.png}}
+      \only<5>{\includegraphics[width=5cm]{example1-5.png}}
+      \only<6>{\includegraphics[width=5cm]{example1-6.png}}
+      \only<7>{\includegraphics[width=5cm]{example1-7.png}}
+      \only<8>{\includegraphics[width=5cm]{example1-8.png}}
+      \only<9>{\includegraphics[width=5cm]{example1-9.png}}
+      \only<10>{\includegraphics[width=5cm]{example1-10.png}}
+      \only<11>{\includegraphics[width=5cm]{example1-11.png}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
 \subsection{传输线的阻抗匹配}
 \begin{frame}{传输线的阻抗匹配}
 
