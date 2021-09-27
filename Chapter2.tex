@@ -1176,7 +1176,74 @@
 
 \subsection{Smith Chart（阻抗圆图及其应用）}
 \begin{frame}{Smith Chart（阻抗圆图及其应用）}
+  前面的分析都是围绕如下公式及相互关系展开的：
+  \begin{empheq}[box=\widefbox]{align*}
+    Z_{in}(d)=\frac{V_L\cosh\gamma d+I_LZ_0\sinh\gamma d}{I_L\cosh\gamma d+\frac{V_L\sinh\gamma d}{Z_0}} & =Z_0\frac{Z_L+Z_0\tanh\gamma d}{Z_0+Z_L\tanh\gamma d}\\
+    \text{无耗传输线:}& =Z_0\frac{Z_L+jZ_0\tan\beta d}{Z_0+jZ_L\tan\beta d}
+  \end{empheq}
+  \begin{columns}
+    \begin{column}{0.45\linewidth}
+      \begin{empheq}[box=\widefbox]{align*}
+        \Gamma_L &=\frac{A_2}{A_1}=\frac{Z_L-Z_0}{Z_L+Z_0}\\
+        &=\left\lvert\frac{Z_L-Z_0}{Z_L+Z_0}\right\rvert e^{j\phi_L}\\
+        &=\lvert\Gamma_L\rvert e^{j\phi_L}
+      \end{empheq}
+    \end{column}
+    \begin{column}{0.55\linewidth}
+      \begin{empheq}[box=\widefbox]{align*}
+        \rho=VSWR=\frac{\lvert V\rvert_{max}}{\lvert V\rvert_{min}}=\frac{1+\lvert\Gamma_L\rvert}{1-\lvert\Gamma_L\rvert}
+      \end{empheq}
+    \end{column}
+  \end{columns}
+\end{frame}
 
+\begin{frame}{Smith Chart（阻抗圆图及其应用）}
+  \begin{enumerate}
+    \item 圆图概念
+    \begin{itemize}
+      \item 圆图是求解均匀传输线有关阻抗计算和阻抗匹配问题的一类曲线坐标图；
+      \item 图上有两组坐标曲线：归一化阻抗或者导纳的实部和虚部的等值线簇，与反射系数的模和辐角的等值线簇；
+      \item 所有这些等值线簇都是圆或圆弧（直线是圆的特例），故称为阻抗圆图或者导纳圆图，简称圆图。
+    \end{itemize}
+    \saveenum
+  \end{enumerate}
+  \begin{align*}
+    z(d)=\frac{Z(d)}{Z_0}=\frac{1+\Gamma(d)}{1-\Gamma(d)}\quad\text{or}\quad\Gamma(d)=\frac{z(d)-1}{z(d)+1}\\
+    z(d)=r(d)+jx(d)=\lvert z\rvert e^{j\theta}\\
+    \Gamma(d)=\Gamma_{Re}(d)=j\Gamma_{Im}(d)=\lvert\Gamma(d)\rvert e^{j\phi(d)}
+  \end{align*}
+\end{frame}
+
+\begin{frame}{Smith Chart（阻抗圆图及其应用）}
+  \begin{enumerate}
+    \resume
+    \item Smith圆图
+    \begin{itemize}
+      \item Smith圆图是通过双线性变换式，将$z$复平面上的$r=$常数和$x=$常数的二簇相互正交的直线分别变换成$\Gamma$复平面上的二簇相互正交的圆，并同$\Gamma$极坐标等值线簇$\lvert\Gamma\rvert=$常数和$\phi=$常数套印在一起而得到的圆图。
+      \item 该图表是由\textbf{Phillip Smith}于1939年发明的，当时他在美国的RCA公司工作。Smith也许不是图表的第一位发明者，一位名叫Kurakawa的日本工程师声称早于其一年发明了这种图表。
+    \end{itemize}
+  \end{enumerate}
+  \begin{align*}
+    z(d)=\frac{Z(d)}{Z_0}=\frac{1+\Gamma(d)}{1-\Gamma(d)}\quad\text{or}\quad\Gamma(d)=\frac{z(d)-1}{z(d)+1}\\
+    z(d)=r(d)+jx(d)=\lvert z\rvert e^{j\theta}\\
+    \Gamma(d)=\Gamma_{Re}(d)=j\Gamma_{Im}(d)=\lvert\Gamma(d)\rvert e^{j\phi(d)}
+  \end{align*}
+\end{frame}
+
+\begin{frame}{Smith Chart（阻抗圆图及其应用）}
+  \begin{itemize}
+    \item 阻抗圆图\\
+    阻抗圆图是由等反射系数圆和归一化等阻抗圆组成。
+    \begin{enumerate}
+      \item 等反射系数圆\\
+      距离终端$d$处的反射系数为
+      \begin{empheq}[box=\widefbox]{align*}
+        \Gamma(d)=\lvert\Gamma\rvert e^{j\phi(d)}=\lvert\Gamma_L\rvert e^{j(\phi_L-2\beta d)}=\Gamma_{Re}+j\Gamma_{Im}
+      \end{empheq}
+      \saveenum
+    \end{enumerate}
+  \end{itemize}
+  表明，在复平面上等反射系数模$\lvert\Gamma\rvert$的轨迹是以坐标原点为圆心、$\lvert\Gamma_L\rvert$为半径的圆，这个圆称为等反射系数$\lvert\Gamma\rvert$圆。由于反射系数的模与驻波比是一一对应的，故又称为\textbf{等驻波比圆}。
 \end{frame}
 
 \subsection{传输线的阻抗匹配}
