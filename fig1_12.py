@@ -21,8 +21,8 @@ distancekm = distance / 1000
 p1, = plt.plot(distancekm, snr3, color='r', marker='+')
 p2, = plt.plot(distancekm, snr1, color='k', marker='+')
 p3, = plt.plot(distancekm, snr2, color='b', marker='+')
-plt.legend([p1, p2, p3], ["\sigma=0dBsm", "\sigma=-10dBsm",
-                          "\sigma=-20dBsm"], loc='upper right')
+plt.legend([p1, p2, p3], ["$\sigma$=0dBsm", "$\sigma$=-10dBsm",
+                          "$\sigma$=-20dBsm"], loc='upper right')
 plt.grid()
 plt.xlabel('Dectection range -Km')
 plt.ylabel('SNR -dB')
