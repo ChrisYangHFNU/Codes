@@ -1,5 +1,6 @@
 \section{第二章\quad 传输线理论}
 
+\begin{comment}
 \begin{frame}{传输线理论}
  \begin{itemize}
   \item \textbf{传输线理论，一维分布参数电路理论，微波电路设计和计算的理论基础。}
@@ -105,7 +106,6 @@
  \tikz[overlay,remember picture]
  {\draw[->]([yshift=-10pt]#2.north) -- node[mylabel,#1]{#4}([yshift=6pt]#3.north);}
 }
-\end{comment}
 
 \begin{frame}{传输线方程}
  \begin{itemize}
@@ -1173,6 +1173,7 @@
 \begin{frame}{有耗线的特性与计算}
 
 \end{frame}
+\end{comment}
 
 \subsection{Smith Chart（阻抗圆图及其应用）}
 \begin{frame}{Smith Chart（阻抗圆图及其应用）}
@@ -1420,17 +1421,17 @@
 
 \begin{frame}{Smith Chart（阻抗圆图及其应用）}
   \begin{columns}
-    \begin{column}{0.4\linewidth}
+    \begin{column}{0.45\linewidth}
       (2)圆图上有三条特殊线\\
-      圆图上实轴为$x=0$的轨迹，\\正半实轴为电压波腹点的轨迹，\\线上$R$值为驻波比读数。\\
-      负半实轴为电压波节点的轨迹，\\
-      线上的$R$值为行波系数$K$的\\
+      圆图上实轴为$x=0$的轨迹，\\ \textbf{正半实轴}为电压波腹点的轨迹，线上$R$值为驻波比读数。\\
+      \textbf{负半实轴}为电压波节点的轨迹，
+      线上的$R$值为行波系数$K$的
       读数。\\
-      最外面的单位圆为$R=0$的纯\\
-      电抗轨迹，即为$\lvert\Gamma\rvert=1$的全反射\\
+      \textbf{最外面的单位圆}为$R=0$的纯
+      电抗轨迹，即为$\lvert\Gamma\rvert=1$的全反射
       系数圆的轨迹.
     \end{column}
-    \begin{column}{0.6\linewidth}
+    \begin{column}{0.55\linewidth}
       \only<1>{\includegraphics[width=5cm]{smithchart-4.png}}
       \only<2>{\includegraphics[width=5cm]{smithchart-5.png}}
       \only<3>{\includegraphics[width=5cm]{smithchart-6.png}}
