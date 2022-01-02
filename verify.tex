@@ -1,0 +1,343 @@
+\documentclass{ctexbeamer}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multirow,booktabs}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{tcolorbox}
+\usepackage{empheq}
+\newcommand*\widefbox[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
+\usetheme{Berkeley}
+\logo{\includegraphics[width=1.55cm,height=1.55cm]{logo.jpg}}
+\newcounter{savedenum}
+\newcommand*{\saveenum}{\setcounter{savedenum}{\theenumi}}
+\newcommand*{\resume}{\setcounter{enumi}{\thesavedenum}}
+
+\begin{document}
+\begin{frame}
+\title{《微波技术基础》}
+  \institute{Sch.EIEE Hefei Normal University}
+  \author{杨晶}
+  \date{\today}
+  \titlepage
+\end{frame}
+
+\begin{frame}{目录}
+  \tableofcontents
+\end{frame}
+
+\begin{frame}{教材}
+  《微波技术基础》，廖承恩编，西安电子科技大学出版社，2011.5.
+  \begin{figure}
+    \centering
+    \includegraphics[height=6cm]{jiaocai}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{参考文献}
+  \bibliographystyle{apalike}
+  \nocite{Zhao}
+  \nocite{Wu}
+  \nocite{Colin}
+  \nocite{Liang}
+  \bibliography{math}
+\end{frame}
+
+\begin{frame}{考核模式}
+  \begin{enumerate}
+    \item 平时成绩$100$分，占总成绩$50\%$
+    \begin{enumerate}
+    \item 学习态度：$100$分，占$20\%$(考勤 $100$分,占$100\%$)
+    \item 课堂参与：$100$分，占$30\%$(课堂表现，课堂回答问题积极性，$100$分，占$100\%$)
+    \item 平时作业：$100$分，占$50\%$(书面作业$100$分，占$100\%$)
+    \end{enumerate}
+    \item 期末考核$100$分，占总成绩$50\%$(期末笔试$100$分，占$100\%$)
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波技术基础}
+  \begin{description}
+    \item[第一章] \textcolor{red}{引论}
+    \item[第二章] \textcolor{red}{传输线理论}
+    \item[第三章] \textcolor{red}{规则金属波导}
+    \item[第四章] \textcolor{red}{微波集成传输线}
+    \item[第五章] 毫米波介质波导与光波导
+    \item[第六章] \textcolor{red}{微波网络基础}
+    \item[第七章] \textcolor{red}{微波谐振器}
+    \item[第八章] \textcolor{red}{常用微波元件}
+    \item[第九章] 微波铁氧体元件
+  \end{description}
+\end{frame}
+
+\section{第一章\quad 引论}
+\begin{frame}{第一章\quad 引论}
+  \begin{enumerate}
+    \item 微波及其特点
+    \item 微波的应用
+    \item 本书的内容框图
+    \item 导行波及其一般的传输特性
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{近代通信技术的发展}
+  \begin{columns}
+    \begin{column}{0.35\linewidth}
+      \centering
+      \includegraphics[height=5cm]{fenghuotai}
+    \end{column}
+    \begin{column}{0.65\linewidth}
+      \centering
+      \begin{itemize}
+        \item 人类历史上最早的通信手段和现在一样是“无线”的。
+        \item 人类通信史上革命性变化，是从把电作为信息载体后发生的。
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{电报的发明}
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      \includegraphics[height=4cm]{dianbao}
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      \begin{itemize}
+        \item 电报的发明，拉开了电信时代的序幕，开创了人类利用电来传递信息的历史。
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{电报的发明}
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+    \begin{figure}
+      \includegraphics[width=3.5cm]{Morse.jpg}
+      \caption{莫尔斯 Morse.Samrel Finley.Breese (1791-1872)}\label{Morse}
+    \end{figure}
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      \begin{itemize}
+        \item 美国画家莫尔斯
+        \item 在1835年，第一台电报机问世
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{电报的发明}
+  \begin{itemize}
+    \item 莫尔斯成功地利用电流的“通”、“断”和“长断”来代替了人类的文字进行传送，这就是鼎鼎大名的莫尔斯电码。
+  \end{itemize}
+  \centering
+  \includegraphics[width=8cm]{morsecode}
+\end{frame}
+
+\begin{frame}{电话的发明}
+  \begin{columns}
+    \begin{column}{0.35\linewidth}
+      \includegraphics[height=6.5cm]{dianhua}
+    \end{column}
+    \begin{column}{0.65\linewidth}
+      \begin{itemize}
+        \item 1875年6月2日，被人们作为发明电话的伟大日子而加以纪念，而美国波士顿法院路109号也因此载入史册，至今它的门口仍钉着块铜牌，上面镌有：“1875年6月2日电话诞生在此。”
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{电话的发明}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+    \begin{figure}
+      \includegraphics[width=3.2cm]{Bell.png}
+      \caption{亚历山大·格拉汉姆·贝尔Alexander Graham Bell (1847 - 1922)}
+    \end{figure}
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \begin{itemize}
+        \item 美国发明家和企业家。他获得了世界上第一台可用的电话机的专利权（发明者为意大利人安东尼奥·梅乌奇），创建了贝尔电话公司（AT\&T公司的前身）。其被世界誉为“电话之父”。
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{电话的发明}
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      \includegraphics[width=5.5cm]{Bell2}
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      \begin{itemize}
+        \item 贝尔在1892年启用第一条长途电话线——从纽约至芝加哥，长约900里。
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{电话的发明}
+  \begin{columns}
+    \begin{column}{0.35\linewidth}
+      \includegraphics[width=3.5cm]{pengmingbao}
+    \end{column}
+    \begin{column}{0.65\linewidth}
+      \begin{itemize}
+        \item 电话传入我国，是在1881年，英籍电气技师皮晓浦在上海十六铺沿街架起一对露天电话，付36文制钱可通话一次，这是中国的第一部电话。1882年2月，丹麦大北电报公司在上海外滩扬于天路办起我国第一个电话局，用户25家。
+        \item 1889年，安徽省安庆州候补知州\textbf{彭名保}，自行设计了一部电话，包括自制的五六十种大小零件，称为我国第一部自行设计制造的电话。
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{电磁波的发现}
+  % Electromagnetic wave - black
+\begin{tikzpicture}[x=(-15:0.9), y=(90:1.0), z=(-150:1.0),
+                    line cap=round, line join=round,
+                    axis/.style={black, thick,->},
+                    vector/.style={>=stealth,->}]
+  \large
+  \def\A{1}
+  \def\nNodes{5} % use even number
+  \def\nVectorsPerNode{8}
+  \def\N{\nNodes*40}
+  \def\xmax{\nNodes*pi/2*1.01}
+  \pgfmathsetmacro\nVectors{(\nVectorsPerNode+1)*\nNodes}
+
+  \def\vE{{\color{blue}\mathbf{E}}}
+  \def\vB{{\color{red}\mathbf{B}}}
+  \def\vk{\mathbf{\hat{k}}}
+
+  % main axes
+  \draw[axis] (0,0,0) -- ++(\xmax*1.1,0,0) node[right] {$x$};
+  \draw[axis] (0,-\A*1.4,0) -- (0,\A*1.4,0) node[right] {$y$};
+  \draw[axis] (0,0,-\A*1.4) -- (0,0,\A*1.4) node[above left] {$z$};
+
+  % small axes
+  \def\xOffset{{(\nNodes-2)*pi/2}}
+  \def\yOffset{\A*1.2}
+  \def\zOffset{\A*1.2}
+  \draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(\A*0.6,0,0) node[right] {$\vk$};
+  \draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(0,\A*0.6,0) node[right] {$\vE$};
+  \draw[axis] (\xOffset,\yOffset,-\zOffset) -- ++(0,0,\A*0.6) node[above left] {$\vB$};
+
+  % equation
+  %\node[above right] at (\xOffset,-0.5*\yOffset,4*\zOffset)
+  %  {$\begin{aligned}
+  %    \vE &= \mathbf{E_0}\sin(\vk\cdot\mathbf{x}-c_0t)\\
+  %    \vB &= \mathbf{B_0}\sin(\vk\cdot\mathbf{x}-c_0t)\\
+  %    \end{aligned}$};
+  %\node[below right] at (\xOffset,-0.5*\yOffset,4*\zOffset)
+  %  {$\vE\cdot\vk = 0,\;\; \vB\cdot\vk = 0,\;\; \vB = \frac{1}{c_0}\vk\times\vE$};
+
+  % waves
+  \draw[blue,very thick,variable=\t,domain=0:\nNodes*pi/2*1.01,samples=\N]
+    plot (\t,{\A*sin(\t*360/pi)},0);
+  \draw[red,very thick,variable=\t,domain=0:\nNodes*pi/2*1.01,samples=\N]
+    plot (\t,0,{\A*sin(\t*360/pi)});
+
+  % draw vectors
+  \foreach \k [evaluate={\t=\k*pi/2/(\nVectorsPerNode+1);
+                         \angle=\k*90/(\nVectorsPerNode+1);
+                         \c=(mod(\angle,90)!=0);}]
+              in {1,...,\nVectors}{
+    \if\c1
+      \draw[vector,blue!50] (\t,0,0) -- ++(0,{\A*sin(2*\angle)},0);
+      \draw[vector,red!50] (\t,0,0) -- ++(0,0,{\A*sin(2*\angle)});
+    \fi
+  }
+\end{tikzpicture}
+\begin{itemize}
+  \item 自从贝尔发明了电话机，这样人人都能手拿一个“话柄”，和远方的亲朋好友谈天说地了。电报和电话的相继发明，使人类获得了远距离传送信息的重要手段。但是，电信号都是通过金属线传送信息的重要手段。但是，电信号都是通过金属线传送的。线路架设到的地方，信息才能传到，这就大大限制了信息的传播范围，特别是在大海、高山，有没有能让信息\textbf{无线}传播的方法？
+\end{itemize}
+\end{frame}
+
+\begin{frame}{电磁波的发现}
+  \begin{columns}
+    \begin{column}{0.35\linewidth}
+    \begin{figure}
+      \includegraphics[width=3.5cm]{faraday.jpg}
+      \caption{迈克尔·法拉第Michael Faraday(1791-1867)}
+    \end{figure}
+    \end{column}
+    \hfill
+    \begin{column}{0.65\linewidth}
+      \includegraphics[width=4.5cm]{faradayexperiment.jpg}
+      \begin{itemize}
+        \item 英国物理学家、化学家
+        \item 1831年发现电磁感应
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{电磁波的发现}
+  \begin{columns}
+    \begin{column}{0.35\linewidth}
+      \begin{figure}
+        \includegraphics[width=3.5cm]{maxwell.jpg}
+        \caption{詹姆斯·克拉克·麦克斯韦James Clerk Maxwell (1831-1879)}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.65\linewidth}
+      Maxwell Equations:
+      %\begin{equation}
+        \begin{align*}
+          &\nabla\times\vec E=-\frac{\partial \vec B}{\partial t}\\
+          &\nabla\times\vec H=\vec{J} +\frac{\partial \vec D}{\partial t}\\
+          &\nabla\cdot\vec{D}=\rho\\
+          &\nabla\cdot\vec{B}=0
+        \end{align*}
+      %\end{equation}
+      \begin{itemize}
+        \item 英国物理学家。1864年，麦氏发表了电磁场理论，成为人类历史上预言电磁波存在的\textbf{第一人}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{电磁波的发现}
+  \begin{columns}
+    \begin{column}{0.35\linewidth}
+      \begin{figure}
+        \includegraphics[width=3cm]{hertz.jpg}
+        \caption{亨利希·鲁道夫·赫兹(1857 - 1894)}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.65\linewidth}
+      \begin{figure}
+        \flushright
+        \includegraphics[width=2.5cm]{hertzexperiment.jpg}
+      \end{figure}
+      \begin{itemize}
+        \item 德国物理学家，1887年，实验证实了电磁波的存在和传播。成为了近代科学技术史的一座里程碑，为了纪念这位杰出的科学家，电磁波的单位便命名为“赫兹($Hz$)”
+        \item 证明了麦克斯韦理论的正确，导致了无线电的诞生，开辟了电子技术的新纪元，标志着从“有线电通信”向“无线电通信”的转折点。也是整个移动通信的发源点，应该说，从这时开始，人类开始进入了无线通信的新领域。
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\subsection{1\quad 微波及其特点}
+\begin{frame}{微波及其特点}
+  电磁波按波长（或频率）划分，则大致可以把$300MHz - 3000GHz$,（对应空气中波长$\lambda$是$1m - 0.1mm$）这一频段的电磁波称之为微波。它处于超短波和红外光波之间。
+\end{frame}
+
+\begin{frame}{微波波段的划分}
+  \begin{tabular}{cccc}
+    \toprule
+    波段代号 & 标称波长/cm & 频率范围/GHz & 波长范围/cm \\
+    \midrule
+     L & 22 & 1-2 & 30-15 \\
+     S & 10 & 2-4 & 15-7.5 \\
+     C & 5 & 4-8 & 7.5-3.5 \\
+     X & 3 & 8-12 & 3.75-2.5 \\
+     Ku & 2 & 12-18 & 2.5-1.67 \\
+     K & 1.25 & 18-27 & 1.67-1.11 \\
+     Ka & 0.8 & 27-40 & 1.11-0.75 \\
+     U & 0.6 & 40-60 & 0.75-0.5 \\
+     V & 0.4 & 60-80 & 0.5-0.375 \\
+     W & 0.3 & 80-100 & 0.375-0.3 \\
+     \bottomrule
+  \end{tabular}
+\end{frame}
+\end{document}

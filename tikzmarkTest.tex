@@ -1,0 +1,32 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\newcommand{\sn}[2]{\ensuremath{{#1}\times 10^{#2}}}
+\newcommand{\mtikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
+
+\tikzset{mylabel/.style={align=center,fill=white,near start,font=\footnotesize}}
+
+%\mytlabel[options]{start.mark}{end-mark}{text}
+\newcommand\mytlabel[4][]{%
+\tikz[overlay,remember picture]
+  {\draw[<->] ([yshift=4pt]#2.north) -- ++(0,0.25)  -| node[mylabel,#1] {#4} ([yshift=4pt]#3.north);}
+}
+%\myblabel[options]{start.mark}{end-mark}{text}
+\newcommand\myblabel[4][]{%
+\tikz[overlay,remember picture]
+  {\draw[<->] (#2.south) -- ++(0,-0.2)  -| node[mylabel,#1] {#4} (#3.south);}
+}
+
+\begin{document}
+\begin{align*}
+(\sn{3\mtikzmark{e}.14}{-\mtikzmark{a}2}) + (\sn{1.2}{-\mtikzmark{b}4}) 
+  &= (\sn{3\mtikzmark{f}.14}{-\mtikzmark{c}2}) + (\sn{0.012}{-\mtikzmark{d}2})\\[1ex]
+&= \sn{(3.14+0.012)}{-2}\\
+&= \sn{3.152}{-2}
+\end{align*}
+\mytlabel{a}{b}{not equal}
+\mytlabel{c}{d}{equal}
+\myblabel[anchor=north,yshift=4pt]{e}{f}{The decimal is moved \\ to the left to increase \\ the exponent}
+\end{document}
