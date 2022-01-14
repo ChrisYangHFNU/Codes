@@ -24,25 +24,25 @@ for k=1:LenT
     vMatrix_tw = [vMatrix_tw;v_tw];
     iMatrix_tw = [iMatrix_tw;i_tw];
 end
-savepath = 'D:\01.yangjing\Codes\GitHub\image\'; % 保存路径
+savepath = 'D:\7.Codes\GitHub\image\'; % 保存路径
 for kk=1:LenT
     h = figure; % 将figure保存在h中
     set(h,'Visible','off'); %将figure设为不显示，防止一直弹框
-    plot(d,vMatrix_sw(kk,:),d,iMatrix_sw(kk,:)) % 绘图
+    plot(d,vMatrix_tw(kk,:),d,iMatrix_tw(kk,:)) % 绘图
     axis([0 max(d) -2.5 2.5]);
-    legend('电压驻波','电流驻波')
-    saveas(h,[savepath 'standingwave-' num2str(kk-1)],'jpg');
+    legend('电压行波','电流行波')
+    saveas(h,[savepath 'travelingwave-' num2str(kk-1)],'jpg');
     clf;
 end
 
-inputpath = 'D:\01.yangjing\Codes\GitHub\image\'; % 图片输入路径
+inputpath = 'D:\7.Codes\GitHub\image\'; % 图片输入路径
 format = '.jpg'; % 图片格式
 pic = dir([inputpath,'*.jpg']); % 返回路径内容：文件名
-WriteObj = VideoWriter('D:\01.yangjing\Codes\GitHub\movie\standingwave.avi'); % 合成视频目标文件路径
+WriteObj = VideoWriter('D:\7.Codes\GitHub\movie\travelingwave.avi'); % 合成视频目标文件路径
 WriteObj.FrameRate = 5; % 调整帧率，用来调整视频长短
 open(WriteObj); %打开视频
 for ii=1:(length(pic))
-    frame = imread(strcat(inputpath,'standingwave-',num2str(ii-1),format)); % 读取图片，放在变量frame中
+    frame = imread(strcat(inputpath,'travelingwave-',num2str(ii-1),format)); % 读取图片，放在变量frame中
     writeVideo(WriteObj,frame); % frame存到变量WriteObj中
     % ...这里是你想要对每张图片的操作，比如反色、二值化之类
 end
