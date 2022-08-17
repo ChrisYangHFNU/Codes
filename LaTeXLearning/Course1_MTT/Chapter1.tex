@@ -1,4 +1,4 @@
-\section{第一章\quad 引论}
+\section{第1章\quad 绪论}
 
 \begin{frame}{近代通信技术的发展}
  \begin{columns}
@@ -458,8 +458,8 @@
         \begin{columns}
          \begin{column}{0.4\linewidth}
           \begin{align*}
-            & \nabla\times\vec{H} = j\omega\epsilon\vec{E}+\vec{J} \\
-            & \nabla\times\vec{E} = -j\omega\mu\vec{H}
+            & \nabla\times\vec{H} = \mathrm{j}\omega\epsilon\vec{E}+\vec{J} \\
+            & \nabla\times\vec{E} = -\mathrm{j}\omega\mu\vec{H}
           \end{align*}
          \end{column}
          \begin{column}{0.6\linewidth}
@@ -546,7 +546,8 @@
  \begin{columns}
   \begin{column}{0.2\linewidth}
    \begin{enumerate}
-    \item 引论
+    \item 绪论
+    \item 低频电路 $\longrightarrow$ 微波分析
           \saveenum
    \end{enumerate}
   \end{column}
@@ -557,14 +558,13 @@
   \begin{column}{0.5\linewidth}
    \begin{enumerate}
     \resume
-    \item \textbf{传输线理论}
-    \item \textbf{规则金属波导}
-    \item \textbf{微波集成电路}
-    \item 毫米波介质波导与光波导
-    \item \textbf{微波网络基础}
-    \item \textbf{微波谐振器}
-    \item \textbf{常用微波器件}
-    \item 微波铁氧体元件
+    \item \textbf{分布电路与传输线理论}
+    \item \textbf{Smith圆图和阻抗匹配}
+    \item \textbf{微波网络理论}
+    \item \textbf{实用微波传输线与波导}
+    \item 微波谐振器
+    \item \textbf{功率分配器和定向耦合器}
+    \item 微波滤波器
    \end{enumerate}
   \end{column}
  \end{columns}
@@ -685,37 +685,37 @@
   \begin{column}{0.45\linewidth}
    \begin{empheq}[box=\widefbox]{align*}
     %\tikzmarkin{c}(0.05,-0.6)(-0.05,0.65)
-    & \nabla_t\times\vec{H_{t}}=j\omega\epsilon\hat{z}E_{z} \\
+    & \nabla_t\times\vec{H_{t}}=\mathrm{j}\omega\epsilon\hat{z}E_{z} \\
     & \nabla_t\times\hat{z}H_{z}+\hat{z}\times\frac{\partial\vec{H_{t}}}{\partial z}
-    = \mtikzmark{a}j\omega\epsilon\vec{E_{t}}
+    = \mtikzmark{a}\mathrm{j}\omega\epsilon\vec{E_{t}}
    \end{empheq}
    %$$\times j\omega\mu$$
   \end{column}
   \begin{column}{0.5\linewidth}
    \begin{empheq}[box=\widefbox]{align*}
-    & \nabla_t\times\vec E_{t}=-j\omega\mu\hat{z} H_{z} \\
+    & \nabla_t\times\vec E_{t}=-\mathrm{j}\omega\mu\hat{z} H_{z} \\
     & \nabla_t\times \hat z E_{z}+\hat{z}\times\mtikzmark{c}\frac{\partial\vec{E_{t}}}{\partial z}
-    = -j\omega\mu\vec{H_t}
+    = -\mathrm{j}\omega\mu\vec{H_t}
    \end{empheq}
   \end{column}
  \end{columns}
  \begin{flalign*}
-   & j\omega\mu\hat{z}\times\frac{\partial \vec{H_{t}}}{\partial z}=\mtikzmark{b}-j\omega\mu\nabla_{t}\times\hat{z}H_{z}-\omega^{2}\mu\epsilon\vec{E_{t}} &
+   & \mathrm{j}\omega\mu\hat{z}\times\frac{\partial \vec{H_{t}}}{\partial z}=\mtikzmark{b}-\mathrm{j}\omega\mu\nabla_{t}\times\hat{z}H_{z}-\omega^{2}\mu\epsilon\vec{E_{t}} &
  \end{flalign*}
  \begin{flalign*}
-   &  & -j\omega\mu\hat{z}\times\frac{\partial \vec{H_{t}}}{\partial z}=\hat{z}\times\frac{\partial}{\partial z} \left(\nabla_{t}\times\hat{z}E_{z}\right)+\hat{z}\times\mtikzmark{d}\frac{\partial}{\partial z} \left(\hat{z} \times \frac{\partial \vec{E_{t}}}{\partial z} \right)
+   &  & -\mathrm{j}\omega\mu\hat{z}\times\frac{\partial \vec{H_{t}}}{\partial z}=\hat{z}\times\frac{\partial}{\partial z} \left(\nabla_{t}\times\hat{z}E_{z}\right)+\hat{z}\times\mtikzmark{d}\frac{\partial}{\partial z} \left(\hat{z} \times \frac{\partial \vec{E_{t}}}{\partial z} \right)
  \end{flalign*}
  % draw arrow with text from specified position to another
- \mytlabel{a}{b}{$\times j\omega\mu$}
+ \mytlabel{a}{b}{$\times \mathrm{j}\omega\mu$}
  \mytlabel{c}{d}{$\hat{z}\times\frac{\partial}{\partial z}$}
 \end{frame}
 
 \begin{frame}{导波场的分析}
  \begin{empheq}[box=\widefbox]{align*}
-  \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}} \right)\vec{E_{t}}=\frac{\partial}{\partial z}\nabla_{t}E_{z}-j\omega\mu\nabla_{t}\times\hat{z}H_{z}
+  \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}} \right)\vec{E_{t}}=\frac{\partial}{\partial z}\nabla_{t}E_{z}-\mathrm{j}\omega\mu\nabla_{t}\times\hat{z}H_{z}
  \end{empheq}
  \begin{empheq}[box=\widefbox]{align*}
-  \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}} \right)\vec{H_{t}}=\frac{\partial}{\partial z}\nabla_{t}H_{z}+j\omega\epsilon\nabla_{t}\times\hat{z}E_{z}
+  \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}} \right)\vec{H_{t}}=\frac{\partial}{\partial z}\nabla_{t}H_{z}+\mathrm{j}\omega\epsilon\nabla_{t}\times\hat{z}E_{z}
  \end{empheq}
  在规则导行系统中，导波场的\textbf{横向分量}可用\textbf{纵向分量}完全确定。\\上面公式中$k^{2}=\omega^{2}\mu\epsilon$
 \end{frame}
@@ -810,12 +810,12 @@
         %\flushleft
         解：
         \begin{empheq}[box=\widefbox]{align*}
-         Z(z)=A_{1}exp(-j\beta z)+A_{2}exp(j\beta z)
+         Z(z)=A_{1}exp(-\mathrm{j}\beta z)+A_{2}exp(\mathrm{j}\beta z)
         \end{empheq}
         \textbf{规则导行系统中沿正$z$方向传播的导波纵向场分量}\\
         \begin{align*}
-         E_{z}(t,z)=E_{0z}(t)exp(-j\beta z) \\
-         H_{z}(t,z)=H_{0z}(t)exp(-j\beta z)
+         E_{z}(t,z)=E_{0z}(t)exp(-\mathrm{j}\beta z) \\
+         H_{z}(t,z)=H_{0z}(t)exp(-\mathrm{j}\beta z)
         \end{align*}
         \saveenum
  \end{enumerate}
@@ -839,14 +839,14 @@
   \resume
   \item 横-纵向场的关系
         \begin{empheq}[box=\widefbox]{align*}
-         \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}}\right)\vec{E}_{t}=\frac{\partial}{\partial z}\nabla_{t}E_{z}-j\omega\mu\nabla_{t}\times\hat{z}H_{z}\\
-         \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}}\right)\vec{H}_{t}=\frac{\partial}{\partial z}\nabla_{t}H_{z}+j\omega\epsilon\nabla_{t}\times\hat{z}E_{z}
+         \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}}\right)\vec{E}_{t}=\frac{\partial}{\partial z}\nabla_{t}E_{z}-\mathrm{j}\omega\mu\nabla_{t}\times\hat{z}H_{z}\\
+         \left( k^{2}+\frac{\partial^{2}}{\partial z^{2}}\right)\vec{H}_{t}=\frac{\partial}{\partial z}\nabla_{t}H_{z}+\mathrm{j}\omega\epsilon\nabla_{t}\times\hat{z}E_{z}
         \end{empheq}
         \begin{columns}
          \begin{column}{0.6\linewidth}
           \begin{empheq}[box=\widefbox]{align*}
-           \vec{E}_{t}=\frac{-j\beta}{k_{c}^{2}}\left[\nabla_{t}E_{z}+Z_{h}\nabla_{t}H_{z}\times\hat{z}\right]\\
-           \vec{H}_{t}=\frac{-j\beta}{k_{c}^{2}}\left[\nabla_{t}H_{z}+Y_{e}\hat{z}\times\nabla_{t}E_{z}\right]
+           \vec{E}_{t}=\frac{-\mathrm{j}\beta}{k_{c}^{2}}\left[\nabla_{t}E_{z}+Z_{h}\nabla_{t}H_{z}\times\hat{z}\right]\\
+           \vec{H}_{t}=\frac{-\mathrm{j}\beta}{k_{c}^{2}}\left[\nabla_{t}H_{z}+Y_{e}\hat{z}\times\nabla_{t}E_{z}\right]
           \end{empheq}
          \end{column}
          \begin{column}{0.4\linewidth}
@@ -866,14 +866,14 @@
   \item 导波的种类\\
         \begin{block}{横磁波（TM）或电（E）波——$H_{z}=0$}
          \begin{empheq}[box=\widefbox]{align*}
-          \vec{E}_{t}^{e}=\frac{-j\beta}{k_{c}^{2}}\nabla_{t}E_{z}\qquad
-          \vec{H}_{t}^{e}=\frac{-j\beta}{k_{c}^{2}}Y_{e}\hat{z}\times\nabla_{t}E_{z}
+          \vec{E}_{t}^{e}=\frac{-\mathrm{j}\beta}{k_{c}^{2}}\nabla_{t}E_{z}\qquad
+          \vec{H}_{t}^{e}=\frac{-\mathrm{j}\beta}{k_{c}^{2}}Y_{e}\hat{z}\times\nabla_{t}E_{z}
          \end{empheq}
         \end{block}
         \begin{block}{横电波（TE）或磁（H）波——$E_{z}=0$}
          \begin{empheq}[box=\widefbox]{align*}
-          \vec{E}_{t}^{h}=\frac{-j\beta}{k_{c}^{2}}Z_{h}\nabla_{t}H_{z}\times\hat{z}\qquad
-          \vec{H}_{t}^{h}=\frac{-j\beta}{k_{c}^{2}}\nabla_{t}H_{z}
+          \vec{E}_{t}^{h}=\frac{-\mathrm{j}\beta}{k_{c}^{2}}Z_{h}\nabla_{t}H_{z}\times\hat{z}\qquad
+          \vec{H}_{t}^{h}=\frac{-\mathrm{j}\beta}{k_{c}^{2}}\nabla_{t}H_{z}
          \end{empheq}
         \end{block}
         导行系统横向为调谐（振动）解形式$k_{c}^{2}>0$,$k^{2}>\beta^{2}$;$\beta=k\cdot\sqrt{1-\left(k_{c}/k\right)^{2}}$ 相速$v_{p}>c/\sqrt{\epsilon_{r}}$快波，有色散性，且需满足$k_{c}<k$才能传播。
@@ -887,23 +887,23 @@
   %\end{flalign*}
   以及
   \begin{align*}
-    & \vec{E}_{t}=\frac{-j\beta}{k_{c}^{2}}[\nabla_{t}E_{z}+Z_{h}\nabla_{t}H_{z}\times\hat{z}] \\
-    & \vec{H}_{t}=\frac{-j\beta}{k_{c}^{2}}[\nabla_{t}H_{z}+Y_{e}\hat{z}\times\nabla_{t}E_{z}]
+    & \vec{E}_{t}=\frac{-\mathrm{j}\beta}{k_{c}^{2}}[\nabla_{t}E_{z}+Z_{h}\nabla_{t}H_{z}\times\hat{z}] \\
+    & \vec{H}_{t}=\frac{-\mathrm{j}\beta}{k_{c}^{2}}[\nabla_{t}H_{z}+Y_{e}\hat{z}\times\nabla_{t}E_{z}]
   \end{align*}
   $$\left(\frac{0}{0}\right)\text{形式}\Longrightarrow k_{c}=0 \qquad k^{2}=k_{c}^{2}+\beta^{2}\Longrightarrow \beta=k $$
  \end{block}
 \end{frame}
 
 \begin{frame}{导波场的分析}
- 又由$\nabla_{t}\times\vec{E}_{t}=-j\omega\mu\hat{z}H_{z}$\qquad$\nabla_{t}\times\vec{H}_{t}=j\omega\epsilon\hat{z}E_{z}$
+ 又由$\nabla_{t}\times\vec{E}_{t}=-\mathrm{j}\omega\mu\hat{z}H_{z}$\qquad$\nabla_{t}\times\vec{H}_{t}=\mathrm{j}\omega\epsilon\hat{z}E_{z}$
  \begin{empheq}[box=\widefbox]{align*}
   \nabla_{t}\times\vec{E}_{t}^{0}=0 \qquad \nabla_{t}\times\vec{H}_{t}^{0}=0
  \end{empheq}
- $$\nabla_{t}\times\hat{z}E_{z}+\hat{z}\times\frac{\partial\vec{E}_{t}}{\partial z}=-j\omega\mu\vec{H}_{t} \qquad \nabla_{t}\times\hat{z}H_{z}+\hat{z}\times\frac{\partial\vec{H}_{t}}{\partial z}=j\omega\epsilon\vec{E}_{t} $$
+ $$\nabla_{t}\times\hat{z}E_{z}+\hat{z}\times\frac{\partial\vec{E}_{t}}{\partial z}=-\mathrm{j}\omega\mu\vec{H}_{t} \qquad \nabla_{t}\times\hat{z}H_{z}+\hat{z}\times\frac{\partial\vec{H}_{t}}{\partial z}=\mathrm{j}\omega\epsilon\vec{E}_{t} $$
  \begin{columns}
   \begin{column}{0.2\linewidth}
    \begin{empheq}[box=\widefbox]{align*}
-    & \frac{\partial}{\partial z}=-j\beta \\ & k=\omega\sqrt{(\mu\epsilon)}
+    & \frac{\partial}{\partial z}=-\mathrm{j}\beta \\ & k=\omega\sqrt{(\mu\epsilon)}
    \end{empheq}
   \end{column}
   \begin{column}{0.75\linewidth}
@@ -999,8 +999,8 @@
         沿无耗规则导行系统$+z$方向传输的导波时间平均功率
         \begin{align*}
          P & =\frac{1}{2}Re\int_{S}\vec{E}\times\vec{H}^{*}\cdot d\vec{S}                                      \\
-           & =\frac{1}{2}Re\int_{S}[(\vec{E}_{0t}+\vec{E}_{0z})e^{j\omega t-\gamma z}]                         \\
-           & \qquad\qquad\times[(\vec{H}_{0t}^{*}+\vec{H}_{0z}^{*})e^{-j\omega t-\gamma^{*} z}]\cdot \hat{z}dS \\
+           & =\frac{1}{2}Re\int_{S}[(\vec{E}_{0t}+\vec{E}_{0z})e^{\mathrm{j}\omega t-\gamma z}]                         \\
+           & \qquad\qquad\times[(\vec{H}_{0t}^{*}+\vec{H}_{0z}^{*})e^{-\mathrm{j}\omega t-\gamma^{*} z}]\cdot \hat{z}dS \\
            & =\frac{1}{2}Re\int_{S}\vec{E}_{0t}\times\vec{H}_{0t}^{*}\cdot \hat{z}dS
         \end{align*}
         \begin{columns}

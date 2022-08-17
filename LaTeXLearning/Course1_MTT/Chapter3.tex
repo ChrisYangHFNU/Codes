@@ -1,6 +1,6 @@
-\section{第二章\quad 传输线理论}
+\section{第3章\quad 分布电路与传输线理论}
 
-\begin{comment}
+
 \begin{frame}{传输线理论}
  \begin{itemize}
   \item \textbf{传输线理论，一维分布参数电路理论，微波电路设计和计算的理论基础。}
@@ -18,6 +18,7 @@
  \saveenum
 \end{frame}
 
+
 \begin{frame}{传输线方程}
  \textbf{传输线}是以TEM导模的方式传送电磁波能量或信号的导行系统，其横向尺寸远小于其上工作波长。\\
  \textbf{传输线}有\textbf{长线}和\textbf{短线}之分。所谓长线是指传输线的几何长度与线上传输电磁波的波长比值（电长度）可相比拟，反之称为短线。\\
@@ -34,6 +35,7 @@
  \centering
  \includegraphics[width=9cm]{transmissionline1.png}
 \end{frame}
+
 
 \begin{frame}{传输线方程}
  双导线、同轴线和平行线传输线的分布参数\\
@@ -102,10 +104,12 @@
 \newcommand{\mtikzmark}[1]{\tikz[overlay,remember picture]\node(#1){};}
 \tikzset{mylabel/.style={align=center,fill=blue!10,font=\footnotesize}}
 %\mytlabel[options]{start.mark}{end.mark}{text}
+
 \newcommand\mytlabel[4][]{%
  \tikz[overlay,remember picture]
  {\draw[->]([yshift=-10pt]#2.north) -- node[mylabel,#1]{#4}([yshift=6pt]#3.north);}
 }
+\end{comment}
 
 \begin{frame}{传输线方程}
  \begin{itemize}
@@ -150,6 +154,7 @@
  \end{align*}
  \textbf{电压传播常数}：\fbox{$\gamma=\sqrt{Z_{1}Y_{1}}=\sqrt{(R_{1}+j\omega L_{1})(G_{1}+j\omega C_{1})}$}
 \end{frame}
+
 
 \begin{frame}{传输线方程}
  \begin{itemize}
@@ -204,6 +209,7 @@
  \end{empheq}
 \end{frame}
 
+
 \begin{frame}{传输线方程}
  \begin{empheq}[box=\widefbox]{align*}
   A_{1}=\frac{V_{L}+I_{L}Z_{0}}{2}e^{\gamma l},A_{2}=\frac{V_{L}-I_{L}Z_{0}}{2}e^{-\gamma l}
@@ -251,6 +257,7 @@
   \end{bmatrix}
  \end{align*}
 \end{frame}
+
 
 \begin{frame}{传输线方程}
  \textbf{始端条件解}：已知始端电压和电流$V_{0},I_{0}$ \\
@@ -384,6 +391,7 @@
  \textbf{传输线的特性阻抗可由单位长度分布电容或分布电感求得}
 \end{frame}
 
+
 \subsection{分布参数阻抗}
 \begin{frame}{分布参数阻抗}
  \begin{itemize}
@@ -463,6 +471,7 @@
   \item 当$Z_{0}$为实数，$Z_{L}$为复数负载时，四分之一波长的传输线具有变换阻抗性质的作用。\textbf{四分之一波长变换性}
  \end{itemize}
 \end{frame}
+
 
 \begin{frame}
  \flushleft
@@ -588,6 +597,7 @@
  \end{empheq}
 \end{frame}
 
+%\begin{comment}
 \begin{frame}{驻波参量}
  \begin{enumerate}
   \resume
@@ -643,6 +653,7 @@
   \end{column}
  \end{columns}
 \end{frame}
+%\end{comment}
 
 \begin{frame}{驻波参量}{沿线阻抗分布}
  线上任一点处的输入阻抗为：
@@ -694,6 +705,7 @@
  \end{columns}
 \end{frame}
 
+
 \subsection{无耗线工作状态分析}
 \begin{frame}{无耗线工作状态}
  任何传输线上的电压函数只可能是入射波和反射波的迭加（构成Standing Wave）。不同传输线的区别仅仅在于入射波和反射波的成分不同。换句话说，通解是完备的，我们不需要再找，也不可能再找到其他解。\\
@@ -716,6 +728,7 @@
   & =I^{+}(d)+I^{-}(d)
  \end{empheq}
 \end{frame}
+
 
 \begin{frame}{无耗线工作状态}
  \begin{itemize}
@@ -764,6 +777,7 @@
  \end{enumerate}
 \end{frame}
 
+
 \begin{frame}{无耗线工作状态}
  \begin{columns}
   \begin{column}{0.5\linewidth}
@@ -796,6 +810,7 @@
  \qquad \quad$Z_{L}=0$,\qquad$Z_{L}=\infty$,\qquad$Z_{L}=\pm jX_{L}$\\
  终端的入射波将被全反射，沿线入射波与反射波迭加形成驻波分布。驻波状态意味着入射波功率一点也没有被负载吸收，即\textbf{负载与传输线完全失配}。
 \end{frame}
+
 
 \begin{frame}{无耗线工作状态}
  \begin{itemize}
@@ -853,6 +868,7 @@
   \end{empheq}}
 \end{frame}
 
+
 \begin{frame}{无耗线工作状态}
  \begin{itemize}
   \item 终端开路
@@ -905,6 +921,7 @@
  $Z_{in}^{oc}(d)=-jZ_{0}\cot\beta d\Longleftrightarrow$ 短路 \fbox{$Z_{in}^{sc}=jZ_{0}\tan\beta d$}\\
  经过观察：\textbf{把开路线可以看成是短路线移动$\lambda/4$而成}
 \end{frame}
+
 
 \begin{frame}{无耗线工作状态}
  \begin{columns}
@@ -960,6 +977,7 @@
  \end{align*}
 \end{frame}
 
+
 \begin{frame}{无耗线工作状态}
  \begin{itemize}
   \item 终端接\textbf{纯电感}负载无耗线\quad \fbox{$Z_{L}=+jX_{L}$}
@@ -1006,6 +1024,7 @@
  \end{columns}
 \end{frame}
 
+
 \begin{frame}{无耗线工作状态}
  \begin{itemize}
   \item 终端接\textbf{纯电容}负载无耗线\quad \fbox{$Z_L=-jX_L$}
@@ -1028,6 +1047,7 @@
  \includegraphics[width=8.5cm]{dianrong.png}
 \end{frame}
 
+
 \begin{frame}{无耗线工作状态}
  阻抗的一般公式\quad \fbox{$Z_L=jX_L$}
  \begin{align*}
@@ -1047,6 +1067,7 @@
  \end{align*}
 \end{frame}
 
+
 \begin{frame}{无耗线工作状态}
  \begin{empheq}[box=\widefbox]{align*}
   X_L=Z_0\tan\frac{2\pi}{\lambda}l_0\quad \Longrightarrow \quad l_0=\frac{\lambda}{2\pi}\arctan\frac{X_L}{Z_0}
@@ -1062,6 +1083,7 @@
  \end{align*}
 \end{frame}
 
+
 \begin{frame}{无耗线工作状态}
  \centering
  \includegraphics[width=8cm]{LandC.png}\\
@@ -1072,11 +1094,13 @@
  \textbf{纯电抗}：电压、电流按正余弦变化，终端电压和电流不为零，也不是最大。
 \end{frame}
 
+
 \begin{frame}{无耗线工作状态}
  2、二分之一波长的重复性，四分之一波长的变化性。\\
  3、驻波波腹值为入射波的两倍，波节值等于零。短路线终端为电压波节、电流波腹；开路线终端为电压波腹、电流波节；接纯电抗负载时，终端既非波腹也非波节（\textbf{纯电感负载时，距负载第一个出现的是电压波腹点}）。\\
  4、沿线同一位置的电压电流之间$90^\circ$相位差，所以驻波状态只有能量的存贮并无能量的传输。
 \end{frame}
+
 
 \begin{frame}{无耗线工作状态}
  \begin{enumerate}
@@ -1091,6 +1115,7 @@
  \end{empheq}
 \end{frame}
 
+
 \begin{frame}{无耗线工作状态}
  \widefbox{$\Gamma_L=\lvert\Gamma_L\rvert e^{\pm j\phi_L}$}
  \begin{align*}
@@ -1099,6 +1124,7 @@
  \end{align*}
  传输线工作在行驻波状态，行波与驻波的相对大小决定于负载与传输线的失配程度。
 \end{frame}
+
 
 \begin{frame}{无耗线工作状态}
  1、沿线电压、电流分布\\
@@ -1119,6 +1145,8 @@
  此时$\lvert\Gamma\rvert<1$，终端产生部分反射，线上形成行驻波，无波节点，驻波最小值不等于零，驻波最大值不等于终端入射波振幅的两倍。
 \end{frame}
 
+
+
 \begin{frame}{无耗线工作状态}
  \begin{align*}
   \lvert V(d)\rvert=\lvert V^+(d)\rvert[1+\lvert\Gamma_L\rvert^2+2\lvert\Gamma_L\rvert\cos(\phi_L-2\beta d)]^{1/2} \\
@@ -1136,6 +1164,8 @@
  \end{empheq}
 \end{frame}
 
+
+
 \begin{frame}{无耗线工作状态}
  2、阻抗分布
  \begin{align*}
@@ -1149,6 +1179,8 @@
   \rho=\frac{1+\lvert\Gamma_L\rvert}{1-\lvert\Gamma_L\rvert}
  \end{empheq}
 \end{frame}
+
+
 
 \begin{frame}{无耗线工作状态}
  \begin{align*}
@@ -1169,311 +1201,11 @@
  \end{align*}
 \end{frame}
 
+
 \subsection{有耗线的特性与计算}
 \begin{frame}{有耗线的特性与计算}
 
 \end{frame}
-\end{comment}
 
-\subsection{Smith Chart（阻抗圆图及其应用）}
-\begin{frame}{Smith Chart（阻抗圆图及其应用）}
- 前面的分析都是围绕如下公式及相互关系展开的：
- \begin{empheq}[box=\widefbox]{align*}
-  Z_{in}(d)=\frac{V_L\cosh\gamma d+I_LZ_0\sinh\gamma d}{I_L\cosh\gamma d+\frac{V_L\sinh\gamma d}{Z_0}} & =Z_0\frac{Z_L+Z_0\tanh\gamma d}{Z_0+Z_L\tanh\gamma d}\\
-  \text{无耗传输线:}& =Z_0\frac{Z_L+jZ_0\tan\beta d}{Z_0+jZ_L\tan\beta d}
- \end{empheq}
- \begin{columns}
-  \begin{column}{0.45\linewidth}
-   \begin{empheq}[box=\widefbox]{align*}
-    \Gamma_L &=\frac{A_2}{A_1}=\frac{Z_L-Z_0}{Z_L+Z_0}\\
-    &=\left\lvert\frac{Z_L-Z_0}{Z_L+Z_0}\right\rvert e^{j\phi_L}\\
-    &=\lvert\Gamma_L\rvert e^{j\phi_L}
-   \end{empheq}
-  \end{column}
-  \begin{column}{0.55\linewidth}
-   \begin{empheq}[box=\widefbox]{align*}
-    \rho=VSWR=\frac{\lvert V\rvert_{max}}{\lvert V\rvert_{min}}=\frac{1+\lvert\Gamma_L\rvert}{1-\lvert\Gamma_L\rvert}
-   \end{empheq}
-  \end{column}
- \end{columns}
-\end{frame}
 
-\begin{frame}{Smith Chart（阻抗圆图及其应用）}
- \begin{enumerate}
-  \item 圆图概念
-        \begin{itemize}
-         \item 圆图是求解均匀传输线有关阻抗计算和阻抗匹配问题的一类曲线坐标图；
-         \item 图上有两组坐标曲线：归一化阻抗或者导纳的实部和虚部的等值线簇，与反射系数的模和辐角的等值线簇；
-         \item 所有这些等值线簇都是圆或圆弧（直线是圆的特例），故称为阻抗圆图或者导纳圆图，简称圆图。
-        \end{itemize}
-        \saveenum
- \end{enumerate}
- \begin{align*}
-  z(d)=\frac{Z(d)}{Z_0}=\frac{1+\Gamma(d)}{1-\Gamma(d)}\quad\text{or}\quad\Gamma(d)=\frac{z(d)-1}{z(d)+1} \\
-  z(d)=r(d)+jx(d)=\lvert z\rvert e^{j\theta}                                                              \\
-  \Gamma(d)=\Gamma_{Re}(d)=j\Gamma_{Im}(d)=\lvert\Gamma(d)\rvert e^{j\phi(d)}
- \end{align*}
-\end{frame}
 
-\begin{frame}{Smith Chart（阻抗圆图及其应用）}
- \begin{enumerate}
-  \resume
-  \item Smith圆图
-        \begin{itemize}
-         \item Smith圆图是通过双线性变换式，将$z$复平面上的$r=$常数和$x=$常数的二簇相互正交的直线分别变换成$\Gamma$复平面上的二簇相互正交的圆，并同$\Gamma$极坐标等值线簇$\lvert\Gamma\rvert=$常数和$\phi=$常数套印在一起而得到的圆图。
-         \item 该图表是由\textbf{Phillip Smith}于1939年发明的，当时他在美国的RCA公司工作。Smith也许不是图表的第一位发明者，一位名叫Kurakawa的日本工程师声称早于其一年发明了这种图表。
-        \end{itemize}
- \end{enumerate}
- \begin{align*}
-  z(d)=\frac{Z(d)}{Z_0}=\frac{1+\Gamma(d)}{1-\Gamma(d)}\quad\text{or}\quad\Gamma(d)=\frac{z(d)-1}{z(d)+1} \\
-  z(d)=r(d)+jx(d)=\lvert z\rvert e^{j\theta}                                                              \\
-  \Gamma(d)=\Gamma_{Re}(d)=j\Gamma_{Im}(d)=\lvert\Gamma(d)\rvert e^{j\phi(d)}
- \end{align*}
-\end{frame}
-
-\begin{frame}{Smith Chart（阻抗圆图及其应用）}
- \begin{itemize}
-  \item 阻抗圆图\\
-        阻抗圆图是由等反射系数圆和归一化等阻抗圆组成。
-        \begin{enumerate}
-         \item 等反射系数圆\\
-               距离终端$d$处的反射系数为
-               \begin{empheq}[box=\widefbox]{align*}
-                \Gamma(d)=\lvert\Gamma\rvert e^{j\phi(d)}=\lvert\Gamma_L\rvert e^{j(\phi_L-2\beta d)}=\Gamma_{Re}+j\Gamma_{Im}
-               \end{empheq}
-               \saveenum
-        \end{enumerate}
- \end{itemize}
- 表明，在复平面上等反射系数模$\lvert\Gamma\rvert$的轨迹是以坐标原点为圆心、$\lvert\Gamma_L\rvert$为半径的圆，这个圆称为等反射系数$\lvert\Gamma\rvert$圆。由于反射系数的模与驻波比是一一对应的，故又称为\textbf{等驻波比圆}。
-\end{frame}
-
-\begin{frame}{Smith Chart（阻抗圆图及其应用）}
- 线上移动的距离与转动角度之间的关系为
- \begin{columns}
-  \begin{column}{0.4\linewidth}
-   \begin{empheq}[box=\widefbox]{align*}
-    \Gamma(d) &=\lvert\Gamma\rvert e^{j\phi}\\
-    &=\lvert\Gamma_L\rvert e^{j(\phi_L-2\beta d)}\\
-    \Delta\phi &=2\beta\Delta d\\
-    &=\frac{4\pi}{\lambda}\Delta d
-   \end{empheq}
-   为了使用方便，有的圆图上标有两个方向的波长数数值，如图所示。向负载方向移动读里圈读数，向波源方向移动读外圈读数。
-  \end{column}
-  \begin{column}{0.6\linewidth}
-   \begin{figure}
-    \includegraphics[width=6cm]{reflect_coeff.png}
-    \caption{反射系数圆}
-   \end{figure}
-  \end{column}
- \end{columns}
-\end{frame}
-
-\begin{frame}{Smith Chart（阻抗圆图及其应用）}
- \textbf{相角相等的反射系数的轨迹是单位圆内的径向线}
- \begin{columns}
-  \begin{column}{0.4\linewidth}
-   线上移动长度$\lambda/2$时，对应反射系数矢量转动一周。一般转动的角度用波长数（或电长度）$\Delta d/\lambda$表示，且标度波长数的零点位置通常选在$\phi=\pi$处。
-  \end{column}
-  \begin{column}{0.6\linewidth}
-   \begin{figure}
-    \includegraphics[width=4cm]{reflect_coeff.png}
-    \caption{等反射系数圆的波长数标度}
-   \end{figure}
-  \end{column}
- \end{columns}
- $\phi=0$\textbf{的径向线为各种不同负载阻抗情况下电压波腹点反射系数的轨迹；}\\
- $\phi=\pi$\textbf{的径向线为各种不同负载阻抗情况下电压波节点反射系数的轨迹。}
-\end{frame}
-
-\begin{frame}{Smith Chart（阻抗圆图及其应用）}
- \begin{itemize}
-  \item 阻抗圆图
-        \begin{enumerate}
-         \resume
-         \item 归一化阻抗圆
-        \end{enumerate}
-        \begin{empheq}[box=\widefbox]{align*}
-         z_{in}(d)=\frac{Z_{in}(d)}{Z_0}=\frac{1+\Gamma(d)}{1-\Gamma(d)}
-        \end{empheq}
- \end{itemize}
- \begin{align*}
-  z_{in}(d) & =\frac{1+(\Gamma_{Re}+j\Gamma_{Im})}{1-(\Gamma_{Re}+j\Gamma_{Im})}                                                                          \\
-            & =\frac{1-(\Gamma^{2}_{Re}+\Gamma^{2}_{Im})}{(1-\Gamma_{Re})^2+\Gamma_{Im}^{2}}+j\frac{2\Gamma_{Im}}{(1-\Gamma_{Re})^2+\Gamma_{Im}^{2}}=r+jx
- \end{align*}
- \begin{empheq}[box=\widefbox]{align*}
-  \left(\Gamma_{Re}-\frac{r}{r+1}\right)^2+\Gamma_{Im}^{2}=\frac{1}{(r+1)^2}\quad \text{归一化电阻轨迹方程}\\
-  (\Gamma_{Re}-1)^2+\left(\Gamma_{Im}-\frac{1}{x}\right)^2=\left(\frac{1}{x}\right)^2\quad \text{归一化电抗轨迹方程}
- \end{empheq}
- \footnotesize{特征参数，是形成统一Smith圆图的最关键点，它包含了阻抗归一和电长度归一。}
-\end{frame}
-
-\begin{frame}{Smith Chart（阻抗圆图及其应用）}
-  \only<1>{\begin{columns}
-    \begin{column}{0.55\linewidth}
-      \begin{empheq}[box=\widefbox]{align*}
-        (\Gamma_{Re}-1)^2+\left(\Gamma_{Im}-\frac{1}{x}\right)^2=\left(\frac{1}{x}\right)^2
-      \end{empheq}
-    \end{column}
-    \begin{column}{0.45\linewidth}
-      \begin{figure}
-        \includegraphics[width=5cm]{diankangyuan.png}
-        \caption{归一化电抗圆}
-      \end{figure}
-    \end{column}
-  \end{columns}}
-  \only<2>{\begin{columns}
-    \begin{column}{0.45\linewidth}
-      \begin{figure}
-        \includegraphics[width=5cm]{dianzuyuan.png}
-        \caption{归一化电阻圆}
-      \end{figure}
-    \end{column}
-    \begin{column}{0.55\linewidth}
-      \begin{empheq}[box=\widefbox]{align*}
-        \left(\Gamma_{Re}-\frac{r}{r+1}\right)^2+\Gamma_{Im}^2=\frac{1}{(r+1)^2}
-      \end{empheq}
-    \end{column}
-  \end{columns}}
-\end{frame}
-
-\begin{frame}{Smith Chart（阻抗圆图及其应用）}
-  电阻圆始终和直线$\Gamma_r=1$相切
-  \begin{columns}
-    \begin{column}{0.42\linewidth}
-      \begin{figure}
-        \includegraphics[width=4.55cm]{dianzuyuan.png}
-        \caption{归一化电阻圆}
-      \end{figure}
-    \end{column}
-    \begin{column}{0.58\linewidth}
-      \begin{tabular}{|c|c|c|c|}
-        \hline
-        \multirow{2}*{$r$} &
-        \multicolumn{2}{c|}{\footnotesize{圆心坐标}} &
-        \multirow{2}*{\footnotesize{半径} $\left(\frac{1}{1+r}\right)$}\\ \cline{2-3}
-        & $\Gamma_r=\frac{r}{1+r}$ & $\Gamma_i=0$ \\ \hline
-        0 & 0 & 0 & 1 \\ \hline
-        1 & 1/2 & 0 & 1/2 \\ \hline
-        2 & 2/3 & 0 & 1/3 \\ \hline
-      \end{tabular}
-    \end{column}
-  \end{columns}
-  \begin{empheq}[box=\widefbox]{align*}
-    \left(\Gamma_{Re}-\frac{r}{r+1}\right)^2+\Gamma_{Im}^2=\frac{1}{(r+1)^2}
-  \end{empheq}
-\end{frame}
-
-\begin{frame}{Smith Chart（阻抗圆图及其应用）}
-  电抗圆圆心坐标和半径
-  \begin{empheq}[box=\widefbox]{align*}
-      (\Gamma_{Re}-1)^2+\left(\Gamma_{Im}-\frac{1}{x}\right)^2=\left(\frac{1}{x}\right)^2
-  \end{empheq}
-  \begin{columns}
-    \begin{column}{0.58\linewidth}
-      \begin{tabular}{|c|c|c|c|}
-        \hline
-        \multirow{2}*{$x$} &
-        \multicolumn{2}{c|}{\footnotesize{圆心坐标}} &
-        \multirow{2}*{\footnotesize{半径} $\left(\frac{1}{x}\right)$}\\ \cline{2-3}
-        & $\Gamma_r=1$ & $\Gamma_i=\frac{1}{x}$ \\ \hline
-        0 & 1 & \infty & \infty \\ \hline
-        \pm0.5 & 1 & \pm2 & 2 \\ \hline
-        \pm1 & 1 & \pm1 & 1 \\ \hline
-      \end{tabular}
-    \end{column}
-    \begin{column}{0.42\linewidth}
-      \begin{figure}
-        \includegraphics[width=4.55cm]{diankangyuan.png}
-        \caption{归一化电抗圆}
-      \end{figure}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}{Smith Chart（阻抗圆图及其应用）}
-  将等电阻圆和等电抗圆绘制在同一张图上，得到阻抗圆图。
-  \centering
-  \includegraphics[width=8cm]{zukangyuan.png}
-\end{frame}
-
-\begin{frame}{Smith Chart（阻抗圆图及其应用）}
-  阻抗圆图有如下几个特点
-  \begin{columns}
-    \begin{column}{0.4\linewidth}
-      (1)圆图上有三个特殊点：\\
-      \pause\textbf{匹配点}(O点)，其坐标为(0,0)\\
-      $r=1,x=0$ \\
-      $\lvert\Gamma\rvert=0,\rho=1$\\
-      \pause\textbf{短路点}(C点)，其坐标为(-1,0)\\
-      $r=0,x=0,\lvert\Gamma\rvert=1$ \\
-      $\rho=\infty,\phi=\pi$ \\
-      \pause\textbf{开路点}(D点)，其坐标为(1,0)\\
-      $r=\infty,x=\infty,\lvert\Gamma\rvert=1$ \\
-      $\rho=\infty,\phi=0$
-    \end{column}
-    \begin{column}{0.6\linewidth}
-      \only<1>{\includegraphics[width=5cm]{smithchart-1.png}}
-      \only<2>{\includegraphics[width=5cm]{smithchart-2.png}}
-      \only<3>{\includegraphics[width=5cm]{smithchart-3.png}}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}{Smith Chart（阻抗圆图及其应用）}
-  \begin{columns}
-    \begin{column}{0.45\linewidth}
-      (2)圆图上有三条特殊线\\
-      圆图上实轴为$x=0$的轨迹，\\ \textbf{正半实轴}为电压波腹点的轨迹，线上$R$值为驻波比读数。\\
-      \textbf{负半实轴}为电压波节点的轨迹，
-      线上的$R$值为行波系数$K$的
-      读数。\\
-      \textbf{最外面的单位圆}为$R=0$的纯
-      电抗轨迹，即为$\lvert\Gamma\rvert=1$的全反射
-      系数圆的轨迹.
-    \end{column}
-    \begin{column}{0.55\linewidth}
-      \only<1>{\includegraphics[width=5cm]{smithchart-4.png}}
-      \only<2>{\includegraphics[width=5cm]{smithchart-5.png}}
-      \only<3>{\includegraphics[width=5cm]{smithchart-6.png}}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}{Smith Chart（阻抗圆图及其应用）}
- 例1 \quad 特性阻抗$Z_0=50\Omega$，负载阻抗$Z_L=100+j50\Omega$，求距负载$0.24\lambda$处输入阻抗。\\
- 解：归一化负载阻抗$z_L=2+j1$\\
- \begin{columns}
-  \begin{column}{0.5\linewidth}
-   1)\quad 向电源方向旋转$0.213\lambda$
-   \begin{align*}
-    \phi=\arctan(1/2)                         \\
-    \frac{2\pi}{\lambda/2}=\frac{\pi-\phi}{l} \\
-    l =(\pi-0.4636)\lambda/4\pi               \\
-    =0.213\lambda
-   \end{align*}
-   2)\quad 旋转$0.24\lambda$到$z_{in}$
-   \begin{align*}
-    z_in=0.42-j0.25\rightarrow\times 50 \\
-    \rightarrow 21-j12.5\Omega
-   \end{align*}
-  \end{column}
-  \begin{column}{0.5\linewidth}
-   \only<1>{\includegraphics[width=5cm]{example1-1.png}}
-   \only<2>{\includegraphics[width=5cm]{example1-2.png}}
-   \only<3>{\includegraphics[width=5cm]{example1-3.png}}
-   \only<4>{\includegraphics[width=5cm]{example1-4.png}}
-   \only<5>{\includegraphics[width=5cm]{example1-5.png}}
-   \only<6>{\includegraphics[width=5cm]{example1-6.png}}
-   \only<7>{\includegraphics[width=5cm]{example1-7.png}}
-   \only<8>{\includegraphics[width=5cm]{example1-8.png}}
-   \only<9>{\includegraphics[width=5cm]{example1-9.png}}
-   \only<10>{\includegraphics[width=5cm]{example1-10.png}}
-   \only<11>{\includegraphics[width=5cm]{example1-11.png}}
-  \end{column}
- \end{columns}
-\end{frame}
-
-\subsection{传输线的阻抗匹配}
-\begin{frame}{传输线的阻抗匹配}
-
-\end{frame}

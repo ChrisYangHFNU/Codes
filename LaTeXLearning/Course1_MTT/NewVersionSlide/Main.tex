@@ -1,0 +1,29 @@
+\documentclass[17pt]{ctexbeamer}
+\usepackage{tikz}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\title[About Microwave]{《微波技术基础》}
+\subtitle{Demonstrating larger fonts}
+
+\author{Yang Jing\inst{1}}
+
+\institute[HFNU]
+{
+    \inst{1}%
+    Sch.EIEE \\
+    Hefei Normal University \\
+}
+
+\date{\today}
+
+% Use a simple TikZ graphic to show where the logo is positioned
+\logo{\begin{tikzpicture}
+    \filldraw[color=red!50,fill=red!25,very thick](0,0) circle(0.5);
+    \node[draw,color=white] at (0,0) {LOGO HERE};
+\end{tikzpicture}}
+\begin{document}
+\frame{\titlepage}
+\begin{frame}
+    \frametitle{Demonstrating large fonts}
+\end{frame}
+\end{document}

@@ -1,10 +1,20 @@
 \usepackage{verbatim}
 \usepackage{graphicx}
+\usepackage{svg}
 \usepackage{amsmath}
 \usepackage{extarrows}
 \usepackage{mathtools}
 \usepackage{multirow,booktabs}
 \usepackage{tikz}
+\usetikzlibrary{calc,intersections,through}
+\usepackage{pgfplots}
+\usepgfplotslibrary{smithchart}
+\usepgfplotslibrary{polar}
+\pgfplotsset{compat=1.11}
+\usepackage{siunitx}
+\usepackage{circuitikz}
+\usepackage{booktabs}
+\usepackage{makecell}
 \usepackage{multimedia}
 \usepackage{hyperref}
 \usepackage{luatex85}
@@ -19,11 +29,12 @@
 \usepackage{empheq}
 \usepackage{multirow}
 \newcommand*\widefbox[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
-%\usetheme{PaloAlto}
+\usetheme{Madrid}
+\usecolortheme{beaver}
 %\usetheme{CambridgeUS}
-\usetheme[hideallsubsections]{Berkeley}
+%\usetheme[hideallsubsections]{Berkeley}
 %\setbeamersize{sidebar width left=0pt}
-\logo{\includegraphics[width=1.55cm,height=1.55cm]{logo.jpg}}
+\logo{\includegraphics[width=1cm,height=1cm]{logo.jpg}}
 \newcounter{savedenum}
 \newcommand*{\saveenum}{\setcounter{savedenum}{\theenumi}}
 \newcommand*{\resume}{\setcounter{enumi}{\thesavedenum}}

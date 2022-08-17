@@ -1,30 +1,37 @@
 \documentclass{ctexbeamer}
 \input{preamble}
 
-\includeonly{Chapter2}
+\title[Fundamentals of Microwave Technology]{《微波技术基础》}
+\subtitle{Fundamentals of Microwave Technology}
+
+\author{Yang Jing\inst{1}}
+\institute[HFNU]
+{
+      \inst{1} %
+      School of Electronic Information and Electrical Engineering \\
+      Hefei Normal University\\
+}
+
+\includeonly{Chapter3} % 每次编译一章，减少编译量
+
 \begin{document}
-\begin{frame}
-      \title{《微波技术基础》}
-      \institute{合肥师范学院\\电子信息与电气工程学院\\Sch.EIEE Hefei Normal University}
-      \author{杨晶}
-      \date{\today}
-      \titlepage
-\end{frame}
+\frame{\titlepage}
 
 \begin{frame}{教材}
-      《微波技术基础》，廖承恩编，西安电子科技大学出版社，2011.5.
+      《微波技术基础（第2版）》，李秀萍编，电子工业出版社，2017.7.
       \begin{figure}
             \centering
-            \includegraphics[height=6cm]{jiaocai2}
+            \includegraphics[height=6cm]{jiaocaibeiyou}
       \end{figure}
 \end{frame}
 
-\begin{frame}{参考文献}
+\begin{frame}{参考书目}
       \bibliographystyle{apalike}
       \nocite{Zhao}
       \nocite{Wu}
       \nocite{Colin}
       \nocite{Liang}
+      \nocite{Liao}
       \bibliography{math}
 \end{frame}
 
@@ -40,13 +47,13 @@
       \end{enumerate}
 \end{frame}
 
-\include{Chapter1}
-\include{Chapter2}
+%\include{Chapter1}
+%\include{Chapter2}
 \include{Chapter3}
-\include{Chapter4}
-\include{Chapter5}
-\include{Chapter6}
-\include{Chapter7}
-\include{Chapter8}
-\include{Chapter9}
+%\include{Chapter4}
+%\include{Chapter5}
+%\include{Chapter6}
+%\include{Chapter7}
+%\include{Chapter8}
+%\include{Chapter9}
 \end{document}
