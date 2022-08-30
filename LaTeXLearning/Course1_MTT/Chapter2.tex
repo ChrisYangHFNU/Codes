@@ -1,5 +1,5 @@
 \section{第2章\quad 从低频电路到微波分析}
-\begin{frame}{第2章\quad 从低频电路到微波分析}
+\begin{frame}
     通常电路分析应用于元件尺寸远小于工作波长、电路中的各元件（如电阻、电容和电感）彼此独立、位置固定的低频电路。这意味着在所讨论的频率范围内，基本电路元件电阻 $R$ 、电容 $C$ 和电感 $L$ 在各自所处的区域内将分别表现为电阻消耗能量、电容存储电能、
     电感产生磁场，低频电路的上述条件使得我们可将低频电路中的所有元件都视为集总元件。而在微波频段这些电路元件不再表现为纯电阻、电容和电感，而是有额外的阻抗和电抗（寄生效应）。在微波频段，同一元件在不同频率下可能会表现出不同的容性、感性或阻性。
 \end{frame}
@@ -339,8 +339,10 @@ $$X_C=159/fC\text{(f的单位GHz,C的单位pF)}$$
             \centering
             \begin{align*}
                 &\vec J = \sigma \vec E\\
-                &\vec J = \vec J_0 e^{-z/\delta_s}\\
-                &\delta_s = \frac{1}{\sqrt{\pi f\mu\sigma}}
+                &\vec J = \vec J_0 \mathrm{e}^{-z/\delta_s}\\
+                &\delta_s = \frac{1}{\sqrt{\pi f\mu\sigma}}\\
+                & R_{AC} = \frac{1}{\pi D\delta_S\sigma} \\
+                & R_{DC} = \frac{1}{\pi(D^2/4)\sigma}
             \end{align*}
         \end{column}
     \end{columns}
