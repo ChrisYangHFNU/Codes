@@ -298,13 +298,6 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Smith导纳圆图}
-  \begin{itemize}
-    \item 导纳圆图
-  \end{itemize}
-  %TODO:
-\end{frame}
-
 \begin{frame}{Smith圆图的特点}
   \textbf{使用圆图应注意以下特点}\\
   \begin{columns}
@@ -342,7 +335,7 @@
 
 \begin{frame}{Smith圆图的应用}
   例1 \quad 特性阻抗$Z_0=50\Omega$，负载阻抗$Z_L=100+j50\Omega$，求距负载$0.24\lambda$处输入阻抗。\\
-  解：归一化负载阻抗$z_L=2+j1$\\
+  解：归一化负载阻抗$z_L=2+\mathrm{j}1$\\
   \begin{columns}
     \begin{column}{0.4\linewidth}
       1)\quad 向电源方向旋转$0.213\lambda$
@@ -381,7 +374,12 @@
   例2 \quad 已知无耗传输线的特征阻抗为$50\Omega$，长度为$0.1\lambda$，终端短路，求输入阻抗。
   \begin{columns}
     \begin{column}{0.4\linewidth}
-      %TODO:
+      1)\quad 先找出终端短路点$S$\\
+      2)\quad 向源方向旋转$0.1\lambda$，到圆图上$A$点，读出$x=0.72$
+      \begin{flalign*}
+        Z_{in}=Z_0z_{in}&=50\times\mathrm{j}0.72\\
+        &=\mathrm{j}36\Omega
+      \end{flalign*}
     \end{column}
     \begin{column}{0.6\linewidth}
       \only<1>{\includegraphics[width=6.5cm]{fig4-11-1.pdf}}
@@ -393,6 +391,183 @@
       \only<7>{\includegraphics[width=6.5cm]{fig4-11-7.pdf}}
     \end{column}
   \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  例3 \quad 已知无耗传输线的特征阻抗为$Z_0=50\Omega$，端接负载阻抗为$Z_L=(85+\mathrm{j}30)\Omega$,利用圆图求驻波比。
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      1)\quad 首先对负载归一化
+      \begin{flalign*}
+        z_L=\frac{Z_L}{Z_0}=1.7+\mathrm{j}0.6
+      \end{flalign*}
+      2)\quad 在$Smith$圆图中确定负载位置$A$点：$r=1.7,x=0.6$，并画出负载所在的等反射系数圆\\
+      3)\quad 由图读出与等反射系数圆相切的电阻圆的$r$值即为驻波比 $\rho=2.0$
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \only<1>{\includegraphics[width=7cm]{fig4-12-1.pdf}}
+      \only<2>{\includegraphics[width=7cm]{fig4-12-2.pdf}}
+      \only<3>{\includegraphics[width=7cm]{fig4-12-3.pdf}}
+      \only<4>{\includegraphics[width=7cm]{fig4-12-4.pdf}}
+      \only<5>{\includegraphics[width=7cm]{fig4-12-5.pdf}}
+      \only<6>{\includegraphics[width=7cm]{fig4-12-6.pdf}}
+      \only<7>{\includegraphics[width=7cm]{fig4-12-7.pdf}}
+    \end{column}
+  \end{columns} 
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  例4 \quad 已知传输线长$l=25m$，特征阻抗为$100\Omega$，端接负载阻抗为$Z_L=(100-\mathrm{j}200)\Omega$,信号源频率为$f=10MHz$，利用Smith圆图求输入阻抗及导纳。
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      1)\quad 首先对负载归一化
+      \begin{flalign*}
+        z_L=\frac{Z_L}{Z_0}=1-\mathrm{j}2
+      \end{flalign*}
+      2)\quad 图中定位$A$点：$r=1,x=-2$，由题知$\lambda=30m$，传输线长$l=25m$，所以由$A$点沿等反射系数圆顺时针转动
+      \begin{flalign*}
+        \frac{l}{\lambda}=\frac{5}{6}=0.833=0.5+0.333
+      \end{flalign*}
+      到输入阻抗点，而
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \only<1>{\includegraphics[width=6.5cm]{fig4-13-1.pdf}}
+      \only<2>{\includegraphics[width=6.5cm]{fig4-13-2.pdf}}
+      \only<3>{\includegraphics[width=6.5cm]{fig4-13-3.pdf}}
+      \only<4>{\includegraphics[width=6.5cm]{fig4-13-4.pdf}}
+      \only<5>{\includegraphics[width=6.5cm]{fig4-13-5.pdf}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\begin{frame}{Smith圆图的应用}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      \begin{flalign*}
+        2\beta l=4\pi\frac{5}{6}=2\pi+\frac{4}{3}\pi
+      \end{flalign*}
+      3)\quad 由负载对应的$A$点先沿等反射系数圆顺时针转动0.5刻度，对应$2\pi$，再转$\dfrac{4}{3}\pi$，对应0.333刻度，到达$B$点，$B$点即为输入阻抗点。从图中读出该点读数：$0.45+\mathrm{j}1.2$，反归一化，得到输入阻抗
+      \begin{flalign*}
+        Z_{in}&=(0.45+\mathrm{j}1.2)\times 100\\
+        &=(45+\mathrm{j}120)\Omega
+      \end{flalign*}  
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \includegraphics[width=6.5cm]{fig4-13-6.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      4)\quad 再由$OB$反向延长到$C$点，为归一化导纳点，读出该点的值为$y_{in}=0.27-\mathrm{j}0.73$，所以输入导纳为
+      \begin{flalign*}
+        Y_{in}&=(0.27-\mathrm{j}0.73)/100\\
+        &=0.0027-\mathrm{j}0.0073
+      \end{flalign*}
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \includegraphics[width=6.5cm]{fig4-13-7.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  例5 \quad 如图所示，已知一无耗传输线的特性阻抗为$50\Omega$，驻波比$\rho=3$，相邻两个电压最小值点的距离为$0.2m$，距离负载最近的电压驻波最小值点距负载$0.05m$，求：(1)负载处反射系数；(2)负载阻抗
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      由题可知$\lambda/2=0.2m$，所以$\lambda=0.4m$，由已知条件有
+      \begin{flalign*}
+        \rho=\lvert V_{\mathrm{max}}\rvert / \lvert V_{\mathrm{min}}\rvert = 3
+      \end{flalign*}
+      因为$\rho=\dfrac{1+\lvert \Gamma \rvert}{1-\lvert \Gamma \rvert}$，所以
+      \begin{flalign*}
+        \lvert \Gamma_L \rvert = \lvert \Gamma \rvert = \frac{\rho-1}{\rho+1}=\frac{1}{2}
+      \end{flalign*}
+      1)\quad 绘出等反射系数圆
+      
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \includegraphics[width=6.5cm]{fig4-16-1.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      2)\quad 第一个最小值点处反射波相位为$-\pi$，对应$E$点，延长$OE$，与单位圆交于点$H$，由$H$点向负载（逆时针）转动$\dfrac{d_{\mathrm{min}}}{\lambda}=\dfrac{1}{8}$刻度，得到点$F$。等反射系数圆与$OF$的交点
+      为$G$点。由$G$点读出的即为归一化负载阻抗$0.6-\mathrm{j}0.8$，进行反归一化，得到负载阻抗为$(0.6-\mathrm{j}0.8)\times 50=30-\mathrm{j}40$\\
+      3)\quad 由$G$点读出反射系数为：
+      \begin{flalign*}
+        \Gamma_L=-\mathrm{j}0.5
+      \end{flalign*}
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \only<1>{\includegraphics[width=6.5cm]{fig4-16-2.pdf}}
+      \only<2>{\includegraphics[width=6.5cm]{fig4-16-3.pdf}}
+      \only<3>{\includegraphics[width=6.5cm]{fig4-16-4.pdf}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  例6 \quad 已知一无耗传输线的特征阻抗为$50\Omega$，端接负载阻抗$Z_L$，驻波电压最大值和最小值分别为$V_{\mathrm{max}}=2.5V$和$V_{\mathrm{min}}=1V$，相邻两个电压最小值点距离为$0.05m$。当负载处由解纯电阻$R(R<Z_0)$
+  改为接负载$Z_L$时，电压最小值向源方向移动$1.25cm$，求负载阻抗$Z_L$。
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      1)\quad 驻波比
+      \begin{flalign*}
+        \rho=\lvert V_{\mathrm{max}}\rvert/\lvert V_{\mathrm{min}}\rvert=2.5
+      \end{flalign*}
+      2)\quad 相邻两个电压最小值点的距离为0.05m,即半波长$\lambda/2=0.05m$，即$\lambda=0.1m$，从而移动$1.25cm$为$\lambda/8$。\\
+      3)\quad 当负载处由纯电阻换为接负载$Z_L$时，电压最小值向源方向移动$\lambda/8$，相当于纯电阻点向源移动$\lambda/8$\\  
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      %TODO:
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      4)\quad 端接负载$Z_L$的传输系统的$A$点输入阻抗为$R$，由$\rho=2.5=r$可以确定等反射系数圆$\lvert\Gamma\rvert$\\
+      5)\quad 由于端接纯电阻时对应电压最小值，$R$处电压最小，$r=R/Z_0<1$，说明纯电阻点在横轴的负半轴上$E$点，
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      %TODO:
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      6)\quad 对于端接负载$Z_L$的传输系统，对应圆图上点$E$向负载逆时针旋转$\lambda/8$到点$G$，即得到$Z_L$。从圆图上读出归一化阻抗为
+      $0.69-\mathrm{j}0.72$，所以负载阻抗为
+      \begin{flalign*}
+        Z_L&=0.69-\mathrm{j}0.72\times 50\\
+        &=(34.5-\mathrm{j}36)\Omega
+      \end{flalign*}
+      7)\quad 导纳为(对应F点)
+      \begin{flalign*}
+        Y_L=1/Z_L=0.02006\angle 46.23^{\circ} S
+      \end{flalign*}
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith导纳圆图}
+  \begin{itemize}
+    \item 导纳圆图
+  \end{itemize}
+  %TODO:
 \end{frame}
 
 \subsection{阻抗匹配}
