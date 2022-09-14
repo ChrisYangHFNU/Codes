@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage{xcolor}
+\usepackage{makecell}
+\begin{document}
+  \ttfamily
+  \begin{tabular}{r|>{\color{green}}c>{\color{green}}r>{\color{green}}c}
+    Source    & \textcolor{black}{SS} & \textcolor{black}{df} & \textcolor{black}{MS} \\
+    \hline
+    Model     & 6.8046e+09            & 4                     & 1.7011e+09 \\
+    Residual  & 22900987.1            & 19                    & 1205315.11 \\
+    \hline
+    Total     & 6.8275e+09            & 23                    & 296846986
+  \end{tabular}
+  \begin{tabular}{l@{\quad=\quad}>{\color{green}}r}
+    Number of obs & 24 \\
+    F(4, 19)      & 1411.37 \\
+    Prob > F      & 0.0000 \\
+    R-squared     & 0.9966 \\
+    Adj R-squared & 0.9959 \\
+    Root MSE      & 1097.9
+  \end{tabular}
+\end{document}
