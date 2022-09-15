@@ -177,17 +177,22 @@
         \caption{归一化电阻圆}
       \end{figure}
     \end{column}
+
     \begin{column}{0.58\linewidth}
-      \begin{tabular}{|c|c|c|c|}
-        \hline
-        \multirow{2}*{$r$}                       &
-        \multicolumn{2}{c|}{\footnotesize{圆心坐标}} &
-        \multirow{2}*{\footnotesize{半径} $\left(\frac{1}{1+r}\right)$}                            \\ \cline{2-3}
-                                                 & $\Gamma_r=\frac{r}{1+r}$ & $\Gamma_i=0$       \\ \hline
-        0                                        & 0                        & 0            & 1   \\ \hline
-        1                                        & 1/2                      & 0            & 1/2 \\ \hline
-        2                                        & 2/3                      & 0            & 1/3 \\ \hline
-      \end{tabular}
+      \begin{table}
+        \caption{电阻圆圆心位置及半径}
+        \begin{tabular}{|c|c|c|c|}
+          \hline
+          \multirow{2}*{$r$}                       &
+          \multicolumn{2}{c|}{\footnotesize{圆心坐标}} &
+          \multirow{2}*{\footnotesize{半径} $\left(\frac{1}{1+r}\right)$}                           \\ \cline{2-3}
+                                                   & $\Gamma_r=\frac{r}{1+r}$ & $\Gamma_i=0$  &     \\ \hline
+          0                                        & 0                        & 0             & 1   \\ \hline
+          1                                        & 1/2                      & 0             & 1/2 \\ \hline
+          2                                        & 2/3                      & 0             & 1/3 \\ \hline
+        \end{tabular}
+        %\label{table1}
+      \end{table}  
     \end{column}
   \end{columns}
   \begin{empheq}[box=\widefbox]{align*}
@@ -202,17 +207,21 @@
   \end{empheq}
   \begin{columns}
     \begin{column}{0.58\linewidth}
-      \begin{tabular}{|c|c|c|c|}
-        \hline
-        \multirow{2}*{$x$}                       &
-        \multicolumn{2}{c|}{\footnotesize{圆心坐标}} &
-        \multirow{2}*{\footnotesize{半径} $\left(\frac{1}{x}\right)$}                               \\ \cline{2-3}
-                                                 & $\Gamma_r=1$ & $\Gamma_i=\frac{1}{x}$          \\ \hline
-        0                                        & 1            & \infty                 & \infty \\ \hline
-        \pm0.5                                   & 1            & \pm2                   & 2      \\ \hline
-        \pm1                                     & 1            & \pm1                   & 1      \\ \hline
-      \end{tabular}
+      \begin{table}
+        \caption{电抗圆圆心位置及半径}
+        \begin{tabular}{|c|c|c|c|}
+          \hline
+          \multirow{2}*{$x$}                       &
+          \multicolumn{2}{c|}{\footnotesize{圆心坐标}} &
+          \multirow{2}*{\footnotesize{半径} $\left(\frac{1}{x}\right)$}                               \\ \cline{2-3}
+                                                   & $\Gamma_r=1$ & $\Gamma_i=\frac{1}{x}$  &        \\ \hline
+          0                                        & 1            & \infty                  & \infty \\ \hline
+          \pm0.5                                   & 1            & \pm2                    & 2      \\ \hline
+          \pm1                                     & 1            & \pm1                    & 1      \\ \hline
+        \end{tabular}
+      \end{table}
     \end{column}
+
     \begin{column}{0.42\linewidth}
       \begin{figure}
         \includegraphics[width=4.55cm]{fig4-4.pdf}
@@ -506,9 +515,39 @@
       \end{flalign*}
     \end{column}
     \begin{column}{0.6\linewidth}
-      \only<1>{\includegraphics[width=6.5cm]{fig4-16-2.pdf}}
-      \only<2>{\includegraphics[width=6.5cm]{fig4-16-3.pdf}}
-      \only<3>{\includegraphics[width=6.5cm]{fig4-16-4.pdf}}
+      \includegraphics[width=6.5cm]{fig4-16-2.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      2)\quad 第一个最小值点处反射波相位为$-\pi$，对应$E$点，延长$OE$，与单位圆交于点$H$，由$H$点向负载（逆时针）转动$\dfrac{d_{\mathrm{min}}}{\lambda}=\dfrac{1}{8}$刻度，得到点$F$。等反射系数圆与$OF$的交点
+      为$G$点。由$G$点读出的即为归一化负载阻抗$0.6-\mathrm{j}0.8$，进行反归一化，得到负载阻抗为$(0.6-\mathrm{j}0.8)\times 50=30-\mathrm{j}40$\\
+      3)\quad 由$G$点读出反射系数为：
+      \begin{flalign*}
+        \Gamma_L=-\mathrm{j}0.5
+      \end{flalign*}
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \includegraphics[width=6.5cm]{fig4-16-3.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      2)\quad 第一个最小值点处反射波相位为$-\pi$，对应$E$点，延长$OE$，与单位圆交于点$H$，由$H$点向负载（逆时针）转动$\dfrac{d_{\mathrm{min}}}{\lambda}=\dfrac{1}{8}$刻度，得到点$F$。等反射系数圆与$OF$的交点
+      为$G$点。由$G$点读出的即为归一化负载阻抗$0.6-\mathrm{j}0.8$，进行反归一化，得到负载阻抗为$(0.6-\mathrm{j}0.8)\times 50=30-\mathrm{j}40$\\
+      3)\quad 由$G$点读出反射系数为：
+      \begin{flalign*}
+        \Gamma_L=-\mathrm{j}0.5
+      \end{flalign*}
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \includegraphics[width=6.5cm]{fig4-16-4.pdf}
     \end{column}
   \end{columns}
 \end{frame}
@@ -538,16 +577,60 @@
       5)\quad 由于端接纯电阻时对应电压最小值，$R$处电压最小，$r=R/Z_0<1$，说明纯电阻点在横轴的负半轴上$E$点，
     \end{column}
     \begin{column}{0.6\linewidth}
-      \only<1>{\includegraphics[width=7cm]{fig4-17-2.pdf}}
-      \only<2>{\includegraphics[width=7cm]{fig4-17-3.pdf}}
-      \only<3>{\includegraphics[width=7cm]{fig4-17-4.pdf}}
-      \only<4>{\includegraphics[width=7cm]{fig4-17-5.pdf}}
-      \only<5>{\includegraphics[width=7cm]{fig4-17-6.pdf}}
+      \includegraphics[width=7cm]{fig4-17-2.pdf}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Smith圆图的应用}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      4)\quad 端接负载$Z_L$的传输系统的$A$点输入阻抗为$R$，由$\rho=2.5=r$可以确定等反射系数圆$\lvert\Gamma\rvert$\\
+      5)\quad 由于端接纯电阻时对应电压最小值，$R$处电压最小，$r=R/Z_0<1$，说明纯电阻点在横轴的负半轴上$E$点，
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \includegraphics[width=7cm]{fig4-17-3.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      4)\quad 端接负载$Z_L$的传输系统的$A$点输入阻抗为$R$，由$\rho=2.5=r$可以确定等反射系数圆$\lvert\Gamma\rvert$\\
+      5)\quad 由于端接纯电阻时对应电压最小值，$R$处电压最小，$r=R/Z_0<1$，说明纯电阻点在横轴的负半轴上$E$点，
+    \end{column}
+    \begin{column}{0.6\linewidth}
+     \includegraphics[width=7cm]{fig4-17-4.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      4)\quad 端接负载$Z_L$的传输系统的$A$点输入阻抗为$R$，由$\rho=2.5=r$可以确定等反射系数圆$\lvert\Gamma\rvert$\\
+      5)\quad 由于端接纯电阻时对应电压最小值，$R$处电压最小，$r=R/Z_0<1$，说明纯电阻点在横轴的负半轴上$E$点，
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \includegraphics[width=7cm]{fig4-17-5.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      4)\quad 端接负载$Z_L$的传输系统的$A$点输入阻抗为$R$，由$\rho=2.5=r$可以确定等反射系数圆$\lvert\Gamma\rvert$\\
+      5)\quad 由于端接纯电阻时对应电压最小值，$R$处电压最小，$r=R/Z_0<1$，说明纯电阻点在横轴的负半轴上$E$点，
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \includegraphics[width=7cm]{fig4-17-6.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
   \begin{columns}
     \begin{column}{0.4\linewidth}
       6)\quad 对于端接负载$Z_L$的传输系统，对应圆图上点$E$向负载逆时针旋转$\lambda/8$到点$G$，即得到$Z_L$。从圆图上读出归一化阻抗为
@@ -562,11 +645,87 @@
       \end{flalign*}
     \end{column}
     \begin{column}{0.6\linewidth}
-      \only<1>{\includegraphics[width=7cm]{fig4-17-7.pdf}}
-      \only<2>{\includegraphics[width=7cm]{fig4-17-8.pdf}}
-      \only<3>{\includegraphics[width=7cm]{fig4-17-9.pdf}}
-      \only<4>{\includegraphics[width=7cm]{fig4-17-10.pdf}}
-      \only<5>{\includegraphics[width=7cm]{fig4-17-11.pdf}}
+      \includegraphics[width=7cm]{fig4-17-7.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      6)\quad 对于端接负载$Z_L$的传输系统，对应圆图上点$E$向负载逆时针旋转$\lambda/8$到点$G$，即得到$Z_L$。从圆图上读出归一化阻抗为
+      $0.69-\mathrm{j}0.72$，所以负载阻抗为
+      \begin{flalign*}
+        Z_L&=0.69-\mathrm{j}0.72\times 50\\
+        &=(34.5-\mathrm{j}36)\Omega
+      \end{flalign*}
+      7)\quad 导纳为(对应F点)
+      \begin{flalign*}
+        Y_L=1/Z_L=0.02006\angle 46.23^{\circ} S
+      \end{flalign*}
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \includegraphics[width=7cm]{fig4-17-8.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      6)\quad 对于端接负载$Z_L$的传输系统，对应圆图上点$E$向负载逆时针旋转$\lambda/8$到点$G$，即得到$Z_L$。从圆图上读出归一化阻抗为
+      $0.69-\mathrm{j}0.72$，所以负载阻抗为
+      \begin{flalign*}
+        Z_L&=0.69-\mathrm{j}0.72\times 50\\
+        &=(34.5-\mathrm{j}36)\Omega
+      \end{flalign*}
+      7)\quad 导纳为(对应F点)
+      \begin{flalign*}
+        Y_L=1/Z_L=0.02006\angle 46.23^{\circ} S
+      \end{flalign*}
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \includegraphics[width=7cm]{fig4-17-9.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      6)\quad 对于端接负载$Z_L$的传输系统，对应圆图上点$E$向负载逆时针旋转$\lambda/8$到点$G$，即得到$Z_L$。从圆图上读出归一化阻抗为
+      $0.69-\mathrm{j}0.72$，所以负载阻抗为
+      \begin{flalign*}
+        Z_L&=0.69-\mathrm{j}0.72\times 50\\
+        &=(34.5-\mathrm{j}36)\Omega
+      \end{flalign*}
+      7)\quad 导纳为(对应F点)
+      \begin{flalign*}
+        Y_L=1/Z_L=0.02006\angle 46.23^{\circ} S
+      \end{flalign*}
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \includegraphics[width=7cm]{fig4-17-10.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith圆图的应用}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      6)\quad 对于端接负载$Z_L$的传输系统，对应圆图上点$E$向负载逆时针旋转$\lambda/8$到点$G$，即得到$Z_L$。从圆图上读出归一化阻抗为
+      $0.69-\mathrm{j}0.72$，所以负载阻抗为
+      \begin{flalign*}
+        Z_L&=0.69-\mathrm{j}0.72\times 50\\
+        &=(34.5-\mathrm{j}36)\Omega
+      \end{flalign*}
+      7)\quad 导纳为(对应F点)
+      \begin{flalign*}
+        Y_L=1/Z_L=0.02006\angle 46.23^{\circ} S
+      \end{flalign*}
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \includegraphics[width=7cm]{fig4-17-11.pdf}
     \end{column}
   \end{columns}
 \end{frame}
@@ -575,18 +734,67 @@
   \begin{itemize}
     \item 导纳圆图
   \end{itemize}
-  \begin{tabular}{|c|c|}
-    \hline
-    \textbf{阻抗圆图}   & \textbf{导纳圆图}      \\ \hline
-    $r$                 &  $g$             \\ \hline
-    $x$                 &  $b$             \\ \hline
-    $\Gamma(z)$         & $\Gamma_I(z)$     \\ \hline
-    电压振幅值腹点       & 电流振幅值腹点      \\ \hline
-    电压振幅值节点        & 电流振幅值节点     \\ \hline
-    开路点              & 短路点             \\ \hline
-    短路点              & 开路点              \\ 
-    \hline
-  \end{tabular}
+  \centering
+  \begin{table}
+    \caption{阻抗原图与导纳圆图对应关系}
+    \begin{tabular}{|c|c|}
+      \hline
+      \textbf{阻抗圆图}   & \textbf{导纳圆图}      \\ \hline
+      $r$                 &  $g$             \\ \hline
+      $x$                 &  $b$             \\ \hline
+      $\Gamma(z)$         & $\Gamma_I(z)$     \\ \hline
+      电压振幅值腹点       & 电流振幅值腹点      \\ \hline
+      电压振幅值节点        & 电流振幅值节点     \\ \hline
+      开路点              & 短路点             \\ \hline
+      短路点              & 开路点              \\ 
+      \hline
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}{Smith导纳圆图}
+  例7 \quad 负载$Z_L=100+\mathrm{j}50\Omega$，端接$50\Omega$传输线，传输线长$0.15\lambda$，用Smith圆图求解负载导纳及输入导纳。
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      
+      1)\quad 负载归一化：
+      \begin{flalign*}
+        z_L=\frac{Z_L}{Z_0}=2+\mathrm{j}1
+      \end{flalign*}
+      
+      2)\quad 利用Smith阻抗圆图，定位A点，旋转$180^{\circ}$，得B点，阻抗圆图中读出的是归一化阻抗数值，这个数值即为负载归一化导纳：
+      \begin{flalign*}
+        y_L=0.4-\mathrm{j}0.2=\frac{1}{2+\mathrm{j}1}=\frac{1}{z_L}
+      \end{flalign*}
+      
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \only<1>{\includegraphics[width=7cm]{fig4-22-1.pdf}}
+      \only<2>{\includegraphics[width=7cm]{fig4-22-2.pdf}}
+      \only<3>{\includegraphics[width=7cm]{fig4-22-3.pdf}}
+      \only<4>{\includegraphics[width=7cm]{fig4-22-4.pdf}}
+      \only<5>{\includegraphics[width=7cm]{fig4-22-5.pdf}}
+      \only<6>{\includegraphics[width=7cm]{fig4-22-6.pdf}}
+      \only<7>{\includegraphics[width=7cm]{fig4-22-7.pdf}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Smith导纳圆图}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      3)\quad 用导纳圆图求归一化输入导纳（反射系数为电流反射系数，形状读数不变），在导纳圆图中找到负载归一化导纳点$y_L=0.4-\mathrm{j}0.2$，顺时针旋转$0.15\lambda$，得归一化输入导纳$y_{in}=0.61+\mathrm{j}0.66$,
+      反归一化得到输入导纳
+      \begin{flalign*}
+        Y_{in}&=y_{in}/Z_0\\
+        &=(0.61+\mathrm{j}0.66)/50\\
+        &=0.0122+\mathrm{j}0.0132 S
+      \end{flalign*}
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \only<1>{\includegraphics[width=7cm]{fig4-22-8.pdf}}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \subsection{阻抗匹配}
