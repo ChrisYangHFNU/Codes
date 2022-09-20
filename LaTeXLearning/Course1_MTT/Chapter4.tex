@@ -1021,6 +1021,70 @@
   \textbf{只要$Z_{02}$为实数，可以实现}
 \end{frame}
 
+\begin{frame}{$\lambda/4$ 阻抗变换器幅频特性}
+  已知：在频率$f_0$时匹配
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      \begin{flalign*}
+        &\color{blue}{Z_{in}=Z_m\cdot\frac{Z_L+\mathrm{j}Z_m\tan\theta}{Z_m+\mathrm{j}Z_L\tan\theta}}                                  \\
+        &\color{blue}{\theta=\beta\cdot l=\frac{\pi}{2}\cdot\left(\frac{f}{f_0}\right)} \quad \color{blue}{Z_m=\sqrt{Z_L\cdot Z_0}}   
+      \end{flalign*}
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      \includegraphics[width=6cm]{fig4-32.pdf}
+    \end{column}
+  \end{columns}
+  \begin{align*}
+    \Gamma &=\frac{Z_{in}-Z_0}{Z_{in}+Z_0}=\frac{Z_m(Z_L-Z_0)+\mathrm{j}\tan\theta(Z_m^2-Z_0Z_L)}{Z_m(Z_L+Z_0)+\mathrm{j}\tan\theta(Z_m^2+Z_0Z_L)}\\
+           &=\frac{Z_L-Z_0}{Z_L+Z_0+\mathrm{j}2\tan\theta\sqrt{Z_0Z_L}}
+  \end{align*}
+\end{frame}
+
+\begin{frame}{$\lambda/4$ 阻抗变换器幅频特性}
+  \begin{align*}
+    \lvert\Gamma\rvert&=\frac{Z_{in}-Z_0}{Z_{in}+Z_0}=\frac{Z_m(Z_L-Z_0)+\mathrm{j}\tan\theta(Z_m^2-Z_0Z_L)}{Z_m(Z_L+Z_0)+\mathrm{j}\tan\theta(Z_m^2+Z_0Z_L)}\\
+                      &=\frac{\lvert Z_L-Z_0\rvert}{[(Z_L+Z_0)^2+4\tan ^2\theta Z_0Z_L] ^{1/2}}\\
+                      &=\frac{1}{\left[\frac{(Z_L+Z_0)^2}{(Z_L-Z_0)^2}+\frac{4\tan ^2\theta Z_0Z_L}{(Z_L-Z_0)^2}\right]^{1/2}}\\
+                      &=\frac{1}{\left[1+\frac{4Z_LZ_0}{(Z_L-Z_0)^2}+\frac{4\tan^2\theta Z_0Z_L}{(Z_L-Z_0}^2\right]^{1/2}}\\
+                      &=\frac{1}{\left[1+\frac{4\sec^2\theta Z_0Z_L}{(Z_L-Z_0)^2}\right]^{1/2}}\\
+                      &\theta \approx \frac{\pi}{2} \rightarrow \sec^2\theta \gg 1 \qquad 
+                      \lvert\Gamma\rvert \approx \frac{\lvert Z_L-Z_0\rvert}{2\sqrt{Z_0\cdot Z_L}}\cdot \lvert\cos\theta\rvert
+  \end{align*}
+\end{frame}
+
+\begin{frame}{$\lambda/4$ 阻抗变换器幅频特性}
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      \begin{figure}
+        \includegraphics[width=6cm]{fig4-33.pdf}
+      \end{figure}
+      
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      匹配变换器的带宽
+      \begin{flalign*}
+        \color{blue}{\Delta \theta =2\left(\frac{\pi}{2}-\theta_m\right)} &&
+      \end{flalign*}
+    \end{column}
+  \end{columns}
+  \begin{empheq}[box=\widefbox]{align*}
+    &\frac{1}{\Gamma_m^2}=1+\left(\frac{2\sqrt{Z_0\cdot Z_L}}{\lvert Z_L-Z_0\rvert}\cdot\tan\theta_m\right)^2\\
+    &\cos\theta_m=\frac{\Gamma_m^2}{\sqrt[2]{1-\Gamma_m^2}}\frac{2\sqrt[]{Z_0\cdot Z_L}}{\lvert Z_L-Z_0\rvert}
+  \end{empheq}
+\end{frame}
+
+\begin{frame}{$\lambda/4$ 阻抗变换器幅频特性}
+  假定采用$TEM$传输线 
+  $$\theta=\beta l=\frac{2\pi f}{v_p}\frac{v_p}{4f_0}=\frac{\pi f}{2f_0}$$
+  在$\theta=\theta_m$处，带宽低端的频率是：
+  $$f_m=\frac{2\theta_mf_0}{\pi}$$
+  分数带宽
+  \begin{align*}
+    \frac{\Delta f}{f_0} &=\frac{2(f_0-f_m)}{f_0}=2-\frac{2f_m}{f_0}=2-\frac{4\theta_m}{\pi}\\
+                         &=2-\frac{4}{\pi}\arccos\left[\frac{\Gamma_m}{\sqrt[]{1-\Gamma_m^2}}\frac{2\sqrt[]{Z_0\cdot Z_L}}{\lvert Z_L-Z_0\rvert}\right]
+  \end{align*}
+\end{frame}
+
 \subsection{小反射理论}
 \begin{frame}{小反射理论}
 
