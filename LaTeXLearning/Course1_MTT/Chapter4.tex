@@ -129,7 +129,7 @@
           \end{empheq}
   \end{itemize}
   \begin{align*}
-    z_{in}(d) & =\frac{1+(\Gamma_{\mathrm{Re}}+\mathrm{j}\Gamma_{\mathrm{Im}})}{1-(\Gamma_{\mathrm{Re}}+\mathrm{j}\Gamma_{\mathrm{Im}})}            \\
+    z_{in}(d) & =\frac{1+(\Gamma_{\mathrm{Re}}+\mathrm{j}\Gamma_{\mathrm{Im}})}{1-(\Gamma_{\mathrm{Re}}+\mathrm{j}\Gamma_{\mathrm{Im}})}                                                                                                     \\
               & =\frac{1-(\Gamma^{2}_{\mathrm{Re}}+\Gamma^{2}_{\mathrm{Im}})}{(1-\Gamma_{\mathrm{Re}})^2+\Gamma_{\mathrm{Im}}^{2}}+\mathrm{j}\frac{2\Gamma_{\mathrm{Im}}}{(1-\Gamma_{\mathrm{Re}})^2+\Gamma_{\mathrm{Im}}^{2}}=r+\mathrm{j}x
   \end{align*}
   \begin{empheq}[box=\widefbox]{align*}
@@ -185,14 +185,14 @@
           \hline
           \multirow{2}*{$r$}                       &
           \multicolumn{2}{c|}{\footnotesize{圆心坐标}} &
-          \multirow{2}*{\footnotesize{半径} $\left(\frac{1}{1+r}\right)$}                           \\ \cline{2-3}
-                                                   & $\Gamma_r=\frac{r}{1+r}$ & $\Gamma_i=0$  &     \\ \hline
-          0                                        & 0                        & 0             & 1   \\ \hline
-          1                                        & 1/2                      & 0             & 1/2 \\ \hline
-          2                                        & 2/3                      & 0             & 1/3 \\ \hline
+          \multirow{2}*{\footnotesize{半径} $\left(\frac{1}{1+r}\right)$}                            \\ \cline{2-3}
+                                                   & $\Gamma_r=\frac{r}{1+r}$ & $\Gamma_i=0$ &     \\ \hline
+          0                                        & 0                        & 0            & 1   \\ \hline
+          1                                        & 1/2                      & 0            & 1/2 \\ \hline
+          2                                        & 2/3                      & 0            & 1/3 \\ \hline
         \end{tabular}
         %\label{table1}
-      \end{table}  
+      \end{table}
     \end{column}
   \end{columns}
   \begin{empheq}[box=\widefbox]{align*}
@@ -214,10 +214,10 @@
           \multirow{2}*{$x$}                       &
           \multicolumn{2}{c|}{\footnotesize{圆心坐标}} &
           \multirow{2}*{\footnotesize{半径} $\left(\frac{1}{x}\right)$}                               \\ \cline{2-3}
-                                                   & $\Gamma_r=1$ & $\Gamma_i=\frac{1}{x}$  &        \\ \hline
-          0                                        & 1            & \infty                  & \infty \\ \hline
-          \pm0.5                                   & 1            & \pm2                    & 2      \\ \hline
-          \pm1                                     & 1            & \pm1                    & 1      \\ \hline
+                                                   & $\Gamma_r=1$ & $\Gamma_i=\frac{1}{x}$ &        \\ \hline
+          0                                        & 1            & \infty                 & \infty \\ \hline
+          \pm0.5                                   & 1            & \pm2                   & 2      \\ \hline
+          \pm1                                     & 1            & \pm1                   & 1      \\ \hline
         \end{tabular}
       \end{table}
     \end{column}
@@ -244,17 +244,17 @@
       \begin{itemize}
         \item 圆图上有三个特殊点：
               \footnotesize{\textbf{匹配点}(O点)\\
-              其坐标为(0,0)\\
-              $r=1,x=0$ \\
-              $\lvert\Gamma\rvert=0,\rho=1$\\
-              \textbf{短路点}(C点)\\
-              其坐标为(-1,0)\\
-              $r=0,x=0,\lvert\Gamma\rvert=1$ \\
-              $\rho=\infty,\phi=\pi$ \\
-              \textbf{开路点}(D点)\\
-              其坐标为(1,0)\\
-              $r=\infty,x=\infty,\lvert\Gamma\rvert=1$ \\
-              $\rho=\infty,\phi=0$}
+                其坐标为(0,0)\\
+                $r=1,x=0$ \\
+                $\lvert\Gamma\rvert=0,\rho=1$\\
+                \textbf{短路点}(C点)\\
+                其坐标为(-1,0)\\
+                $r=0,x=0,\lvert\Gamma\rvert=1$ \\
+                $\rho=\infty,\phi=\pi$ \\
+                \textbf{开路点}(D点)\\
+                其坐标为(1,0)\\
+                $r=\infty,x=\infty,\lvert\Gamma\rvert=1$ \\
+                $\rho=\infty,\phi=0$}
       \end{itemize}
 
     \end{column}
@@ -303,7 +303,7 @@
     \begin{column}{0.6\linewidth}
       \includegraphics[width=7cm]{xuanxiang.pdf}
     \end{column}
-    
+
   \end{columns}
 \end{frame}
 
@@ -313,9 +313,9 @@
     \begin{column}{0.4\linewidth}
       \begin{itemize}
         \item \footnotesize{当圆图作为阻抗圆图时，相角为0的反射系数位于OD上，相角增大，反射系数矢量沿逆时针方向转动；当圆图作为
-              导纳圆图时，相角为0的反射系数位于OC上，相角增大，反射系数矢量仍沿逆时针方向转动。}
+                导纳圆图时，相角为0的反射系数位于OC上，相角增大，反射系数矢量仍沿逆时针方向转动。}
         \item \footnotesize{与阻抗圆图相反，作为导纳圆图使用时，D点为短路点，C点为开路点，线段OD为电压波节点归一化阻抗的轨迹，线
-              段OC为电压波腹点归一化阻抗的轨迹}
+                段OC为电压波腹点归一化阻抗的轨迹}
         \item \footnotesize{$z(d)$与$y(d)$在同一反射系数圆上，相应位置差$180^{\circ}$}
       \end{itemize}
     \end{column}
@@ -386,8 +386,8 @@
       1)\quad 先找出终端短路点$S$\\
       2)\quad 向源方向旋转$0.1\lambda$，到圆图上$A$点，读出$x=0.72$
       \begin{flalign*}
-        Z_{in}=Z_0z_{in}&=50\times\mathrm{j}0.72\\
-        &=\mathrm{j}36\Omega
+        Z_{in}=Z_0z_{in} & =50\times\mathrm{j}0.72 \\
+                         & =\mathrm{j}36\Omega
       \end{flalign*}
     \end{column}
     \begin{column}{0.6\linewidth}
@@ -422,7 +422,7 @@
       \only<6>{\includegraphics[width=7cm]{fig4-12-6.pdf}}
       \only<7>{\includegraphics[width=7cm]{fig4-12-7.pdf}}
     \end{column}
-  \end{columns} 
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Smith圆图的应用}
@@ -458,9 +458,9 @@
       \end{flalign*}
       3)\quad 由负载对应的$A$点先沿等反射系数圆顺时针转动0.5刻度，对应$2\pi$，再转$\dfrac{4}{3}\pi$，对应0.333刻度，到达$B$点，$B$点即为输入阻抗点。从图中读出该点读数：$0.45+\mathrm{j}1.2$，反归一化，得到输入阻抗
       \begin{flalign*}
-        Z_{in}&=(0.45+\mathrm{j}1.2)\times 100\\
-        &=(45+\mathrm{j}120)\Omega
-      \end{flalign*}  
+        Z_{in} & =(0.45+\mathrm{j}1.2)\times 100 \\
+               & =(45+\mathrm{j}120)\Omega
+      \end{flalign*}
     \end{column}
     \begin{column}{0.6\linewidth}
       \includegraphics[width=6.5cm]{fig4-13-6.pdf}
@@ -473,8 +473,8 @@
     \begin{column}{0.4\linewidth}
       4)\quad 再由$OB$反向延长到$C$点，为归一化导纳点，读出该点的值为$y_{in}=0.27-\mathrm{j}0.73$，所以输入导纳为
       \begin{flalign*}
-        Y_{in}&=(0.27-\mathrm{j}0.73)/100\\
-        &=0.0027-\mathrm{j}0.0073
+        Y_{in} & =(0.27-\mathrm{j}0.73)/100 \\
+               & =0.0027-\mathrm{j}0.0073
       \end{flalign*}
     \end{column}
     \begin{column}{0.6\linewidth}
@@ -496,7 +496,7 @@
         \lvert \Gamma_L \rvert = \lvert \Gamma \rvert = \frac{\rho-1}{\rho+1}=\frac{1}{2}
       \end{flalign*}
       1)\quad 绘出等反射系数圆
-      
+
     \end{column}
     \begin{column}{0.6\linewidth}
       \includegraphics[width=6.5cm]{fig4-16-1.pdf}
@@ -562,7 +562,7 @@
         \rho=\lvert V_{\mathrm{max}}\rvert/\lvert V_{\mathrm{min}}\rvert=2.5
       \end{flalign*}
       2)\quad 相邻两个电压最小值点的距离为0.05m,即半波长$\lambda/2=0.05m$，即$\lambda=0.1m$，从而移动$1.25cm$为$\lambda/8$。\\
-      3)\quad 当负载处由纯电阻换为接负载$Z_L$时，电压最小值向源方向移动$\lambda/8$，相当于纯电阻点向源移动$\lambda/8$\\  
+      3)\quad 当负载处由纯电阻换为接负载$Z_L$时，电压最小值向源方向移动$\lambda/8$，相当于纯电阻点向源移动$\lambda/8$\\
     \end{column}
     \begin{column}{0.6\linewidth}
       \includegraphics[width=6cm]{fig4-17-1.pdf}
@@ -601,7 +601,7 @@
       5)\quad 由于端接纯电阻时对应电压最小值，$R$处电压最小，$r=R/Z_0<1$，说明纯电阻点在横轴的负半轴上$E$点，
     \end{column}
     \begin{column}{0.6\linewidth}
-     \includegraphics[width=7cm]{fig4-17-4.pdf}
+      \includegraphics[width=7cm]{fig4-17-4.pdf}
     \end{column}
   \end{columns}
 \end{frame}
@@ -636,8 +636,8 @@
       6)\quad 对于端接负载$Z_L$的传输系统，对应圆图上点$E$向负载逆时针旋转$\lambda/8$到点$G$，即得到$Z_L$。从圆图上读出归一化阻抗为
       $0.69-\mathrm{j}0.72$，所以负载阻抗为
       \begin{flalign*}
-        Z_L&=0.69-\mathrm{j}0.72\times 50\\
-        &=(34.5-\mathrm{j}36)\Omega
+        Z_L & =0.69-\mathrm{j}0.72\times 50 \\
+            & =(34.5-\mathrm{j}36)\Omega
       \end{flalign*}
       7)\quad 导纳为(对应F点)
       \begin{flalign*}
@@ -656,8 +656,8 @@
       6)\quad 对于端接负载$Z_L$的传输系统，对应圆图上点$E$向负载逆时针旋转$\lambda/8$到点$G$，即得到$Z_L$。从圆图上读出归一化阻抗为
       $0.69-\mathrm{j}0.72$，所以负载阻抗为
       \begin{flalign*}
-        Z_L&=0.69-\mathrm{j}0.72\times 50\\
-        &=(34.5-\mathrm{j}36)\Omega
+        Z_L & =0.69-\mathrm{j}0.72\times 50 \\
+            & =(34.5-\mathrm{j}36)\Omega
       \end{flalign*}
       7)\quad 导纳为(对应F点)
       \begin{flalign*}
@@ -676,8 +676,8 @@
       6)\quad 对于端接负载$Z_L$的传输系统，对应圆图上点$E$向负载逆时针旋转$\lambda/8$到点$G$，即得到$Z_L$。从圆图上读出归一化阻抗为
       $0.69-\mathrm{j}0.72$，所以负载阻抗为
       \begin{flalign*}
-        Z_L&=0.69-\mathrm{j}0.72\times 50\\
-        &=(34.5-\mathrm{j}36)\Omega
+        Z_L & =0.69-\mathrm{j}0.72\times 50 \\
+            & =(34.5-\mathrm{j}36)\Omega
       \end{flalign*}
       7)\quad 导纳为(对应F点)
       \begin{flalign*}
@@ -696,8 +696,8 @@
       6)\quad 对于端接负载$Z_L$的传输系统，对应圆图上点$E$向负载逆时针旋转$\lambda/8$到点$G$，即得到$Z_L$。从圆图上读出归一化阻抗为
       $0.69-\mathrm{j}0.72$，所以负载阻抗为
       \begin{flalign*}
-        Z_L&=0.69-\mathrm{j}0.72\times 50\\
-        &=(34.5-\mathrm{j}36)\Omega
+        Z_L & =0.69-\mathrm{j}0.72\times 50 \\
+            & =(34.5-\mathrm{j}36)\Omega
       \end{flalign*}
       7)\quad 导纳为(对应F点)
       \begin{flalign*}
@@ -716,8 +716,8 @@
       6)\quad 对于端接负载$Z_L$的传输系统，对应圆图上点$E$向负载逆时针旋转$\lambda/8$到点$G$，即得到$Z_L$。从圆图上读出归一化阻抗为
       $0.69-\mathrm{j}0.72$，所以负载阻抗为
       \begin{flalign*}
-        Z_L&=0.69-\mathrm{j}0.72\times 50\\
-        &=(34.5-\mathrm{j}36)\Omega
+        Z_L & =0.69-\mathrm{j}0.72\times 50 \\
+            & =(34.5-\mathrm{j}36)\Omega
       \end{flalign*}
       7)\quad 导纳为(对应F点)
       \begin{flalign*}
@@ -731,6 +731,10 @@
 \end{frame}
 
 \begin{frame}{Smith导纳圆图}
+
+\end{frame}
+
+\begin{frame}{Smith导纳圆图}
   \begin{itemize}
     \item 导纳圆图
   \end{itemize}
@@ -739,14 +743,14 @@
     \caption{阻抗原图与导纳圆图对应关系}
     \begin{tabular}{|c|c|}
       \hline
-      \textbf{阻抗圆图}   & \textbf{导纳圆图}      \\ \hline
-      $r$                 &  $g$             \\ \hline
-      $x$                 &  $b$             \\ \hline
-      $\Gamma(z)$         & $\Gamma_I(z)$     \\ \hline
-      电压振幅值腹点       & 电流振幅值腹点      \\ \hline
-      电压振幅值节点        & 电流振幅值节点     \\ \hline
-      开路点              & 短路点             \\ \hline
-      短路点              & 开路点              \\ 
+      \textbf{阻抗圆图} & \textbf{导纳圆图} \\ \hline
+      $r$           & $g$           \\ \hline
+      $x$           & $b$           \\ \hline
+      $\Gamma(z)$   & $\Gamma_I(z)$ \\ \hline
+      电压振幅值腹点       & 电流振幅值腹点       \\ \hline
+      电压振幅值节点       & 电流振幅值节点       \\ \hline
+      开路点           & 短路点           \\ \hline
+      短路点           & 开路点           \\
       \hline
     \end{tabular}
   \end{table}
@@ -756,17 +760,17 @@
   例7 \quad 负载$Z_L=100+\mathrm{j}50\Omega$，端接$50\Omega$传输线，传输线长$0.15\lambda$，用Smith圆图求解负载导纳及输入导纳。
   \begin{columns}
     \begin{column}{0.4\linewidth}
-      
+
       1)\quad 负载归一化：
       \begin{flalign*}
         z_L=\frac{Z_L}{Z_0}=2+\mathrm{j}1
       \end{flalign*}
-      
+
       2)\quad 利用Smith阻抗圆图，定位A点，旋转$180^{\circ}$，得B点，阻抗圆图中读出的是归一化阻抗数值，这个数值即为负载归一化导纳：
       \begin{flalign*}
         y_L=0.4-\mathrm{j}0.2=\frac{1}{2+\mathrm{j}1}=\frac{1}{z_L}
       \end{flalign*}
-      
+
     \end{column}
     \begin{column}{0.6\linewidth}
       \only<1>{\includegraphics[width=7cm]{fig4-22-1.pdf}}
@@ -786,9 +790,9 @@
       3)\quad 用导纳圆图求归一化输入导纳（反射系数为电流反射系数，形状读数不变），在导纳圆图中找到负载归一化导纳点$y_L=0.4-\mathrm{j}0.2$，顺时针旋转$0.15\lambda$，得归一化输入导纳$y_{in}=0.61+\mathrm{j}0.66$,
       反归一化得到输入导纳
       \begin{flalign*}
-        Y_{in}&=y_{in}/Z_0\\
-        &=(0.61+\mathrm{j}0.66)/50\\
-        &=0.0122+\mathrm{j}0.0132 S
+        Y_{in} & =y_{in}/Z_0                \\
+               & =(0.61+\mathrm{j}0.66)/50  \\
+               & =0.0122+\mathrm{j}0.0132 S
       \end{flalign*}
     \end{column}
     \begin{column}{0.6\linewidth}
@@ -799,17 +803,286 @@
 
 \subsection{阻抗匹配}
 \begin{frame}{阻抗匹配}
+  \begin{flalign*}
+     & Z_{in}=R_{in}+\mathrm{j}X_{in}=Z_0\cdot \frac{Z_L+\mathrm{j}Z_0\cdot\tan (\beta l)}{Z_0+\mathrm{j}Z_L\cdot\tan (\beta l)}                                                                                           \\
+     & P =\frac{1}{2}Re(V_{in}I_{in}^*)=\frac{1}{2}\lvert V_{in}\rvert^2Re\left(\frac{1}{Z_{in}}\right)=\frac{1}{2}\lvert V_{S}\rvert^2 \left\lvert\frac{Z_{in}}{Z_{in}+Z_S}\right\rvert^2 Re\left(\frac{1}{Z_{in}}\right)
+  \end{flalign*}
+  令$Z_S=R_S+\mathrm{j}X_S,Z_{in}=R_{in}+\mathrm{j}X_{in}$
+  上式简化为
+  \begin{flalign*}
+    \color{blue}{P=\frac{1}{2}\lvert V_S\rvert^2\frac{R_{in}}{(R_{in}+R_{S})^2+(X_{in}+X_S)^2}} &  &
+  \end{flalign*}
 
+  \begin{figure}
+    \flushright
+    \includegraphics[width=6cm]{fig4-24.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{阻抗匹配}
+  \begin{enumerate}
+    \item 负载与传输线匹配$Z_L=Z_0$
+          \saveenum
+  \end{enumerate}
+  \begin{align*}
+    \Gamma_L=\frac{Z_L-Z_0}{Z_L+Z_0}=0 \quad Z_{in}=Z_0\cdot \frac{Z_L+\mathrm{j}Z_0\cdot \tan(\beta l)}{Z_0+\mathrm{j}Z_L\cdot \tan(\beta l)}=Z_0
+  \end{align*}
+  传递至负载的功率为
+  \begin{align*}
+    P_{L1}=\frac{1}{2}\lvert V_S \rvert^2\frac{Z_0}{(Z_0+R_S)^2+X_S^2}
+  \end{align*}
+
+  \begin{flalign*}
+    \color{blue}{P=\frac{1}{2}\lvert V_S\rvert^2\frac{R_{in}}{(R_{in}+R_{S})^2+(X_{in}+X_S)^2}} &  &
+  \end{flalign*}
+  \begin{figure}
+    \flushright
+    \includegraphics[width=5.5cm]{fig4-24.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{阻抗匹配}
+  \begin{enumerate}
+    \resume
+    \item 源与带载传输线匹配$Z_S=Z_{in}$
+          \saveenum
+  \end{enumerate}
+  \begin{align*}
+    \Gamma_{in}=\frac{Z_{in}-Z_S}{Z_{in}+Z_S}=0
+  \end{align*}
+  传递至负载的功率为
+  \begin{align*}
+    P_{L2}=\frac{1}{2}\lvert V_S \rvert^2\frac{R_S}{4(R_S^2+X_S^2)}
+  \end{align*}
+
+  \begin{flalign*}
+    \color{blue}{P=\frac{1}{2}\lvert V_S\rvert^2\frac{R_{in}}{(R_{in}+R_{S})^2+(X_{in}+X_S)^2}} &  &
+  \end{flalign*}
+  \begin{figure}
+    \flushright
+    \includegraphics[width=5.5cm]{fig4-24.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{阻抗匹配}
+  \begin{enumerate}
+    \resume
+    \item 共轭匹配
+  \end{enumerate}
+  $$\color{blue}{P=\frac{1}{2}\lvert V_S\rvert^2\frac{R_{in}}{(R_{in}+R_{S})^2+(X_{in}+X_S)^2}}$$
+  \begin{align*}
+     & \frac{\partial P}{\partial R_{in}}=0 \quad \Longrightarrow                                               \\
+     & \frac{1}{(R_{in}+R_S)^2+(X_{in}+X_S)^2}+\frac{-2R_{in}(R_{in}+R_S)}{[(R_{in}+R_S)^2+(X_{in}+X_S)^2]^2}=0 \\
+     & R_S^2-R_{in}^2+(X_{in}+X_S)^2=0                                                                          \\
+    \\
+     & \frac{\partial P}{\partial X_{in}}=0 \quad \Longrightarrow                                               \\
+     & \frac{-2R_{in}(X_{in}+X_S)}{[(R_{in}+R_S)^2+(X_{in}+X_S)^2]^2}=0                                         \\
+     & X_{in}(X_{in}+X_S)=0
+  \end{align*}
+\end{frame}
+
+\begin{frame}{阻抗匹配}
+  \begin{align*}
+    R_S=R_{in} \quad X_S=-X_{in}
+  \end{align*}
+  $$\downarrow$$
+  \begin{empheq}[box=\widefbox]{align*}
+    Z_{in} = Z_S^*
+  \end{empheq}
+  传递至负载的功率：
+  \begin{align*}
+    P_{L3}=\frac{1}{2}\lvert V_S\rvert^2\frac{1}{4R_S} \\
+    P_{L3}\geqslant P_{L1},P_{L3}\geqslant P_{L2}
+  \end{align*}
+  若源阻抗为实数 $P_{L3}=P_{L2}$
+\end{frame}
+
+\begin{frame}{阻抗匹配}
+  \begin{itemize}
+    \item 匹配的意义
+          \begin{itemize}
+            \item 传输线的功率容量最大\\
+                  行波状态时传输线的功率容量最大，因为不匹配时的驻波场，在波腹处的电场比传输同样功率的行波电场大得多，故而容易发生击穿，使功率容量降低
+            \item 微波源工作稳定\\
+                  行波状态时，对信号源无影响，使微波源工作稳定
+          \end{itemize}
+    \item 匹配器
+          \begin{itemize}
+            \item 人为引入新的不均匀性以造成新的反射去抵消（或大大削弱）失配所引起的反射
+            \item 匹配器的主要目的是为了使负载能得到最大功率，故匹配器本身不能有损耗，它应由\uline{纯无功元件}构成
+            \item 理想的匹配，反射系数为0；实际工程中，在指定的频率范围内反射系数小于规定的值
+            \item 阻抗匹配器类型 \\
+                  窄带，宽带\\
+                  支节匹配器：单支节、双支节\\
+                  四分之一波长阻抗变换器，渐变变换器\\
+                  ……
+          \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \subsection{支节匹配器}
 \begin{frame}{支节匹配器}
+  \begin{itemize}
+    \item 并联单支节匹配
+  \end{itemize}
+  \centering
+  \begin{figure}
+    \includegraphics[width=12cm]{fig4-23.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{支节匹配器}
+  $$Y_A=Y_{stub}+Y(d_{stub})=Y_0=\frac{1}{Z_0}$$
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      $Y_{stub}$：支节线引入的输入导纳\\
+      \includegraphics[width=5cm]{fig4-25.pdf}
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      $Y(d_{stub})$：在支节引入处支节未引入时的导纳\\
+      \includegraphics[width=6cm]{fig4-26.pdf}
+    \end{column}
+  \end{columns}
 
 \end{frame}
 
 \subsection{$\lambda/4$ 阻抗变换器}
 \begin{frame}{$\lambda/4$ 阻抗变换器}
+  \begin{itemize}
+    \item 实数负载阻抗
+  \end{itemize}
+  \centering
+  \includegraphics[width=8cm]{fig4-27.pdf}
+  \begin{align*}
+     & Z_{in}=\lim_{\tan(\beta l)\to\infty}Z_0\frac{Z_A+\mathrm{j}Z_0\tan(\beta l)}{\mathrm{j}Z_A\tan(\beta l)+Z_0}=\frac{Z_0^2}{Z_A} \\
+     & Z_B=\frac{Z_{02}^2}{R_L}=Z_{01}\quad \Rightarrow Z_{02}=\sqrt{Z_{01}R_L}=\sqrt{50\cdot 100}\approx 70.71\Omega
+  \end{align*}
+\end{frame}
 
+\begin{frame}{$\lambda/4$ 阻抗变换器}
+  \begin{itemize}
+    \item 实数负载阻抗
+  \end{itemize}
+  \centering
+  \includegraphics[width=8cm]{fig4-28.pdf}
+  \begin{align*}
+     & Z_A=\frac{Z_{01}^2}{R_L}=\frac{75^2}{300}=18.75\Omega                                                    \\
+     & Z_B=\frac{Z_{02}^2}{Z_A}=Z_{01}\quad \Rightarrow Z_{02}=\sqrt{Z_{01}Z_A}=\sqrt{75\cdot 18.75}=37.5\Omega
+  \end{align*}
+\end{frame}
+
+\begin{frame}{$\lambda/4$ 阻抗变换器}
+  \begin{itemize}
+    \item 复数负载阻抗
+  \end{itemize}
+  \centering
+  \includegraphics[width=8cm]{fig4-29.pdf}
+  \begin{align*}
+     & \lvert \Gamma_L \rvert = \left\lvert \frac{100+\mathrm{j}100-50}{100+\mathrm{j}100+50}\right\rvert \approx 0.62 \\
+     & Z_A=Z_0 \frac{1+\lvert \Gamma_L\rvert}{1-\lvert \Gamma_L\rvert}\approx 213.28\Omega \\
+     & Z_{02}=\sqrt{Z_{01}Z_A}=\sqrt{50\cdot 213.28}=103.27\Omega
+  \end{align*}
+\end{frame}
+
+\begin{frame}{$\lambda/4$ 阻抗变换器}
+  \begin{itemize}
+    \item 复数负载阻抗
+  \end{itemize}
+  \centering
+  \includegraphics[width=8cm]{fig4-30.pdf}
+  \begin{align*}
+     & \lvert \Gamma_L \rvert = \left\lvert \frac{100+\mathrm{j}100-50}{100+\mathrm{j}100+50}\right\rvert \approx 0.62 \\
+     & Z_A=Z_0 \frac{1-\lvert \Gamma_L\rvert}{1+\lvert \Gamma_L\rvert}\approx 11.72\Omega \\
+     & Z_{02}=\sqrt{Z_{01}Z_A}=\sqrt{50\cdot 11.72}=24.21\Omega
+  \end{align*}
+\end{frame}
+
+\begin{frame}{$\lambda/4$ 阻抗变换器}
+  \begin{itemize}
+    \item 任意长度传输线实现阻抗匹配
+  \end{itemize}
+  \centering
+  \includegraphics[width=8cm]{fig4-31.pdf}
+  \begin{align*}
+     & Z_{01}=Z_A=Z_{02}\frac{R_L+\mathrm{j}X_L+\mathrm{j}Z_{02}\tan(\beta L)}{Z_{02}+\mathrm{j}(R_L+\mathrm{j}X_L)\tan(\beta L)} \\
+     & Z_{02}(Z_{01}-R_L)=Z_{01}X_L\tan(\beta L) \text{实部}\\
+     & \tan(\beta L)=\frac{Z_{02}X_L}{Z_{01}R_L-Z_{02}^2} \text{虚部}
+  \end{align*}
+\end{frame}
+
+\begin{frame}{$\lambda/4$ 阻抗变换器}
+  \begin{itemize}
+    \item 任意长度传输线实现阻抗匹配
+  \end{itemize}
+   \begin{align*}
+     & Z_{02}=\frac{\sqrt{Z_{01}R_L-R_L^2-X_L^2}}{\sqrt{1-R_L/Z_{01}}}\\
+     & \tan(\beta L)=\frac{\sqrt{(1-R_L/Z_{01})(Z_{01}R_L-R_L^2-X_L^2)}}{X_L} 
+  \end{align*}
+  \textbf{只要$Z_{02}$为实数，可以实现}
+\end{frame}
+
+\begin{frame}{$\lambda/4$ 阻抗变换器幅频特性}
+  已知：在频率$f_0$时匹配
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      \begin{flalign*}
+        &\color{blue}{Z_{in}=Z_m\cdot\frac{Z_L+\mathrm{j}Z_m\tan\theta}{Z_m+\mathrm{j}Z_L\tan\theta}}                                  \\
+        &\color{blue}{\theta=\beta\cdot l=\frac{\pi}{2}\cdot\left(\frac{f}{f_0}\right)} \quad \color{blue}{Z_m=\sqrt{Z_L\cdot Z_0}}   
+      \end{flalign*}
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      \includegraphics[width=6cm]{fig4-32.pdf}
+    \end{column}
+  \end{columns}
+  \begin{align*}
+    \Gamma &=\frac{Z_{in}-Z_0}{Z_{in}+Z_0}=\frac{Z_m(Z_L-Z_0)+\mathrm{j}\tan\theta(Z_m^2-Z_0Z_L)}{Z_m(Z_L+Z_0)+\mathrm{j}\tan\theta(Z_m^2+Z_0Z_L)}\\
+           &=\frac{Z_L-Z_0}{Z_L+Z_0+\mathrm{j}2\tan\theta\sqrt{Z_0Z_L}}
+  \end{align*}
+\end{frame}
+
+\begin{frame}{$\lambda/4$ 阻抗变换器幅频特性}
+  \begin{align*}
+    \lvert\Gamma\rvert&=\frac{Z_{in}-Z_0}{Z_{in}+Z_0}=\frac{Z_m(Z_L-Z_0)+\mathrm{j}\tan\theta(Z_m^2-Z_0Z_L)}{Z_m(Z_L+Z_0)+\mathrm{j}\tan\theta(Z_m^2+Z_0Z_L)}\\
+                      &=\frac{\lvert Z_L-Z_0\rvert}{[(Z_L+Z_0)^2+4\tan ^2\theta Z_0Z_L] ^{1/2}}\\
+                      &=\frac{1}{\left[\frac{(Z_L+Z_0)^2}{(Z_L-Z_0)^2}+\frac{4\tan ^2\theta Z_0Z_L}{(Z_L-Z_0)^2}\right]^{1/2}}\\
+                      &=\frac{1}{\left[1+\frac{4Z_LZ_0}{(Z_L-Z_0)^2}+\frac{4\tan^2\theta Z_0Z_L}{(Z_L-Z_0}^2\right]^{1/2}}\\
+                      &=\frac{1}{\left[1+\frac{4\sec^2\theta Z_0Z_L}{(Z_L-Z_0)^2}\right]^{1/2}}\\
+                      &\theta \approx \frac{\pi}{2} \rightarrow \sec^2\theta \gg 1 \qquad 
+                      \lvert\Gamma\rvert \approx \frac{\lvert Z_L-Z_0\rvert}{2\sqrt{Z_0\cdot Z_L}}\cdot \lvert\cos\theta\rvert
+  \end{align*}
+\end{frame}
+
+\begin{frame}{$\lambda/4$ 阻抗变换器幅频特性}
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      \begin{figure}
+        \includegraphics[width=6cm]{fig4-33.pdf}
+      \end{figure}
+      
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      匹配变换器的带宽
+      \begin{flalign*}
+        \color{blue}{\Delta \theta =2\left(\frac{\pi}{2}-\theta_m\right)} &&
+      \end{flalign*}
+    \end{column}
+  \end{columns}
+  \begin{empheq}[box=\widefbox]{align*}
+    &\frac{1}{\Gamma_m^2}=1+\left(\frac{2\sqrt{Z_0\cdot Z_L}}{\lvert Z_L-Z_0\rvert}\cdot\tan\theta_m\right)^2\\
+    &\cos\theta_m=\frac{\Gamma_m^2}{\sqrt[2]{1-\Gamma_m^2}}\frac{2\sqrt[]{Z_0\cdot Z_L}}{\lvert Z_L-Z_0\rvert}
+  \end{empheq}
+\end{frame}
+
+\begin{frame}{$\lambda/4$ 阻抗变换器幅频特性}
+  假定采用$TEM$传输线 
+  $$\theta=\beta l=\frac{2\pi f}{v_p}\frac{v_p}{4f_0}=\frac{\pi f}{2f_0}$$
+  在$\theta=\theta_m$处，带宽低端的频率是：
+  $$f_m=\frac{2\theta_mf_0}{\pi}$$
+  分数带宽
+  \begin{align*}
+    \frac{\Delta f}{f_0} &=\frac{2(f_0-f_m)}{f_0}=2-\frac{2f_m}{f_0}=2-\frac{4\theta_m}{\pi}\\
+                         &=2-\frac{4}{\pi}\arccos\left[\frac{\Gamma_m}{\sqrt[]{1-\Gamma_m^2}}\frac{2\sqrt[]{Z_0\cdot Z_L}}{\lvert Z_L-Z_0\rvert}\right]
+  \end{align*}
 \end{frame}
 
 \subsection{小反射理论}
