@@ -731,7 +731,33 @@
 \end{frame}
 
 \begin{frame}{Smith导纳圆图}
+  导纳情况：
+  \begin{align*}
+    y_L=\frac{1-\Gamma}{1+\Gamma}=\frac{1+\Gamma^{'}}{1-\Gamma^{'}} \quad \Gamma^{'}=-\Gamma
+  \end{align*}
+  令$y_L=g+\mathrm{j}b$，完全类似可导出电导圆方程
+  \begin{align*}
+    \left(\Gamma_r^{'}-\frac{g}{1+g}\right)^2+\Gamma_i^{'2}=\left(\frac{1}{1+g}\right)^2
+  \end{align*}
+  其中，圆心坐标是$(\frac{g}{1+g},0)$，半径为$\frac{1}{1+g}$。
+  \begin{align*}
+    \frac{g}{1+g}+\frac{1}{1+g}\equiv 1
+  \end{align*}
+  等电导圆与直线$\Gamma_r^{'}=1$相切。
+\end{frame}
 
+\begin{frame}{Smith导纳圆图}
+  同理，电纳圆方程为
+  \begin{align*}
+    (\Gamma_r^{'}-1)^2+\left(\Gamma_i^{'}-\frac{1}{b}\right)^2=\left(\frac{1}{b}\right)^2
+  \end{align*}
+  在很多实际计算时，我们要用到导纳（特别是对于并联支节）。对比阻抗和导纳，在归一化情况下：
+  \begin{align*}
+    l=\frac{\lambda}{4} \quad Z_{in}=\lim_{\beta\cdot l\to \frac{\pi}{2}}\left(Z_0\cdot\frac{Z_L+\mathrm{j}Z_0\cdot\tan(\beta\cdot l)}{Z_0+\mathrm{j}Z_L\cdot\tan(\beta\cdot l)}\right)=Z_0^2\cdot\frac{1}{Z_L}
+  \end{align*}
+  非归一情况：$Y_L=\dfrac{Z_0^2}{Z_L}$ \\
+  归一情况：$y_l=\dfrac{1}{z_l}$\\
+  对应$\frac{\lambda_g}{4}$阻抗变换：$Z_{in}=\dfrac{1}{z_l}$
 \end{frame}
 
 \begin{frame}{Smith导纳圆图}
