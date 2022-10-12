@@ -994,7 +994,73 @@
       \includegraphics[width=6cm]{fig4-26.pdf}
     \end{column}
   \end{columns}
+\end{frame}
 
+\begin{frame}{支节匹配器}
+  解析法：
+  \begin{itemize}
+    \item $y_L$为纯电阻负载，即$y_L=g_L$
+  \end{itemize}
+  支节接入位置$d$的输入导纳$y^{'}$可从下面的方程中解
+  $$y^{'}=1+\mathrm{j}b^{'}=\frac{g_L+\mathrm{j}\tan(\beta d)}{1+\mathrm{j}g_L\tan(\beta d)}$$
+  上式移项后比较等式两边实部、虚部，得
+  \begin{align}
+    1-b^{'}g_L\tan(\beta d)=g_L \\
+    g_L\tan(\beta d)+b^{'}=\tan(\beta d) \label{eqn4-1}
+  \end{align}
+  消去$b^{'}$，可得
+  \begin{align}
+    \tan^2(\beta d)=1/g_L \label{eqn4-2}
+  \end{align}
+  利用$\tan^2(\beta d)=(1-\cos^2(\beta d))/\cos^2(\beta d)$，可得
+  $$\cos^2(\beta d)=g_L/(g_L+1)$$
+\end{frame}
+
+\begin{frame}{支节匹配器}
+  再利用$\cos^2(\beta d)=(1+\cos(2\beta d))/2$，可得
+  $$\cos(2\beta d)=(g_L-1)/(g_L+1)$$
+  因此，
+  \begin{align}
+    d=\frac{\lambda}{4\pi}\arccos\left(\frac{g_L-1}{g_L+1}\right) \label{eqn4-3}
+  \end{align}
+  若$d_1$是上式的一个解，则$\lambda/2+d$是另一个解，$d$的一般解为$d_1\pm n\lambda/2$。由于周期性，传输线每一波腹、波节之间都有解，可取尽量靠近负载的解且$d$取正值。\\
+  接下来求支节长度$l$。取短路支节，支节输入端导纳为
+  \begin{align}
+    y_{stub}=\mathrm{j}b=-\mathrm{j}\cot(\beta l) \label{eqn4-4}
+  \end{align}
+  根据(\ref{eqn4-1})得
+  $$b^{'}=(1-g_L)\tan(\beta d)$$
+  再利用(\ref{eqn4-2})
+\end{frame}
+
+\begin{frame}{支节匹配器}
+  有$$b^{'}=\pm(1-g_L)/\sqrt{g_L}$$
+  为了在支节匹配点消除电纳$b^{'}$，可使$b=b^{'}$，考虑式(\ref{eqn4-4})，得
+  $$\cot(\beta l)=\pm (1-g_L)/\sqrt{g_L}$$
+  所以
+  \begin{align}
+    l=\frac{\lambda}{2\pi}\arctan\left(\frac{\pm\sqrt{g_L}}{1-g_L}\right) \label{eqn4-5}
+  \end{align}
+  
+\end{frame}
+
+\begin{frame}{支节匹配器}
+  \begin{itemize}
+    \item $y_L=g_L+\mathrm{j}b_L$为复数
+  \end{itemize}
+  \begin{columns}
+    \begin{column}{0.5\linewidth}
+      \includegraphics[width=6cm]{fig4-28true.pdf}
+    \end{column}
+    \begin{column}{0.5\linewidth}
+      直接利用(\ref{eqn4-3})和(\ref{eqn4-5}),且两式中的$g_L$用$\rho$代替。设支节接入位置到电压波节点的距离为$d_0$，可得
+      \begin{align*}
+        &d_0=\frac{\lambda}{4\pi}\arccos\left(\frac{\rho-1}{\rho+1}\right)\\
+        &d=l_{min}+d_0=l_{min}+\frac{\lambda}{4\pi}\arccos\left(\frac{\rho-1}{\rho+1}\right)\\
+        &l=\frac{\lambda}{2\pi}\arccos\left(\frac{\pm\sqrt{\rho}}{1-\rho}\right)
+      \end{align*}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{支节匹配器}
@@ -1019,6 +1085,54 @@
       \only<14>{\includegraphics[width=7cm]{fig4-30true-14.pdf}}
       \only<15>{\includegraphics[width=7cm]{fig4-30true-15.pdf}}
       \only<16>{\includegraphics[width=7cm]{fig4-30true-16.pdf}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{支节匹配器}
+  \begin{itemize}
+    \item 并联双支节匹配
+  \end{itemize}
+  \centering
+  \begin{figure}
+    \includegraphics[width=8cm]{fig4-36.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{支节匹配器}
+  
+  \centering
+  \begin{figure}
+    \includegraphics[width=8cm]{fig4-37.pdf}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{支节匹配器}
+  \begin{columns}
+    \begin{column}{0.4\linewidth}
+      
+    \end{column}
+    \begin{column}{0.6\linewidth}
+      \only<1>{\includegraphics[width=7cm]{fig4-39-1.pdf}}
+      \only<2>{\includegraphics[width=7cm]{fig4-39-2.pdf}}
+      \only<3>{\includegraphics[width=7cm]{fig4-39-3.pdf}}
+      \only<4>{\includegraphics[width=7cm]{fig4-39-4.pdf}}
+      \only<5>{\includegraphics[width=7cm]{fig4-39-5.pdf}}
+      \only<6>{\includegraphics[width=7cm]{fig4-39-6.pdf}}
+      \only<7>{\includegraphics[width=7cm]{fig4-39-7.pdf}}
+      \only<8>{\includegraphics[width=7cm]{fig4-39-8.pdf}}
+      \only<9>{\includegraphics[width=7cm]{fig4-39-9.pdf}}
+      \only<10>{\includegraphics[width=7cm]{fig4-39-10.pdf}}
+      \only<11>{\includegraphics[width=7cm]{fig4-39-11.pdf}}
+      \only<12>{\includegraphics[width=7cm]{fig4-39-12.pdf}}
+      \only<13>{\includegraphics[width=7cm]{fig4-39-13.pdf}}
+      \only<14>{\includegraphics[width=7cm]{fig4-39-14.pdf}}
+      \only<15>{\includegraphics[width=7cm]{fig4-39-15.pdf}}
+      \only<16>{\includegraphics[width=7cm]{fig4-39-16.pdf}}
+      \only<17>{\includegraphics[width=7cm]{fig4-39-17.pdf}}
+      \only<18>{\includegraphics[width=7cm]{fig4-39-18.pdf}}
+      \only<19>{\includegraphics[width=7cm]{fig4-39-19.pdf}}
+      \only<20>{\includegraphics[width=7cm]{fig4-39-20.pdf}}
     \end{column}
   \end{columns}
 \end{frame}
