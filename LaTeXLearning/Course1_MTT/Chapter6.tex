@@ -9,9 +9,9 @@
     \end{itemize}
     \begin{itemize}
         \item 传输线理论 $\Longrightarrow$ 波导
-        \begin{itemize}
-            \item 当其他人或物靠近双导线时会产生较大影响。这说明，传输线与外界有能量交换，它带来的直接问题是能量损失和工作不稳定。就其原因是\textbf{开放(Open)}造成的特点
-        \end{itemize}
+              \begin{itemize}
+                  \item 当其他人或物靠近双导线时会产生较大影响。这说明，传输线与外界有能量交换，它带来的直接问题是能量损失和工作不稳定。就其原因是\textbf{开放(Open)}造成的特点
+              \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -32,39 +32,46 @@
 \begin{frame}{第6章\quad 实用微波传输线与波导}
     \begin{itemize}
         \item 波导一般解的出发点和假定条件\\
-        波导一般解的出发点是频域Maxwell方程组
-        \begin{align}
-            \begin{cases}
-                \nabla\times\vec{H}=\rm{j}\omega\epsilon\vec{E}\\
-                \nabla\times\vec{E}=-\rm{j}\omega\mu\vec{H}\\
-                \nabla\cdot\vec{E}=0\\
-                \nabla\cdot\vec{H}=0
-            \end{cases}\label{eqn6-1}
-        \end{align}
-        波导假定条件
-        \begin{itemize}
-            \item 波导均匀条件：假定横截面不随$z$而变化
-            \item 媒质均匀条件：波导内部$\epsilon,\mu$均匀，波导内壁$\sigma$无限大
-            \item 无源条件：波导内$\rho,\vec{J}\equiv 0$
-            \item 无限条件：波导在$z$方向无限长
-        \end{itemize}
+              波导一般解的出发点是频域Maxwell方程组
+              \begin{align}
+                  \begin{cases}
+                      \nabla\times\vec{H}=\rm{j}\omega\epsilon\vec{E} \\
+                      \nabla\times\vec{E}=-\rm{j}\omega\mu\vec{H}     \\
+                      \nabla\cdot\vec{E}=0                            \\
+                      \nabla\cdot\vec{H}=0
+                  \end{cases}\label{eqn6-1}
+              \end{align}
+              波导假定条件
+              \begin{columns}
+                  \begin{column}{0.5\linewidth}
+                      \begin{itemize}
+                          \item 波导均匀条件：假定横截面不随$z$而变化
+                          \item 媒质均匀条件：波导内部$\epsilon,\mu$均匀，波导内壁$\sigma$无限大
+                          \item 无源条件：波导内$\rho,\vec{J}\equiv 0$
+                          \item 无限条件：波导在$z$方向无限长
+                      \end{itemize}
+                  \end{column}
+                  \begin{column}{0.5\linewidth}
+                      \includegraphics[width=5cm]{fig6-1.png}
+                  \end{column}
+              \end{columns}
     \end{itemize}
 \end{frame}
 
 \subsection{传输线的一般传输特性}
 \begin{frame}{传输线的一般传输特性}
-(\ref{eqn6-1})第二式两边取旋度
-\begin{align*}
-    \nabla\times\nabla\times\vec{E}&=\nabla(\nabla\cdot\vec{E})-\nabla^2\vec{E}=-\rm{j}\omega\mu\nabla\times\vec{H}\\
-&=\omega^2\mu\epsilon\vec{E}=k^2\vec{E}
-\end{align*}
-得到波动方程
-\begin{align}
-    \begin{cases}
-        \nabla^2\vec{E}+k^2\vec{E}=0 \\
-        \nabla^2\vec{H}+k^2\vec{H}=0 \\
-    \end{cases}\label{eqn6-2}
-\end{align}
+    (\ref{eqn6-1})第二式两边取旋度
+    \begin{align*}
+        \nabla\times\nabla\times\vec{E} & =\nabla(\nabla\cdot\vec{E})-\nabla^2\vec{E}=-\rm{j}\omega\mu\nabla\times\vec{H} \\
+                                        & =\omega^2\mu\epsilon\vec{E}=k^2\vec{E}
+    \end{align*}
+    得到波动方程
+    \begin{align}
+        \begin{cases}
+            \nabla^2\vec{E}+k^2\vec{E}=0 \\
+            \nabla^2\vec{H}+k^2\vec{H}=0 \\
+        \end{cases}\label{eqn6-2}
+    \end{align}
 \end{frame}
 
 \subsection{矩形波导}
