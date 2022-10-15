@@ -1,0 +1,55 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections,through}
+\usepackage{circuitikz}
+\usepackage{comment}
+
+\begin{document}
+
+    \begin{circuitikz}
+        %\centering
+        \draw (0,3) to[R,*-] (2,3)
+        to[L] (4,3)
+        to[short] (5,3)
+        to[short] (5,2.25)
+        to[short] (6,2.25)
+        to[C] (6,0.75)
+        to[short] (5,0.75);
+        \draw(1,3) node[label={[font=\footnotesize]above:$R_1\mathrm{d}z$}]{};
+        \draw(3,3) node[label={[font=\footnotesize]above:$L_1\mathrm{d}z$}]{};
+        \draw(4,1.5) node[label={[font=\footnotesize]left:$G_1\mathrm{d}z$}]{};
+        \draw(6,1.5) node[label={[font=\footnotesize]left:$C_1\mathrm{d}z$}]{};
+
+        \draw (5,2.25) to[short] (4,2.25)
+        to[R] (4,0.75)
+        to[short] (5,0.75);
+        \draw (5,0.75) to[short] (5,0);
+
+        \draw (5,3) to[short,-*] (7,3); 
+        \draw (0,0) to[short,*-*] (7,0);
+        \draw[dashed] (0,3.1) to[short] (0,-0.1);
+        \draw[dashed] (7,3.1) to[short] (7,-0.1);
+
+        \draw[dashed] (7,3) -- (8.5,3);
+        \draw[dashed] (7,0) -- (8.5,0);
+        \draw[dashed] (0,3) -- (-1.5,3);
+        \draw[dashed] (0,0) -- (-1.5,0);
+        
+        \draw[->] (-1,3.2) -- (0,3.2);
+        \draw(-0.5,3.2) node[label={[font=\footnotesize]above:$i(z,t)$}]{};
+        \draw[->] (7,3.2) -- (8,3.2);
+        \draw(7.5,3.2) node[label={[font=\footnotesize]above:$i(z+\mathrm{d}z,t)$}]{};
+               
+
+        \draw(0,2.75) node[label={[font=\footnotesize]left:$+$}] {};
+        \draw(0,0.25) node[label={[font=\footnotesize]left:$-$}] {};
+        \draw(0,1.5) node[label={[font=\footnotesize]left:$v(z,t)$}] {};
+
+        
+        \draw(7,2.75) node[label={[font=\footnotesize]right:$+$}] {};
+        \draw(7,0.25) node[label={[font=\footnotesize]right:$-$}] {};
+        \draw(7,1.5) node[label={[font=\footnotesize]right:$v(z+\mathrm{d}z,t)$}] {};
+        
+    \end{circuitikz}
+
+\end{document}

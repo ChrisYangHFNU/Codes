@@ -1,0 +1,190 @@
+\documentclass[a3,convert]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{smithchart}    
+\usepgfplotslibrary{polar}   
+\usepackage{siunitx} 
+\usepackage{tikz}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{calc,intersections,through,arrows.meta}
+\usepackage{comment}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \pgfmathsetmacro{\xoffset}{10.45*(1-cos(3))-1.25}
+    \pgfmathsetmacro{\yoffset}{sin(3)*10.45+9.2}
+    \draw[,thick,->] (+\xoffset,\yoffset) arc [radius=10.45cm,start angle=177,end angle=166];
+    \pgfmathsetmacro{\xoffset}{10.45*(1-cos(18))-1.25}
+    \pgfmathsetmacro{\yoffset}{sin(18)*10.45+9.2}
+    \draw[,draw=none] (+\xoffset,\yoffset) arc [radius=10.45cm,start angle=162,end angle=144] node[midway,sloped]{towards};
+    \pgfmathsetmacro{\xoffset}{10.45*(1-cos(36))-1.25}
+    \pgfmathsetmacro{\yoffset}{sin(36)*10.45+9.2}
+    \draw[,draw=none] (+\xoffset,\yoffset) arc [radius=10.45cm,start angle=144,end angle=126] node[midway,sloped]{generator};
+
+    \pgfmathsetmacro{\xoffset}{9.95*(1-cos(-3))-0.75}
+    \pgfmathsetmacro{\yoffset}{sin(-3)*9.95+9.2}
+    \draw[,thick,->] (\xoffset,\yoffset) arc [radius=9.95cm,start angle=183,end angle=193] ;
+    \pgfmathsetmacro{\xoffset}{9.95*(1-cos(-18))-0.75}
+    \pgfmathsetmacro{\yoffset}{sin(-18)*9.95+9.2}
+    \draw[,draw=none] (+\xoffset,\yoffset) arc [radius=10.45cm,start angle=198,end angle=216] node[midway,sloped]{towards};
+    \pgfmathsetmacro{\xoffset}{9.95*(1-cos(-36))-0.75}
+    \pgfmathsetmacro{\yoffset}{sin(-36)*9.95+9.2}
+    \draw[,draw=none] (+\xoffset,\yoffset) arc [radius=10.45cm,start angle=216,end angle=234] node[midway,sloped]{load};
+
+
+    \begin{polaraxis}[
+            rotate=180,
+            width=23cm,
+            xshift=1.5cm,
+            yshift=1.5cm,
+            %xticklabels={$0\lambda$,$0.05\lambda$,$0.1\lambda$,$0.15\lambda$,$0.2\lambda$,$0.25\lambda$},
+            xticklabel style={
+                    sloped like x axis={%
+                            execute for upside down={\tikzset{anchor=south}},
+                            reset nontranslations=false
+                        },
+                    anchor=north,
+                },
+            xticklabel={\small\pgfmathparse{0.5-\tick/720}\pgfmathprintnumber[fixed,precision=3]{\pgfmathresult}$\lambda$},
+            xtick align=center,
+            xtick={0,18,...,360},
+            grid=none,
+            axis y line = none,
+            minor x tick num={4},
+            ymax=1,
+        ]
+    \end{polaraxis}
+
+    \begin{polaraxis}[
+            rotate=180,
+            width=22cm,
+            xshift=1cm,
+            yshift=1cm,
+            %xticklabels={$0\lambda$,$0.05\lambda$,$0.1\lambda$,$0.15\lambda$,$0.2\lambda$,$0.25\lambda$},
+            xticklabel style={
+                    sloped like x axis={%
+                            execute for upside down={\tikzset{anchor=south}},
+                            reset nontranslations=false
+                        },
+                    anchor=north,
+                },
+            xticklabel={\small\pgfmathparse{\tick/720}\pgfmathprintnumber[fixed,precision=3]{\pgfmathresult}$\lambda$},
+            xtick align=center,
+            xtick={0,18,...,360},
+            grid=none,
+            axis y line = none,
+            minor x tick num={4},
+            ymax=1,
+        ]
+
+    \end{polaraxis}
+
+    \begin{polaraxis}[
+            width=21cm,
+            xshift=-0.5cm,
+            yshift=-0.5cm,
+            %xticklabels={$0\lambda$,$0.05\lambda$,$0.1\lambda$,$0.15\lambda$,$0.2\lambda$,$0.25\lambda$},
+            xticklabel style={
+                    sloped like x axis={%
+                            execute for upside down={\tikzset{anchor=north}},
+                            reset nontranslations=false
+                        },
+                    anchor=south,
+                },
+            xticklabel={\small\pgfmathprintnumber{\tick}\si{\degree}},
+            xtick align=center,
+            grid=none,
+            axis y line = none,
+        ]
+    \end{polaraxis}
+
+    \begin{smithchart}[
+            show origin,
+            width=20cm,
+        ]
+
+        \coordinate [label=below:$O$] (o) at (1,0);
+        \addplot[domain=0:90,samples=600,color=blue]{-1.6};
+        
+        \addplot+[mark=*,only marks,samples at={0,.02,...,100},
+            mark options={solid},color={blue},mark size=.1,line width=1](1.46,x);
+        \addplot+[mark=*,only marks,samples at={0,-.02,...,-100},
+            mark options={solid},color={blue},mark size=.1,line width=1](1.46,x);
+
+        \addplot+[mark=*,only marks,samples at={0,.02,...,100},
+            mark options={solid},color={black},mark size=.1,line width=1](1,x);
+        \addplot+[mark=*,only marks,samples at={0,-.02,...,-100},
+            mark options={solid},color={black},mark size=.1,line width=1](1,x);
+
+        \addplot+[mark=*,only marks,samples at={0,.02,...,100},
+            mark options={solid},color={blue},mark size=.1,line width=1](0.5,x);
+        \addplot+[mark=*,only marks,samples at={0,-.02,...,-100},
+            mark options={solid},color={blue},mark size=.1,line width=1](0.5,x);
+        
+        \coordinate [label=330:$z_L$] (a) at (1.46,-1.6);
+        \coordinate [label=0:$y_L$] (b) at (0.31,0.35);
+        \coordinate [label=350:$C$] (c) at (0.5,0.85);
+        \coordinate [label=0:$D$] (d) at (0.5,-0.14);
+        \coordinate [label=270:$E$] (e) at (1,-0.75);
+        %\coordinate [label=225:$S$] (s) at (1000,0);
+        %\coordinate [label=335:$K$] (k) at (0,0);
+        \coordinate [] (ao) at (0.6,-0.8); % 辅助匹配圆圆心
+        \coordinate [] (o1) at (2,0); % r=0.5 等电导圆的圆心
+        \coordinate [] (o2) at (3,0); % r=1 等电导圆的圆心
+        
+        \path[draw=blue,fill=blue] (a) circle (0.1cm);
+        \path[draw=blue,fill=blue] (b) circle (0.1cm);
+        \path[draw=blue,fill=blue] (c) circle (0.1cm);
+        \path[draw=blue,fill=blue] (d) circle (0.1cm);
+        \path[draw=blue,fill=blue] (e) circle (0.1cm);
+        %\path[draw=blue,fill=blue] (s) circle (0.1cm);
+        %\path[draw=blue,fill=blue] (k) circle (0.1cm);
+           
+        \path[name path=O-A,draw=blue,thick] (o) -- (a);
+        \draw[thick,blue] (o) -- ($ (o) !2.3! (b) $) coordinate (b1);
+        \draw[thick,blue] (o) -- ($ (o) !2.3! (c) $) coordinate (c1);
+        
+        \node (H) [label=90:$EqualReflectionCoefficientCircle$,name path=H,draw=red,thick,circle through={(a)}]at (o) {};
+        \node (H1) [label=90:$EqualReflectionCoefficientCircle$,name path=H,draw=red,thick,circle through={(d)}]at (o) {};
+        \node (H2) [label=180:$AuxiliaryCircle$,name path=H,draw=black,thick,circle through={(o)}]at (ao) {};
+        %\node (J) [label=120:$UnitConductanceCircle$,name path=J]at (1,0.6) {};     
+        
+        \draw [thick,blue,-{Stealth[length=4mm,width=3mm]}]
+        let
+           \p1=($(o) - (b)$),
+           \n1={veclen(\x1,\y1)}
+        in
+           (b) arc(137.5:90.5:\n1);
+        
+        \draw [thick,blue,-{Stealth[length=4mm,width=3mm]}]
+        let
+           \p2=($(o1) - (c)$),
+           \n2={veclen(\x2,\y2)}
+        in
+           (c) arc(121:190:\n2);
+
+        \draw [thick,blue,-{Stealth[length=4mm,width=3mm]}]
+        let
+           \p3=($(o) - (d)$),
+           \n3={veclen(\x3,\y3)}
+        in
+           (d) arc(201:-69:\n3);
+
+        \draw [thick,blue,-{Stealth[length=4mm,width=3mm]}]
+        let
+           \p4=($(o2) - (o)$),
+           \n4={veclen(\x4,\y4)}
+        in
+           (e) arc(221:180:\n4);
+
+        
+        %\coordinate [label=below:$$] (b) at (0.2,0);
+        %\draw[red,line width=1mm] let \p1=($(b)-(o)$) in (o) --++ (109:({veclen(\x1,\y1)}););
+        %\draw[blue] (o) let \p1 = ($(b)-(o)$) in --++({veclen(\x1,\y1)},0) arc (0:70:({veclen(\x1,\y1)}););
+        %\draw[->,thick] (0.2,0) .. controls (0.2,0.3) .. (0.4,0.65)node[anchor=west]{towards generator$0.1\lambda$};
+
+    \end{smithchart}
+ 
+\end{tikzpicture}
+
+\end{document}
