@@ -1,0 +1,27 @@
+\documentclass{scrartcl}
+\usepackage{tikz} 
+\usetikzlibrary{calc}
+
+\newcommand{\pgfextractangle}[3]{%
+    \pgfmathanglebetweenpoints{\pgfpointanchor{#2}{center}}
+                              {\pgfpointanchor{#3}{center}}
+    \global\let#1\pgfmathresult  
+}
+
+\begin{document}
+\begin{tikzpicture}
+
+\coordinate (A) at (0,0);
+\coordinate (B) at (3,4);
+
+\pgfextractangle{\angle}{A}{B}
+\draw (A) -- (B);
+\message{angle between +x and (A-B) = \angle};
+
+\begin{scope}[shift={($(B)-(A)$)},rotate=\angle]
+\draw[thick,red] (0,0) -- ++(-90:3);
+\end{scope}
+
+\end{tikzpicture} 
+
+\end{document}

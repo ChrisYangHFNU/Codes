@@ -5,7 +5,7 @@
 \usepackage{siunitx} 
 \usepackage{tikz}
 \pgfplotsset{compat=1.18}
-\usetikzlibrary{calc,intersections,through}
+\usetikzlibrary{calc,intersections,through,arrows.meta}
 \usepackage{comment}
 
 \begin{document}
@@ -111,13 +111,19 @@
         \path[draw=blue,fill=blue] (s) circle (0.1cm);
         \path[draw=blue,fill=blue] (a) circle (0.1cm);
         \path[name path=O-S,draw=blue,thick] (s) -- (o);
-        \path[name path=O-A,draw=blue,thick,dashed] (o) -- (a);
+        \path[name path=O-A,draw=blue,thick] (o) -- (a);
         \node (H) [label=right:$EqualReflectionCoefficientCircle$,name path=H,draw=red,thick,circle through={(s)}]at (o) {};
 
         %\coordinate [label=below:$$] (b) at (0.2,0);
         %\draw[red,line width=1mm] let \p1=($(b)-(o)$) in (o) --++ (109:({veclen(\x1,\y1)}););
         %\draw[blue] (o) let \p1 = ($(b)-(o)$) in --++({veclen(\x1,\y1)},0) arc (0:70:({veclen(\x1,\y1)}););
-        \draw[->,thick] (0.2,0) .. controls (0.2,0.3) .. (0.4,0.65)node[anchor=west]{towards generator$0.1\lambda$};
+        
+        \draw [thick,blue,-{Stealth[length=4mm,width=3mm]}]
+        let
+        \p1=($(o) - (s)$),
+        \n1={veclen(\x1,\y1)}
+        in
+        (s) arc(180:108:\n1);
 
     \end{smithchart}
 
