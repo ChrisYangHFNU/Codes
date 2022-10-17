@@ -476,11 +476,89 @@
     \begin{align}
         k_c^2=k_x^2+k_y^2=\left(\frac{m\pi}{a}\right)^2+\left(\frac{n\pi}{b}\right)^2
     \end{align}
-
 \end{frame}
 
 \begin{frame}{矩形波导}
-    上述$TE$模称为$TE_{mn}$模，其中$m$表示$x$方向变化的半周期数；$n$表示$y$方向变化的半周期数。
+    上述$TE$模称为$TE_{mn}$模，其中$m$表示$x$方向变化的半周期数；$n$表示$y$方向变化的半周期数。\\
+    关于\textbf{本征模}：\\
+    以矩形波导为例，尽管在$z$方向它们只可能是入射波加反射波，但是由于横向边界条件的约束，它们由$TE_{mn}$
+    和$TM_{mn}$模组成，并且只能由$TE_{mn}$和$TM_{mn}$模组成（后者称为完备性），矩形波导中这些模的完备
+    集合就是本征模。
+\end{frame}
+
+\begin{frame}{矩形波导}
+    同理，对于$TM$模来说
+\end{frame}
+
+\begin{frame}{矩形波导}
+    \begin{itemize}
+        \item $TE_{10}模$
+    \end{itemize}
+    即$TE_{mn}$模中下标$m=1,n=0$的情况，是满足$a>b$条件下的矩形波导中\textbf{截止频率}最低的模式，也叫主模。
+    \begin{align*}
+        \begin{cases}
+            H_z=H_0\cos\left(\dfrac{\pi}{a}x\right)\rm{e}^{-\rm{j}\beta z}\\
+            E_y=-\rm{j}\dfrac{\omega\mu}{k_c^2}\left(\dfrac{\pi}{a}\right)H_0\sin\left(\dfrac{\pi}{a}x\right)\rm{e}^{-\rm{j}\beta z}\\
+            H_x=\dfrac{\rm{j}\beta}{k_c^2}\left(\dfrac{\pi}{a}\right)H_0\sin\left(\dfrac{\pi}{a}x\right)\rm{e}^{-\rm{j}\beta z}
+        \end{cases}
+    \end{align*}
+    只取其实部解，得
+    \begin{align*}
+        \begin{cases}
+            H_z=H_0\cos\left(\dfrac{\pi}{a}x\right)\cos(\omega t-\beta z)\\
+            E_y=\dfrac{\omega\mu}{k_c^2}\left(\dfrac{\pi}{a}\right)H_0\sin\left(\dfrac{\pi}{a}x\right)\sin(\omega t-\beta z)\\
+            H_x=-\dfrac{\beta}{k_c^2}\left(\dfrac{\pi}{a}\right)H_0\sin\left(\dfrac{\pi}{a}x\right)\sin(\omega t-\beta z)
+        \end{cases}
+    \end{align*}
+\end{frame}
+
+\begin{frame}{矩形波导}
+    \begin{itemize}
+        \item $TE_{10}$模场结构
+    \end{itemize}
+    $TE_{10}$模场强与$y$无关，场分量沿$y$轴均匀分布。沿$x$轴的变化规律为：
+    $$E_y \propto \sin(\pi x/a),H_x \propto \sin(\pi x/a),H_z \propto \cos(\pi x/a)$$
+    \begin{columns}
+        \begin{column}{0.7\linewidth}
+            \begin{figure}
+                \includegraphics[width=7cm]{Cha6//fig6-4.png}
+                \caption{\footnotesize{矩形波导$TE_{10}$模场分量分布规律}}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.3\linewidth}
+            {\footnotesize (a)场分量沿$x$轴变化规律\\
+            (b)场分量沿$z$轴变化规律\\
+            (c)矩形波导横截面场分布\\
+            (d)矩形波导纵剖面场分布}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{矩形波导}
+    某一时刻$TE_{10}$模完整的场分布，随时间推移，场分布图以相速$v_P$沿传输方向移动
+    \begin{figure}
+        \includegraphics[width=9cm]{Cha6//fig6-5.png}
+        \caption{\footnotesize{矩形波导$TE_{10}$模场分布图}}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{矩形波导}
+    \begin{itemize}
+        \item 截止特性
+    \end{itemize}
+    由于$k_c^2=k^2+\gamma^2=k^2-\beta^2=\left(\frac{m\pi}{a}\right)^2+\left(\frac{n\pi}{b}\right)^2$,
+    而传播相位因子$\rm{e}^{-\rm{j}\beta z}$中，如$\beta$需要是实数，必须满足
+    $$\beta^2=k^2-k_c^2>0或k>k_c$$
+    对于$TE_{10}$模来说，必须要满足
+    \begin{align}
+        \frac{2\pi}{\lambda}>\frac{\pi}{a}\qquad \lambda<2a
+    \end{align}
+    为此，定义
+    \begin{align}
+        k_c=\frac{2\pi}{\lambda_c}
+    \end{align}
+    其中，$\lambda_c=2a$称为截止波长；$k_c$是对应的截止波数。在这种意义下，波导是一个\textcolor{blue}{高通}滤波器，“低频”信号无法通过。
+    
 \end{frame}
 
 \subsection{圆波导}
