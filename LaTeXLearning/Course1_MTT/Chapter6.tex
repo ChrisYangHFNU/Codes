@@ -135,7 +135,7 @@
                       \end{itemize}
                   \end{column}
                   \begin{column}{0.5\linewidth}
-                      \includegraphics[width=5cm]{Cha6//fig6-1.png}
+                      \includegraphics[width=5cm]{Cha6//fig6-1.pdf}
                   \end{column}
               \end{columns}
     \end{itemize}
@@ -223,14 +223,14 @@
     \begin{align}
         Z(z)=C_1\rm{e}^{-\gamma z}+C_2\rm{e}^{\gamma z}
     \end{align}
-    $$\downarrow$$
+    有趣的是：波导解的$z$函数与传输线解有惊人的相似，又是入射波和反射波的组合。我们只研究一个波（不论是TE或TM波），在形式上只写入射波
     \begin{align}
         \begin{cases}
             E_z=E(x,y)\rm{e}^{-\gamma z} \\
             H_z=H(x,y)\rm{e}^{-\gamma z}
         \end{cases}
     \end{align}
-    $$\frac{\partial}{\partial z}\rightarrow -\gamma$$
+    $$\frac{\partial}{\partial z}\rightarrow -\gamma$$ 
 \end{frame}
 
 \begin{frame}{矩形波导}
@@ -458,28 +458,30 @@
     \begin{align*}
         \begin{cases}
             x=0,E_y=0 \rightarrow \varphi_x=0                                    \\
-            x=a,E_y=0 \rightarrow k_x a=m\pi \rightarrow k_x=\frac{m\pi}{a},m为整数 \\
+            x=a,E_y=0 \rightarrow k_x a=m\pi \rightarrow k_x=\frac{m\pi}{a},m=0,1,2,\cdots \\
             y=0,E_x=0 \rightarrow \varphi_y=0                                    \\
-            y=b,E_x=0 \rightarrow k_y b=n\pi \rightarrow k_y=\frac{n\pi}{b},n为整数
+            y=b,E_x=0 \rightarrow k_y b=n\pi \rightarrow k_y=\frac{n\pi}{b},n=0,1,2,\cdots
         \end{cases}
     \end{align*}
     \begin{align}
         \begin{cases}
-            H_z=H_0\cos(\frac{m\pi}{a}x)\cos(\frac{n\pi}{b}y)\rm{e}^{-\gamma z}                                             \\
-            E_x=\rm{j}\frac{\omega\mu}{k_c^2}\frac{n\pi}{b}H_0\cos(\frac{m\pi}{a}x)\sin(\frac{n\pi}{b}y)\rm{e}^{-\gamma z}  \\
-            E_y=-\rm{j}\frac{\omega\mu}{k_c^2}\frac{m\pi}{a}H_0\sin(\frac{m\pi}{a}x)\cos(\frac{n\pi}{b}y)\rm{e}^{-\gamma z} \\
+            H_z=H_0\cos\left(\dfrac{m\pi}{a}x\right)\cos\left(\dfrac{n\pi}{b}y\right)\rm{e}^{-\gamma z}                                             \\
+            E_x=\rm{j}\dfrac{\omega\mu}{k_c^2}\dfrac{n\pi}{b}H_0\cos\left(\dfrac{m\pi}{a}x\right)\sin\left(\dfrac{n\pi}{b}y\right)\rm{e}^{-\gamma z}  \\
+            E_y=-\rm{j}\dfrac{\omega\mu}{k_c^2}\dfrac{m\pi}{a}H_0\sin\left(\dfrac{m\pi}{a}x\right)\cos\left(\dfrac{n\pi}{b}y\right)\rm{e}^{-\gamma z} \\
             E_z=0                                                                                                           \\
-            H_x=\frac{\gamma}{k_c^2}\frac{m\pi}{a}H_0\sin(\frac{m\pi}{a}x)\cos(\frac{n\pi}{b}y)\rm{e}^{-\gamma z}           \\
-            H_y=\frac{\gamma}{k_c^2}\frac{n\pi}{b}H_0\cos(\frac{m\pi}{a}x)\sin(\frac{n\pi}{b}y)\rm{e}^{-\gamma z}
+            H_x=\dfrac{\gamma}{k_c^2}\dfrac{m\pi}{a}H_0\sin\left(\dfrac{m\pi}{a}x\right)\cos\left(\dfrac{n\pi}{b}y\right)\rm{e}^{-\gamma z}           \\
+            H_y=\dfrac{\gamma}{k_c^2}\dfrac{n\pi}{b}H_0\cos\left(\dfrac{m\pi}{a}x\right)\sin\left(\dfrac{n\pi}{b}y\right)\rm{e}^{-\gamma z}
         \end{cases}
     \end{align}
-    \begin{align}
-        k_c^2=k_x^2+k_y^2=\left(\frac{m\pi}{a}\right)^2+\left(\frac{n\pi}{b}\right)^2
-    \end{align}
+    
 \end{frame}
 
 \begin{frame}{矩形波导}
-    上述$TE$模称为$TE_{mn}$模，其中$m$表示$x$方向变化的半周期数；$n$表示$y$方向变化的半周期数。\\
+    \begin{align}
+        k_c^2=k_x^2+k_y^2=\left(\frac{m\pi}{a}\right)^2+\left(\frac{n\pi}{b}\right)^2
+    \end{align}
+    上述$TE$模称为$TE_{mn}$模，其中$m$表示$x$方向变化的半周期数；$n$表示$y$方向变化的半周期数。由于$m=0$及$n=0$时所有场分量才为0，因此
+    矩形波导中存在$TE_{m0}$和$TE_{0n}$等波形。若$a>b$，则模$TE_{10}$是最低次波型，其余波型为高次波型。\\
     关于\textbf{本征模}：\\
     以矩形波导为例，尽管在$z$方向它们只可能是入射波加反射波，但是由于横向边界条件的约束，它们由$TE_{mn}$
     和$TM_{mn}$模组成，并且只能由$TE_{mn}$和$TM_{mn}$模组成（后者称为完备性），矩形波导中这些模的完备
@@ -487,7 +489,27 @@
 \end{frame}
 
 \begin{frame}{矩形波导}
-    同理，对于$TM$模来说
+    同理，对于$TM$模来说$H_z=0$总的纵向电场为：
+    \begin{align}
+        E_z=E_0\sin\left(\frac{m\pi}{a}x\right)\sin\left(\frac{n\pi}{b}y\right)\rm{e}^{-\gamma z}
+    \end{align}
+    本征值：
+    $$k_x=\frac{m\pi}{a},k_y=\frac{n\pi}{b}\quad m,n=1,2,\cdots$$
+    
+    \begin{align*}
+        \begin{cases}
+            E_x = -\rm{j}\dfrac{\beta}{k_c^2}\left(\dfrac{m\pi}{a}\right)E_0\cos\left(\dfrac{m\pi}{a}x\right)\sin\left(\dfrac{n\pi}{b}y\right)\rm{e}^{-\gamma z}\\
+            E_y = -\rm{j}\dfrac{\beta}{k_c^2}\left(\dfrac{n\pi}{b}\right)E_0\sin\left(\dfrac{m\pi}{a}x\right)\cos\left(\dfrac{n\pi}{b}y\right)\rm{e}^{-\gamma z}\\
+            H_x = \rm{j}\dfrac{\omega\epsilon}{k_c^2}\left(\dfrac{n\pi}{b}\right)E_0\cos\left(\dfrac{m\pi}{a}x\right)\sin\left(\dfrac{n\pi}{b}y\right)\rm{e}^{-\gamma z}\\
+            H_y = -\rm{j}\dfrac{\omega\epsilon}{k_c^2}\left(\dfrac{m\pi}{a}\right)E_0\sin\left(\dfrac{m\pi}{a}x\right)\cos\left(\dfrac{n\pi}{b}y\right)\rm{e}^{-\gamma z}\\
+            H_z = 0
+        \end{cases}
+    \end{align*}
+\end{frame}
+
+\begin{frame}{矩形波导}
+    上述$TM$模称为$TM_{mn}$模，其中$m$表示$x$方向变化的半周期数；$n$表示$y$方向变化的半周期数。由于$m=0$或$n=0$时所有场分量均为0，因此
+    矩形波导中不存在$TM_{00}$、$TM_{0n}$及$TM_{m0}$等波形。所以$TM_{11}$是最低次波型，其余波型为高次波型。\\
 \end{frame}
 
 \begin{frame}{矩形波导}
@@ -559,6 +581,63 @@
     \end{align}
     其中，$\lambda_c=2a$称为截止波长；$k_c$是对应的截止波数。在这种意义下，波导是一个\textcolor{blue}{高通}滤波器，“低频”信号无法通过。
     
+\end{frame}
+
+\begin{frame}{矩形波导}
+    \begin{itemize}
+        \item 波导波长$\lambda_g$
+    \end{itemize}
+    \begin{align}
+        \lambda_g=\frac{\lambda}{\sqrt{1-\left(\frac{\lambda}{\lambda_c}\right)^2}}
+    \end{align}
+    很明显，波导波长$\lambda_g$大于自由空间波长$\lambda$。设传播常数$\beta=\dfrac{2\pi}{\lambda_g}$，则有
+    $$\beta^2=k^2-k_c^2=\left(\frac{2\pi}{\lambda}\right)^2-\left(\frac{2\pi}{\lambda_c}\right)^2=\left(\frac{2\pi}{\lambda_g}\right)^2$$
+    即可推导得
+    $$\lambda_g=\frac{\lambda}{\sqrt{1-\left(\frac{\lambda}{\lambda_c}\right)^2}}=\frac{\lambda}{\sqrt{1-\left(\frac{\lambda}{2a}\right)^2}}$$
+\end{frame}
+
+\begin{frame}{矩形波导}
+    \begin{itemize}
+        \item 相速$v_p$
+    \end{itemize}
+    \begin{align}
+        v_p=\frac{c}{\sqrt{1-\left(\frac{\lambda}{\lambda_c}\right)^2}}=\frac{c}{\sqrt{1-\left(\frac{\lambda}{2a}\right)^2}}>c
+    \end{align}
+    已知相位因子构成的等相位面
+    \begin{align*}
+        \omega t-\beta z=const \\
+        v_p=\frac{\rm{d}z}{\rm{d}t}=\frac{\omega}{\beta}=\frac{2\pi c/\lambda}{2\pi/\lambda_g}=c\frac{\lambda_g}{\lambda} \\
+           =\frac{c}{\sqrt{1-\left(\frac{\lambda}{\lambda_c}\right)^2}}=\frac{c}{\sqrt{1-\left(\frac{\lambda}{2a}\right)^2}} 
+    \end{align*}
+    显然相速$v_p$大于自由空间光速，但相速并不是能量传播速度。
+\end{frame}
+
+\begin{frame}{矩形波导}
+    \begin{itemize}
+        \item 群速$v_g$
+    \end{itemize}
+    \begin{align*}
+        v_g&=\frac{\rm{d}\omega}{\rm{d}\beta}\\
+        \beta &= \sqrt{k^2-k_c^2}=\sqrt{\omega^2\epsilon\mu-k_c^2}\\
+        \frac{\rm{d}\beta}{\rm{d}\omega}&=\frac{1}{2}\frac{2\omega\epsilon\mu}{\sqrt{k^2-k_c^2}}=\frac{k^2/\omega}{\sqrt{k^2-k_c^2}}=\frac{v_p}{c^2}
+    \end{align*}
+    \begin{align}
+        v_g = \frac{c^2}{v_p}=c\sqrt{1-\left(\frac{\lambda}{\lambda_c}\right)^2}=c\sqrt{1-\left(\frac{\lambda}{2a}\right)^2}<c
+    \end{align}
+    \begin{align}
+        v_p v_g=c^2
+    \end{align}
+\end{frame}
+
+\begin{frame}{矩形波导}
+    \begin{itemize}
+        \item 波型阻抗
+    \end{itemize}
+    \begin{align}
+        \eta_{TE}=\left|\frac{E_t}{H_t}\right|=\frac{\omega\mu}{\beta}=\sqrt{\frac{\mu}{\epsilon}}\frac{k}{\beta}=\eta\frac{\lambda_g}{\lambda}=\eta\frac{1}{\sqrt{1-\left(\frac{\lambda}{\lambda_c}\right)^2}}\\
+        \color{blue}{\eta_{TE_{10}}=\left|\frac{E_y}{H_x}\right|=\sqrt{\frac{\mu}{\epsilon}}\bullet\frac{1}{\sqrt{1-\left(\frac{\lambda}{2a}\right)^2}}}\\
+        \eta_{TM}=\left|\frac{E_t}{H_t}\right|=\frac{\beta}{\omega\epsilon}=\sqrt{\frac{\mu}{\epsilon}}\frac{\beta}{k}=\eta\sqrt{1-\left(\frac{\lambda}{\lambda_c}\right)^2}
+    \end{align}
 \end{frame}
 
 \subsection{圆波导}
