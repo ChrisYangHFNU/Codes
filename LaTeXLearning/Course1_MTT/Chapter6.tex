@@ -566,6 +566,53 @@
 
 \begin{frame}{矩形波导}
     \begin{itemize}
+        \item 根据导体中电磁波传播，在微波波段，趋肤效应使感应电流在很薄的波导内壁表面流动  ————称为\textbf{壁电流}
+    \end{itemize}
+    \begin{columns}
+        \begin{column}{0.5\linewidth}
+            $$\vec{J_S}=\hat{n}\times\vec{H}_{\tan}$$
+        \end{column}
+        \begin{column}{0.5\linewidth}
+            \begin{figure}
+                \includegraphics[width=5cm]{Cha6//fig6-3.pdf}
+            \end{figure}
+        \end{column}
+    \end{columns}
+    以$TE_{10}$模为例
+    \begin{align*}
+        \begin{cases}
+            \vec{J_S}|_{y=0}=\hat{y}\times[\hat{x}H_x+\hat{z}H_z]_{y=0}=[\hat{x}H_z-\hat{z}H_x]_{y=0}\\
+            \vec{J_S}|_{y=b}=-\hat{y}\times[\hat{x}H_x+\hat{z}H_z]_{y=b}=[-\hat{x}H_z+\hat{z}H_x]_{y=b}\\
+            \vec{J_S}|_{x=0}=\hat{x}\times\hat{z}H_z|_{x=0}=-\hat{y}H_z|_{x=0}\\
+            \vec{J_S}|_{x=a}=-\hat{x}\times\hat{z}H_z|_{x=a}=\hat{y}H_z|_{x=a}
+        \end{cases}
+    \end{align*}
+\end{frame}
+
+\begin{frame}{矩形波导}
+    \begin{align*}
+        \color{blue}{\vec{J_S}(y=0)=[\hat{x}H_{10}\cos(\pi x/a)-\mathrm{j}\hat{z}\frac{\beta a}{\pi}H_{10}\sin(\pi x/a)]}\\
+        \color{blue}{\vec{J_S}(y=b)=[-\hat{x}H_{10}\cos(\pi x/a)+\mathrm{j}\hat{z}\frac{\beta a}{\pi}H_{10}\sin(\pi x/a)]}
+    \end{align*}
+    \begin{columns}
+        \begin{column}{0.5\linewidth}
+            \begin{figure}
+                \includegraphics[width=6cm]{Cha6//fig6-6.png}
+                \caption{矩形波导$TE_{10}$模管壁电流分布}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\linewidth}
+            \fbox{面电流与磁力线、表面法向正交}
+            \begin{align*}
+                \vec{J_S}(x=0)=-\hat{y}H_{10}\\
+                \vec{J_S}(x=a)=-\hat{y}H_{10}
+            \end{align*}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{矩形波导}
+    \begin{itemize}
         \item 截止特性
     \end{itemize}
     由于$k_c^2=k^2+\gamma^2=k^2-\beta^2=\left(\frac{m\pi}{a}\right)^2+\left(\frac{n\pi}{b}\right)^2$,
@@ -579,8 +626,60 @@
     \begin{align}
         k_c=\frac{2\pi}{\lambda_c}
     \end{align}
-    其中，$\lambda_c=2a$称为截止波长；$k_c$是对应的截止波数。在这种意义下，波导是一个\textcolor{blue}{高通}滤波器，“低频”信号无法通过。
-    
+    其中，$\lambda_c=2a$称为截止波长；$k_c$是对应的截止波数。
+\end{frame}
+
+\begin{frame}{矩形波导}
+    TE波和TM波的\textbf{截止频率}为
+    \begin{align*}
+        f_c=\frac{v}{\lambda_c}=\frac{k_c}{2\pi\sqrt{\mu\epsilon}}=\frac{1}{2\sqrt{\mu\epsilon}}\sqrt{\left(\frac{m}{a}\right)^2+\left(\frac{n}{b}\right)^2}
+    \end{align*}
+    截止波长：
+    \begin{empheq}[box=\fbox]{align*}
+        \lambda_c=\frac{2\pi}{k_c}=\frac{2}{\sqrt{(m/a)^2+(n/b)^2}}
+    \end{empheq}
+    截止条件可记为：
+    $$f<f_c或\lambda>\lambda_c$$\\
+    截止波长不仅与波导尺寸$a$和$b$有关，而且与决定波型的$m$和$n$有关，截止频率还与介质特性有关。在这种意义下，波导是一个\textcolor{blue}{高通}滤波器，“低频”信号无法通过。
+\end{frame}
+
+\begin{frame}{矩形波导}
+    当波导尺寸$a$和$b$给定时，将不同$m$和$n$值代入，即可得到不同波型的截止波长。其分布如图
+    \begin{figure}
+        \includegraphics[width=8cm]{Cha6//fig6-7.pdf}
+        \caption{BJ-100型波导不同波型截止波长分布图}
+    \end{figure}
+    从图中可以看到，$TE_{10}$模的截止波长最长，右边的阴影区为截止区。
+\end{frame}
+
+\begin{frame}{矩形波导}
+    \begin{itemize}
+        \item 模式简并
+    \end{itemize}
+    不同导模的截止波长$\lambda_c$相同现象\\
+    相同的波型指数$m$和$n$的$TE_{mn}$和$TM_{mn}$的截止波长相同，矩形波导的导模具有双重简并。
+    \begin{itemize}
+        \item 主模$TE_{10}$模——主模
+        \begin{enumerate}
+            \item 通常矩形波导工作在$TE_{10}$单模传输情况，因为$TE_{10}$模容易实现单模传输。
+            \item 当工作频率一定时传输$TE_{10}$模的波导尺寸最小
+            \item 若波导尺寸一定，则实现单模传输的频带最宽。
+        \end{enumerate}
+    \end{itemize}
+    为了实现$TE_{10}$单模传输，则要求电磁波的工作波长必须满足下列条件
+    \begin{align*}
+        \begin{cases}
+            \lambda_c(TE_{20})<\lambda<\lambda_c(TE_{10})\\
+            \lambda>\lambda_c(TE_{01})
+        \end{cases}
+        \rightarrow
+        \begin{cases}
+            a<\lambda<2a\\
+            \lambda>2b
+        \end{cases}
+    \end{align*}
+    当工作波长给定时，若要实现$TE_{10}$单模传输，则波导尺寸必须满足
+    $$\lambda/2<a<\lambda \quad b<\lambda/2$$
 \end{frame}
 
 \begin{frame}{矩形波导}
