@@ -1616,7 +1616,7 @@
 \end{frame}
 
 \begin{frame}{同轴线——传输主模TEM}
-    势满足拉普拉斯方程
+    势函数满足拉普拉斯方程
     $$\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial\Phi(r,\varphi)}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2\Phi(r,\varphi)}{\partial\varphi^2}=0$$
     \begin{columns}
         \begin{column}{0.5\linewidth}
@@ -1629,6 +1629,7 @@
         \end{column}
         \begin{column}{0.5\linewidth}
             \begin{figure}
+                \centering
                 \includegraphics[width=4cm]{Cha6//fig6-30.png}
             \end{figure}
         \end{column}
@@ -1636,48 +1637,462 @@
 \end{frame}
 
 \begin{frame}{同轴线——传输主模TEM}
-
+    \begin{align}
+        \frac{1}{F(\varphi)}\frac{\mathrm{d}^2F(\varphi)}{\mathrm{d}\varphi^2}=-k_{\varphi}^2
+        \label{eqn6-3-1}
+    \end{align}
+    \begin{align}
+        \frac{r}{R(r)}\frac{\mathrm{d}}{\mathrm{d}r}\left(r\frac{\mathrm{d}R(r)}{\mathrm{d}r}\right)=-k_r^2
+        \label{eqn6-3-2}
+    \end{align}
+    方程(\ref{eqn6-3-1})的解为
+    \begin{gather*}
+        F(\varphi)=A\cos n\varphi+B\sin n\varphi\\
+        \text{势函数}\Phi(r,\varphi)\text{不随}\varphi\text{变化}\rightarrow\quad n=0\\
+        F(\varphi)=A\rightarrow \quad k_{\varphi}=0
+    \end{gather*}
+    根据$k_r^2+k_{\varphi}^2=0$可知$k_r=0$，结合方程(\ref{eqn6-3-2})可知
 \end{frame}
 
 \begin{frame}{同轴线——传输主模TEM}
-
+    \begin{gather*}
+        \frac{\mathrm{d}}{\mathrm{d}r}\left(r\frac{\mathrm{d}R(r)}{\mathrm{d}r}\right)=0 \\
+        R(r)=C\ln r+D                                                                    \\
+        \Phi(r,\varphi)=F(\varphi)R(r)=A\cdot(C\ln r+D)=C_1\ln r+C_2
+    \end{gather*}
+    结合边界条件
+    \begin{align*}
+        &\Phi(a,\varphi)=V_0=C_1\ln a+C_2\\
+        &\Phi(b,\varphi)=0=C_1\ln b+C_2\\
+        \rightarrow\quad &\Phi(r,\varphi)=\frac{V_0\ln(b/r)}{\ln (b/a)}\\
+        &\vec{E}(r,\varphi,z)=\hat{r}\frac{V_0}{{\color{red}{r}}\ln(b/a)}\mathrm{e}^{-\mathrm{j}\beta z}\quad \vec{H}(r,\varphi,z)=\hat{\varphi}\frac{V_0}{\eta {\color{red}{r}}\ln(b/a)}\mathrm{e}^{-\mathrm{j}\beta z}\\
+        &\beta=k=\omega\sqrt{\mu\epsilon}
+    \end{align*}
 \end{frame}
 
 \begin{frame}{同轴线——传输主模TEM}
-
+    \begin{figure}
+        \includegraphics[width=8cm]{Cha6//fig6-31.png}
+        \caption{同轴线$TEM$模的场结构}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{同轴线——传输主模TEM}
-
+    \begin{enumerate}
+        \resume
+        \item 同轴线$TEM$模特性参量
+        \begin{align*}
+            &k_c=0\quad \lambda_c=\infty\\
+            &\beta=k=\omega\sqrt{\mu\epsilon}
+        \end{align*}
+        \begin{itemize}
+            \item 相速与光速关系\\
+            \begin{align*}
+                &v_p=\frac{\omega}{\beta}=\frac{1}{\sqrt{\mu\epsilon}}=\frac{c}{\sqrt{\epsilon_r}}\\
+                &\lambda_p=\frac{2\pi}{\beta}=\frac{v_p}{f}=\lambda\\
+            \end{align*}
+            \item 波导波长\\
+            $$\lambda_g=\frac{\lambda}{\sqrt{1-\left(\frac{\lambda}{\lambda_c}\right)}}=\lambda_p=\lambda$$
+        \end{itemize}
+    \end{enumerate}
 \end{frame}
 
 \begin{frame}{同轴线——传输主模TEM}
-
+    \begin{enumerate}
+        \resume
+        \item 同轴线$TEM$模特性参量
+        \begin{itemize}
+            \item 特性阻抗
+            \begin{align*}
+                &Z_0=\frac{U}{I}=\frac{\eta}{2\pi}\ln\frac{b}{a}=\frac{60}{\sqrt{\epsilon_r}}\ln\frac{b}{a}\\
+                &U=\int_a^b E_r(r,\varphi,z)\mathrm{d}r=V_0\mathrm{e}^{-\mathrm{j}\beta z}\\
+                &I=\int_0^{2\pi} H_r(r,\varphi,z)a\mathrm{d}\varphi=\frac{2\pi V_0}{\eta\ln(b/a)}\mathrm{e}^{-\mathrm{j}\beta z}
+            \end{align*}
+            \item 衰减常数
+            \begin{align*}
+                \alpha_c&=\frac{R_s}{2Z_0\eta}\frac{\mathrm{d}Z_0}{\mathrm{d}r}=\frac{R_s}{4\pi Z_0}\left[\frac{\mathrm{d}\ln(b/a)}{\mathrm{d}b}-\frac{\mathrm{d}\ln(b/a)}{\mathrm{d}a}\right]\\
+                        &=\frac{R_s}{4\pi Z_0}\left(\frac{1}{a}-\frac{1}{b}\right)\qquad\qquad Np/m
+            \end{align*}
+        \end{itemize}
+    \end{enumerate}
 \end{frame}
 
 \begin{frame}{同轴线}
-
+    \begin{enumerate}
+        \resume
+        \item 同轴线$TEM$模特性参量
+        \begin{itemize}
+            \item 衰减常数\\
+            固定$b$，由$\partial\alpha_c/\partial a=0$，可以求空气同轴线导体损耗最小尺寸条件$b/a=3.591$
+            $$Z_0=\frac{60}{\sqrt{\epsilon_r}}\ln\frac{b}{a}=76.71\Omega$$
+            \item 传输功率
+            $$P=\frac{1}{2}\int_S \vec{E}\times\vec{H}^*\cdot\mathrm{d}\vec{S}=\frac{1}{2}\int_S\vec{E}_r\times\vec{H}_{\varphi}^*\cdot\mathrm{d}\vec{S}=\frac{1}{2}V_0I_0^*$$
+            最大场强$E_{br}$对应的击穿前最大电压
+            $$V_{max}=E_{br}a\ln(b/a)$$
+            空气同轴线的最大功率容量
+            $$P_{max}=\frac{V_{max}^2}{2Z_0}=\frac{\pi a^2E_{br}}{\eta_0}\ln\frac{b}{a}$$
+        \end{itemize}
+    \end{enumerate}
 \end{frame}
 
-\begin{frame}{同轴线}
-
+\begin{frame}{同轴线——高次模}
+    在同轴线中，除传输主模$TEM$模外，还能够传输高次模——$TE$模和$TM$模。但在实际应用中，同轴线是以$TEM$模工作的。
+    \begin{enumerate}
+        \item $TM$模
+        \begin{gather*}
+            E_z=[A_1J_m(k_cr)+A_2Y_m(k_cr)]
+            \begin{matrix*}
+                \cos m\varphi\\
+                \sin m\varphi\\
+            \end{matrix*}
+            \mathrm{e}^{-\mathrm{j}\beta z}
+        \end{gather*}
+        边界条件：
+        \begin{gather*}
+            E_z(r=a,b)=0\\
+            \rightarrow
+            \begin{cases}
+                A_1J_m(k_ca)+A_2Y_m(k_ca)=0\\
+                A_1J_m(k_cb)+A_2Y_m(k_cb)=0
+            \end{cases}
+        \end{gather*}
+        $TM$模本征值$k_c$满足超越方程
+        $$\frac{J_m(k_ca)}{J_m(k_cb)}=\frac{Y_m(k_ca)}{Y_m(k_cb)}$$
+    \end{enumerate}
 \end{frame}
 
-\begin{frame}{同轴线}
-
+\begin{frame}{同轴线——高次模}
+    \begin{enumerate}
+        \item $TM$模\\
+        同轴线$TM_{mn}$模的截止波长近似为：$\lambda_c(TM_{mn})\approx\frac{D-d}{n}$\\
+        最低次模$TM_{01}$模的截止波长为：$\lambda_c(TM_{01})\approx D-d$
+        \item $TE$模
+        \begin{gather*}
+            H_z=[A_1J_m(k_cr)+A_2Y_m(k_cr)]
+            \begin{matrix*}
+                \cos m\varphi\\
+                \sin m\varphi\\
+            \end{matrix*}
+            \mathrm{e}^{-\mathrm{j}\beta z}
+        \end{gather*}
+        边界条件：
+        \begin{gather*}
+            \frac{\partial H_z}{\partial r}=0\qquad(r=a,b)\\
+            \rightarrow
+            \begin{cases}
+                A_1J_m^{'}(k_ca)+A_2Y_m^{'}(k_ca)=0\\
+                A_1J_m^{'}(k_cb)+A_2Y_m^{'}(k_cb)=0
+            \end{cases}
+        \end{gather*}
+        $TE_{m1}$模的截止波长为：
+        $$\lambda_c(TE_{m1})\approx\frac{\pi}{m}(b+a)\qquad(m=1,2,3,\cdots)$$
+        \saveenum
+    \end{enumerate}
 \end{frame}
 
-\begin{frame}{同轴线}
-
-\end{frame}
-
-\begin{frame}{同轴线}
-
+\begin{frame}{同轴线——高次模}
+    \begin{enumerate}
+        \resume
+        \item $TE$模\\
+        最低次模$TE_{11}$模的截止波长为：$\lambda_c(TE_{11})\approx \pi(b+a)$
+        \item 单模传输条件\\
+        最小工作波长应满足：
+        $$\lambda_{min}>\lambda_c(TE_{11})\approx\pi(b+a)$$
+        \item 同轴线尺寸选择\\
+        同轴线只传输$TEM$模，最低次高次模为$TE_{11}$模，截止波长最大，应满足
+        $$\lambda_{min}>\pi(a+b)$$
+    \end{enumerate}
 \end{frame}
 
 \subsection{平面传输线}
 \begin{frame}{平面传输线}
     上世纪六十年代以来，在微波工程和微波技术上，出现了一次不小的革命，即所谓MIC(Microwave Integrated Circuit)微波集成电路——HMIC、MMIC。其特色是体积小、功能多、频带宽，但承受功率小。因此被广泛应用于接收机和小功率元件中，并都传输TEM波。\\
+    \hspace*{\fill}\\
     作为这一革命的“过渡人物”是带状线(Stripline)。它可以看作是同轴线的变形。
+    \begin{figure}
+        \includegraphics[width=8cm]{Cha6//fig6-32.png}
+        \caption{同轴线到带状线的转换}
+    \end{figure}
 \end{frame}
 
+\begin{frame}{平面传输线——带状线}
+    \begin{figure}
+        \includegraphics[width=8cm]{Cha6//fig6-33.png}
+    \end{figure}
+    对于带状线的分析可以用传输线理论来分析。表征带状线的主要特性参量有传播常数、相速、相波长和特征阻抗。
+\end{frame}
+
+\begin{frame}{平面传输线——带状线}
+    \begin{figure}
+        \includegraphics[width=8cm]{Cha6//fig6-34.png}
+        \caption{均匀填充$\epsilon_r$的带状线}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{平面传输线——带状线}
+    带状线传输$TEM$模，特性阻抗是研究的主要问题，其求解框图如下
+    \begin{figure}
+        \includegraphics[width=10cm]{Cha6//fig6-35.pdf}
+    \end{figure}
+    其中$v=c/\sqrt{\epsilon_r},c=3.0\times 10^8m/s,\epsilon_0\epsilon_r$是所填充的介质，于是一般的特性阻抗问题可转化为求电容$C$的问题
+    
+\end{frame}
+
+\begin{frame}{平面传输线——带状线}
+    带线电容分成板间电容$C_p$和边缘电容$C_f^{'}$。\\
+    $W/b$越大，$C$越大，特性阻抗$Z_0$越小。\\
+    $W/b$越大，$C_f^{'}$影响越小。
+    \begin{figure}
+        \includegraphics[width=6cm]{Cha6//fig6-36.png}
+        \caption{带状线的电容分布}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{平面传输线——带状线}
+    由长线理论可知，$TEM$模传输线特性阻抗的计算公式为：
+    $$Z_0=\sqrt{\frac{L_1}{C_1}}=\frac{1}{v_pC_1}$$
+    式中$L_1$和$C_1$分别为带状线单位长度上的分布电感和分布电容；$v_p$为带状线中$TEM$模的传播速度。
+\end{frame}
+
+\begin{frame}{平面传输线——带状线}
+    \begin{itemize}
+        \item 宽导带($w/(b-t)\geqslant 0.35$)
+        \begin{tiny}
+            \begin{align*}
+                    &Z_c=\frac{94.145}{\sqrt{\epsilon\left(\frac{w/b}{1-t/b}+\frac{C_f}{0.0885\epsilon_r}\right)}} \\
+                    &C_f=\frac{0.0885\epsilon_r}{\pi}\left\{\frac{2}{1-t/b}\ln\left(\frac{1}{1-t/b}+1\right)
+                      -\left(\frac{1}{1-t/b}-1\right)\ln\left(\frac{1}{(1-t/b)^2}-1\right)\right\}\quad (pF/cm)
+            \end{align*}
+        \end{tiny}
+        \item 窄导带($w/(b-t)<0.35$)
+              \begin{itemize}
+                  \item $t/b\leqslant 0.25$和$t/w\leqslant 0.11$的条件下\\
+                        $$Z_c=\frac{6}{\sqrt{\epsilon_r}}\ln\left(\frac{4b}{\pi d}\right)$$
+                  \item d为等效中心导体直径\\
+                        $$d=\frac{w}{2}\left[1+\frac{t}{w\pi}\left(1+\ln\frac{4\pi w}{t}\right)+0.51\left(\frac{t}{w}\right)^2\right]$$
+              \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{平面传输线——带状线}
+    \begin{figure}
+        \includegraphics[width=7cm]{Cha6//fig6-37.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{平面传输线——微带线}
+    \begin{enumerate}
+        \item 微带的基本概念\\
+              微带线是一种重要的微波传输线，其结构如下图所示。它是由介质基片上的导带和基片下面的接地板构成。微带线容易实现微带电路的
+              小型化和集成化，所以微带线在微波集成电路中获得了广泛的应用。 \\
+              \hspace*{\fill}\\
+              带状线可以看成是由同轴线演变而成的，微带则可以看成是双导线演化而成的。
+    \end{enumerate}
+    \begin{figure}
+        \includegraphics[width=10cm]{Cha6//fig6-38.png}
+        \caption{从双导线到微带线}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{平面传输线——微带线}
+    \begin{enumerate}
+        \item 微带的基本概念\\
+        \begin{figure}
+            \includegraphics[width=4.5cm]{Cha6//fig6-47.jpg}
+            \includegraphics[width=4.5cm]{Cha6//fig6-48.jpg}\\
+            \includegraphics[width=4.5cm]{Cha6//fig6-49.jpg}
+            \includegraphics[width=4.5cm]{Cha6//fig6-50.jpg}
+        \end{figure}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{平面传输线——微带线}
+    \begin{enumerate}
+        \item 微带的基本概念
+        \begin{itemize}
+            \item 微带采用金属薄膜工艺
+            \item 微带均有介质填充，因此电磁波在其中传播时波长缩短
+            \item 结构上微带属于不均匀结构
+            \item 准$TEM$模(Quasi-TEM mode)
+            \item 易集成
+        \end{itemize}
+        \saveenum
+    \end{enumerate}
+    \begin{figure}
+        \includegraphics[width=10cm]{Cha6//fig6-39.png}
+        \caption{微带的有效介电常数}
+    \end{figure}
+    常用的介质基片：氧化铝$Al_2O_3$陶瓷\quad $\epsilon_r=90\sim 99$\\
+    聚四氟乙烯或聚氯乙烯\quad $\epsilon_r=2.50$左右\\
+    FR4\quad $\epsilon_r=4.4$左右
+\end{frame}
+
+\begin{frame}{平面传输线——微带线}
+    \begin{enumerate}
+        \resume
+        \item 微带特性阻抗\\
+        \begin{itemize}
+            \item 工程上，常常认为微带线中近似传播$TEM$模：“准静态分析法”
+            \item 由前面分析知道$TEM$模传输线特性阻抗计算公式：
+            $$Z_0=\frac{1}{v_pC_1}$$
+            $v_p=c/\sqrt{\epsilon_r}$是微带中的相速
+            \item 引入一个相对等效介电常数为$\epsilon_{re}$，其值介于$1$和$\epsilon_r$之间，用它来均匀填充微带线，构成等效
+            微带线，并保持它的尺寸和特性阻抗与原来的实际微带线相同。这种等效微带线中波的相速度为
+            $$v_p=c/\sqrt{\epsilon_{re}}$$
+            微带线中波的相波长为$\lambda_p=\lambda_0/\sqrt{\epsilon_{re}}$
+            $$\epsilon_{re}=\frac{\epsilon_r+1}{2}+\frac{\epsilon_r-1}{2}\frac{1}{\sqrt{1+12d/w}}$$
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{平面传输线——微带线}
+    \begin{enumerate}
+        \resume
+        \item 微带特性阻抗\\
+    \end{enumerate}
+    \begin{figure}
+        \includegraphics[width=8cm]{Cha6//fig6-40.png}\\
+        \includegraphics[width=8cm]{Cha6//fig6-41.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{平面传输线——微带线}
+    \begin{enumerate}
+        \resume
+        \item 微带特性阻抗\\
+    \end{enumerate}
+    \begin{figure}
+        \includegraphics[width=8cm]{Cha6//fig6-42.png}
+        \caption{微带线特性阻抗$Z_0$和相对等效介电常数$\epsilon_{re}$及尺寸的关系}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{平面传输线——微带线}
+    \begin{enumerate}
+        \resume
+        \item 微带特性阻抗\\
+        微带线单位长度电容
+        $$C_1=C_p+2C_f$$
+        $W$越大特性阻抗越低，$h$越大特性阻抗越高。
+        \saveenum
+    \end{enumerate}
+    \begin{figure}
+        \includegraphics[width=7cm]{Cha6//fig6-43.png}
+        \caption{微带线的电容分布}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{平面传输线——微带线}
+    \begin{enumerate}
+        \resume
+        \item Gupta的闭式工作\\
+              微带传输线的难于计算和查表问题使国外发展了与计算机、CAD相联系的闭式工作，也就是把场论复杂的结果用简要的Closed Form(成为闭式)
+              表示，其目标是计算简单，精度高。\\
+              \hspace*{\fill}\\
+              Gupta的工作分为分析和综合两大部分。
+              \begin{itemize}
+                  \item 分析工作
+              \end{itemize}
+              \begin{figure}
+                  \includegraphics[width=8cm]{Cha6//fig6-44.pdf}
+              \end{figure}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{平面传输线——微带线}
+    \begin{enumerate}
+        \resume
+        \item Gupta的闭式工作\\
+              \begin{itemize}
+                  \item 分析工作\\
+                  $\frac{W}{h}\leqslant 1 \text{窄导带}$
+                  \begin{align*}
+                    \begin{cases}
+                        Z_0=\frac{60}{\sqrt{\epsilon_e}}\ln\left(8\frac{h}{W}+0.25\frac{W}{h}\right)\\
+                        \epsilon_e=\frac{\epsilon_r+1}{2}+\frac{\epsilon_r-1}{2}\left[\left(1+12\frac{h}{W}\right)^{-1}+0.04\left(1-\frac{W}{h}\right)^2\right]
+                    \end{cases}
+                  \end{align*}
+                  $\frac{W}{h}>1 \text{宽导带}$
+                  \begin{align*}
+                    \begin{cases}
+                        Z_0=\frac{120\pi/\sqrt{\epsilon_r}}{W/h+1.393+0.667\ln(W/h+1.444)}\\
+                        \epsilon_e=\frac{\epsilon_r+1}{2}+\frac{\epsilon_r-1}{2}\left(1+12\frac{h}{W}^{-1/2}\right)
+                    \end{cases}
+                  \end{align*}
+              \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{平面传输线——微带线}
+    \begin{enumerate}
+        \resume
+        \item Gupta的闭式工作\\
+        \begin{itemize}
+            \item 综合工作
+        \end{itemize}
+        \begin{figure}
+            \includegraphics[width=8cm]{Cha6//fig6-45.pdf}
+        \end{figure}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{平面传输线——微带线}
+    \begin{enumerate}
+        \resume
+        \item Gupta的闭式工作\\
+        \begin{itemize}
+            \item 综合工作
+            \begin{align*}
+                &\frac{W}{h}=
+                \begin{cases}
+                    \frac{8\mathrm{e}^{A}}{\mathrm{e}^{2A}-2},  W/h<2\\
+                    \frac{2}{\pi}\left[B-1-\ln(2B-1)+
+                    \frac{\epsilon_r-1}{2\epsilon_r}\left\{\ln(B-1)+0.39-\frac{0.61}{\epsilon_r}\right\}\right] \\
+                    W/h>2
+                \end{cases}\\
+                &A=\frac{Z_0}{60}\left(\frac{\epsilon_r+1}{2}\right)^{1/2}+\frac{\epsilon_r-1}{\epsilon_r+1}\left(0.23+\frac{0.11}{\epsilon_r}\right)\\
+                &B=\frac{377\pi}{2Z_0\sqrt{\epsilon_r}}
+            \end{align*}
+            典型数据有$\epsilon_r=9.6,W/h=1,Z_0=49.69\Omega,\epsilon_e=6.49$
+        \end{itemize}
+        \saveenum
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{平面传输线——微带线}
+    \begin{enumerate}
+        \resume
+        \item 微带的衰减和Q值
+        \begin{itemize}
+            \item 微带的衰减\\
+            微带的衰减还是包括两部分，在小衰减情况下认为相互不交叉影响，有
+            $$\alpha=\alpha_d+\alpha_c$$
+            其中，$\alpha_d$——介质衰减；$\alpha_c$——导体衰减
+            $$\alpha_d=\frac{k_0\epsilon_r(\epsilon_e-1)\tan\delta}{2\sqrt{\epsilon_e}(\epsilon_r-1)}Np/m\qquad \alpha_c=\frac{R_s}{Z_0W}Np/m$$
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{平面传输线——微带线}
+    \begin{enumerate}
+        \resume
+        \item 微带的衰减和Q值
+        \begin{itemize}
+            \item 微带Q值\\
+            \begin{align*}
+                Q&=\frac{2\pi\times\text{单位长度储能}}{\text{每周期单位长度消耗能量}}=\frac{2\pi W}{TP}\\
+                &=\frac{\omega W}{P}
+            \end{align*}
+            所定义传输线端接匹配负载，即无反射波。\\
+            因为，消耗能量=介质损耗+导体损耗，于是有
+            $$\frac{1}{Q}=\frac{1}{Q_c}+\frac{1}{Q_d}$$
+            其中，$Q_c$——导体$Q$值，$Q_d$——介质$Q$值。
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{平面传输线——微带线}
+    \begin{figure}
+        \includegraphics[width=9cm]{Cha6//fig6-46.png}
+    \end{figure}
+\end{frame}
