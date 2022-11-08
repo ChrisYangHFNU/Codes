@@ -66,23 +66,25 @@
     \begin{enumerate}
         \item 微波传输线等效为双线
               \begin{itemize}
-                  \item 等效双线上的电压和电流可以写成入射波和反射波之和，即：
-                        \begin{align*}
-                             & \begin{cases}
-                                   V(z)=V^{+}(z)+V^{-}(z) \\
-                                   I(z)=I^{+}(z)-I^{-}(z)=\frac{1}{Z_0}[V^{+}(z)-V^{-}(z)]
-                               \end{cases}                                                                                                                \\
-                             & \begin{matrix*}
-                                   \dfrac{V(z)}{\sqrt{Z_0}}=\dfrac{V^{+}(z)}{\sqrt{Z_0}}+\dfrac{V^{-}(z)}{\sqrt{Z_0}}\\
-                                   I(z)\sqrt{Z_0}=\dfrac{V^{+}(z)}{\sqrt{Z_0}}-\dfrac{V^{-}(z)}{\sqrt{Z_0}}\\
-                               \end{matrix*} \\
-                             & \quad\qquad\Downarrow\quad                                                                                                                                            \\
-                             & \begin{matrix*}
-                                   v(z)=v^{+}(z)+v^{-}(z)\\
-                                   i(z)=v^{+}(z)-v^{-}(z)\\
-                               \end{matrix*}
-                        \end{align*}
+                  \item 等效双线上的电压和电流可以写成入射波和反射波之和，即：          
               \end{itemize}
+              \begin{gather*}
+                \begin{cases}
+                    V(z)=V^{+}(z)+V^{-}(z) \\
+                    I(z)=I^{+}(z)-I^{-}(z)=\frac{1}{Z_0}[V^{+}(z)-V^{-}(z)]
+                \end{cases}
+            \end{gather*}
+            \begin{gather*}                                                                                                              \\
+                \begin{matrix*}
+                    \dfrac{V(z)}{\sqrt{Z_0}}=\dfrac{V^{+}(z)}{\sqrt{Z_0}}+\dfrac{V^{-}(z)}{\sqrt{Z_0}}\\
+                    I(z)\sqrt{Z_0}=\dfrac{V^{+}(z)}{\sqrt{Z_0}}-\dfrac{V^{-}(z)}{\sqrt{Z_0}}\\
+                \end{matrix*} \\
+                \quad\Downarrow\quad                                                                                                                                            \\
+                \begin{matrix*}
+                    v(z)=v^{+}(z)+v^{-}(z)\\
+                    i(z)=v^{+}(z)-v^{-}(z)\\
+                \end{matrix*}
+            \end{gather*}
     \end{enumerate}
 \end{frame}
 
@@ -318,11 +320,11 @@
                   \footnotesize
                   \begin{tabular}{|c|c|c|}
                       \hline
-                      阻抗矩阵阵元   & 计算公式                           & 物理意义             \\ \hline
-                      $Z_{11}$ & $\dfrac{V_1}{I_1}\vert_{I_2=0}$ & 输出端口开路情况下的输入阻抗   \\ \hline
-                      $Z_{12}$ & $\dfrac{V_1}{I_2}\vert_{I_1=0}$ & 输入端口开路情况下的反向传输阻抗 \\ \hline
-                      $Z_{21}$ & $\dfrac{V_2}{I_1}\vert_{I_2=0}$ & 输出端口开路情况下的正向传输阻抗 \\ \hline
-                      $Z_{22}$ & $\dfrac{V_2}{I_2}\vert_{I_1=0}$ & 输入端口开路情况下的输出阻抗   \\ \hline
+                      \textbf{阻抗矩阵阵元}   & \textbf{计算公式}                            & \textbf{物理意义}             \\ \hline
+                      $Z_{11}$ & $\dfrac{V_1}{I_1}\bigg\vert_{I_2=0}$ & 输出端口开路情况下的输入阻抗   \\ \hline
+                      $Z_{12}$ & $\dfrac{V_1}{I_2}\bigg\vert_{I_1=0}$ & 输入端口开路情况下的反向传输阻抗 \\ \hline
+                      $Z_{21}$ & $\dfrac{V_2}{I_1}\bigg\vert_{I_2=0}$ & 输出端口开路情况下的正向传输阻抗 \\ \hline
+                      $Z_{22}$ & $\dfrac{V_2}{I_2}\bigg\vert_{I_1=0}$ & 输入端口开路情况下的输出阻抗   \\ \hline
                   \end{tabular}
               \end{table}
     \end{enumerate}
@@ -331,24 +333,111 @@
 \begin{frame}{微波网络参量}
     \begin{enumerate}
         \item 微波网络的电路参量
+              \begin{itemize}
+                  \item 导纳矩阵$[Y]$
+                        \begin{figure}
+                            \includegraphics[width=8cm]{Cha5//fig5-7.pdf}
+                        \end{figure}
+                        \begin{gather*}
+                            \begin{bmatrix*}
+                                I_1\\
+                                I_2\\
+                            \end{bmatrix*}
+                            =
+                            \begin{bmatrix*}
+                                Y_{11} & Y_{12}\\
+                                Y_{21} & Y_{22}\\
+                            \end{bmatrix*}
+                            \begin{bmatrix*}
+                                V_1 \\
+                                V_2 \\
+                            \end{bmatrix*}\\
+                            [I]=[Y][V]
+                        \end{gather*}
+              \end{itemize}
     \end{enumerate}
 \end{frame}
 
 \begin{frame}{微波网络参量}
     \begin{enumerate}
         \item 微波网络的电路参量
+              \begin{itemize}
+                  \item 网络的“短路”参数：“自导纳”和“转移导纳”
+                        \begin{gather*}
+                            \begin{bmatrix*}
+                                I_1\\
+                                I_2\\
+                            \end{bmatrix*}
+                            =
+                            \begin{bmatrix*}
+                                Y_{11} & Y_{12}\\
+                                Y_{21} & Y_{22}\\
+                            \end{bmatrix*}
+                            \begin{bmatrix*}
+                                V_1 \\
+                                V_2 \\
+                            \end{bmatrix*}\\
+                            Y_{ij}=\frac{I_i}{V_j}|_{V_k=0,k\neq j}
+                        \end{gather*}
+                        所有其他端口短路时，驱动端口$j$的电压为$V_j$时在端口$i$测得的短路电流来确定。
+                        \begin{gather*}
+                            [i]=[y][v] \qquad
+                            [y]=
+                            \begin{bmatrix*}
+                                Y_{11}Z_{01} & Y_{12}\sqrt{Z_{01}Z_{02}} \\
+                                Y_{21}\sqrt{Z_{01}Z_{02}} & Y_{22}Z_{02} \\
+                            \end{bmatrix*}
+                        \end{gather*}
+              \end{itemize}
     \end{enumerate}
 \end{frame}
 
 \begin{frame}{微波网络参量}
     \begin{enumerate}
         \item 微波网络的电路参量
+        \begin{table}
+            \caption{导纳矩阵单元物理意义}
+            \footnotesize
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \textbf{导纳矩阵阵元}   & \textbf{计算公式}                            & \textbf{物理意义}             \\ \hline
+                $Y_{11}$ & $\dfrac{I_1}{V_1}\bigg\vert_{V_2=0}$ & 输出端口短路情况下的输入导纳   \\ \hline
+                $Y_{12}$ & $\dfrac{I_1}{V_2}\bigg\vert_{V_1=0}$ & 输入端口短路路情况下的反向传输导纳 \\ \hline
+                $Y_{21}$ & $\dfrac{I_2}{V_1}\bigg\vert_{V_2=0}$ & 输出端口短路情况下的正向传输导纳 \\ \hline
+                $Y_{22}$ & $\dfrac{I_2}{V_2}\bigg\vert_{V_1=0}$ & 输入端口短路情况下的输出导纳   \\ \hline
+            \end{tabular}
+        \end{table}
     \end{enumerate}
 \end{frame}
 
 \begin{frame}{微波网络参量}
     \begin{enumerate}
         \item 微波网络的电路参量
+        \begin{itemize}
+            \item 转移矩阵$[A]$
+            \begin{figure}
+                \includegraphics[width=8cm]{Cha5//fig5-8.pdf}
+            \end{figure}
+            \begin{gather*}
+                \begin{bmatrix*}
+                    V_1 \\
+                    I_1 \\
+                \end{bmatrix*}
+                =
+                \begin{bmatrix*}
+                    A & B \\
+                    C & D \\
+                \end{bmatrix*}
+                \begin{bmatrix*}
+                    V_2 \\
+                    I_2 \\
+                \end{bmatrix*}\quad\rightarrow\quad
+                \begin{cases}
+                    V_1=A\cdot V_2+B\cdot I_2\\
+                    I_1=C\cdot V_2+D\cdot I_2
+                \end{cases}
+            \end{gather*}
+        \end{itemize}
     \end{enumerate}
 \end{frame}
 
