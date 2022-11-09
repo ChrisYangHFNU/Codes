@@ -194,8 +194,8 @@
                   \end{matrix*}
                   \qquad Z=\frac{V}{I}\\
                   \begin{matrix*}
-                      Z_{11}=\dfrac{V_1}{I_1}|_{I_2=0} & Z_{21}=\dfrac{V_2}{I_1}|_{I_2=0} & 2端口开路 \\
-                      Z_{22}=\dfrac{V_2}{I_2}|_{I_1=0} & Z_{12}=\dfrac{V_1}{I_2}|_{I_1=0} & 1端口开路 \\
+                      Z_{11}=\dfrac{V_1}{I_1}\bigg|_{I_2=0} & Z_{21}=\dfrac{V_2}{I_1}\bigg|_{I_2=0} & 2端口开路 \\
+                      Z_{22}=\dfrac{V_2}{I_2}\bigg|_{I_1=0} & Z_{12}=\dfrac{V_1}{I_2}\bigg|_{I_1=0} & 1端口开路 \\
                   \end{matrix*}
               \end{gather*}
     \end{enumerate}
@@ -377,7 +377,7 @@
                                 V_1 \\
                                 V_2 \\
                             \end{bmatrix*}\\
-                            Y_{ij}=\frac{I_i}{V_j}|_{V_k=0,k\neq j}
+                            Y_{ij}=\frac{I_i}{V_j}\bigg|_{V_k=0,k\neq j}
                         \end{gather*}
                         所有其他端口短路时，驱动端口$j$的电压为$V_j$时在端口$i$测得的短路电流来确定。
                         \begin{gather*}
@@ -435,7 +435,9 @@
                 \begin{cases}
                     V_1=A\cdot V_2+B\cdot I_2\\
                     I_1=C\cdot V_2+D\cdot I_2
-                \end{cases}
+                \end{cases}\\
+                A=\frac{V_1}{V_2}\bigg|_{I_2=0}\qquad C=\frac{I_1}{V_2}\bigg|_{I_2=0}\qquad 2端口开路\\
+                B+\frac{V_1}{I_2}\bigg|_{V_2=0}\qquad D=\frac{I_1}{I_2}\bigg|_{V_2=0}\qquad 2端口短路
             \end{gather*}
         \end{itemize}
     \end{enumerate}
@@ -444,12 +446,111 @@
 \begin{frame}{微波网络参量}
     \begin{enumerate}
         \item 微波网络的电路参量
+        \begin{table}
+            \caption{导纳矩阵单元物理意义}
+            \footnotesize
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \textbf{导纳矩阵阵元}   & \textbf{计算公式}                            & \textbf{物理意义}             \\ \hline
+                $A$ & $\dfrac{V_1}{V_2}\bigg\vert_{I_2=0}$ & 输出端口开路情况下的反向电压增益   \\ \hline
+                $B$ & $\dfrac{V_1}{I_2}\bigg\vert_{V_2=0}$ & 输出端口短路路情况下的互阻抗 \\ \hline
+                $C$ & $\dfrac{I_1}{V_2}\bigg\vert_{I_2=0}$ & 输出端口开路情况下的互导纳 \\ \hline
+                $D$ & $\dfrac{I_1}{I_2}\bigg\vert_{V_2=0}$ & 输出端口短路情况下的反向电流增益   \\ \hline
+            \end{tabular}
+        \end{table}
     \end{enumerate}
 \end{frame}
 
 \begin{frame}{微波网络参量}
     \begin{enumerate}
         \item 微波网络的电路参量
+        \begin{itemize}
+            \item 归一化转移矩阵$[a]$
+        \end{itemize}
+        \begin{gather*}
+            \begin{bmatrix*}
+                v_1 \\
+                i_1 \\
+            \end{bmatrix*}
+            =[a]
+            \begin{bmatrix*}
+                v_2 \\
+                i_2 \\
+            \end{bmatrix*}
+            \qquad
+            [a]=
+            \begin{bmatrix*}
+                A\sqrt{\dfrac{Z_{02}}{Z_{01}}} & \dfrac{B}{\sqrt{Z_{01}Z_{02}}} \\
+                C\sqrt{Z_{01}Z_{02}} & D\sqrt{\dfrac{Z_{01}}{Z_{02}}} \\
+            \end{bmatrix*}
+        \end{gather*}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{enumerate}
+        \item 微波网络的电路参量
+        \begin{itemize}
+            \item 转移矩阵$[A]$的用途——网络的级联(Cascade)
+        \end{itemize}
+        \begin{figure}
+            \includegraphics[width=10cm]{Cha5//fig5-9.pdf}
+        \end{figure}
+        \begin{gather*}
+            \begin{bmatrix*}
+                V_1 \\
+                I_1 \\
+            \end{bmatrix*}=
+            \begin{bmatrix*}
+                A & B \\
+                C & D \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                V_2 \\
+                I_2
+            \end{bmatrix*}\\
+            \begin{bmatrix*}
+                A & B \\
+                C & D \\
+            \end{bmatrix*}=
+            \begin{bmatrix*}
+                A_1 & B_1 \\
+                C_1 & D_1 \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                A_2 & B_2 \\
+                C_2 & D_2 \\
+            \end{bmatrix*}
+        \end{gather*}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{enumerate}
+        \item 微波网络的电路参量
+        \begin{itemize}
+            \item 小结：“电路”参量——反映电压、电流关系
+        \end{itemize}
+        \begin{gather*}
+            [V]={\color{red}{[Z]}}[I] \qquad [v]={\color{red}{[z]}}[i] \\
+            [I]={\color{red}{[Y]}}[V] \qquad [i]={\color{red}{[y]}}[v] \\
+            \begin{bmatrix*}
+                V_1 \\
+                I_1 \\
+            \end{bmatrix*}={\color{red}{[A]}}
+            \begin{bmatrix*}
+                V_2 \\
+                I_2 \\
+            \end{bmatrix*} \qquad
+            \begin{bmatrix*}
+                v_1 \\
+                i_1 \\
+            \end{bmatrix*}={\color{red}{[a]}}
+            \begin{bmatrix*}
+                v_2 \\
+                i_2 \\
+            \end{bmatrix*}
+        \end{gather*}
     \end{enumerate}
 \end{frame}
 
