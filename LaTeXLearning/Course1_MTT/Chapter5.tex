@@ -667,32 +667,32 @@
     \begin{enumerate}
         \resume
         \item 微波网络的波参量\\
-        \begin{itemize}
-            \item 传输参量——传输矩阵
-        \end{itemize}
-        \begin{figure}
-            \includegraphics[width=10cm]{Cha5//fig5-12.pdf}
-        \end{figure}
-        \begin{gather*}
-            \begin{bmatrix*}
-                a_1 \\
-                b_1 \\
-            \end{bmatrix*}=
-            \begin{bmatrix*}
-                T_{11} & T_{12} \\
-                T_{21} & T_{22} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                b_2 \\
-                a_2 \\
-            \end{bmatrix*}\\
-            \begin{cases}
-                a_1 = T_{11}\cdot b_2 + T_{12}\cdot a_2 \\
-                b_1 = T_{21}\cdot b_2 + T_{22}\cdot a_2
-            \end{cases}
-            T_{11} = \dfrac{1}{\left(\dfrac{b_2}{a_1}\bigg|_{a_2=0}\right)}
-        \end{gather*}
-        $T_{11}$物理含义：端口2匹配情况下，端口1到端口2的“传输系数”的倒数。
+              \begin{itemize}
+                  \item 传输参量——传输矩阵
+              \end{itemize}
+              \begin{figure}
+                  \includegraphics[width=10cm]{Cha5//fig5-12.pdf}
+              \end{figure}
+              \begin{gather*}
+                  \begin{bmatrix*}
+                      a_1 \\
+                      b_1 \\
+                  \end{bmatrix*}=
+                  \begin{bmatrix*}
+                      T_{11} & T_{12} \\
+                      T_{21} & T_{22} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      b_2 \\
+                      a_2 \\
+                  \end{bmatrix*}\\
+                  \begin{cases}
+                      a_1 = T_{11}\cdot b_2 + T_{12}\cdot a_2 \\
+                      b_1 = T_{21}\cdot b_2 + T_{22}\cdot a_2
+                  \end{cases}
+                  T_{11} = \dfrac{1}{\left(\dfrac{b_2}{a_1}\bigg|_{a_2=0}\right)}
+              \end{gather*}
+              $T_{11}$物理含义：端口2匹配情况下，端口1到端口2的“传输系数”的倒数。
     \end{enumerate}
 \end{frame}
 
@@ -700,12 +700,12 @@
     \begin{enumerate}
         \resume
         \item 微波网络的波参量\\
-        \begin{itemize}
-            \item $n$端口网络
-        \end{itemize}
-        \begin{figure}
-            \includegraphics[width=8cm]{Cha5//fig5-13.pdf}
-        \end{figure}
+              \begin{itemize}
+                  \item $n$端口网络
+              \end{itemize}
+              \begin{figure}
+                  \includegraphics[width=8cm]{Cha5//fig5-13.pdf}
+              \end{figure}
     \end{enumerate}
 \end{frame}
 
@@ -713,29 +713,39 @@
     \begin{enumerate}
         \resume
         \item 微波网络的波参量 \\
-        \begin{itemize}
-            \item $N$端口网络
-        \end{itemize}
-        \begin{gather*}
-            \begin{bmatrix*}
-                b_1 \\
-                b_2 \\
-                \vdots \\
-                b_n
-            \end{bmatrix*}=
-            \begin{bmatrix*}
-                S_{11} & S_{12} & \cdots & S_{1n} \\
-                S_{21} & S_{22} & \cdots & S_{2n} \\
-                \vdots & \vdots & \vdots & \vdots \\
-                S_{n1} & S_{n2} & \cdots & S_{nn} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                a_1 \\
-                a_2 \\
-                \vdots \\
-                a_n
-            \end{bmatrix*}
-        \end{gather*}
+              \begin{itemize}
+                  \item $N$端口网络
+              \end{itemize}
+              \begin{gather*}
+                  \begin{bmatrix*}
+                      b_1 \\
+                      b_2 \\
+                      \vdots \\
+                      b_n
+                  \end{bmatrix*}=
+                  \begin{bmatrix*}
+                      S_{11} & S_{12} & \cdots & S_{1n} \\
+                      S_{21} & S_{22} & \cdots & S_{2n} \\
+                      \vdots & \vdots & \vdots & \vdots \\
+                      S_{n1} & S_{n2} & \cdots & S_{nn} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      a_1 \\
+                      a_2 \\
+                      \vdots \\
+                      a_n
+                  \end{bmatrix*}
+              \end{gather*}
+              \begin{align*}
+                  &\begin{matrix*}
+                      S_{ii}=\dfrac{b_i}{a_i}\bigg|_{a_k=0} & (i,k=1,2,3,\cdots,n; k\neq i) \\
+                  \end{matrix*}           \\
+                  &\text{\scriptsize{\color{blue}{表示除端口i之外其余各个端口均接匹配负载时端口i的反射系数}}}                 \\
+                  &\begin{matrix*}
+                      S_{ji}=\dfrac{b_j}{a_i}\bigg|_{a_k=0} & (i,j,k=1,2,3,\cdots,n; j\neq i,k\neq i) \\
+                  \end{matrix*} \\
+                  &\text{\scriptsize{\color{blue}{表示除端口i之外其余各个端口均接匹配负载时端口i到端口j的传输系数}}}
+              \end{align*}
     \end{enumerate}
 \end{frame}
 
@@ -743,10 +753,18 @@
     \begin{enumerate}
         \resume
         \item 微波网络的波参量 \\
-        \begin{itemize}
-            \item $N$端口网络
-        \end{itemize}
-        
+              \begin{itemize}
+                  \item $N$端口网络
+              \end{itemize}
+        [example5.3] 在特性阻抗为$Z_0$的传输线上串接阻抗$z$(归一化$z$)，求该串接阻抗的散射参数。\\
+        解：令端口2接匹配负载，归一化后为1，则$a_2=0$，有
+        \begin{align*}
+            \begin{cases}
+                i_1=\dfrac{v_1}{z+1}\\
+                i_1=-i_2
+            \end{cases}
+        因为
+        \end{align*}
     \end{enumerate}
 \end{frame}
 
