@@ -96,7 +96,7 @@
                         \begin{align*}
                             P^+=\frac{1}{2}|V^+(z)||I^+(z)|=\frac{|V^+(z)|^2}{2Z_0}=\frac{1}{2}\left\lvert\frac{V^+(z)}{\sqrt{Z_0}}\right\rvert^2=\frac{1}{2}|v^+(z)|^2
                         \end{align*}
-                  \item 归一化反射波电压模的平方正比于入射波功率，即
+                  \item 归一化反射波电压模的平方正比于反射波功率，即
                         \begin{align*}
                             P^-=\frac{1}{2}|V^-(z)||I^-(z)|=\frac{|V^-(z)|^2}{2Z_0}=\frac{1}{2}\left\lvert\frac{V^-(z)}{\sqrt{Z_0}}\right\rvert^2=\frac{1}{2}|v^-(z)|^2
                         \end{align*}
@@ -654,10 +654,12 @@
         \item 微波网络的波参量\\
               \begin{gather*}
                   \begin{matrix*}
-                      S_{11}=\frac{b_1}{a_1}\bigg|_{a_2=0} & S_{21}=\frac{b_2}{a_1}\bigg|_{a_2=0} & \text{\scriptsize{2端口匹配}} \\
-                      \text{\scriptsize{表示端口2接匹配负载时，端口1的反射系数}}  & \text{\scriptsize{端口1到端口2的传输系数}} & \\
-                      S_{22}=\frac{b_2}{a_2}\bigg|_{a_1=0} & S_{12}=\frac{b_1}{a_2}\bigg|_{a_1=0} & \text{\scriptsize{1端口匹配}} \\
-                      \text{\scriptsize{表示端口1接匹配负载时，端口2的反射系数}}  & \text{\scriptsize{端口2到端口1的传输系数}} & \\
+                      S_{11}=\dfrac{b_1}{a_1}\bigg|_{a_2=0} & S_{21}=\dfrac{b_2}{a_1}\bigg|_{a_2=0} & \text{\footnotesize{2端口匹配}} \\
+                      \text{\footnotesize{表示端口2接匹配负载时，}}  & \text{\footnotesize{端口1到端口2的传输系数}} & \\
+                      \text{\footnotesize{端口1的反射系数}}  &  &  \\
+                      S_{22}=\dfrac{b_2}{a_2}\bigg|_{a_1=0} & S_{12}=\dfrac{b_1}{a_2}\bigg|_{a_1=0} & \text{\footnotesize{1端口匹配}} \\
+                      \text{\footnotesize{表示端口1接匹配负载时，}}  & \text{\footnotesize{端口2到端口1的传输系数}} & \\
+                      \text{\footnotesize{端口2的反射系数}}  &  &  \\
                   \end{matrix*}
               \end{gather*}
     \end{enumerate}
@@ -737,33 +739,609 @@
                   \end{bmatrix*}
               \end{gather*}
               \begin{align*}
-                  &\begin{matrix*}
-                      S_{ii}=\dfrac{b_i}{a_i}\bigg|_{a_k=0} & (i,k=1,2,3,\cdots,n; k\neq i) \\
-                  \end{matrix*}           \\
-                  &\text{\scriptsize{\color{blue}{表示除端口i之外其余各个端口均接匹配负载时端口i的反射系数}}}                 \\
-                  &\begin{matrix*}
-                      S_{ji}=\dfrac{b_j}{a_i}\bigg|_{a_k=0} & (i,j,k=1,2,3,\cdots,n; j\neq i,k\neq i) \\
-                  \end{matrix*} \\
-                  &\text{\scriptsize{\color{blue}{表示除端口i之外其余各个端口均接匹配负载时端口i到端口j的传输系数}}}
+                   & \begin{matrix*}
+                         S_{ii}=\dfrac{b_i}{a_i}\bigg|_{a_k=0} & (i,k=1,2,3,\cdots,n; k\neq i) \\
+                     \end{matrix*}           \\
+                   & \text{\scriptsize{\color{blue}{表示除端口i之外其余各个端口均接匹配负载时端口i的反射系数}}}                 \\
+                   & \begin{matrix*}
+                         S_{ji}=\dfrac{b_j}{a_i}\bigg|_{a_k=0} & (i,j,k=1,2,3,\cdots,n; j\neq i,k\neq i) \\
+                     \end{matrix*} \\
+                   & \text{\scriptsize{\color{blue}{表示除端口i之外其余各个端口均接匹配负载时端口i到端口j的传输系数}}}
               \end{align*}
+              \saveenum
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    [例1]\quad 在特性阻抗为$Z_0$的传输线上串接阻抗$z$(归一化$z$)，求该串接阻抗的散射参数。\\
+    \begin{columns}
+        \begin{column}{0.5\linewidth}
+            解：令端口2接匹配负载，归一化后为1，则$a_2=0$，有
+            \begin{gather*}
+                \begin{cases}
+                    i_1=\dfrac{v_1}{z+1} \\
+                    i_1=-i_2
+                \end{cases}\\
+                因为
+                \begin{cases}
+                    a_1-b_1=\dfrac{v_1}{z+1}=\dfrac{a_1+b_1}{z+1} \\
+                    a_1-b_1=b_2
+                \end{cases}
+            \end{gather*}
+        \end{column}
+        \begin{column}{0.5\linewidth}
+            \begin{figure}
+                \includegraphics[width=6cm]{Cha5//fig5-14.pdf}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{align*}
+         & b_1=\dfrac{z}{z+2}a_1,b_2=\dfrac{2}{z+2}a_1                 \\
+         & S_{11}=\dfrac{b_1}{a_1}\bigg|_{a_2=0}=\dfrac{z}{z+2} \qquad
+        S_{21}=\dfrac{b_2}{a_1}\bigg|_{a_2=0}=\dfrac{2}{z+2}
+    \end{align*}
+    同理，设端口1接匹配负载，类似得：
+    \begin{align*}
+        S_{22}=\dfrac{b_2}{a_2}\bigg|_{a_1=0}=\dfrac{z}{z+2} \qquad S_{12}=\dfrac{b_1}{a_2}\bigg|_{a_1=0}=\dfrac{2}{z+2}
+    \end{align*}
+    \begin{gather*}
+        [S]=
+        \begin{bmatrix*}
+            \dfrac{z}{2+z} & \dfrac{2}{2+z} \\
+            \dfrac{2}{2+z} & \dfrac{z}{2+z} \\
+        \end{bmatrix*}
+    \end{gather*}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    [例2] \quad 在特性阻抗为$Z_0$的传输线上并联导纳$Y$(归一化$y$)，求该并联导纳的散射参数。
+    \begin{columns}
+        \begin{column}{0.5\linewidth}
+            解：令端口2接匹配负载，归一化后为1，则$a_2=0$，有
+            \begin{gather*}
+                \begin{cases}
+                    i_1=v_1(y+1) \\
+                    v_1=v_2
+                \end{cases}
+                \\
+                \begin{cases}
+                    a_1-b_1=(a_1+b_1)(y+1) \\
+                    a_1+b_1=a_2+b_2
+                \end{cases}
+            \end{gather*}
+        \end{column}
+        \begin{column}{0.5\linewidth}
+            \begin{figure}
+                \includegraphics[width=6cm]{Cha5//fig5-15.pdf}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{gather*}
+        \begin{cases}
+            a_1 y=-b_1(y+2) \\
+            \dfrac{2}{y+2}a_2=b_2
+        \end{cases}
+    \end{gather*}
+    \begin{gather*}
+        S_{11}=\dfrac{b_1}{a_1}\bigg|_{a_2=0}=-\dfrac{y}{y+2}\quad
+        S_{21}=\dfrac{b_2}{a_1}\bigg|_{a_2=0}=\dfrac{2}{y+2}
+    \end{gather*}
+    同理，设端口1接匹配负载，类似得：
+
+    \begin{gather*}
+        S_{22}=\dfrac{b_2}{a_2}\bigg|_{a_1=0}=-\dfrac{y}{y+2}\quad
+        S_{12}=\dfrac{b_1}{a_2}\bigg|_{a_1=0}=\dfrac{2}{y+2}\\
+        [S]=
+        \begin{bmatrix*}
+            \dfrac{-y}{2+y} & \dfrac{2}{2+y} \\
+            \dfrac{2}{2+y} & \dfrac{-y}{2+y} \\
+        \end{bmatrix*}
+    \end{gather*}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    [例3]\quad 已知二端口网络的散射矩阵$[S]$，端口2接有负载$Z_L$，反射系数为$\Gamma_L$，求网络端口1的反射系数以及输入阻抗。
+    \begin{figure}
+        \includegraphics[width=8cm]{Cha5//fig5-16.pdf}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    网络的散射参量矩阵
+    \begin{gather*}
+        \begin{bmatrix*}
+            b_1 \\
+            b_2 \\
+        \end{bmatrix*}
+        =
+        \begin{bmatrix*}
+            S_{11} & S_{12} \\
+            S_{21} & S_{22} \\
+        \end{bmatrix*}
+        \begin{bmatrix*}
+            a_1 \\
+            a_2 \\
+        \end{bmatrix*}\\
+        \begin{cases}
+            b_1=S_{11}\cdot a_1+S_{12}\cdot a_2 \\
+            b_2=S_{21}\cdot a_1+S_{22}\cdot a_2
+        \end{cases}
+    \end{gather*}
+    根据$\Gamma_L=\dfrac{a_2}{b_2}$可得
+    \begin{gather*}
+        \begin{cases}
+            b_1=S_{11}\cdot a_1+S_{12}\cdot a_2 \\
+            1=S_{21}\dfrac{a_1}{b_2}+S_{22}\dfrac{a_2}{b_2}=S_{21}\dfrac{a_1}{b_2}+S_{22}\Gamma_L
+        \end{cases}
+    \end{gather*}
+    得
+    \begin{gather*}
+        b_2=\frac{S_{21}a_1}{1-S_{22}\Gamma_L}\\
+        a_2=\Gamma_L \cdot b_2=\dfrac{S_{21}\Gamma_L a_1}{1-S_{22}\Gamma_L}
+    \end{gather*}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{align*}
+        b_1=S_{11}a_1+\dfrac{S_{12}S_{21}\Gamma_L}{1-S_{22}\Gamma_L}a_1
+    \end{align*}
+    端口1的反射系数：
+    $$\Gamma_{in}=\frac{b_1}{a_1}\Rightarrow \Gamma_{in}=S_{11}+\frac{S_{12}S_{21}\Gamma_L}{1-S_{22}\Gamma_L}$$
+    端口1的阻抗：
+    $$Z_{in}=\frac{1+\Gamma_{in}}{1-\Gamma_{in}}Z_0$$
+    \begin{itemize}
+        \item 网络自身的$S$参量以及因负载的反射透过网络在端口1造成的影响
+        \item 在微波测量中非常重要
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    [例4]\quad 一段均匀、无耗微波传输线，特性阻抗$Z_0$，电长度$\theta$，求$S$矩阵
+    \begin{figure}
+        \includegraphics[width=7cm]{Cha5//fig5-17.pdf}
+    \end{figure}
+    解：对于无耗均匀传输线，端口1的电压波$V_1^+(a_1)$推进到端口2为$V_2^-(b_2)$，$V_1^+(a_1)$比$V_2^-(b_2)$超前相角$\theta$，则有关系式
+    \begin{align*}
+        a_1=b_2\mathrm{e}^{\mathrm{j}\theta}\quad b_1=0
+    \end{align*}
+    \begin{itemize}
+        \item 令端口2接匹配负载，归一化后为1
+        \item $a_2=0$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    同理，端口2的电压波$V_2^+(a_2)$推进到端口1为$V_1^-(b_1)$，$V_2^+(a_2)$比$V_1^-(b_1)$超前相角$\theta$，则有关系式
+    \begin{align*}
+        a_2=b_1\mathrm{e}^{\mathrm{j}\theta}\quad b_2=0
+    \end{align*}
+    \begin{itemize}
+        \item 令端口1接匹配负载，归一化后为1
+        \item $a_1=0$
+    \end{itemize}
+    \begin{align*}
+        S_{11}=\frac{b_1}{a_1}\bigg|_{a_2=0}=\frac{0}{b_2\mathrm{e}^{\mathrm{j}\theta}}=0\qquad
+        S_{12}=\frac{b_1}{a_2}\bigg|_{a_1=0}=\frac{b_1}{b_1\mathrm{e}^{\mathrm{j}\theta}}=\mathrm{e}^{-\mathrm{j}\theta}\\
+        S_{22}=\frac{b_2}{a_2}\bigg|_{a_1=0}=\frac{0}{b_1\mathrm{e}^{\mathrm{j}\theta}}=0\qquad
+        S_{21}=\frac{b_2}{a_1}\bigg|_{a_2=0}=\frac{b_2}{b_2\mathrm{e}^{\mathrm{j}\theta}}=\mathrm{e}^{-\mathrm{j}\theta}
+    \end{align*}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{enumerate}
+        \resume
+        \item 微波网络参量之间的转换
+        \begin{itemize}
+            \item $[S]$和$[z]$
+        \end{itemize}
+        \begin{align*}
+            \begin{cases}
+                [a]=\frac{1}{2}([v]+[i])=\frac{1}{2}([z]+[I])[i]\\
+                [b]=\frac{1}{2}([v]-[i])=\frac{1}{2}([z]-[I])[i]
+            \end{cases}
+            \qquad
+            [I]=\begin{bmatrix*}
+                1 & 0 \\
+                0 & 1 \\
+            \end{bmatrix*}
+        \end{align*}
+        将上式代入$[b]=[S][a]$可得：
+        \begin{gather*}
+            [S]=([z]-[I])([z]+[I])^{-1}\\
+            [z]=([I]-[S])^{-1}([I]+{S})
+        \end{gather*}
     \end{enumerate}
 \end{frame}
 
 \begin{frame}{微波网络参量}
     \begin{enumerate}
         \resume
-        \item 微波网络的波参量 \\
-              \begin{itemize}
-                  \item $N$端口网络
-              \end{itemize}
-        [example5.3] 在特性阻抗为$Z_0$的传输线上串接阻抗$z$(归一化$z$)，求该串接阻抗的散射参数。\\
-        解：令端口2接匹配负载，归一化后为1，则$a_2=0$，有
+        \item 微波网络参量之间的转换
+        \begin{itemize}
+            \item $[S]$和$[y]$
+        \end{itemize}
         \begin{align*}
             \begin{cases}
-                i_1=\dfrac{v_1}{z+1}\\
-                i_1=-i_2
+                [a]=\frac{1}{2}([v]+[i])=\frac{1}{2}([I]+[y])[v]\\
+                [b]=\frac{1}{2}([v]-[i])=\frac{1}{2}([I]-[y])[v]
             \end{cases}
-        因为
+            \qquad
+            [I]=\begin{bmatrix*}
+                1 & 0 \\
+                0 & 1 \\
+            \end{bmatrix*}
+        \end{align*}
+        将上式代入$[b]=[S][a]$可得：
+        \begin{gather*}
+            [S]=([I]-[y])([I]+[y])^{-1}\\
+            [y]=([I]+[S])^{-1}([I]-[S])
+        \end{gather*}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{enumerate}
+        \resume
+        \item 微波网络参量之间的转换
+        \begin{itemize}
+            \item $[S]$和$[a]$
+        \end{itemize}
+        \begin{align*}
+            \begin{bmatrix*}
+                v_1 \\
+                i_1 \\
+            \end{bmatrix*}
+            =[a]
+            \begin{bmatrix*}
+                v_2 \\
+                i_2 \\
+            \end{bmatrix*}
+            \qquad
+            [a]=
+            \begin{bmatrix*}
+                A\sqrt{\frac{Z_{02}}{Z_{01}}} & \frac{B}{\sqrt{Z_{01}Z_{02}}}  \\
+                C\sqrt{Z_{01}Z_{02}} & D\sqrt{\frac{Z_{01}}{Z_{02}}} \\
+            \end{bmatrix*}\\
+            [S]=\frac{1}{a+b+c+d}
+            \begin{bmatrix*}
+                a+b-c-d & 2|{a}| \\
+                2 & -a+b-c+d \\
+            \end{bmatrix*} 
+        \end{align*}
+        \begin{itemize}
+            \item $|a| = ad-bc$
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{enumerate}
+        \resume
+        \item 微波网络参量之间的转换
+        \begin{itemize}
+            \item $[S]$和$[a]$
+        \end{itemize}
+        归一化电流电压构成的$[a]$矩阵为
+        \begin{align*}
+            \begin{cases}
+                v_1=av_2+bi_2\\
+                i_1=cv_2+di_2
+            \end{cases}
+        \end{align*}
+        很明显，$[a]$矩阵是\textbf{不对称}定义
+        \begin{align*}
+            &v_1=a_1+b_1 \qquad v_2=a_2+b_2 \\
+            &i_1=a_1-b_1 \qquad i_2=-(a_2-b_2)
+        \end{align*}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{enumerate}
+        \resume
+        \item 微波网络参量之间的转换
+        \begin{itemize}
+            \item $[S]$和$[a]$
+        \end{itemize}
+        \begin{align*}
+            \begin{cases}
+                a_1+b_1=a(a_2+b_2)-b(a_2-b_2)\\
+                a_1-b_1=c(a_2+b_2)-d(a_2-b_2)
+            \end{cases}\\
+            \Rightarrow
+            \begin{cases}
+                b_1-(a+b)b_2=-a_1+(a-b)a_2\\
+                -b_1-(c+d)b_2=-a_1+(c-d)a_2
+            \end{cases}
+        \end{align*}
+        写成矩阵形式
+        \begin{align*}
+            \begin{bmatrix*}
+                1 & -(a+b) \\
+                -1 & -(c+d) \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                b_1 \\
+                b_2 \\
+            \end{bmatrix*}
+            =
+            \begin{bmatrix*}
+                -1 & a-b \\
+                -1 & c-d \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                a_1 \\
+                a_2 \\
+            \end{bmatrix*}
+        \end{align*}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{enumerate}
+        \resume
+        \item 微波网络参量之间的转换
+        \begin{itemize}
+            \item $[S]$和$[a]$
+        \end{itemize}
+        \begin{align*}
+            \begin{bmatrix*}
+                b_1 \\
+                b_2 \\
+            \end{bmatrix*}
+            &=
+            \begin{bmatrix*}
+                1 & -(a+b) \\
+                -1 & -(c+d) \\
+            \end{bmatrix*}^{-1}
+            \begin{bmatrix*}
+                -1 & a-b \\
+                -1 & c-d \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                a_1 \\
+                a_2 \\
+            \end{bmatrix*}\\
+            &=
+            -\frac{1}{a+b+c+d}
+            \begin{bmatrix*}
+                -(c+d) & a+b \\
+                1 & 1 \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                -1 & a-b \\
+                -1 & c-d \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                a_1 \\
+                a_2 \\
+            \end{bmatrix*}
+        \end{align*}
+        所以
+        \begin{align*}
+            [S]=\frac{1}{a+b+c+d}
+            \begin{bmatrix*}
+                a+b-c-d & 2(ad-bc) \\
+                2 & d+b-c-a \\
+            \end{bmatrix*}
+        \end{align*}
+        \saveenum
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{enumerate}
+        \resume
+        \item 参考面移动对网络参数的影响
+        \begin{figure}
+            \includegraphics[width=10cm]{Cha5//fig5-18.pdf}
+        \end{figure}
+        \begin{gather*}
+            [S]=\begin{bmatrix*}
+                S_{11} & S_{12} \\
+                S_{21} & S_{22} \\
+            \end{bmatrix*}
+        \end{gather*}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{enumerate}
+        \resume
+        \item 参考面移动对网络参数的影响\\
+        $a^{'}$超前于$a$，而$b^{'}$滞后于$b$
+        \begin{align*}
+            &\begin{bmatrix*}
+                a_1^{'} \\
+                a_2^{'} \\
+            \end{bmatrix*}
+            =
+            \begin{bmatrix*}
+                \mathrm{e}^{\mathrm{j}\theta_1} & 0 \\
+                0 & \mathrm{e}^{\mathrm{j}\theta_2} \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                a_1 \\
+                a_2 \\
+            \end{bmatrix*}
+            \qquad
+            \begin{bmatrix*}
+                b_1^{'} \\
+                b_2^{'} \\
+            \end{bmatrix*}
+            =
+            \begin{bmatrix*}
+                \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
+                0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                b_1 \\
+                b_2 \\
+            \end{bmatrix*}\\
+            &\begin{cases}
+                \theta_1=\beta\cdot l_1 \\
+                \theta_2=\beta\cdot l_2
+            \end{cases}
+        \end{align*}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{enumerate}
+        \resume
+        \item 参考面移动对网络参数的影响\\
+        \begin{align*}
+            &\begin{bmatrix*}
+                b_1^{'} \\
+                b_2^{'} \\
+            \end{bmatrix*}
+            =
+            \begin{bmatrix*}
+                \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
+                0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                b_1 \\
+                b_2 \\
+            \end{bmatrix*}
+            \qquad
+            \begin{bmatrix*}
+                b_1 \\
+                b_2 \\
+            \end{bmatrix*}
+            =
+            \begin{bmatrix*}
+                S_{11} & S_{12} \\
+                S_{21} & S_{22} \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                a_1 \\
+                a_2 \\
+            \end{bmatrix*}\\
+            \rightarrow
+            &\begin{bmatrix*}
+                b_1^{'} \\
+                b_2^{'} \\
+            \end{bmatrix*}
+            =
+            \begin{bmatrix*}
+                \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
+                0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                S_{11} & S_{12} \\
+                S_{21} & S_{22} \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                a_1 \\
+                a_2 \\
+            \end{bmatrix*}
+            \qquad
+            \begin{bmatrix*}
+                a_1^{'} \\
+                a_2^{'} \\
+            \end{bmatrix*}
+            =
+            \begin{bmatrix*}
+                \mathrm{e}^{\mathrm{j}\theta_1} & 0 \\
+                0 & \mathrm{e}^{\mathrm{j}\theta_2} \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                a_1 \\
+                a_2 \\
+            \end{bmatrix*}\\
+            \rightarrow
+            &\begin{bmatrix*}
+                b_1^{'} \\
+                b_2^{'} \\
+            \end{bmatrix*}
+            =
+            \begin{bmatrix*}
+                \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
+                0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                S_{11} & S_{12} \\
+                S_{21} & S_{22} \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                \mathrm{e}^{\mathrm{j}\theta_1} & 0 \\
+                0 & \mathrm{e}^{\mathrm{j}\theta_2} \\
+            \end{bmatrix*}^{-1}
+            \begin{bmatrix*}
+                a_1^{'} \\
+                a_2^{'} \\
+            \end{bmatrix*}
+        \end{align*}
+        \begin{align*}
+            \begin{bmatrix*}
+                b_1^{'} \\
+                b_2^{'} \\
+            \end{bmatrix*}
+            =
+            \begin{bmatrix*}
+                S_{11}^{'} & S_{12}^{'} \\
+                S_{21}^{'} & S_{22}^{'} \\
+            \end{bmatrix*}
+            =
+            \begin{bmatrix*}
+                S_{11}\cdot\mathrm{e}^{-\mathrm{j}2\theta_1} & S_{12}\cdot\mathrm{e}^{-\mathrm{j}(\theta_1+\theta_2)} \\
+                S_{21}\cdot\mathrm{e}^{-\mathrm{j}(\theta_1+\theta_2)} & S_{22}\cdot \mathrm{e}^{-\mathrm{j}2\theta_2} \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                a_1^{'} \\
+                a_2^{'} \\
+            \end{bmatrix*}
+        \end{align*}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{enumerate}
+        \item 参考面移动对网络参数的影响
+        \begin{align*}
+            \begin{bmatrix*}
+                b_1^{'} \\
+                b_2^{'} \\
+            \end{bmatrix*}
+            =
+            \begin{bmatrix*}
+                S_{11}\cdot\mathrm{e}^{-\mathrm{j}2\theta_1} & S_{12}\cdot\mathrm{e}^{-\mathrm{j}(\theta_1+\theta_2)} \\
+                S_{21}\cdot\mathrm{e}^{-\mathrm{j}(\theta_1+\theta_2)} & S_{22}\cdot \mathrm{e}^{-\mathrm{j}2\theta_2} \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                a_1^{'} \\
+                a_2^{'} \\
+            \end{bmatrix*}
+            =[S^{'}]
+            \begin{bmatrix*}
+                a_1^{'} \\
+                a_2^{'} \\
+            \end{bmatrix*}
+        \end{align*}
+        \begin{itemize}
+            \item 结论：参考面的移动，仅对$[S]$的相位产生影响
+        \end{itemize}
+        \begin{align*}
+            [S^{'}]=
+            \begin{bmatrix*}
+                \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
+                0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                S_{11} & S_{12} \\
+                S_{21} & S_{22} \\
+            \end{bmatrix*}
+            \begin{bmatrix*}
+                \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
+                0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
+            \end{bmatrix*}
         \end{align*}
     \end{enumerate}
 \end{frame}
