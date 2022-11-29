@@ -927,7 +927,7 @@
     \end{itemize}
     \begin{align*}
         S_{11}=\frac{b_1}{a_1}\bigg|_{a_2=0}=\frac{0}{b_2\mathrm{e}^{\mathrm{j}\theta}}=0\qquad
-        S_{12}=\frac{b_1}{a_2}\bigg|_{a_1=0}=\frac{b_1}{b_1\mathrm{e}^{\mathrm{j}\theta}}=\mathrm{e}^{-\mathrm{j}\theta}\\
+        S_{12}=\frac{b_1}{a_2}\bigg|_{a_1=0}=\frac{b_1}{b_1\mathrm{e}^{\mathrm{j}\theta}}=\mathrm{e}^{-\mathrm{j}\theta} \\
         S_{22}=\frac{b_2}{a_2}\bigg|_{a_1=0}=\frac{0}{b_1\mathrm{e}^{\mathrm{j}\theta}}=0\qquad
         S_{21}=\frac{b_2}{a_1}\bigg|_{a_2=0}=\frac{b_2}{b_2\mathrm{e}^{\mathrm{j}\theta}}=\mathrm{e}^{-\mathrm{j}\theta}
     \end{align*}
@@ -937,25 +937,25 @@
     \begin{enumerate}
         \resume
         \item 微波网络参量之间的转换
-        \begin{itemize}
-            \item $[S]$和$[z]$
-        \end{itemize}
-        \begin{align*}
-            \begin{cases}
-                [a]=\frac{1}{2}([v]+[i])=\frac{1}{2}([z]+[I])[i]\\
-                [b]=\frac{1}{2}([v]-[i])=\frac{1}{2}([z]-[I])[i]
-            \end{cases}
-            \qquad
-            [I]=\begin{bmatrix*}
-                1 & 0 \\
-                0 & 1 \\
-            \end{bmatrix*}
-        \end{align*}
-        将上式代入$[b]=[S][a]$可得：
-        \begin{gather*}
-            [S]=([z]-[I])([z]+[I])^{-1}\\
-            [z]=([I]-[S])^{-1}([I]+{S})
-        \end{gather*}
+              \begin{itemize}
+                  \item $[S]$和$[z]$
+              \end{itemize}
+              \begin{align*}
+                  \begin{cases}
+                      [a]=\frac{1}{2}([v]+[i])=\frac{1}{2}([z]+[I])[i] \\
+                      [b]=\frac{1}{2}([v]-[i])=\frac{1}{2}([z]-[I])[i]
+                  \end{cases}
+                  \qquad
+                  [I]=\begin{bmatrix*}
+                          1 & 0 \\
+                          0 & 1 \\
+                      \end{bmatrix*}
+              \end{align*}
+              将上式代入$[b]=[S][a]$可得：
+              \begin{gather*}
+                  [S]=([z]-[I])([z]+[I])^{-1}\\
+                  [z]=([I]-[S])^{-1}([I]+{S})
+              \end{gather*}
     \end{enumerate}
 \end{frame}
 
@@ -963,25 +963,25 @@
     \begin{enumerate}
         \resume
         \item 微波网络参量之间的转换
-        \begin{itemize}
-            \item $[S]$和$[y]$
-        \end{itemize}
-        \begin{align*}
-            \begin{cases}
-                [a]=\frac{1}{2}([v]+[i])=\frac{1}{2}([I]+[y])[v]\\
-                [b]=\frac{1}{2}([v]-[i])=\frac{1}{2}([I]-[y])[v]
-            \end{cases}
-            \qquad
-            [I]=\begin{bmatrix*}
-                1 & 0 \\
-                0 & 1 \\
-            \end{bmatrix*}
-        \end{align*}
-        将上式代入$[b]=[S][a]$可得：
-        \begin{gather*}
-            [S]=([I]-[y])([I]+[y])^{-1}\\
-            [y]=([I]+[S])^{-1}([I]-[S])
-        \end{gather*}
+              \begin{itemize}
+                  \item $[S]$和$[y]$
+              \end{itemize}
+              \begin{align*}
+                  \begin{cases}
+                      [a]=\frac{1}{2}([v]+[i])=\frac{1}{2}([I]+[y])[v] \\
+                      [b]=\frac{1}{2}([v]-[i])=\frac{1}{2}([I]-[y])[v]
+                  \end{cases}
+                  \qquad
+                  [I]=\begin{bmatrix*}
+                          1 & 0 \\
+                          0 & 1 \\
+                      \end{bmatrix*}
+              \end{align*}
+              将上式代入$[b]=[S][a]$可得：
+              \begin{gather*}
+                  [S]=([I]-[y])([I]+[y])^{-1}\\
+                  [y]=([I]+[S])^{-1}([I]-[S])
+              \end{gather*}
     \end{enumerate}
 \end{frame}
 
@@ -989,34 +989,34 @@
     \begin{enumerate}
         \resume
         \item 微波网络参量之间的转换
-        \begin{itemize}
-            \item $[S]$和$[a]$
-        \end{itemize}
-        \begin{align*}
-            \begin{bmatrix*}
-                v_1 \\
-                i_1 \\
-            \end{bmatrix*}
-            =[a]
-            \begin{bmatrix*}
-                v_2 \\
-                i_2 \\
-            \end{bmatrix*}
-            \qquad
-            [a]=
-            \begin{bmatrix*}
-                A\sqrt{\frac{Z_{02}}{Z_{01}}} & \frac{B}{\sqrt{Z_{01}Z_{02}}}  \\
-                C\sqrt{Z_{01}Z_{02}} & D\sqrt{\frac{Z_{01}}{Z_{02}}} \\
-            \end{bmatrix*}\\
-            [S]=\frac{1}{a+b+c+d}
-            \begin{bmatrix*}
-                a+b-c-d & 2|{a}| \\
-                2 & -a+b-c+d \\
-            \end{bmatrix*} 
-        \end{align*}
-        \begin{itemize}
-            \item $|a| = ad-bc$
-        \end{itemize}
+              \begin{itemize}
+                  \item $[S]$和$[a]$
+              \end{itemize}
+              \begin{align*}
+                  \begin{bmatrix*}
+                      v_1 \\
+                      i_1 \\
+                  \end{bmatrix*}
+                  =[a]
+                  \begin{bmatrix*}
+                      v_2 \\
+                      i_2 \\
+                  \end{bmatrix*}
+                  \qquad
+                  [a]=
+                  \begin{bmatrix*}
+                      A\sqrt{\dfrac{Z_{02}}{Z_{01}}} & \dfrac{B}{\sqrt{Z_{01}Z_{02}}}  \\
+                      C\sqrt{Z_{01}Z_{02}} & D\sqrt{\dfrac{Z_{01}}{Z_{02}}} \\
+                  \end{bmatrix*} \\
+                  [S]=\frac{1}{a+b+c+d}
+                  \begin{bmatrix*}
+                      a+b-c-d & 2|{a}| \\
+                      2 & -a+b-c+d \\
+                  \end{bmatrix*}
+              \end{align*}
+              \begin{itemize}
+                  \item $|a| = ad-bc$
+              \end{itemize}
     \end{enumerate}
 \end{frame}
 
@@ -1024,21 +1024,21 @@
     \begin{enumerate}
         \resume
         \item 微波网络参量之间的转换
-        \begin{itemize}
-            \item $[S]$和$[a]$
-        \end{itemize}
-        归一化电流电压构成的$[a]$矩阵为
-        \begin{align*}
-            \begin{cases}
-                v_1=av_2+bi_2\\
-                i_1=cv_2+di_2
-            \end{cases}
-        \end{align*}
-        很明显，$[a]$矩阵是\textbf{不对称}定义
-        \begin{align*}
-            &v_1=a_1+b_1 \qquad v_2=a_2+b_2 \\
-            &i_1=a_1-b_1 \qquad i_2=-(a_2-b_2)
-        \end{align*}
+              \begin{itemize}
+                  \item $[S]$和$[a]$
+              \end{itemize}
+              归一化电流电压构成的$[a]$矩阵为
+              \begin{align*}
+                  \begin{cases}
+                      v_1=av_2+bi_2 \\
+                      i_1=cv_2+di_2
+                  \end{cases}
+              \end{align*}
+              很明显，$[a]$矩阵是\textbf{不对称}定义
+              \begin{align*}
+                   & v_1=a_1+b_1 \qquad v_2=a_2+b_2    \\
+                   & i_1=a_1-b_1 \qquad i_2=-(a_2-b_2)
+              \end{align*}
     \end{enumerate}
 \end{frame}
 
@@ -1046,40 +1046,40 @@
     \begin{enumerate}
         \resume
         \item 微波网络参量之间的转换
-        \begin{itemize}
-            \item $[S]$和$[a]$
-        \end{itemize}
-        \begin{align*}
-            \begin{cases}
-                a_1+b_1=a(a_2+b_2)-b(a_2-b_2)\\
-                a_1-b_1=c(a_2+b_2)-d(a_2-b_2)
-            \end{cases}\\
-            \Rightarrow
-            \begin{cases}
-                b_1-(a+b)b_2=-a_1+(a-b)a_2\\
-                -b_1-(c+d)b_2=-a_1+(c-d)a_2
-            \end{cases}
-        \end{align*}
-        写成矩阵形式
-        \begin{align*}
-            \begin{bmatrix*}
-                1 & -(a+b) \\
-                -1 & -(c+d) \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                b_1 \\
-                b_2 \\
-            \end{bmatrix*}
-            =
-            \begin{bmatrix*}
-                -1 & a-b \\
-                -1 & c-d \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                a_1 \\
-                a_2 \\
-            \end{bmatrix*}
-        \end{align*}
+              \begin{itemize}
+                  \item $[S]$和$[a]$
+              \end{itemize}
+              \begin{align*}
+                  \begin{cases}
+                      a_1+b_1=a(a_2+b_2)-b(a_2-b_2) \\
+                      a_1-b_1=c(a_2+b_2)-d(a_2-b_2)
+                  \end{cases} \\
+                  \Rightarrow
+                  \begin{cases}
+                      b_1-(a+b)b_2=-a_1+(a-b)a_2 \\
+                      -b_1-(c+d)b_2=-a_1+(c-d)a_2
+                  \end{cases}
+              \end{align*}
+              写成矩阵形式
+              \begin{align*}
+                  \begin{bmatrix*}
+                      1 & -(a+b) \\
+                      -1 & -(c+d) \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      b_1 \\
+                      b_2 \\
+                  \end{bmatrix*}
+                  =
+                  \begin{bmatrix*}
+                      -1 & a-b \\
+                      -1 & c-d \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      a_1 \\
+                      a_2 \\
+                  \end{bmatrix*}
+              \end{align*}
     \end{enumerate}
 \end{frame}
 
@@ -1087,51 +1087,51 @@
     \begin{enumerate}
         \resume
         \item 微波网络参量之间的转换
-        \begin{itemize}
-            \item $[S]$和$[a]$
-        \end{itemize}
-        \begin{align*}
-            \begin{bmatrix*}
-                b_1 \\
-                b_2 \\
-            \end{bmatrix*}
-            &=
-            \begin{bmatrix*}
-                1 & -(a+b) \\
-                -1 & -(c+d) \\
-            \end{bmatrix*}^{-1}
-            \begin{bmatrix*}
-                -1 & a-b \\
-                -1 & c-d \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                a_1 \\
-                a_2 \\
-            \end{bmatrix*}\\
-            &=
-            -\frac{1}{a+b+c+d}
-            \begin{bmatrix*}
-                -(c+d) & a+b \\
-                1 & 1 \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                -1 & a-b \\
-                -1 & c-d \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                a_1 \\
-                a_2 \\
-            \end{bmatrix*}
-        \end{align*}
-        所以
-        \begin{align*}
-            [S]=\frac{1}{a+b+c+d}
-            \begin{bmatrix*}
-                a+b-c-d & 2(ad-bc) \\
-                2 & d+b-c-a \\
-            \end{bmatrix*}
-        \end{align*}
-        \saveenum
+              \begin{itemize}
+                  \item $[S]$和$[a]$
+              \end{itemize}
+              \begin{align*}
+                  \begin{bmatrix*}
+                      b_1 \\
+                      b_2 \\
+                  \end{bmatrix*}
+                   & =
+                  \begin{bmatrix*}
+                      1 & -(a+b) \\
+                      -1 & -(c+d) \\
+                  \end{bmatrix*}^{-1}
+                  \begin{bmatrix*}
+                      -1 & a-b \\
+                      -1 & c-d \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      a_1 \\
+                      a_2 \\
+                  \end{bmatrix*} \\
+                   & =
+                  -\frac{1}{a+b+c+d}
+                  \begin{bmatrix*}
+                      -(c+d) & a+b \\
+                      1 & 1 \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      -1 & a-b \\
+                      -1 & c-d \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      a_1 \\
+                      a_2 \\
+                  \end{bmatrix*}
+              \end{align*}
+              所以
+              \begin{align*}
+                  [S]=\frac{1}{a+b+c+d}
+                  \begin{bmatrix*}
+                      a+b-c-d & 2(ad-bc) \\
+                      2 & d+b-c-a \\
+                  \end{bmatrix*}
+              \end{align*}
+              \saveenum
     \end{enumerate}
 \end{frame}
 
@@ -1139,15 +1139,15 @@
     \begin{enumerate}
         \resume
         \item 参考面移动对网络参数的影响
-        \begin{figure}
-            \includegraphics[width=10cm]{Cha5//fig5-18.pdf}
-        \end{figure}
-        \begin{gather*}
-            [S]=\begin{bmatrix*}
-                S_{11} & S_{12} \\
-                S_{21} & S_{22} \\
-            \end{bmatrix*}
-        \end{gather*}
+              \begin{figure}
+                  \includegraphics[width=10cm]{Cha5//fig5-18.pdf}
+              \end{figure}
+              \begin{gather*}
+                  [S]=\begin{bmatrix*}
+                      S_{11} & S_{12} \\
+                      S_{21} & S_{22} \\
+                  \end{bmatrix*}
+              \end{gather*}
     \end{enumerate}
 \end{frame}
 
@@ -1155,40 +1155,40 @@
     \begin{enumerate}
         \resume
         \item 参考面移动对网络参数的影响\\
-        $a^{'}$超前于$a$，而$b^{'}$滞后于$b$
-        \begin{align*}
-            &\begin{bmatrix*}
-                a_1^{'} \\
-                a_2^{'} \\
-            \end{bmatrix*}
-            =
-            \begin{bmatrix*}
-                \mathrm{e}^{\mathrm{j}\theta_1} & 0 \\
-                0 & \mathrm{e}^{\mathrm{j}\theta_2} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                a_1 \\
-                a_2 \\
-            \end{bmatrix*}
-            \qquad
-            \begin{bmatrix*}
-                b_1^{'} \\
-                b_2^{'} \\
-            \end{bmatrix*}
-            =
-            \begin{bmatrix*}
-                \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
-                0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                b_1 \\
-                b_2 \\
-            \end{bmatrix*}\\
-            &\begin{cases}
-                \theta_1=\beta\cdot l_1 \\
-                \theta_2=\beta\cdot l_2
-            \end{cases}
-        \end{align*}
+              $a^{'}$超前于$a$，而$b^{'}$滞后于$b$
+              \begin{align*}
+                   & \begin{bmatrix*}
+                         a_1^{'} \\
+                         a_2^{'} \\
+                     \end{bmatrix*}
+                  =
+                  \begin{bmatrix*}
+                      \mathrm{e}^{\mathrm{j}\theta_1} & 0 \\
+                      0 & \mathrm{e}^{\mathrm{j}\theta_2} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      a_1 \\
+                      a_2 \\
+                  \end{bmatrix*}
+                  \qquad
+                  \begin{bmatrix*}
+                      b_1^{'} \\
+                      b_2^{'} \\
+                  \end{bmatrix*}
+                  =
+                  \begin{bmatrix*}
+                      \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
+                      0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      b_1 \\
+                      b_2 \\
+                  \end{bmatrix*}            \\
+                   & \begin{cases}
+                         \theta_1=\beta\cdot l_1 \\
+                         \theta_2=\beta\cdot l_2
+                     \end{cases}
+              \end{align*}
     \end{enumerate}
 \end{frame}
 
@@ -1196,164 +1196,501 @@
     \begin{enumerate}
         \resume
         \item 参考面移动对网络参数的影响\\
-        \begin{align*}
-            &\begin{bmatrix*}
-                b_1^{'} \\
-                b_2^{'} \\
-            \end{bmatrix*}
-            =
-            \begin{bmatrix*}
-                \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
-                0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                b_1 \\
-                b_2 \\
-            \end{bmatrix*}
-            \qquad
-            \begin{bmatrix*}
-                b_1 \\
-                b_2 \\
-            \end{bmatrix*}
-            =
-            \begin{bmatrix*}
-                S_{11} & S_{12} \\
-                S_{21} & S_{22} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                a_1 \\
-                a_2 \\
-            \end{bmatrix*}\\
-            \rightarrow
-            &\begin{bmatrix*}
-                b_1^{'} \\
-                b_2^{'} \\
-            \end{bmatrix*}
-            =
-            \begin{bmatrix*}
-                \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
-                0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                S_{11} & S_{12} \\
-                S_{21} & S_{22} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                a_1 \\
-                a_2 \\
-            \end{bmatrix*}
-            \qquad
-            \begin{bmatrix*}
-                a_1^{'} \\
-                a_2^{'} \\
-            \end{bmatrix*}
-            =
-            \begin{bmatrix*}
-                \mathrm{e}^{\mathrm{j}\theta_1} & 0 \\
-                0 & \mathrm{e}^{\mathrm{j}\theta_2} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                a_1 \\
-                a_2 \\
-            \end{bmatrix*}\\
-            \rightarrow
-            &\begin{bmatrix*}
-                b_1^{'} \\
-                b_2^{'} \\
-            \end{bmatrix*}
-            =
-            \begin{bmatrix*}
-                \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
-                0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                S_{11} & S_{12} \\
-                S_{21} & S_{22} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                \mathrm{e}^{\mathrm{j}\theta_1} & 0 \\
-                0 & \mathrm{e}^{\mathrm{j}\theta_2} \\
-            \end{bmatrix*}^{-1}
-            \begin{bmatrix*}
-                a_1^{'} \\
-                a_2^{'} \\
-            \end{bmatrix*}
-        \end{align*}
-        \begin{align*}
-            \begin{bmatrix*}
-                b_1^{'} \\
-                b_2^{'} \\
-            \end{bmatrix*}
-            =
-            \begin{bmatrix*}
-                S_{11}^{'} & S_{12}^{'} \\
-                S_{21}^{'} & S_{22}^{'} \\
-            \end{bmatrix*}
-            =
-            \begin{bmatrix*}
-                S_{11}\cdot\mathrm{e}^{-\mathrm{j}2\theta_1} & S_{12}\cdot\mathrm{e}^{-\mathrm{j}(\theta_1+\theta_2)} \\
-                S_{21}\cdot\mathrm{e}^{-\mathrm{j}(\theta_1+\theta_2)} & S_{22}\cdot \mathrm{e}^{-\mathrm{j}2\theta_2} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                a_1^{'} \\
-                a_2^{'} \\
-            \end{bmatrix*}
-        \end{align*}
+              \begin{align*}
+                   & \begin{bmatrix*}
+                         b_1^{'} \\
+                         b_2^{'} \\
+                     \end{bmatrix*}
+                  =
+                  \begin{bmatrix*}
+                      \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
+                      0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      b_1 \\
+                      b_2 \\
+                  \end{bmatrix*}
+                  \qquad
+                  \begin{bmatrix*}
+                      b_1 \\
+                      b_2 \\
+                  \end{bmatrix*}
+                  =
+                  \begin{bmatrix*}
+                      S_{11} & S_{12} \\
+                      S_{21} & S_{22} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      a_1 \\
+                      a_2 \\
+                  \end{bmatrix*}    \\
+                  \rightarrow
+                   & \begin{bmatrix*}
+                         b_1^{'} \\
+                         b_2^{'} \\
+                     \end{bmatrix*}
+                  =
+                  \begin{bmatrix*}
+                      \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
+                      0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      S_{11} & S_{12} \\
+                      S_{21} & S_{22} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      a_1 \\
+                      a_2 \\
+                  \end{bmatrix*}
+                  \qquad
+                  \begin{bmatrix*}
+                      a_1^{'} \\
+                      a_2^{'} \\
+                  \end{bmatrix*}
+                  =
+                  \begin{bmatrix*}
+                      \mathrm{e}^{\mathrm{j}\theta_1} & 0 \\
+                      0 & \mathrm{e}^{\mathrm{j}\theta_2} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      a_1 \\
+                      a_2 \\
+                  \end{bmatrix*}    \\
+                  \rightarrow
+                   & \begin{bmatrix*}
+                         b_1^{'} \\
+                         b_2^{'} \\
+                     \end{bmatrix*}
+                  =
+                  \begin{bmatrix*}
+                      \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
+                      0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      S_{11} & S_{12} \\
+                      S_{21} & S_{22} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      \mathrm{e}^{\mathrm{j}\theta_1} & 0 \\
+                      0 & \mathrm{e}^{\mathrm{j}\theta_2} \\
+                  \end{bmatrix*}^{-1}
+                  \begin{bmatrix*}
+                      a_1^{'} \\
+                      a_2^{'} \\
+                  \end{bmatrix*}
+              \end{align*}
+              \begin{align*}
+                  \begin{bmatrix*}
+                      b_1^{'} \\
+                      b_2^{'} \\
+                  \end{bmatrix*}
+                  =
+                  \begin{bmatrix*}
+                      S_{11}^{'} & S_{12}^{'} \\
+                      S_{21}^{'} & S_{22}^{'} \\
+                  \end{bmatrix*}
+                  =
+                  \begin{bmatrix*}
+                      S_{11}\cdot\mathrm{e}^{-\mathrm{j}2\theta_1} & S_{12}\cdot\mathrm{e}^{-\mathrm{j}(\theta_1+\theta_2)} \\
+                      S_{21}\cdot\mathrm{e}^{-\mathrm{j}(\theta_1+\theta_2)} & S_{22}\cdot \mathrm{e}^{-\mathrm{j}2\theta_2} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      a_1^{'} \\
+                      a_2^{'} \\
+                  \end{bmatrix*}
+              \end{align*}
     \end{enumerate}
 \end{frame}
 
 \begin{frame}{微波网络参量}
     \begin{enumerate}
+        \resume
         \item 参考面移动对网络参数的影响
-        \begin{align*}
-            \begin{bmatrix*}
-                b_1^{'} \\
-                b_2^{'} \\
-            \end{bmatrix*}
-            =
-            \begin{bmatrix*}
-                S_{11}\cdot\mathrm{e}^{-\mathrm{j}2\theta_1} & S_{12}\cdot\mathrm{e}^{-\mathrm{j}(\theta_1+\theta_2)} \\
-                S_{21}\cdot\mathrm{e}^{-\mathrm{j}(\theta_1+\theta_2)} & S_{22}\cdot \mathrm{e}^{-\mathrm{j}2\theta_2} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                a_1^{'} \\
-                a_2^{'} \\
-            \end{bmatrix*}
-            =[S^{'}]
-            \begin{bmatrix*}
-                a_1^{'} \\
-                a_2^{'} \\
-            \end{bmatrix*}
-        \end{align*}
-        \begin{itemize}
-            \item 结论：参考面的移动，仅对$[S]$的相位产生影响
-        \end{itemize}
-        \begin{align*}
-            [S^{'}]=
-            \begin{bmatrix*}
-                \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
-                0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                S_{11} & S_{12} \\
-                S_{21} & S_{22} \\
-            \end{bmatrix*}
-            \begin{bmatrix*}
-                \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
-                0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
-            \end{bmatrix*}
-        \end{align*}
+              \begin{align*}
+                  \begin{bmatrix*}
+                      b_1^{'} \\
+                      b_2^{'} \\
+                  \end{bmatrix*}
+                  =
+                  \begin{bmatrix*}
+                      S_{11}\cdot\mathrm{e}^{-\mathrm{j}2\theta_1} & S_{12}\cdot\mathrm{e}^{-\mathrm{j}(\theta_1+\theta_2)} \\
+                      S_{21}\cdot\mathrm{e}^{-\mathrm{j}(\theta_1+\theta_2)} & S_{22}\cdot \mathrm{e}^{-\mathrm{j}2\theta_2} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      a_1^{'} \\
+                      a_2^{'} \\
+                  \end{bmatrix*}
+                  =[S^{'}]
+                  \begin{bmatrix*}
+                      a_1^{'} \\
+                      a_2^{'} \\
+                  \end{bmatrix*}
+              \end{align*}
+              \begin{itemize}
+                  \item 结论：参考面的移动，仅对$[S]$的相位产生影响
+              \end{itemize}
+              \begin{gather*}
+                  \begin{bmatrix*}
+                      S^{'}
+                  \end{bmatrix*}
+                  =
+                  \begin{bmatrix*}
+                      \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
+                      0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      S_{11} & S_{12} \\
+                      S_{21} & S_{22} \\
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      \mathrm{e}^{-\mathrm{j}\theta_1} & 0 \\
+                      0 & \mathrm{e}^{-\mathrm{j}\theta_2} \\
+                  \end{bmatrix*}\\
+                  \begin{bmatrix*}
+                      S^{'}
+                  \end{bmatrix*}
+                  =
+                  \begin{bmatrix*}
+                      P
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      S
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      P
+                  \end{bmatrix*}\\
+                  \begin{bmatrix*}
+                      P
+                  \end{bmatrix*}
+                  =
+                  \begin{cases}
+                      \mathrm{e}^{-\mathrm{j}\theta} \quad \text{参考面向外移动} \\
+                      \mathrm{e}^{\mathrm{j}\theta} \quad \text{参考面向内移动}
+                  \end{cases}
+              \end{gather*}
     \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量}
+    \begin{table}
+        \caption{基本电路单元的网络参量矩阵}
+        \tiny % 设置表格内字体大小
+        \renewcommand\arraystretch{1.25} % 设置行宽为初始值1.25倍
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            电路
+             & \begin{minipage}[b]{0.25\columnwidth}
+                   \centering
+                   \raisebox{-.5\height}{\includegraphics[width=2.5cm]{Cha5//fig5-20.pdf}}
+               \end{minipage}
+             & \begin{minipage}[b]{0.25\columnwidth}
+                   \centering
+                   \raisebox{-.5\height}{\includegraphics[width=2.5cm]{Cha5//fig5-19.pdf}}
+               \end{minipage} 
+             & \begin{minipage}[b]{0.25\columnwidth}
+                   \centering
+                   \raisebox{-.5\height}{\includegraphics[width=2.5cm]{Cha5//fig5-17.pdf}}
+               \end{minipage}           \\
+            \hline
+            $[Z]$
+             &
+             & $   \begin{bmatrix*}
+                           \frac{1}{y} & \frac{1}{y} \\
+                           \frac{1}{y} & \frac{1}{y} \\
+                       \end{bmatrix*}$
+             & $   \begin{bmatrix*}
+                           -\mathrm{j}Z_0\cot\theta & -\mathrm{j}Z_0\csc\theta \\
+                           -\mathrm{j}Z_0\csc\theta & -\mathrm{j}Z_0\cot\theta \\
+                       \end{bmatrix*}$                                                          \\
+            \hline
+            $[Y]$
+             & $ \begin{bmatrix*}
+                         \frac{1}{z} & -\frac{1}{z} \\
+                         -\frac{1}{z} & \frac{1}{z} \\
+                     \end{bmatrix*}$
+             &
+             &  $   \begin{bmatrix*}
+                           -\mathrm{j}\frac{1}{Z_0}\cot\theta & \mathrm{j}\frac{1}{Z_0}\csc\theta \\
+                           \mathrm{j}\frac{1}{Z_0}\csc\theta & -\mathrm{j}\frac{1}{Z_0}\cot\theta \\
+                       \end{bmatrix*}$                                                       \\
+            \hline
+            $[A]$
+             & $ \begin{bmatrix*}
+                         1 & z \\
+                         0 & 1 \\
+                     \end{bmatrix*}$
+             & $ \begin{bmatrix*}
+                         1 & 0 \\
+                         y & 1 \\
+                     \end{bmatrix*}$
+             &  $ \begin{bmatrix*}
+                         \cos\theta & \mathrm{j}Z_0\sin\theta \\
+                         \mathrm{j}\frac{1}{Z_0}\sin\theta & \cos\theta \\
+                     \end{bmatrix*}$                                                       \\
+            \hline
+            $[S]$
+             & $ \begin{bmatrix*}
+                         \frac{z}{2+z} & \frac{2}{2+z} \\
+                         \frac{2}{2+z} & \frac{z}{2+z} \\
+                     \end{bmatrix*}$
+             & $ \begin{bmatrix*}
+                         \frac{-y}{2+y} & \frac{2}{2+y} \\
+                         \frac{2}{2+y} & \frac{-y}{2+y} \\
+                     \end{bmatrix*}$
+             &  $ \begin{bmatrix*}
+                         0 & \mathrm{e}^{\mathrm{j}\theta} \\
+                         \mathrm{e}^{\mathrm{j}\theta} & 0 \\
+                     \end{bmatrix*}$                                                       \\
+            \hline
+        \end{tabular}
+    \end{table}
 \end{frame}
 
 \subsection{微波网络参量的性质}
 \begin{frame}{微波网络参量的性质}
+    \begin{enumerate}
+        \item 互易性\\
+              \begin{itemize}
+                  \item 当无源二端口网络中填充各向同性媒质时，该网络为互易网络，此时网络参量应满足互易条件。互易网络的阻抗和导纳矩阵是对称的。
+              \end{itemize}
+              \begin{gather*}
+                  [Z]^T=[Z],Z_{kj}=Z_{jk}(j\neq k)\\
+                  [Y]^T=[Y],Y_{kj}=Y_{jk}(j\neq k)\\
+                  [S]^T=[S],S_{kj}=S_{jk}(j\neq k)
+              \end{gather*}
+              \saveenum
+    \end{enumerate}
+\end{frame}
 
+\begin{frame}{微波网络参量的性质}
+    \begin{enumerate}
+        \item 互易性 \\
+        证明：
+        \begin{align*}
+            [z][i]=[z][a]-[z][b]=[v]=[a]+[b]\\
+            ([z]+[I])[b]=([z]-[I])[a]\\
+            \Rightarrow[S]=([z]+[I])^{-1}([z]-[I])
+        \end{align*}
+        再根据
+        \begin{align*}
+            \begin{cases}
+                [a]=\frac{1}{2}([v]+[i])=\frac{1}{2}([z]+[I])[i] \\
+                [b]=\frac{1}{2}([v]-[i])=\frac{1}{2}([z]-[I])[i]
+            \end{cases}\\
+            \Rightarrow [S]=([z]-[I])([z]+[I])^{-1}\\
+            \Rightarrow [S]^T=([z]+[I])^{-1}([z]-[I])
+        \end{align*}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量的性质}
+    \begin{enumerate}
+        \resume
+        \item 对称性
+              \begin{itemize}
+                  \item 对称网络可以反向使用，性能不变
+                  \item $Z_{11}=Z_{22},Z_{12}=Z_{21}$
+                  \item $Y_{11}=Y_{22},Y_{12}=Y_{21}$
+                  \item $S_{11}=S_{22},S_{12}=S_{21}$
+                  \item 对称网络首先必须是互易网络
+              \end{itemize}
+              \saveenum
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量的性质}
+    \begin{enumerate}
+        \resume
+        \item 无耗网络$S$参量的幺正性\\
+              对于无耗网络，因其损耗功率$P=0$，则
+              \begin{gather*}
+                  [I]-[S]^\dagger[S]=0
+              \end{gather*}
+              \begin{itemize}
+                  \item $[\quad]^\dagger$ —— Hermite符号，表示共轭转置或转置共轭\\
+                        \begin{align*}
+                            [\quad]^\dagger=([\quad]^{*})^T=([\quad]^T)^{*}
+                        \end{align*}
+              \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量的性质}
+    \begin{enumerate}
+        \resume
+        \item 无耗网络$S$参量的幺正性
+              \begin{align*}
+                  p & =\frac{1}{2}\mathrm{Re}(vi^*)=\frac{1}{2}\mathrm{Re}[(a+b)(a^*-b^*)] \\
+                    & =\frac{1}{2}(aa^*-bb^*)+\frac{1}{2}\mathrm{Re}(a^*b-ab^*)
+              \end{align*}
+              后一项的实部显然等于$0$，于是有
+              \begin{align*}
+                   & p=\frac{1}{2}(aa^*-bb^*)                                               \\
+                   & p^+=\frac{1}{2}\lvert a\rvert^2 \qquad p^-=\frac{1}{2}\lvert b\rvert^2 \\
+                   & p=p^+-p^-=\frac{1}{2}(\lvert a\rvert^2-\lvert b\rvert^2)
+              \end{align*}
+              物理意义：端口功率等于入射功率减去散射功率。
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量的性质}
+    \begin{enumerate}
+        \resume
+        \item 无耗网络$S$参量的幺正性\\
+              无耗条件为
+              $$p=0,或者aa^*-bb^*=0$$
+              假如对于双端口网络，有
+              \begin{align*}
+                  a_1a_1^*+a_2a_2^*=
+                  \begin{bmatrix*}
+                      a_1^*,a_2^*
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      a_1 \\
+                      a_2 \\
+                  \end{bmatrix*}
+                  =
+                  \begin{bmatrix*}
+                      a
+                  \end{bmatrix*}^\dagger
+                  \begin{bmatrix*}
+                      a
+                  \end{bmatrix*}
+              \end{align*}
+              于是，把多口网络的无耗条件写成
+              \begin{align*}
+                   & \begin{bmatrix*}
+                         a
+                     \end{bmatrix*}^\dagger
+                  \begin{bmatrix*}
+                      a
+                  \end{bmatrix*}
+                  -
+                  \begin{bmatrix*}
+                      b
+                  \end{bmatrix*}^\dagger
+                  \begin{bmatrix*}
+                      b
+                  \end{bmatrix*}
+                  =0                        \\
+                   & \begin{bmatrix*}
+                         a
+                     \end{bmatrix*}^\dagger
+                  \begin{bmatrix*}
+                      a
+                  \end{bmatrix*}
+                  -
+                  \begin{bmatrix*}
+                      a
+                  \end{bmatrix*}^\dagger
+                  \begin{bmatrix*}
+                      S
+                  \end{bmatrix*}^\dagger
+                  \begin{bmatrix*}
+                      S
+                  \end{bmatrix*}
+                  \begin{bmatrix*}
+                      a
+                  \end{bmatrix*}
+                  =0
+              \end{align*}
+              即
+              \begin{gather*}
+                  \begin{bmatrix*}
+                      a
+                  \end{bmatrix*}^\dagger
+                  \left\{
+                  \begin{bmatrix*}
+                      I
+                  \end{bmatrix*}
+                  -
+                  \begin{bmatrix*}
+                      S
+                  \end{bmatrix*}^\dagger
+                  \begin{bmatrix*}
+                      S
+                  \end{bmatrix*}
+                  \right\}
+                  \begin{bmatrix*}
+                      a
+                  \end{bmatrix*}
+                  =0
+              \end{gather*}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{微波网络参量的性质}
+    \begin{enumerate}
+        \resume
+        \item 无耗网络$S$参量的幺正性\\
+              考虑$[a]$激励的任意性，可知
+              \begin{align*}
+                  \begin{bmatrix*}
+                      I
+                  \end{bmatrix*}
+                  -
+                  \begin{bmatrix*}
+                      S
+                  \end{bmatrix*}^\dagger
+                  \begin{bmatrix*}
+                      S
+                  \end{bmatrix*}
+                  =0
+              \end{align*}
+              当网络\textbf{互易无耗}时,即
+              \begin{gather*}
+                  [S]^T=[S] \rightarrow [S]^\dagger=[S]^*\\
+                  [S]^\dagger [S]=[S]^*[S]=[I]\\
+                  \sum_{k=1}^N S_{ki}S_{kj}^*=\delta_{ij} \qquad 对于所有的 i,j\\
+              \end{gather*}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \begin{enumerate}
+        \resume
+        \item 无耗网络$S$参量的幺正性
+              \begin{align*}
+                  \begin{matrix*}
+                      \sum\limits_{k=1}^N S_{ki}S_{ki}^*=1 & i=j & \text{\scriptsize{无耗网络S参量的单元特性}} \\
+                      &     & \text{\scriptsize{说明[S]的任一列与此列的共轭点乘等于1}} \\
+                      \sum\limits_{k=1}^N S_{ki}S_{kj}^*=0 & i\neq j & \text{\scriptsize{无耗网络S参量的零特性}} \\
+                      &     & \text{\scriptsize{说明[S]的任一列与不同列的共轭点乘为0}}\\
+                  \end{matrix*}
+              \end{align*}
+              若网络是\textbf{互易}的，则$[S]$是对称的，对于散射参量的各行，可以有同样的特征。
+    \end{enumerate}
 \end{frame}
 
 \subsection{二端口微波网络的工作特性参量}
 \begin{frame}{二端口微波网络的工作特性参量}
+    \begin{enumerate}
+        \item 电压传输系数$T$
+    \end{enumerate}
+\end{frame}
 
+\begin{frame}{二端口微波网络的工作特性参量}
+    \begin{enumerate}
+        \item 插入衰减$L_i$
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{二端口微波网络的工作特性参量}
+    \begin{enumerate}
+        \item 工作衰减$L_A$
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{二端口微波网络的工作特性参量}
+    \begin{enumerate}
+        \item 插入相移$\theta$
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{二端口微波网络的工作特性参量}
+    \begin{enumerate}
+        \item 插入驻波比$\rho$
+    \end{enumerate}
 \end{frame}
 
 \subsection{微波网络的组合}
