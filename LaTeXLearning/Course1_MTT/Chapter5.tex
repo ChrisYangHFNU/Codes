@@ -1386,11 +1386,11 @@
              & \begin{minipage}[b]{0.25\columnwidth}
                    \centering
                    \raisebox{-.5\height}{\includegraphics[width=2.5cm]{Cha5//fig5-19.pdf}}
-               \end{minipage} 
+               \end{minipage}
              & \begin{minipage}[b]{0.25\columnwidth}
                    \centering
                    \raisebox{-.5\height}{\includegraphics[width=2.5cm]{Cha5//fig5-17.pdf}}
-               \end{minipage}           \\
+               \end{minipage}                              \\
             \hline
             $[Z]$
              &
@@ -1401,7 +1401,7 @@
              & $   \begin{bmatrix*}
                            -\mathrm{j}Z_0\cot\theta & -\mathrm{j}Z_0\csc\theta \\
                            -\mathrm{j}Z_0\csc\theta & -\mathrm{j}Z_0\cot\theta \\
-                       \end{bmatrix*}$                                                          \\
+                       \end{bmatrix*}$                    \\
             \hline
             $[Y]$
              & $ \begin{bmatrix*}
@@ -1409,10 +1409,10 @@
                          -\frac{1}{z} & \frac{1}{z} \\
                      \end{bmatrix*}$
              &
-             &  $   \begin{bmatrix*}
+             & $   \begin{bmatrix*}
                            -\mathrm{j}\frac{1}{Z_0}\cot\theta & \mathrm{j}\frac{1}{Z_0}\csc\theta \\
                            \mathrm{j}\frac{1}{Z_0}\csc\theta & -\mathrm{j}\frac{1}{Z_0}\cot\theta \\
-                       \end{bmatrix*}$                                                       \\
+                       \end{bmatrix*}$ \\
             \hline
             $[A]$
              & $ \begin{bmatrix*}
@@ -1423,10 +1423,10 @@
                          1 & 0 \\
                          y & 1 \\
                      \end{bmatrix*}$
-             &  $ \begin{bmatrix*}
+             & $ \begin{bmatrix*}
                          \cos\theta & \mathrm{j}Z_0\sin\theta \\
                          \mathrm{j}\frac{1}{Z_0}\sin\theta & \cos\theta \\
-                     \end{bmatrix*}$                                                       \\
+                     \end{bmatrix*}$                           \\
             \hline
             $[S]$
              & $ \begin{bmatrix*}
@@ -1437,10 +1437,10 @@
                          \frac{-y}{2+y} & \frac{2}{2+y} \\
                          \frac{2}{2+y} & \frac{-y}{2+y} \\
                      \end{bmatrix*}$
-             &  $ \begin{bmatrix*}
+             & $ \begin{bmatrix*}
                          0 & \mathrm{e}^{\mathrm{j}\theta} \\
                          \mathrm{e}^{\mathrm{j}\theta} & 0 \\
-                     \end{bmatrix*}$                                                       \\
+                     \end{bmatrix*}$                                        \\
             \hline
         \end{tabular}
     \end{table}
@@ -1465,21 +1465,21 @@
 \begin{frame}{微波网络参量的性质}
     \begin{enumerate}
         \item 互易性 \\
-        证明：
-        \begin{align*}
-            [z][i]=[z][a]-[z][b]=[v]=[a]+[b]\\
-            ([z]+[I])[b]=([z]-[I])[a]\\
-            \Rightarrow[S]=([z]+[I])^{-1}([z]-[I])
-        \end{align*}
-        再根据
-        \begin{align*}
-            \begin{cases}
-                [a]=\frac{1}{2}([v]+[i])=\frac{1}{2}([z]+[I])[i] \\
-                [b]=\frac{1}{2}([v]-[i])=\frac{1}{2}([z]-[I])[i]
-            \end{cases}\\
-            \Rightarrow [S]=([z]-[I])([z]+[I])^{-1}\\
-            \Rightarrow [S]^T=([z]+[I])^{-1}([z]-[I])
-        \end{align*}
+              证明：
+              \begin{align*}
+                  [z][i]=[z][a]-[z][b]=[v]=[a]+[b] \\
+                  ([z]+[I])[b]=([z]-[I])[a]        \\
+                  \Rightarrow[S]=([z]+[I])^{-1}([z]-[I])
+              \end{align*}
+              再根据
+              \begin{align*}
+                  \begin{cases}
+                      [a]=\frac{1}{2}([v]+[i])=\frac{1}{2}([z]+[I])[i] \\
+                      [b]=\frac{1}{2}([v]-[i])=\frac{1}{2}([z]-[I])[i]
+                  \end{cases} \\
+                  \Rightarrow [S]=([z]-[I])([z]+[I])^{-1}          \\
+                  \Rightarrow [S]^T=([z]+[I])^{-1}([z]-[I])
+              \end{align*}
     \end{enumerate}
 \end{frame}
 
@@ -1666,30 +1666,95 @@
 \begin{frame}{二端口微波网络的工作特性参量}
     \begin{enumerate}
         \item 电压传输系数$T$
+              \begin{itemize}
+                  \item 网络输出端接匹配负载时，输出端参考面上的反射波电压与入射参考面上的入射波电压之比。
+              \end{itemize}
+              \begin{figure}
+                  \includegraphics[width=7cm]{Cha5//fig5-21.pdf}
+              \end{figure}
+              \saveenum
     \end{enumerate}
 \end{frame}
 
 \begin{frame}{二端口微波网络的工作特性参量}
     \begin{enumerate}
+        \resume
         \item 插入衰减$L_i$
+              \begin{itemize}
+                  \item 网络未插入前负载吸收的功率与网络插入后负载吸收的功率之比的分贝数。
+              \end{itemize}
+              \begin{figure}
+                  \includegraphics[width=7cm]{Cha5//fig5-22.pdf}
+              \end{figure}
+              未插入前负载的吸收功率：
+              $$P_{L0}=\frac{1}{2}\lvert a_1\rvert^2\left(1-\lvert\Gamma_L\rvert^2\right)$$
+              网络插入后负载的吸收功率
+              \begin{align*}
+                  P_L=\frac{1}{2}\lvert b_2\rvert^2\left(1-\lvert\Gamma_L\rvert^2\right)
+              \end{align*}
     \end{enumerate}
 \end{frame}
 
 \begin{frame}{二端口微波网络的工作特性参量}
     \begin{enumerate}
+        \resume
+        \item 插入衰减$L_i$
+              \begin{align*}
+                  P_L & =\frac{1}{2}\lvert b_2\rvert^2\left(1-\lvert\Gamma_L\rvert^2\right)\qquad b_2=\frac{S_{21}a_1}{1-S_{22}\Gamma_L}  \\
+                      & =\frac{1}{2}\frac{\lvert S_{21}a_1\rvert^2\left(1-\lvert\Gamma_L\rvert^2\right)}{\lvert 1-S_{22}\Gamma_L\rvert^2}
+              \end{align*}
+              $$L_i=10\lg\frac{P_{L0}}{P_L}=10\lg\frac{\lvert 1-S_{22}\Gamma_L\rvert^2}{\lvert S_{21}\rvert^2}$$
+              \saveenum
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{二端口微波网络的工作特性参量}
+    \begin{enumerate}
+        \resume
         \item 工作衰减$L_A$
+              \begin{itemize}
+                  \item 网络输入输出端接匹配负载时，则插入衰减仅与网络参量有关，称为工作衰减$L_A$
+              \end{itemize}
+              $$L_A=10\lg\frac{1}{\lvert S_{21}\rvert^2} \quad dB$$
+              \begin{itemize}
+                  \item 无耗网络
+              \end{itemize}
+              $$L_A=10\lg\frac{1}{1-\lvert S_{11}\rvert^2} \quad dB$$
+              \begin{align*}
+                  L_A&=10\lg\left(\frac{1}{1-\lvert S_{11}\rvert^2}\cdot\frac{1-\lvert S_{11}\rvert^2}{\lvert S_{21}\rvert^2}\right)\\
+                     &=
+                  \begin{matrix*}
+                      10\lg\left(\frac{1}{1-\lvert S_{11}\rvert^2}\right) & + & 10\lg\left(\frac{1-\lvert S_{11}\rvert^2}{\lvert S_{21}\rvert^2}\right)\\
+                      \text{\scriptsize{反射衰减}} & & \text{\scriptsize{吸收衰减}}\\
+                  \end{matrix*}
+              \end{align*}
+              \saveenum
     \end{enumerate}
 \end{frame}
 
 \begin{frame}{二端口微波网络的工作特性参量}
     \begin{enumerate}
+        \resume
         \item 插入相移$\theta$
-    \end{enumerate}
-\end{frame}
-
-\begin{frame}{二端口微波网络的工作特性参量}
-    \begin{enumerate}
+              \begin{itemize}
+                  \item 网络输出端接匹配负载时，输出端反射波对输入端入射波的相移。即为$b_2$与$a_1$的相位差
+                        \begin{itemize}
+                            \item 令输入端入射波电压和输出端反射波电压分别为
+                        \end{itemize}
+              \end{itemize}
+              \begin{gather*}
+                  a_1=\lvert a_1\rvert\mathrm{e}^{\mathrm{j}\varphi_1} \qquad b_2=\lvert b_2\rvert\mathrm{e}^{\mathrm{j}\varphi_2}\\
+                  T=\frac{b_2}{a_1}\bigg|_{a_2=0}=\lvert S_{21}\rvert\mathrm{e}^{\mathrm{j}(\varphi_2-\varphi_1)} \\
+                  \theta=\mathrm{arg}T=\mathrm{arg}S_{21}
+              \end{gather*}
         \item 插入驻波比$\rho$
+              \begin{itemize}
+                  \item 网络输出端接匹配负载时，输入端的驻波比
+                        \begin{itemize}
+                            \item 输入端驻波比与输入端反射系数模的关系为
+                        \end{itemize}
+              \end{itemize}
+              $$\rho=\frac{1+|\Gamma|}{1-|\Gamma|} \quad \rho=\frac{1+|S_{11}|}{1-|S_{11}|}$$
     \end{enumerate}
 \end{frame}
 
