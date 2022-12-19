@@ -1,0 +1,21 @@
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\logo{\includegraphics[width=1cm,height=1cm]{HFNULogo.jpg}}
+
+\AtBeginSection[]{%
+\begin{frame}[shrink]
+    \frametitle{目录}
+    \tableofcontents[currentsection,hideallsubsections]
+\end{frame}
+}
+\AtBeginSubsection[]{
+    \begin{frame}[shrink]
+        \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]
+    \end{frame}
+}
