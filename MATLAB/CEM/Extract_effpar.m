@@ -2,7 +2,7 @@ clear all
 close all
 
 % 读取csv文件数据
-num = csvread('SRR_CLS.csv',1,0);
+num = csvread('SRR_CLS2.csv',1,0);
 
 freq = num(:,1);
 S11re = num(:,3);
@@ -59,7 +59,7 @@ subplot(2,2,3);
 plot(freq,real(epsilon),'-b','linewidth',2);
 hold on;
 plot(freq,imag(epsilon),'-.r','linewidth',2);
-plot(freq,zeros(length(freq),1),'k--','linewidth',1);
+plot(freq,zeros(length(freq),1),'k-','linewidth',1);
 title('permittivity \epsilon');
 legend('Re','Im','Location','NorthEast');
 legend('boxoff','fontsize',10);
@@ -69,7 +69,7 @@ subplot(2,2,4);
 plot(freq,real(mu),'-b','linewidth',2);
 hold on;
 plot(freq,imag(mu),'-.r','linewidth',2);
-plot(freq,zeros(length(freq),1),'k--','linewidth',1);
+plot(freq,zeros(length(freq),1),'k-','linewidth',1);
 title('permeability \mu');
 legend('Re','Im','Location','NorthEast');
 legend('boxoff','fontsize',10);
