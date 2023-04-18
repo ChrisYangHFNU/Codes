@@ -2,7 +2,7 @@ clear all
 close all
 
 % 读取csv文件数据
-num = csvread('SRR_CLS2.csv',1,0);
+num = csvread('SRR_CLS2.csv',1,0); % SRR_CLS2.csv和本脚本放在同一个文件夹内
 
 freq = num(:,1);
 S11re = num(:,3);
@@ -55,15 +55,20 @@ legend('boxoff','fontsize',10);
 epsilon=n./z;
 mu=n.*z;
 
+% =======================>以该段绘图代码为准<=========================
 subplot(2,2,3);
-plot(freq,real(epsilon),'-b','linewidth',2);
+plot(freq,real(epsilon),'k-',freq,imag(epsilon),'k--','Linewidth',2);
 hold on;
-plot(freq,imag(epsilon),'-.r','linewidth',2);
-plot(freq,zeros(length(freq),1),'k-','linewidth',1);
+plot(freq,zeros(length(freq),1),'b-','linewidth',2);
 title('permittivity \epsilon');
+xlabel('freq/GHz');
+ylabel('');
 legend('Re','Im','Location','NorthEast');
-legend('boxoff','fontsize',10);
+set(gca,'FontSize',15)
+axis tight
+box off
 %axis([0 13 -10 10]);
+% ==================================================================
 
 subplot(2,2,4);
 plot(freq,real(mu),'-b','linewidth',2);
