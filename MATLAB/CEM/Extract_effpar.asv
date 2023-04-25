@@ -62,7 +62,7 @@ subplot(2,1,1);
 plot(freq,real(epsilon),'b-',freq,imag(epsilon),'r-.','Linewidth',2);
 hold on;
 plot(freq,zeros(length(freq),1),'k-','linewidth',1);
-title('permittivity $\epsilon$','interpreter','latex');
+title('permittivity \epsilon');
 xlabel('freq/GHz');
 ylabel('');
 legend('Re','Im','Location','NorthEast');
@@ -72,7 +72,7 @@ box off
 %axis([0 13 -10 10]);
 % ==================================================================
 
-subplot(2,1,2);
+subplot(2,2,2);
 plot(freq,real(mu),'-b','linewidth',2);
 hold on;
 plot(freq,imag(mu),'-.r','linewidth',2);
