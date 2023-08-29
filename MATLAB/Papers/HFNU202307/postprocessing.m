@@ -9,6 +9,8 @@ import3 = csvread('Hplane.csv',1,0);
 import3_1 = csvread('HplaneAn2.csv',1,0);
 import4 = csvread('gainAn1.csv',1,0);
 import5 = csvread('gainAn2.csv',1,0);
+import6 = csvread('inputZ1.csv',1,0);
+import7 = csvread('inputZ2.csv',1,0);
 
 freq = import1(:,1);
 S11 = import1(:,2);
@@ -30,6 +32,10 @@ f1 = import4(:,1);
 realisedGainAn1 = import4(:,2);
 f2 = import5(:,1);
 realisedGainAn2 = import5(:,2);
+
+fre1 = import6(:,1);fre2 = import7(:,1);
+R1 = import6(:,3);X1 = import6(:,2);
+R2 = import7(:,3);X2 = import7(:,2);
 
 h1 = figure(1);
 plot(freq,S11,'-',freq,S11An2,'--','Linewidth',2,'Color',[64/255,105/255,224/255]);hold on;
@@ -98,6 +104,19 @@ legend('Antenna1','Antenna2','Orientation','horizontal');
 set(legend,'Location','Northeast')
 xticks(2:1:10);
 
+h5 = figure(7);
+plot(fre1,R1,'-',fre2,R2,'-.','Linewidth',2,'Color',[64/255,105/255,224/255]);
+hold on
+plot(fre1,X1,'-',fre2,X2,'-.','Linewidth',2,'Color','k');hold on;
+plot(freq,ones(1,length(freq))*(50),'r',freq,ones(1,length(freq))*(0),'r','LineWidth',2);
+
+set(gca,'FontSize',15);
+xlabel('Frequency (GHz)','Interpreter','latex');
+ylabel('Input Impedance ($\Omega$)','Interpreter','latex');
+legend('Real Ant1','Real Ant2','Imag Ant1','Imag Ant2','Orientation','vertical');
+set(legend,'Location','Northeast')
+xticks(2:1:10);
+
 % 设置输出图大小
 % set(gcf,'PaperUnits','centimeters')
 % set(gcf,'PaperSize',[28,11.4])
@@ -108,8 +127,9 @@ xticks(2:1:10);
 % print fig_s11.eps -depsc2 -r600
 % print(h1,'fig_s11.jpg','-djpeg','-r600');
 % 
-print(h2,'fig_Eplane.jpg','-djpeg','-r600')
-print(h3,'fig_Hplane.jpg','-djpeg','-r600')
-print(h2_1,'fig_Eplane2.jpg','-djpeg','-r600')
-print(h3_1,'fig_Hplane2.jpg','-djpeg','-r600')
+% print(h2,'fig_Eplane.jpg','-djpeg','-r600')
+% print(h3,'fig_Hplane.jpg','-djpeg','-r600')
+% print(h2_1,'fig_Eplane2.jpg','-djpeg','-r600')
+% print(h3_1,'fig_Hplane2.jpg','-djpeg','-r600')
 % print(h4,'fig_Gain.jpg','-djpeg','-r600')
+print(h5,'fig_InputZ.jpg','-djpeg','-r600')
