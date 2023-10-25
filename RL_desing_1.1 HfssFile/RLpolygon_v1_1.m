@@ -118,13 +118,13 @@ S=Wp^2/(8*lambda0*Rh);
        Lph=(2.6746*S.^2 + 0.2026*S - 0.0085)*Rh; %approximation of the Lph from E.I. Muehldorf 1970, IEEE Tran. on Antennas and Prop.
      else
       Lph=0;
-     end;
+     end
    case 2
      if S>0.06 %approximations are not valid below S=0.06  
        Lph=( -454.9955*S.^6 +  837.7860*S.^5 - 556.1810*S.^4 + 147.3046*S.^3 - 9.4030*S.^2 + 0.3223*S)*Rh;%approximation of the Lph based on CST and HFSS calculations
      else
        Lph=0;
-     end;
+     end
    case 3
     Lph=0;
    case 4
@@ -164,7 +164,7 @@ Xb2(i+1)=centerX(i);
 Xb1(i)=centerX(i);
 Yb2(i+1)=centerY(i);
 Yb1(i)=centerY(i);
-end;
+end
 
 %% Array port geometry generation
 %repeat the array port calculation of intervaley coordinates
@@ -205,13 +205,13 @@ Sa=Wpa^2/(8*lambda0*Rha);
        Lpha=(2.6746*Sa.^2 + 0.2026*Sa - 0.0085)*Rha; %approximation of the Lph from E.I. Muehldorf 1970, IEEE Tran. on Antennas and Prop.
      else
        Lpha=0;
-     end;  
+     end
    case 2
      if Sa>0.06 %approximations are not valid below S=0.06  
        Lpha=( -454.9955*Sa.^6 +  837.7860*Sa.^5 - 556.1810*Sa.^4 + 147.3046*Sa.^3 - 9.4030*Sa.^2 + 0.3223*Sa)*Rha;%approximation of the Lph based on CST and HFSS calculations
      else
        Lpha=0;
-     end;
+     end
    case 3
     Lpha=0;
    case 4
@@ -298,9 +298,9 @@ for i=2:1:length(Xa)-1 %correction for the aperture width
          Xa2(i+2)=centerXa0;
          Ya2(i+1)=centerYa0;
          Ya2(i+2)=centerYa0;
-    end;
+    end
 
-end;
+end
 
 %% Dummy port geometry generation
 Xp=[Xb0(1) Xb2(1)  (Xb2(1)+Xa1(1))/2  Xa1(1) Xa0(1)];
@@ -402,21 +402,21 @@ plot([Xd2(i) Xd4(i) Xd6(i) Xd5(i) Xd3(i) Xd1(i)],[Yd2(i) Yd4(i) Yd6(i) Yd5(i) Yd
 Xn((j-1)*6+1:j*6)=[Xd2(i) Xd4(i) Xd6(i) Xd5(i) Xd3(i) Xd1(i)];
 Yn((j-1)*6+1:j*6)=[Yd2(i) Yd4(i) Yd6(i) Yd5(i) Yd3(i) Yd1(i)];
 j=j+1;
-end;
+end
 
 for i=length(Xb):-1:1
 plot([Xb2(i) Xb4(i) Xb6(i) Xb5(i) Xb3(i) Xb1(i)],[Yb2(i) Yb4(i) Yb6(i) Yb5(i) Yb3(i) Yb1(i)],'k-')
 Xn((j-1)*6+1:j*6)=[Xb1(i) Xb3(i) Xb5(i) Xb6(i) Xb4(i) Xb2(i)];
 Yn((j-1)*6+1:j*6)=[Yb1(i) Yb3(i) Yb5(i) Yb6(i) Yb4(i) Yb2(i)];
 j=j+1;
-end;
+end
 
 for i=1:1:length(Xd1)
 plot([Xd1(i) Xd3(i) Xd5(i) Xd6(i) Xd4(i) Xd2(i)],[Yd1(i) Yd3(i) Yd5(i) Yd6(i) Yd4(i) Yd2(i)],'k-')
 Xn((j-1)*6+1:j*6)=[Xd1(i) Xd3(i) Xd5(i) Xd6(i) Xd4(i) Xd2(i)];
 Yn((j-1)*6+1:j*6)=-[Yd1(i) Yd3(i) Yd5(i) Yd6(i) Yd4(i) Yd2(i)];
 j=j+1;
-end;
+end
 
 if(mod(Na,2))
   for i=1:1:floor(length(Xa)/2)+1
@@ -424,29 +424,29 @@ if(mod(Na,2))
     Xn((j-1)*6+1:j*6)=[Xa1(i) Xa3(i) Xa5(i) Xa6(i) Xa4(i) Xa2(i)];
     Yn((j-1)*6+1:j*6)=[Ya1(i) Ya3(i) Ya5(i) Ya6(i) Ya4(i) Ya2(i)];
     j=j+1;
-  end;
+  end
 
   for i=floor(length(Xa)/2)+2:1:length(Xa)
     plot([Xa2(i) Xa4(i) Xa6(i) Xa5(i) Xa3(i) Xa1(i)],[Ya2(i) Ya4(i) Ya6(i) Ya5(i) Ya3(i) Ya1(i)],'k-')
     Xn((j-1)*6+1:j*6)=[Xa2(i) Xa4(i) Xa6(i) Xa5(i) Xa3(i) Xa1(i)];
     Yn((j-1)*6+1:j*6)=[Ya2(i) Ya4(i) Ya6(i) Ya5(i) Ya3(i) Ya1(i)];
     j=j+1;
-  end;
+  end
 else
   for i=1:1:floor(length(Xa)/2)
     plot([Xa2(i) Xa4(i) Xa6(i) Xa5(i) Xa3(i) Xa1(i)],[Ya2(i) Ya4(i) Ya6(i) Ya5(i) Ya3(i) Ya1(i)],'k-')
     Xn((j-1)*6+1:j*6)=[Xa1(i) Xa3(i) Xa5(i) Xa6(i) Xa4(i) Xa2(i)];
     Yn((j-1)*6+1:j*6)=[Ya1(i) Ya3(i) Ya5(i) Ya6(i) Ya4(i) Ya2(i)];
     j=j+1;
-  end;
+  end
 
   for i=floor(length(Xa)/2)+1:1:length(Xa)
     plot([Xa2(i) Xa4(i) Xa6(i) Xa5(i) Xa3(i) Xa1(i)],[Ya2(i) Ya4(i) Ya6(i) Ya5(i) Ya3(i) Ya1(i)],'k-')
     Xn((j-1)*6+1:j*6)=[Xa2(i) Xa4(i) Xa6(i) Xa5(i) Xa3(i) Xa1(i)];
     Yn((j-1)*6+1:j*6)=[Ya2(i) Ya4(i) Ya6(i) Ya5(i) Ya3(i) Ya1(i)];
     j=j+1;
-  end;
-end;
+  end
+end
 axis equal
 
 %final coordinates
@@ -456,8 +456,8 @@ for i=1:1:length(Xn)-1
     X(j)= Xn(i);
     Y(j)= Yn(i);
     j=j+1;
-    end;
-end;
+    end
+end
 
 %shift coordinates position
 X = circshift(X',5*floor(length(Xa)/2)+2*mod(Na,2));
@@ -481,7 +481,7 @@ hold on
  for i=1:1:N
 %     text(X(i)*f1*1000,Y(i)*f1*1000,num2str(i));
     text(X(i),Y(i),num2str(i));
- end;
+ end
 
 %% Visualization of RL in real scale [mm] for target Er
 figure(3)
@@ -505,6 +505,6 @@ save W.tab out  -ascii
 Y3=y3/f1;
 for i=1:1:length(Xa)
 Dd(:,i)= Y3(i)*sin(theta);
-end;
+end
 out=Dd*f1;
 save D.tab out  -ascii
