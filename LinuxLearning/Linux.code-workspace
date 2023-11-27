@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../Obsidian/Zettelkasten"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Foam"
+		}
+	],
+	"settings": {
+		"editor.fontFamily": "Consolas, 'Courier New', monospace, '微软雅黑'"
+	}
+}
