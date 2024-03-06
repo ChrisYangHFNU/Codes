@@ -1,6 +1,6 @@
 clc;
 close all;
-clear all;
+clear ;
 
 f = -10:.01:10;
 w = 2*pi*f;
@@ -10,8 +10,8 @@ wl = fl*2*pi;
 wk = fk*2*pi;
 xil = 0.8;
 xik = 0.9;
-Hk = j*w.^0./(w.^2-wk^2+2*j*xik*w);
-Hl = j*w.^0./(w.^2-wl^2+2*j*xil*w);
+Hk = 1i*w.^0./(w.^2-wk^2+2*1i*xik*w);
+Hl = 1i*w.^0./(w.^2-wl^2+2*1i*xil*w);
 fun1 = Hk.*conj(Hl);
 wu = 4.5;
 n2 = 1000-wu/0.01;
