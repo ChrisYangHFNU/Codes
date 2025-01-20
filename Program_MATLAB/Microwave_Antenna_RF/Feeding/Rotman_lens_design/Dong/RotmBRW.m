@@ -1,0 +1,23 @@
+function [xb,yb,xr,yr,w] = RotmBRW(eps,e,gama,r,n,ap,g,phim,Num)
+be = 1/g;
+phimax = phim*pi/180;
+ap = ap*pi/180;
+a = 1/2*(-be^2*cos(ap)^2+2*be*cos(ap)+be^2*sin(ap)^2*e^2-1-be^2*sin(ap)^2)/(1-e^2)^(1/2)/(be*cos(ap)-1);
+b = (1-e^2)^0.5*a;
+Theta0 = linspace(0,phim,Num);
+Theta = linspace(0,phimax,Num);
+xb = (0.5)./(a^2+tan(Theta).^2*b^2).*(-2*a+2*a*b-2*(b^2*a^2+2*tan(Theta).^2*b^3-tan(Theta).^2*b^2).^(1/2))*a;
+yb = -xb.*tan(Theta);
+D = 1/r;
+y3 = linspace(0,D/2,n)/sqrt(eps);
+ze = y3*gama;
+C = cos(ap);
+S = sin(ap);
+a2 = 1-((1-be)/(1-be*C))^2-(ze/be).^2;
+b2 = -2+2.*ze.^2/be+2*(1-be)/(1-be*C)-(1-be).*((S.*ze)./(1-be*C)).^2;
+c2 = -ze.^2+(S*ze).^2/(1-be*C)-((S*ze).^2/(1-be*C)/2).^2;
+Bcd = b2.^2-4.*a2.*c2;
+w = (-b2-(Bcd).^0.5)./a2/2;
+xr = ((ze.*sin(ap)).^2-2*be.*w+2*w)./(be.*cos(ap)-1)/2;
+yr = ze.*(1-w./be);
+end
