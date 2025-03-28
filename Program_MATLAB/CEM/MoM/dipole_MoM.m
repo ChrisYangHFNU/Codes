@@ -25,7 +25,7 @@ for num=1:len
 
     for n=1:N
         zzn = zm(1,n); % 不含端点，从上到下，各分段节点坐标
-        Zmn(1,n) = -j*30/(sin(beta*Deltz)^2)*(integral('Fun_Zmn01',zzn,zzn+Deltz)+integral('Fun_Zmn02',zzn-Deltz,zzn));
+        Zmn(1,n) = -1j*30/(sin(beta*Deltz)^2)*(integral('Fun_Zmn01',zzn,zzn+Deltz)+integral('Fun_Zmn02',zzn-Deltz,zzn));
     end
 
     Zmn = toeplitz(Zmn(1,:),Zmn(1,:)); % [Zmn]为Toeplitz矩阵
@@ -87,7 +87,7 @@ for n=1:N % 计算第n分段正弦电流基函数短对称振子的方向函数�
     for m=1:Len % 计算第n分段正弦电流基函数短对称振子在Theta处的方向函数值
         theta = (m-1)*pi/180;
         if sin(theta)~=0 % 此式隐含： 若sin(theta)=0,则F(theta)=0
-        F(1,m) = F(1,m)+j*(60/sin(beta*Deltz))*((cos(beta*Deltz*cos(theta))-cos(beta*Deltz))/sin(theta))*In(n,1)*exp(j*beta*cn*cos(theta));
+        F(1,m) = F(1,m)+1j*(60/sin(beta*Deltz))*((cos(beta*Deltz*cos(theta))-cos(beta*Deltz))/sin(theta))*In(n,1)*exp(1j*beta*cn*cos(theta));
         end
     end
 end
@@ -119,13 +119,16 @@ R0 = sqrt((z-zzm).^2+a^2);
 R1 = sqrt((z-(zzm-Deltz)).^2+a^2);
 R2 = sqrt((z-(zzm+Deltz)).^2+a^2);
 y = sin(beta*(z-(zzn-Deltz))).*(exp(-j*beta*R1)./R1-2*cos(beta*Deltz)*exp(-j*beta*R0)./R0+exp(-j*beta*R2)./R2);
+end
 
 function y = Fun_Vm01(z)
 global beta a Deltz;
 j = sqrt(-1);
 y = sin(beta*(Deltz-z));
+end
 
 function y = Fun_Vm02(z)
 global beta a Deltz;
 j = sqrt(-1);
 y = sin(beta*(z-(-Deltz)));
+end
