@@ -25,7 +25,7 @@ for num=1:len
 
     for n=1:N
         zzn = zm(1,n); % 不含端点，从上到下，各分段节点坐标
-        Zmn(1,n) = -1j*30/(sin(beta*Deltz)^2)*(integral('Fun_Zmn01',zzn,zzn+Deltz)+integral('Fun_Zmn02',zzn-Deltz,zzn));
+        Zmn(1,n) = -1j*30/(sin(beta*Deltz)^2)*(integral(@Fun_Zmn01,zzn,zzn+Deltz)+integral(@Fun_Zmn02,zzn-Deltz,zzn));
     end
 
     Zmn = toeplitz(Zmn(1,:),Zmn(1,:)); % [Zmn]为Toeplitz矩阵
@@ -34,7 +34,7 @@ for num=1:len
     VA = 1.0; % 外加激励电压
     Vm = zeros(N,1); % [Vm]初始化
     % 缝隙δ激励模型(slice generator)
-    Vm((N+1)/2,1) = -1/sin(beta*Deltz)*(VA/Deltz)*(integral('Fun_Vm01',0,Deltz)+integral('Fun_Vm02',-Deltz,0));
+    Vm((N+1)/2,1) = -1/sin(beta*Deltz)*(VA/Deltz)*(integral(@Fun_Vm01,0,Deltz)+integral(@Fun_Vm02,-Deltz,0));
     % ===============================
     % 获取广义电流向量 [In]
     In = zeros(N,1); % [In]初始化
@@ -111,6 +111,7 @@ R0 = sqrt((z-zzm).^2+a^2);
 R1 = sqrt((z-(zzm-Deltz)).^2+a^2);
 R2 = sqrt((z-(zzm+Deltz)).^2+a^2);
 y = sin(beta*(zzn+Deltz-z)).*(exp(-j*beta*R1)./R1-2*cos(beta*Deltz)*exp(-j*beta*R0)./R0+exp(-j*beta*R2)./R2);
+end
 
 function y = Fun_Zmn02(z)
 global beta a zzm zzn Deltz;
