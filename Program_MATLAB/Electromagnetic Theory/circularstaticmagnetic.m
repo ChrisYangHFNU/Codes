@@ -10,10 +10,10 @@ BoutQ = 0 ;
 BinQ = 0;
 
 for k=1:2:43
-    fun10 = legendre(k,0);
+    fun10 = legendre(k,0); % 计算 Legendre 多项式的值
     fun0 = fun10(2);
     fun = legendre(k,cos(theta));
-    rfun = squeeze(fun(1,:,:));
+    rfun = squeeze(fun(1,:,:)); % 三维压缩为二维
     Qfun = squeeze(fun(2,:,:));
     % -----------------------------------------
     Cr = 1/a^k*(rin).^(k-1); % 球内 r 分量
