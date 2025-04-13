@@ -2,7 +2,7 @@ clear all
 close all
 
 % 读取csv文件数据
-num = csvread('SRR_CLS3.csv',1,0); % SRR_CLS2.csv和本脚本放在同一个文件夹内
+num = csvread('ZIM_CLS2.csv',1,0); % SRR_CLS2.csv和本脚本放在同一个文件夹内
 
 freq = num(:,1);
 S11re = num(:,3);
@@ -15,7 +15,7 @@ r = S11re+1j*S11im; % 反射系数S11
 t1 = S21re+1j*S21im; % 传输系数S21
 
 % 常量
-d = 25.76e-3;% 立方体边长，单位m
+d = 0.908e-3;% 超材料单元的轮廓尺寸，立方体边长，单位m
 m=0;
 c=3e8;
 
@@ -62,7 +62,7 @@ subplot(2,1,1);
 plot(freq,real(epsilon),'b-',freq,imag(epsilon),'r-.','Linewidth',2);
 hold on;
 plot(freq,zeros(length(freq),1),'k-','linewidth',1);
-title('permittivity $\epsilon$','interpreter','latex');
+title('permittivity $\varepsilon$','interpreter','latex');
 xlabel('freq/GHz');
 ylabel('');
 legend('Re','Im','Location','NorthEast');
