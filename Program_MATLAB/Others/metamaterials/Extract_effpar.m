@@ -1,4 +1,4 @@
-clear all
+clear 
 close all
 
 % 读取csv文件数据
