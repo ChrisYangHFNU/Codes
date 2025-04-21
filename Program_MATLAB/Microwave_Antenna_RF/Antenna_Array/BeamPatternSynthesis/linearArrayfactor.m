@@ -11,9 +11,9 @@ fm = zeros(1,length(thetaRange));
 for ii=1:eleNum
     fm = fm+x(ii+eleNum)*exp(1j*(ii-1)*2*pi*eleSpace*sind(thetaRange)+1j*x(ii));
 end
-fm = abs(fm)./max(abs(fm)); %归一化
-figure
-plot(thetaRange,20*log10(fm),'k','LineWidth',2) % decibal value
+% fm = abs(fm)./max(abs(fm)); %归一化
+% figure
+% plot(thetaRange,20*log10(fm),'k','LineWidth',2) % decibal value
 % plot(thetaRange,fm,'b--')
 hold on
 
@@ -33,8 +33,8 @@ for ii=1:length(thetaRange)
         D_theta(ii) = 0.001;
     end
 end
-plot(thetaRange,20*log10(D_theta),'r-')
-ylim([-50 0])
+% plot(thetaRange,20*log10(D_theta),'r-')
+% ylim([-50 0])
 % plot(thetaRange,D_theta,'r-')
 
 end
