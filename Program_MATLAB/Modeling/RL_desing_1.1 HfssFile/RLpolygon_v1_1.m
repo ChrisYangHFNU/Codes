@@ -496,6 +496,11 @@ save RL_parameters.tab out  -ascii
 
 out=[X*f1*1000/sqrt(Er),Y*f1*1000/sqrt(Er)];
 save RL_XY_coordinates_in_mm.tab out  -ascii
+% There is easier way to import lens into HFSS if have MATLAB 2019 or later version, Just
+% like below
+pgon = polyshape(out(:,1),out(:,2));
+T = triangulation(pgon);
+stlwrite(T,'test1,stl'); % It will generate stl file, whicn can easily import to HFSS(modeler->import)
 
 %Correction TEM line lengths for Er=1
 out=W*f1; % unnormalisation to [m]
