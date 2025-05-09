@@ -29,19 +29,19 @@ clc
 %% Basic input parameters
 %input set 1
 v0=299792458;   %[m/s] speed of light
-f=10e9;         %[Hz] design frequency
+f=60e9;         %[Hz] design frequency
 lambda0=v0/f;   %[m] wavelength in vacuum
 Er=2.9;         %[-] relative permittivity of dielectric substrate
 
 %input set 2 
-Nb=7;           %number of the beam ports
+Nb=9;           %number of the beam ports
 Na=8;           %number of the array ports
-Nd=4;           %[1 2 4 8] only possible number of the dummy ports
+Nd=8;           %[1 2 4 8] only  possible number of the dummy ports,
 theta = 30;     %[deg] Array steering angles
 alpha = 30;     %[deg] Focal angle 
 beta = 0.90;    %Focal ration f2/f1
 gamma = 1.00;   %Expansion factor sin(phi)/sin(alpha)
-f1=3*lambda0;   %On-axis focal length
+f1=5*lambda0;   %On-axis focal length
 
 %% Antenna elememt spacing
 
@@ -51,7 +51,7 @@ sd=0.5;                     %[lambda0]array antenna elements spacing
 d=sd*lambda0;               %[m]array antenna elements spacing
 
 %% Transmission lines and transitions definition
-ww=0.0021; %[m] transmission line width. Put here the target width of your
+ww=0.00021; %[m] transmission line width. Put here the target width of your
             %microstrip line or SIW line connected to the ports
 Ww=ww*sqrt(Er); %rescaling for vacuum Er=1;
 Lw=lambda0;     %[m]length of the transmission lines (TL)
@@ -80,7 +80,7 @@ PhCCa = 0.001; %[m] array ports phase center correction
 theta = linspace(-2*pi*theta/360,2*pi*theta/360,Nb); 
 alpha = 2*pi*alpha/360; 
 y3=(1:1:Na)*d-(Na+1)*d/2; %location of the array elements along array axis
-W0=0.005/f1; %offset length of TEM cables
+W0=0.005/f1; %ofset length of TEM cables
 zeta=y3*gamma/f1;
 rho0 = 1-(1-beta^2)/(2*(1-beta*cos(alpha)));
 alphaN = asin(sin(theta)/gamma);
@@ -496,11 +496,15 @@ save RL_parameters.tab out  -ascii
 
 out=[X*f1*1000/sqrt(Er),Y*f1*1000/sqrt(Er)];
 save RL_XY_coordinates_in_mm.tab out  -ascii
+
+
+%{
 % There is easier way to import lens into HFSS if have MATLAB 2019 or later version, Just
 % like below
 pgon = polyshape(out(:,1),out(:,2));
 T = triangulation(pgon);
-stlwrite(T,'test1.stl'); % It will generate stl file, whicn can easily import to HFSS(modeler->import)
+stlwrite(T,'test1,stl'); % It will generate stl file, whicn can easily import to HFSS(modeler->import)
+%}
 
 %Correction TEM line lengths for Er=1
 out=W*f1; % unnormalisation to [m]

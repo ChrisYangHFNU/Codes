@@ -1,0 +1,2727 @@
+$begin 'AnsoftProject'
+	Created='Wed Nov 05 14:55:08 2014'
+	FileOwnedByWorkbench=false
+	Product='HFSS'
+	NextUniqueID=0
+	MoveBackwards=false
+	$begin 'Desktop'
+		Version(15, 0)
+		InfrastructureVersion(1, 0)
+	$end 'Desktop'
+	$begin 'HFSSEnvironment'
+		Version(1, 0)
+	$end 'HFSSEnvironment'
+	$begin 'HFIEEnvironment'
+		Version(1, 0)
+	$end 'HFIEEnvironment'
+	$begin 'geometry3deditor'
+		Version(1, 0)
+	$end 'geometry3deditor'
+	$begin 'ProjectDatasets'
+		NextUniqueID=0
+		MoveBackwards=false
+		DatasetType='ProjectDatasetType'
+		$begin 'DatasetDefinitions'
+		$end 'DatasetDefinitions'
+	$end 'ProjectDatasets'
+	$begin 'Definitions'
+		$begin 'Folders'
+			Definitions(1104, 10000, 1, 1, 0, false, false)
+			Materials(1104, 9500, 9, 2, 1, false, false)
+		$end 'Folders'
+		$begin 'Materials'
+			$begin 'vacuum'
+				CoordinateSystemType='Cartesian'
+				$begin 'AttachedData'
+				$end 'AttachedData'
+				$begin 'ModifierData'
+				$end 'ModifierData'
+				permittivity='1'
+				ModTime=1028307964
+				Library='Materials'
+				LibLocation='SysLibrary'
+				ModSinceLib=false
+			$end 'vacuum'
+		$end 'Materials'
+		$begin 'Scripts'
+		$end 'Scripts'
+	$end 'Definitions'
+	DesignIDServer=2
+	MoveBackwards=false
+	$begin 'HFSSModel'
+		RepRewriteV2=true
+		Name='HFSSDesign1'
+		DesignID=0
+		'Use Advanced DC Extrapolation'=false
+		'Allow Material Override'=false
+		'Calculate Lossy Dielectrics'=true
+		$begin 'TemperatureSettings'
+			IncludeTemperatureDependence=false
+			EnableFeedback=false
+			Temperatures(477, '22cel')
+		$end 'TemperatureSettings'
+		ObjsEnabledForDeformation()
+		SolutionType='DrivenModal'
+		MaterialDensity=1
+		MassOfTissue=1
+		UseAutoDCThickness=true
+		$begin 'OutputVariable'
+			NextUniqueID=0
+			MoveBackwards=false
+		$end 'OutputVariable'
+		$begin 'ModelSetup'
+			$begin 'Editor3D Doc Preferences'
+				'Plane Background'=true
+				BackgroundColor1=16777215
+				BackgroundColor2=0
+				'Need Lights'=true
+				'Ambient Light'=8355711
+				'Num Lights'=2
+				Light0[4: 8355711, 0.200000002980232, 0.400000005960464, 1]
+				Light1[4: 8355711, -0.200000002980232, -0.400000005960464, -1]
+			$end 'Editor3D Doc Preferences'
+			$begin 'DesignDatasets'
+				NextUniqueID=0
+				MoveBackwards=false
+				DatasetType='DesignDatasetType'
+				$begin 'DatasetDefinitions'
+				$end 'DatasetDefinitions'
+			$end 'DesignDatasets'
+			SnapMode=31
+			WorkingCS=1
+			$begin 'GeometryCore'
+				BlockVersionID=3
+				DataVersion=5
+				NativeKernel='ACIS'
+				NativeKernelVersionID=5
+				Units='mm'
+				InstanceID=-1
+				$begin 'ValidationOptions'
+					EntityCheckLevel='Strict'
+					IgnoreUnclassifiedObjects=false
+					SkipIntersectionChecks=false
+				$end 'ValidationOptions'
+				$begin 'GeometryOperations'
+					BlockVersionID=2
+					$begin 'AnsoftRangedIDServerManager'
+						$begin 'AnsoftRangedIDServer'
+							IDServerObjectTypeID=0
+							IDServerRangeMin=0
+							IDServerRangeMax=2146483647
+							NextUniqueID=2780
+							MoveBackwards=false
+						$end 'AnsoftRangedIDServer'
+						$begin 'AnsoftRangedIDServer'
+							IDServerObjectTypeID=1
+							IDServerRangeMin=2146483648
+							IDServerRangeMax=2146485547
+							NextUniqueID=2146483654
+							MoveBackwards=false
+						$end 'AnsoftRangedIDServer'
+					$end 'AnsoftRangedIDServerManager'
+					StartBackGroundFaceID=2146483648
+					$begin 'CoordinateSystems'
+					$end 'CoordinateSystems'
+					$begin 'UserDefinedModels'
+					$end 'UserDefinedModels'
+					$begin 'ToplevelParts'
+						$begin 'GeometryPart'
+							$begin 'Attributes'
+								Name='Polyline1'
+								Flags=''
+								Color='(132 132 193)'
+								Transparency=0
+								PartCoordinateSystem=1
+								UDMId=-1
+								MaterialValue='"vacuum"'
+								SolveInside=true
+							$end 'Attributes'
+							$begin 'Operations'
+								$begin 'Operation'
+									OperationType='Polyline'
+									ID=476
+									ReferenceCoordSystemID=1
+									$begin 'PolylineParameters'
+										KernelVersion=5
+										IsPolylineClosed=true
+										$begin 'PolylinePoints'
+											$begin 'PLPoint'
+												X='0mm'
+												Y='-0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.05mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.05mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.05mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.05mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.05mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.05mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.05mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.05mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.05mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.05mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.1mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.1mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.1mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.1mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.1mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.1mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.1mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.1mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.1mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.15mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.15mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.15mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.15mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.15mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.15mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.15mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.15mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.15mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.15mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.2mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.2mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.2mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.2mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.2mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.2mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.2mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.2mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.2mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.2mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.25mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.25mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.25mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.25mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.25mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.25mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.25mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.25mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.25mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.25mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.3mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.3mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.3mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.3mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.3mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.3mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.3mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.3mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.3mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.3mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.35mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.35mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.35mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.35mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.35mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.35mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.35mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.35mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.35mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.35mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.4mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.4mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.4mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.4mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.4mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.4mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.4mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.4mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.4mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.4mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.45mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.45mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.45mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.45mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.45mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.45mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.45mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.45mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.45mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.45mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.5mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.5mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.5mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.5mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.5mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.5mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.5mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.5mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.5mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.5mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.55mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.55mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.55mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.55mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.55mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.55mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.55mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.55mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.55mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.6mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.6mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.6mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.6mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.6mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.6mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.6mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.6mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.6mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.6mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.65mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.65mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.65mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.65mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.65mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.65mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.65mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.65mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.65mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.65mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.7mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.7mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.7mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.7mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.7mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.7mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.7mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.7mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.7mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.7mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.75mm'
+												Y='0.45mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.75mm'
+												Y='0.4mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.75mm'
+												Y='0.35mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.75mm'
+												Y='0.3mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.75mm'
+												Y='0.25mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.75mm'
+												Y='0.2mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.75mm'
+												Y='0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.75mm'
+												Y='0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.75mm'
+												Y='0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.75mm'
+												Y='0mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.75mm'
+												Y='-0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.7mm'
+												Y='-0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.7mm'
+												Y='-0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.65mm'
+												Y='-0.1mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.65mm'
+												Y='-0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.55mm'
+												Y='-0.15mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0.55mm'
+												Y='-0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+											$begin 'PLPoint'
+												X='0mm'
+												Y='-0.05mm'
+												Z='0mm'
+											$end 'PLPoint'
+										$end 'PolylinePoints'
+										$begin 'PolylineSegments'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=0
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=1
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=2
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=3
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=4
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=5
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=6
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=7
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=8
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=9
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=10
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=11
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=12
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=13
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=14
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=15
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=16
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=17
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=18
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=19
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=20
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=21
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=22
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=23
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=24
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=25
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=26
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=27
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=28
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=29
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=30
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=31
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=32
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=33
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=34
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=35
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=36
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=37
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=38
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=39
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=40
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=41
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=42
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=43
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=44
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=45
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=46
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=47
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=48
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=49
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=50
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=51
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=52
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=53
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=54
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=55
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=56
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=57
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=58
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=59
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=60
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=61
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=62
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=63
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=64
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=65
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=66
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=67
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=68
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=69
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=70
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=71
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=72
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=73
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=74
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=75
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=76
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=77
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=78
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=79
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=80
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=81
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=82
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=83
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=84
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=85
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=86
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=87
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=88
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=89
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=90
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=91
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=92
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=93
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=94
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=95
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=96
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=97
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=98
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=99
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=100
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=101
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=102
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=103
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=104
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=105
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=106
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=107
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=108
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=109
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=110
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=111
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=112
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=113
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=114
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=115
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=116
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=117
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=118
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=119
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=120
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=121
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=122
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=123
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=124
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=125
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=126
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=127
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=128
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=129
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=130
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=131
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=132
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=133
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=134
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=135
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=136
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=137
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=138
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=139
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=140
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=141
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=142
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=143
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=144
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=145
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=146
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=147
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=148
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=149
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=150
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=151
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=152
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=153
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=154
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=155
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=156
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=157
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=158
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=159
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=160
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=161
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=162
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=163
+												NoOfPoints=2
+											$end 'PLSegment'
+											$begin 'PLSegment'
+												SegmentType='Line'
+												StartIndex=164
+												NoOfPoints=2
+											$end 'PLSegment'
+										$end 'PolylineSegments'
+										$begin 'PolylineXSection'
+											XSectionType='None'
+											XSectionOrient='Auto'
+											XSectionWidth='0mm'
+											XSectionTopWidth='0mm'
+											XSectionHeight='0mm'
+											XSectionNumSegments='0'
+											XSectionBendType='Corner'
+										$end 'PolylineXSection'
+									$end 'PolylineParameters'
+									ParentPartID=477
+									IsSuppressed=false
+									$begin 'OperationIdentity'
+										$begin 'Topology'
+											NumLumps=1
+											NumShells=1
+											NumFaces=0
+											NumWires=1
+											NumLoops=0
+											NumCoedges=165
+											NumEdges=165
+											NumVertices=165
+										$end 'Topology'
+										BodyID=477
+										StartFaceID=-1
+										StartEdgeID=2449
+										StartVertexID=2614
+										NumNewFaces=0
+										NumNewEdges=165
+										NumNewVertices=165
+										FaceNameAndIDMap()
+										EdgeNameAndIDMap()
+										VertexNameAndIDMap()
+									$end 'OperationIdentity'
+								$end 'Operation'
+								$begin 'Operation'
+									OperationType='CoverLines'
+									ID=804
+									$begin 'LocalOperationParameters'
+										KernelVersion=5
+										LocalOpPart=477
+									$end 'LocalOperationParameters'
+									ParentPartID=477
+									IsSuppressed=false
+									$begin 'OperationIdentity'
+										$begin 'Topology'
+											NumLumps=1
+											NumShells=1
+											NumFaces=1
+											NumWires=0
+											NumLoops=1
+											NumCoedges=165
+											NumEdges=165
+											NumVertices=165
+										$end 'Topology'
+										BodyID=-1
+										StartFaceID=2779
+										StartEdgeID=-1
+										StartVertexID=-1
+										NumNewFaces=1
+										NumNewEdges=0
+										NumNewVertices=0
+										FaceNameAndIDMap()
+										EdgeNameAndIDMap()
+										VertexNameAndIDMap()
+										$begin 'GeomTopolBasedOperationIdentityHelper'
+											$begin 'NewFaces'
+												$begin 'Face'
+													NormalizedSerialNum=0
+													ID=2779
+													$begin 'FaceGeomTopol'
+														FaceTopol(1, 165, 165, 165)
+														$begin 'FaceGeometry'
+															Area=0.225
+															FcUVMid(0.375, 0.15, 0)
+															$begin 'FcTolVts'
+																TolVt(0, -0.05, 0, 0)
+																TolVt(0, 0.05, 0, 0)
+																TolVt(0, 0.1, 0, 0)
+																TolVt(0, 0.15, 0, 0)
+																TolVt(0, 0.2, 0, 0)
+																TolVt(0, 0.25, 0, 0)
+																TolVt(0, 0.3, 0, 0)
+																TolVt(0, 0.35, 0, 0)
+																TolVt(0, 0.4, 0, 0)
+																TolVt(0, 0.45, 0, 0)
+																TolVt(0.05, 0.45, 0, 0)
+																TolVt(0.05, 0.4, 0, 0)
+																TolVt(0.05, 0.35, 0, 0)
+																TolVt(0.05, 0.3, 0, 0)
+																TolVt(0.05, 0.25, 0, 0)
+																TolVt(0.05, 0.2, 0, 0)
+																TolVt(0.05, 0.15, 0, 0)
+																TolVt(0.05, 0.1, 0, 0)
+																TolVt(0.05, 0.05, 0, 0)
+																TolVt(0.05, 0, 0, 0)
+																TolVt(0.1, 0, 0, 0)
+																TolVt(0.1, 0.05, 0, 0)
+																TolVt(0.1, 0.1, 0, 0)
+																TolVt(0.1, 0.15, 0, 0)
+																TolVt(0.1, 0.25, 0, 0)
+																TolVt(0.1, 0.3, 0, 0)
+																TolVt(0.1, 0.35, 0, 0)
+																TolVt(0.1, 0.4, 0, 0)
+																TolVt(0.1, 0.45, 0, 0)
+																TolVt(0.15, 0.45, 0, 0)
+																TolVt(0.15, 0.4, 0, 0)
+																TolVt(0.15, 0.35, 0, 0)
+																TolVt(0.15, 0.3, 0, 0)
+																TolVt(0.15, 0.25, 0, 0)
+																TolVt(0.15, 0.2, 0, 0)
+																TolVt(0.15, 0.15, 0, 0)
+																TolVt(0.15, 0.1, 0, 0)
+																TolVt(0.15, 0.05, 0, 0)
+																TolVt(0.15, 0, 0, 0)
+																TolVt(0.2, 0, 0, 0)
+																TolVt(0.2, 0.05, 0, 0)
+																TolVt(0.2, 0.1, 0, 0)
+																TolVt(0.2, 0.15, 0, 0)
+																TolVt(0.2, 0.2, 0, 0)
+																TolVt(0.2, 0.25, 0, 0)
+																TolVt(0.2, 0.3, 0, 0)
+																TolVt(0.2, 0.35, 0, 0)
+																TolVt(0.2, 0.4, 0, 0)
+																TolVt(0.2, 0.45, 0, 0)
+																TolVt(0.25, 0.45, 0, 0)
+																TolVt(0.25, 0.4, 0, 0)
+																TolVt(0.25, 0.35, 0, 0)
+																TolVt(0.25, 0.3, 0, 0)
+																TolVt(0.25, 0.25, 0, 0)
+																TolVt(0.25, 0.2, 0, 0)
+																TolVt(0.25, 0.15, 0, 0)
+																TolVt(0.25, 0.1, 0, 0)
+																TolVt(0.25, 0.05, 0, 0)
+																TolVt(0.25, 0, 0, 0)
+																TolVt(0.3, 0, 0, 0)
+																TolVt(0.3, 0.05, 0, 0)
+																TolVt(0.3, 0.1, 0, 0)
+																TolVt(0.3, 0.15, 0, 0)
+																TolVt(0.3, 0.2, 0, 0)
+																TolVt(0.3, 0.25, 0, 0)
+																TolVt(0.3, 0.3, 0, 0)
+																TolVt(0.3, 0.35, 0, 0)
+																TolVt(0.3, 0.4, 0, 0)
+																TolVt(0.3, 0.45, 0, 0)
+																TolVt(0.35, 0.45, 0, 0)
+																TolVt(0.35, 0.4, 0, 0)
+																TolVt(0.35, 0.35, 0, 0)
+																TolVt(0.35, 0.3, 0, 0)
+																TolVt(0.35, 0.25, 0, 0)
+																TolVt(0.35, 0.2, 0, 0)
+																TolVt(0.35, 0.15, 0, 0)
+																TolVt(0.35, 0.1, 0, 0)
+																TolVt(0.35, 0.05, 0, 0)
+																TolVt(0.35, 0, 0, 0)
+																TolVt(0.4, 0, 0, 0)
+																TolVt(0.4, 0.05, 0, 0)
+																TolVt(0.4, 0.1, 0, 0)
+																TolVt(0.4, 0.15, 0, 0)
+																TolVt(0.4, 0.2, 0, 0)
+																TolVt(0.4, 0.25, 0, 0)
+																TolVt(0.4, 0.3, 0, 0)
+																TolVt(0.4, 0.35, 0, 0)
+																TolVt(0.4, 0.4, 0, 0)
+																TolVt(0.4, 0.45, 0, 0)
+																TolVt(0.45, 0.45, 0, 0)
+																TolVt(0.45, 0.4, 0, 0)
+																TolVt(0.45, 0.35, 0, 0)
+																TolVt(0.45, 0.3, 0, 0)
+																TolVt(0.45, 0.25, 0, 0)
+																TolVt(0.45, 0.2, 0, 0)
+																TolVt(0.45, 0.15, 0, 0)
+																TolVt(0.45, 0.1, 0, 0)
+																TolVt(0.45, 0.05, 0, 0)
+																TolVt(0.45, 0, 0, 0)
+																TolVt(0.5, 0, 0, 0)
+																TolVt(0.5, 0.05, 0, 0)
+																TolVt(0.5, 0.1, 0, 0)
+																TolVt(0.5, 0.15, 0, 0)
+																TolVt(0.5, 0.2, 0, 0)
+																TolVt(0.5, 0.25, 0, 0)
+																TolVt(0.5, 0.3, 0, 0)
+																TolVt(0.5, 0.35, 0, 0)
+																TolVt(0.5, 0.4, 0, 0)
+																TolVt(0.5, 0.45, 0, 0)
+																TolVt(0.55, 0.45, 0, 0)
+																TolVt(0.55, 0.35, 0, 0)
+																TolVt(0.55, 0.3, 0, 0)
+																TolVt(0.55, 0.25, 0, 0)
+																TolVt(0.55, 0.2, 0, 0)
+																TolVt(0.55, 0.15, 0, 0)
+																TolVt(0.55, 0.1, 0, 0)
+																TolVt(0.55, 0.05, 0, 0)
+																TolVt(0.55, 0, 0, 0)
+																TolVt(0.6, 0, 0, 0)
+																TolVt(0.6, 0.05, 0, 0)
+																TolVt(0.6, 0.1, 0, 0)
+																TolVt(0.6, 0.15, 0, 0)
+																TolVt(0.6, 0.2, 0, 0)
+																TolVt(0.6, 0.25, 0, 0)
+																TolVt(0.6, 0.3, 0, 0)
+																TolVt(0.6, 0.35, 0, 0)
+																TolVt(0.6, 0.4, 0, 0)
+																TolVt(0.6, 0.45, 0, 0)
+																TolVt(0.65, 0.45, 0, 0)
+																TolVt(0.65, 0.4, 0, 0)
+																TolVt(0.65, 0.35, 0, 0)
+																TolVt(0.65, 0.3, 0, 0)
+																TolVt(0.65, 0.25, 0, 0)
+																TolVt(0.65, 0.2, 0, 0)
+																TolVt(0.65, 0.15, 0, 0)
+																TolVt(0.65, 0.1, 0, 0)
+																TolVt(0.65, 0.05, 0, 0)
+																TolVt(0.65, 0, 0, 0)
+																TolVt(0.7, 0, 0, 0)
+																TolVt(0.7, 0.05, 0, 0)
+																TolVt(0.7, 0.1, 0, 0)
+																TolVt(0.7, 0.15, 0, 0)
+																TolVt(0.7, 0.2, 0, 0)
+																TolVt(0.7, 0.25, 0, 0)
+																TolVt(0.7, 0.3, 0, 0)
+																TolVt(0.7, 0.35, 0, 0)
+																TolVt(0.7, 0.4, 0, 0)
+																TolVt(0.7, 0.45, 0, 0)
+																TolVt(0.75, 0.45, 0, 0)
+																TolVt(0.75, 0.4, 0, 0)
+																TolVt(0.75, 0.35, 0, 0)
+																TolVt(0.75, 0.3, 0, 0)
+																TolVt(0.75, 0.25, 0, 0)
+																TolVt(0.75, 0.2, 0, 0)
+																TolVt(0.75, 0.15, 0, 0)
+																TolVt(0.75, 0.1, 0, 0)
+																TolVt(0.75, 0.05, 0, 0)
+																TolVt(0.75, 0, 0, 0)
+																TolVt(0.75, -0.05, 0, 0)
+																TolVt(0.7, -0.05, 0, 0)
+																TolVt(0.7, -0.1, 0, 0)
+																TolVt(0.65, -0.1, 0, 0)
+																TolVt(0.65, -0.05, 0, 0)
+																TolVt(0.55, -0.15, 0, 0)
+																TolVt(0.55, -0.05, 0, 0)
+															$end 'FcTolVts'
+														$end 'FaceGeometry'
+													$end 'FaceGeomTopol'
+												$end 'Face'
+											$end 'NewFaces'
+											$begin 'NewEdges'
+											$end 'NewEdges'
+											$begin 'NewVertices'
+											$end 'NewVertices'
+										$end 'GeomTopolBasedOperationIdentityHelper'
+									$end 'OperationIdentity'
+									ParentOperationID=476
+								$end 'Operation'
+							$end 'Operations'
+						$end 'GeometryPart'
+					$end 'ToplevelParts'
+					$begin 'OperandParts'
+					$end 'OperandParts'
+					$begin 'Planes'
+					$end 'Planes'
+					$begin 'Points'
+					$end 'Points'
+					$begin 'GeometryEntityLists'
+					$end 'GeometryEntityLists'
+					$begin 'CachedNames'
+						$begin 'allobjects'
+							allobjects(-1)
+						$end 'allobjects'
+						$begin 'global'
+							global(-1)
+						$end 'global'
+						$begin 'polyline'
+							polyline(1)
+						$end 'polyline'
+					$end 'CachedNames'
+				$end 'GeometryOperations'
+				$begin 'GeometryDependencies'
+					$begin 'DependencyInformation'
+						NumParents=1
+						DependencyObject('GeometryBodyOperation', 476)
+						DependencyObject('CoordinateSystem', 1)
+					$end 'DependencyInformation'
+					$begin 'DependencyInformation'
+						NumParents=1
+						DependencyObject('GeometryBodyOperation', 804)
+						DependencyObject('GeometryBodyOperation', 476)
+					$end 'DependencyInformation'
+				$end 'GeometryDependencies'
+			$end 'GeometryCore'
+			GroupByMaterial('-1'=true)
+			GroupSheetByMaterial()
+			$begin 'LastUserInputs'
+			$end 'LastUserInputs'
+		$end 'ModelSetup'
+		$begin 'BoundarySetup'
+			$begin 'GlobalBoundData'
+				PortImpedance='1'
+				GlobalMaterialEnv='vacuum'
+			$end 'GlobalBoundData'
+			$begin 'Boundaries'
+				NextUniqueID=0
+				MoveBackwards=false
+			$end 'Boundaries'
+			$begin 'ProductSpecificData'
+				$begin 'PMLData'
+					$begin 'PMLGroups'
+					$end 'PMLGroups'
+				$end 'PMLData'
+				$begin 'SortOrder'
+					Port[1: -1]
+					Terminal[1: -1]
+				$end 'SortOrder'
+			$end 'ProductSpecificData'
+		$end 'BoundarySetup'
+		$begin 'ArrayDefinition'
+			NextUniqueID=0
+			MoveBackwards=false
+		$end 'ArrayDefinition'
+		$begin 'MeshSetup'
+			$begin 'MeshSettings'
+				$begin 'GlobalSurfApproximation'
+					SurfDevChoice=0
+					NormalDevChoice=1
+					AspectRatioChoice=1
+					PullToTrueSurf=false
+					SetFacePreservationLevel=0
+				$end 'GlobalSurfApproximation'
+				MeshMethod='Auto'
+			$end 'MeshSettings'
+			$begin 'MeshOperations'
+				NextUniqueID=0
+				MoveBackwards=false
+			$end 'MeshOperations'
+		$end 'MeshSetup'
+		$begin 'AnalysisSetup'
+			$begin 'HfssGlobalData'
+				NextUniqueID=0
+				MoveBackwards=false
+			$end 'HfssGlobalData'
+			$begin 'SolveSetups'
+				NextUniqueID=0
+				MoveBackwards=false
+			$end 'SolveSetups'
+		$end 'AnalysisSetup'
+		$begin 'Optimetrics'
+			$begin 'OptimetricsSetups'
+				NextUniqueID=0
+				MoveBackwards=false
+			$end 'OptimetricsSetups'
+		$end 'Optimetrics'
+		$begin 'Solutions'
+			FieldType='ScatteredFields'
+			IncludePortPostProcessing=false
+			$begin 'Contexts'
+				NextUniqueID=1
+				MoveBackwards=false
+			$end 'Contexts'
+		$end 'Solutions'
+		$begin 'PortFieldDisplay'
+			$begin 'PortFieldDisplay'
+				ScaleFactor=5
+			$end 'PortFieldDisplay'
+		$end 'PortFieldDisplay'
+		$begin 'FieldsReporter'
+			$begin 'FieldsCalculator'
+				Line_Discretization=1000
+			$end 'FieldsCalculator'
+			$begin 'PlotDefaults'
+				Default_SolutionId=-1
+				Default_PlotFolder='Automatic'
+			$end 'PlotDefaults'
+			$begin 'FieldsPlotManagerID'
+				NextUniqueID=0
+				MoveBackwards=false
+				NumQuantityType=0
+				NumPlots=0
+			$end 'FieldsPlotManagerID'
+			$begin 'Report3dInGeomWnd'
+				Report3dNum=0
+			$end 'Report3dInGeomWnd'
+		$end 'FieldsReporter'
+		$begin 'RadField'
+			$begin 'FarFieldSetups'
+				NextUniqueID=0
+				MoveBackwards=false
+			$end 'FarFieldSetups'
+			$begin 'ArraySetup'
+				UseOption='NoArray'
+				$begin 'RegularArray'
+					NumUCells='10'
+					NumVCells='10'
+					CellUDist='10mm'
+					CellVDist='10mm'
+					UDirnX='1'
+					UDirnY='0'
+					UDirnZ='0'
+					VDirnX='0'
+					VDirnY='1'
+					VDirnZ='0'
+					FirstCellPosX='0mm'
+					FirstCellPosY='0mm'
+					FirstCellPosZ='0mm'
+					Behavior='UseSlaveSettings'
+					ScanAnglePhi='45deg'
+					ScanAngleTheta='45deg'
+					UDirnPhaseShift='0deg'
+					VDirnPhaseShift='0deg'
+				$end 'RegularArray'
+				$begin 'CustomArray'
+					NumCells=0
+					$begin 'Cell'
+					$end 'Cell'
+				$end 'CustomArray'
+			$end 'ArraySetup'
+			$begin 'NearFieldSetups'
+				NextUniqueID=0
+				MoveBackwards=false
+			$end 'NearFieldSetups'
+			RadFieldComputationVersion=1.4
+			RadfieldHeaderFile='RAD7B8C727214151957081.tmp'
+		$end 'RadField'
+		$begin 'SolutionManager'
+			$begin 'Version ID Map'
+				V=18
+			$end 'Version ID Map'
+		$end 'SolutionManager'
+		$begin 'UserDefinedSolutionMgr'
+			NextUniqueID=1000000
+			MoveBackwards=false
+		$end 'UserDefinedSolutionMgr'
+		$begin 'DatasetSolutionMgr'
+			NextUniqueID=2000000
+			MoveBackwards=false
+		$end 'DatasetSolutionMgr'
+		Notes=$begin_cdata$		$end_cdata$
+		$begin 'AnimationSetups'
+		$end 'AnimationSetups'
+		CacheHeaderFile='HDR7AEB341214233736632.tmp'
+	$end 'HFSSModel'
+	$begin 'DataInstances'
+		$begin 'Instance'
+			DesignEditor='HFSSDesign1'
+			$begin 'HfssDesignInstance'
+				DesignInstanceID=1
+				$begin 'WindowPosition'
+					$begin 'EditorWindow'
+						'3D Modeler'(Editor3d(View(WindowPos(3, -1, -1, -8, -30, 0, 0, 882, 452), OrientationMatrix(-0.187082856893539, -0.299999982118607, 0.474341630935669, 0, 0.561248600482941, -0.0999999865889549, 0.158113867044449, 0, 6.29688967634934e-009, 0.499999910593033, 0.31622776389122, 0, 0, 2.38418579101563e-007, -5.7486834526062, 1, 0, -0.352098762989044, 0.516921937465668, -0.360345184803009, 0.201596736907959, 4.3281307220459, 7.16923522949219), Drawings[1: 'Polyline1'], 'View Data'('Render Mode'=1, 'Show Ruler'=1), ClipPlanes(ClipPlaneOptions(DisableWhenDrawingNewPlane=true, ForceOpqaueForUnclipped=false, ShowClipped=false, Transparency=0, HandleColor=16776960)))))
+					$end 'EditorWindow'
+				$end 'WindowPosition'
+				$begin 'ReportSetup'
+					$begin 'ReportManager'
+						$begin 'Reports'
+						$end 'Reports'
+						NextUniqueID=0
+						MoveBackwards=false
+						$begin 'NextVersID'
+							NextUniqueID=0
+							MoveBackwards=false
+						$end 'NextVersID'
+					$end 'ReportManager'
+					$begin 'Reports'
+					$end 'Reports'
+					$begin 'ReportsWindowInfoList'
+					$end 'ReportsWindowInfoList'
+				$end 'ReportSetup'
+				$begin 'Properties'
+				$end 'Properties'
+				$begin 'UserDefinedDocument'
+					$begin 'Data'
+					$end 'Data'
+				$end 'UserDefinedDocument'
+			$end 'HfssDesignInstance'
+		$end 'Instance'
+	$end 'DataInstances'
+	$begin 'WBSystemIDToDesignInstanceIDMap'
+	$end 'WBSystemIDToDesignInstanceIDMap'
+	$begin 'WBSysIDSysDetails'
+	$end 'WBSysIDSysDetails'
+	$begin 'WBConnIDConnDetails'
+	$end 'WBConnIDConnDetails'
+$end 'AnsoftProject'
+$begin 'ProjectPreview'
+	Thumbnail64='/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQE\
+BAQICAQECAQEBAgICAgICAgICAQICAgICAgICAgL/2wBDAQEBAQEBAQEBAQECAQEBAgICAgICAgICAg\
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgL/wAARCABgAGADASIAAhEBAxEB/\
+8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQR\
+BRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUp\
+TVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5us\
+LDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAA\
+AECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHB\
+CSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ\
+3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4u\
+Pk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+/iiiigAooooAKKKKACiiigAooooAKKKKACiii\
+gAooooAKK/Eb/gsd+1dc+BvAWlfsz/D3UtPTxx401D4eeM/i/DqdvpVzBY/Ai81nxzdaPoA0HXNSEXj\
+zT/Gfjf4S6n4f8QaXLoviPw1P4Ms/FOieMU0qXxP4Tj1z+fb4A61q7+E9dh8Kft3af8As8fCr4WeMdU\
+8DXPwK8H/APBQW5/Z++Kr6rcado3ijUdZ+Cv7O/i746/DvwBd+Dn8R+NidXv73xv4VkfUdH8Wyx2mp6\
+1ZQ2Wt/eZRwLXzLJlnOJzGGW0alTkhGdKpNyjb43yXlG7soLkalH3+ZLl5uapiVCp7NQ52l0a+4/vCo\
+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\
+8M0CiiigAooooAKKKKACiiigAooooAKKKKAP/Z'
+	$begin 'DesignInfo'
+		DesignName='HFSSDesign1'
+		Notes=''
+		Factory='HFSS'
+		IsSolved=false
+		'Nominal Setups'[0:]
+		'Optimetrics Setups'[0:]
+		'Optimetrics Experiment Types'[0:]
+		Image64='/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQE\
+BAQICAQECAQEBAgICAgICAgICAQICAgICAgICAgL/2wBDAQEBAQEBAQEBAQECAQEBAgICAgICAgICAg\
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgL/wAARCADIAMgDASIAAhEBAxEB/\
+8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQR\
+BRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUp\
+TVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5us\
+LDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAA\
+AECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHB\
+CSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ\
+3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4u\
+Pk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+/iiiigAooooAKKKKACiiigAooooAKKKKACiii\
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACii\
+igAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\
+iigAooooAKKKKACiiigAooooAKKKKACiiigAoor8Rv+C0P7V1z8PPhfo/7KPgfUtP/wCEu/aL8P8Aiu\
+D4vD7PpWq3nhz9m6fS9Q8KeJNNaOTUmn8KeIPGev6pHoukX0+mTRXWheGfH0mkahpfiLRtOvrb1Mmyr\
+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'
+	$end 'DesignInfo'
+$end 'ProjectPreview'

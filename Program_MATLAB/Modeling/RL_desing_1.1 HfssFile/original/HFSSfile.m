@@ -22,7 +22,7 @@
 
 %% Init
 close all;
-clear all;
+clear;
 clc
 %% Import Rotman Lens data
 DATA = dlmread('RL_parameters.tab');
