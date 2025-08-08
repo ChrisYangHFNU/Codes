@@ -1,3 +1,4 @@
 {
-    "C_Cpp.default.compilerPath": "d:\\Software\\mingw64\\bin\\gcc.exe"
+    "C_Cpp.default.compilerPath": "d:\\Software\\mingw64\\bin\\gcc.exe",
+    "cmake.ignoreCMakeListsMissing": true
 }
