@@ -7,6 +7,8 @@ Created on Sun Apr 13 19:36:49 2025
 
 import numpy as np
 import matplotlib.pyplot as plt
+plt.rcParams['font.sans-serif']=['SimHei']
+plt.rcParams['axes.unicode_minus']=False
 
 # Parameters configuration
 theta_min = np.deg2rad(5)

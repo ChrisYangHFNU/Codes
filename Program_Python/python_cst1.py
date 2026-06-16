@@ -4,6 +4,8 @@ Created on Mon Dec  1 18:45:06 2025
 
 @author: chris
 """
+import sys
+sys.path.append(r"D:\Software\CST Studio Suite 2021\AMD64\python_cst_libraries")
 
 import cst.interface 
 cst = cst.interface.DesignEnvironment()
